@@ -56,7 +56,7 @@ export default function AboutPage() {
           <h2 className="text-4xl font-bold  mb-4 text-black">欢迎来到 coolha.top</h2>
           <p className="text-xl text-gray-800 mb-4">Coolha 是一款基于 Lens Protocol 构建的去中心化社交应用，连接创作者和用户</p>
           <p className="text-xl text-gray-800 mb-8">数据权回归用户，在 Web3 时代赋能去中心化连接</p>
-          <Link href="/" className="inline-flex items-center bg-slate-950 text-white  text-2xl px-8 py-4 rounded-full hover:bg-gray-700 transition duration-300">
+          <Link href="/home" className="inline-flex items-center bg-slate-950 text-white  text-2xl px-8 py-4 rounded-full hover:bg-gray-700 transition duration-300">
             开始使用 →
           </Link>
         </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
               <h4 className="text-xl font-semibold  mb-2">去中心化治理</h4>
               <p className=" text-white">用户参与共同治理,不要因为中心组织过度控制而丧失活力</p>
             </div>
-            <div className="bg-[#111111] m-3 p-6 rounded-lg border hover:border-primary ">
+            {/* <div className="bg-[#111111] m-3 p-6 rounded-lg border hover:border-primary ">
               <h4 className="text-xl font-semibold  mb-2">应用架构</h4>
               <Image
                 src={coolhatop应用流程}
@@ -109,7 +109,7 @@ export default function AboutPage() {
                   width: '100%',
                   height: 'auto',
                 }} />
-            </div>
+            </div> */}
 
 
           </div>
