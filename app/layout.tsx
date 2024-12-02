@@ -17,7 +17,7 @@ export const metadata = {
     template: '%s | Coolha',
     default: 'Coolha',
   },
-  description: "coolha.top, Coolha is a decentralized social application built on Lens Protocol",
+  description: "coolha.com, Coolha is a decentralized social application built on Lens Protocol",
   icons: {
     icon: '/favicon.ico',
     shortcut: '/shortcut-icon.png',

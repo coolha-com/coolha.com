@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaCircleChevronLeft, FaGithub, FaSquareXTwitter, FaTelegram, FaTiktok } from 'react-icons/fa6';
 import Image from "next/image"
-import coolhatop应用流程 from '@/public//coolha.top/coolha.top应用流程.png'
+import coolhatop应用流程 from '@/public/coolha.com/coolha.com应用流程.png'
 import { RiMailFill } from "react-icons/ri";
 export default function AboutPage() {
   return (
@@ -13,7 +13,7 @@ export default function AboutPage() {
           <nav>
             <ul className="flex space-x-4">
 
-{/*               <li>
+              {/*               <li>
                 <Link href="https://link3.to/coolha" className="text-black hover:text-gray-600" target='_blank'>
                   <FaCircleChevronLeft className="w-8 h-8" />
                 </Link>
@@ -25,19 +25,19 @@ export default function AboutPage() {
               </li>
 
               <li>
-                <Link href="https://x.com/coolha_top" className="text-black hover:text-gray-600" target='_blank'>
+                <Link href="https://x.com/coolha_com" className="text-black hover:text-gray-600" target='_blank'>
                   <FaSquareXTwitter className="w-8 h-8" />
                 </Link>
               </li>
 
               <li>
-                <Link href="https://github.com/coolha-top" className="text-black hover:text-gray-600" target='_blank'>
+                <Link href="https://github.com/coolha-com" className="text-black hover:text-gray-600" target='_blank'>
                   <FaGithub className="w-8 h-8" />
                 </Link>
               </li>
 
               <li>
-                <Link href="mailto:cs@coolha.top" className="text-black hover:text-gray-600" target='_blank'>
+                <Link href="mailto:cs@coolha.com" className="text-black hover:text-gray-600" target='_blank'>
                   <RiMailFill className="w-8 h-8" />
                 </Link>
               </li>
@@ -53,7 +53,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-[#C0E218] py-20">
         <div className=" mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold  mb-4 text-black">欢迎来到 coolha.top</h2>
+          <h2 className="text-4xl font-bold  mb-4 text-black">欢迎来到 coolha.com</h2>
           <p className="text-xl text-gray-800 mb-4">Coolha 是一款基于 Lens Protocol 构建的去中心化社交应用，连接创作者和用户</p>
           <p className="text-xl text-gray-800 mb-8">数据权回归用户，在 Web3 时代赋能去中心化连接</p>
           <Link href="/home" className="inline-flex items-center bg-slate-950 text-white  text-2xl px-8 py-4 rounded-full hover:bg-gray-700 transition duration-300">
@@ -65,7 +65,7 @@ export default function AboutPage() {
       {/*       <div className=" justify-center  p-12">
         <div className="mockup-browser bg-base-300 border h-auto">
           <div className="mockup-browser-toolbar">
-            <div className="input">https://coolha.top</div>
+            <div className="input">https://coolha.com</div>
           </div>
           <div className="bg-[#111111] flex w-full h-auto"><img src="/web.png" alt="web.png" /></div>
           
@@ -83,7 +83,7 @@ export default function AboutPage() {
       {/* Features Section */}
       <section className="py-20">
         <div className=" mx-auto px-4">
-          <h3 className="text-3xl font-bold text-center  mb-12">为什么选择 coolha.top？</h3>
+          <h3 className="text-3xl font-bold text-center  mb-12">为什么选择 coolha.com？</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
 
@@ -103,7 +103,7 @@ export default function AboutPage() {
               <h4 className="text-xl font-semibold  mb-2">应用架构</h4>
               <Image
                 src={coolhatop应用流程}
-                alt="coolha.top应用流程.png"
+                alt="coolha.com应用流程.png"
                 sizes="100%"
                 style={{
                   width: '100%',
@@ -123,7 +123,7 @@ export default function AboutPage() {
       <section className="py-20 ">
         <div className=" mx-auto px-4 text-center">
           <h3 className="text-3xl font-bold  mb-8">认识开发团队</h3>
-          <Link href={`https://www.coolha.com`} target='_blank' className="inline-flex items-center  text-2xl px-8 py-4 rounded-full hover:border-primary hover:text-primary transition duration-300 border-2 gap-2">
+          <Link href={`https://about.coolha.com`} target='_blank' className="inline-flex items-center  text-2xl px-8 py-4 rounded-full hover:border-primary hover:text-primary transition duration-300 border-2 gap-2">
             <img src="icon.png" alt="icon.png" className="w-16 mask mask-circle" />
             酷哈工作室 ↗
           </Link>
@@ -132,7 +132,7 @@ export default function AboutPage() {
 
       <footer className="footer bg-zinc-700 text-slate-200 items-center p-4">
         <aside className="grid-flow-col items-center ">
-          <p>Copyright © {new Date().getFullYear()} - coolha.top All Rights Reserved.</p>
+          <p>Copyright © {new Date().getFullYear()} - coolha.com All Rights Reserved.</p>
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <Link href={`/fqa`} className="hover:link hover:text-primary"> 常见问题</Link>

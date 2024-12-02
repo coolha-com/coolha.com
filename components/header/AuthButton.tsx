@@ -8,7 +8,7 @@ import { RiAccountCircleFill, RiArrowLeftRightFill, RiAtLine, RiEmotionHappyLine
 import { useAccount, useEnsName } from "wagmi";
 import { WelcomeToLens } from "../lnes/Auth/WelcomeToLens";
 import Cover04Text from '@/public/lens/Cover04-Text.png'
-import web3背景 from '@/public/coolha.top/web3背景.png'
+import web3背景 from '@/public/coolha.com/web3背景.png'
 
 import { config } from "@/config/Wagmi";
 import Image from "next/image";

@@ -5,7 +5,7 @@ export default function Page() {
     <>
       赞助合作
       <div>
-        <p>cs@coolha.top</p>
+        <p>cs@coolha.com</p>
       </div>
 
     </>

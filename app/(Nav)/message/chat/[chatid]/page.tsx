@@ -27,7 +27,7 @@ export default function page() {
                     <div className="w-10 rounded-full">
                         <img
                             alt="coolha.to"
-                            src="/coolha.top/logo.png" />
+                            src="/coolha.com/logo.png" />
                     </div>
                 </div>
                 <div className="chat-header">
