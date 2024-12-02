@@ -41,7 +41,7 @@ export default function layout({ children, params: { users } }) {
 
 
     return (
-        <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-dvw ">
+        <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-dvw bg-base-200">
             <div className='  lg:min-w-3xl mx-auto max-w-3xl  w-full'>
 
                 <UsersHeader name={users} profile={profileData} />

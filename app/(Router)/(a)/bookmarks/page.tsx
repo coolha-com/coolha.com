@@ -35,7 +35,7 @@ export default function page() {
             <>
                 {data?.map((pub: any) => (
                     <>
-                        <div className=" bg-base-100 hover:bg-[--link-hover-background] w-dvw  lg: p-4 py-2 mt-2" key={pub.id}>
+                        <div className=" bg-base-100  w-dvw  lg: p-4 py-2 mt-2" key={pub.id}>
                             {/* 帖子主内容 */}
                             <div className=" flex ">
                                 <div className="flex " onClick={(e) => e.stopPropagation()}>
@@ -66,7 +66,7 @@ export default function page() {
                                 {/* 如果是引用类型的帖子，显示引用的内容 */}
                                 {pub.__typename === "Quote" && (
                                     <div className="pl-0 pt-2">
-                                        <div className="p-4 py-2 border rounded-2xl hover:bg-[--link-hover-background]">
+                                        <div className="p-4 py-2 border rounded-2xl ">
 
                                             <div className="flex" >
                                                 <Avatarimg src={pub.quoteOn.by} href={pub.by.handle.localName} />

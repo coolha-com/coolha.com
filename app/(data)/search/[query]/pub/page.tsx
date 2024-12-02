@@ -43,7 +43,7 @@ export default function SearchPublications({ params: { query } }) {
 
 
       {data?.map((pub: any) => (
-        <div className=" bg-base-100 hover:bg-[--link-hover-background] w-dvw  lg: p-4 mt-2" key={pub.id}>
+        <div className=" bg-base-100  mx-auto max-w-3xl  lg: p-4 mt-2" key={pub.id}>
 
           {/* 帖子主内容 */}
           <div className=" flex ">
@@ -75,7 +75,7 @@ export default function SearchPublications({ params: { query } }) {
             {/* 如果是引用类型的帖子，显示引用的内容 */}
             {pub.__typename === "Quote" && (
               <div className="pl-0 pt-2">
-                <div className="p-4 border rounded-2xl hover:bg-[--link-hover-background]">
+                <div className="p-4 border rounded-2xl ">
 
                   <div className="flex" >
                     <Avatarimg src={pub.quoteOn.by} href={pub.by.handle.localName} />

@@ -9,7 +9,7 @@ export default function NavHeader() {
     return (
         <>
             {["/find", , "/profile"].includes(pathname) ? (
-                <div className=" flex md:hidden navbar border-b md:border-0 w-100vw p-0 bg-base-100">
+                <div className=" flex md:hidden  md:border-0 w-100vw p-0 bg-base-100 h-12">
                     {pathname === "/find" && <Find />}
                     {/* {pathname === "/message/chat" && <Message />} */}
                     {pathname && pathname.startsWith("/profile") && null}
@@ -25,7 +25,7 @@ export default function NavHeader() {
 function Find() {
     const router = useRouter();
     return (
-        <div className="navbar py-0">
+        <div className="navbar min-h-12 py-0 p-0 px-2">
             <div className=" navbar-start"> </div>
             <div className=" navbar-center">发现</div>
             <div className=" navbar-end"> </div>
@@ -35,7 +35,7 @@ function Find() {
 
 function Message() {
     return (
-        <div className="navbar py-0">
+        <div className="navbar min-h-12 py-0 p-0 px-2">
             <div className=" navbar-start"> </div>
             <div className=" navbar-center">消息</div>
             <div className=" navbar-end">
@@ -49,7 +49,7 @@ function Message() {
 
 function Profile() {
     return (
-        <div className="navbar py-0">
+        <div className="navbar  min-h-12 py-0 p-0 px-2">
             <div className="navbar-start">
             </div>
             <div className="navbar-center"> </div>

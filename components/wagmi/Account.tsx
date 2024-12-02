@@ -9,7 +9,7 @@ export function Account() {
   return (
     <div>
       {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
-      {address && <div>{ensName ? `${ensName} (${address})` : address}</div>}
+      {address && ensName ? ensName : address}
     </div>
   )
 }

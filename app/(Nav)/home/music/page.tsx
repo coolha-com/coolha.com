@@ -76,7 +76,7 @@ export default function Page() {
 
         {musicPubs?.map(mpub => (
           <div
-            className="bg-base-100 hover:bg-[--link-hover-background] w-dvw  lg:max-w-3xl p-4 py-2 mt-2 "
+            className="bg-base-100  w-dvw  lg:max-w-3xl p-4 py-2 mt-2 "
             key={mpub.id}
 
           >

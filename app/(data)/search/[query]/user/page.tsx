@@ -25,7 +25,7 @@ export default function SearchProfiles({ params: { query } }) {
         {data?.map(profile => (
           <div
             key={profile.id}
-            className="p-4 mt-2 bg-base-100 hover:bg-[--link-hover-background]  cursor-pointer"
+            className="p-4 mt-2 bg-base-100   cursor-pointer"
             onClick={() => router.push(`/u/${profile?.handle?.localName}`)}>
             <div className="space-y-3 flex">
               <div className="overflow-hidden rounded-md flex flex-row">

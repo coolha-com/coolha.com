@@ -1,3 +1,4 @@
+import { DEFAULT_CIPHERS } from "node:tls";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -19,6 +20,9 @@ const config: Config = {
       },
       borderColor: {
         DEFAULT: 'rgba(204, 204, 204, 0.3)',
+      },
+      borderWidth:{
+        DEFAULT_CIPHERS:'0.5px'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

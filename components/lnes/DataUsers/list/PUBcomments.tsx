@@ -34,7 +34,7 @@ export default function PUBcomments({ profile }) {
             {/* 如果是引用类型的帖子，显示引用的内容 */}
             {comment.__typename === "Comment" && (
               <div className="pb-6">
-                <div className="p-4 py-2  hover:bg-[--link-hover-background]">
+                <div className="p-4 py-2  ">
                   <div className="flex" >
                     <Avatarimg src={comment.commentOn.by} href={comment.commentOn.by.handle.localName} />
                     <AvatarName
@@ -62,7 +62,7 @@ export default function PUBcomments({ profile }) {
 
             {/* 用户的评论 */}
             <div className="p-4">
-              <div className="p-4 py-2 border rounded-2xl hover:bg-[--link-hover-background]">
+              <div className="p-4 py-2 border rounded-2xl ">
 
                 {/* users */}
                 <div className="flex">

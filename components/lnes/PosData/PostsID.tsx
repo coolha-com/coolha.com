@@ -84,7 +84,7 @@ export default function Posts({ params }) {
                 {
                     pub.__typename === "Quote" && (
                         <div className="p-6 pl-0">
-                            <div className="p-4 border rounded-2xl hover:bg-[--link-hover-background]">
+                            <div className="p-4 border rounded-2xl ">
 
                                 <div className="flex" >
                                     <Avatarimg src={pub.quoteOn.by} href={pub?.by?.handle?.localName} />
@@ -122,7 +122,7 @@ export default function Posts({ params }) {
             <div className="my-4 border-t">
                 {commentsData && commentsData.length > 0 ? (commentsData.map((comment) => (
 
-                    <div key={comment.id} className="border-b p-4 hover:bg-[--link-hover-background]">
+                    <div key={comment.id} className="border-b p-4 ">
                         <Link href={`/posts/${comment.id}`}>
                             <div className="flex">
                                 {comment.by && comment.by.handle && comment.by.metadata && (
@@ -207,7 +207,7 @@ function ChildComments({ commentId }) {
             {childCommentsData && childCommentsData.length > 0 ? (
                 childCommentsData.map((childComment) => (
                     <div className="pb-2">
-                        <div key={childComment.id} className="p-4 border rounded-2xl hover:bg-[--link-hover-background]">
+                        <div key={childComment.id} className="p-4 border rounded-2xl ">
 
                             <div className="flex">
                                 {childComment.by && childComment.by.handle && childComment.by.metadata && (

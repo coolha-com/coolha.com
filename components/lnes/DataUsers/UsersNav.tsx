@@ -12,7 +12,7 @@ export default function UsersNav({ name, profile }) {
         <>
             <div className="flex flex-row  w-[100vw] lg:w-full z-20 h-16  items-center bg-base-100">
                 {linknav.map((item) => (
-                    <div className='mx-auto flex-col sm:flex-row  justify-around w-1/4 flex ' key={item.href}>
+                    <div className='mx-auto max-w-3xl flex-col sm:flex-row  justify-around w-1/4 flex ' key={item.href}>
 
                         <Link
                             replace

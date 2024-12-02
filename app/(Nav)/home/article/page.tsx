@@ -61,7 +61,7 @@ export default function Page() {
 
         {musicPubs?.map(mpub => (
           <div
-            className="bg-base-100 hover:bg-[--link-hover-background] w-dvw  md: p-4 py-2 mt-2 "
+            className="bg-base-100  w-dvw  md: p-4 py-2 mt-2 "
             key={mpub.id}
           /*  onClick={() => router.push(`https://share.lens.xyz/p/${mpub.id}`)} */
           >
@@ -92,7 +92,7 @@ export default function Page() {
               {/* 如果是引用类型的帖子，显示引用的内容 */}
               {mpub.__typename === "Quote" && (
                 <div className="p-6 pl-0">
-                  <div className="p-4 py-2 border rounded-2xl hover:bg-[--link-hover-background]">
+                  <div className="p-4 py-2 border rounded-2xl ">
 
                     <div className="flex" >
                       <Avatarimg src={mpub.quoteOn.by} href={mpub.by.handle.localName} />

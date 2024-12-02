@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   const cookies = headers().get('cookie')
   return (
-    <html lang="zh">
+    <html lang="zh_CN">
       <head>
         <meta charSet="utf-8" />
         <meta property="twitter:image" content="/favicon.ico" />

@@ -36,7 +36,7 @@ export default function ButtonList() {
                     {orderOptions.map((option) => (
                         <div className='m-1  ' key={option.key}>
                             <button
-                                className={` whitespace-nowrap text-base-content/70 flex items-center px-1 md:btn md:btn-sm  ${pathname === '/home/foryou' || pathname === '/home/following' ? '' : orderBy === option.key ? 'text-info md:btn-primary' : ''}`}
+                                className={` whitespace-nowrap text-base-content/70 flex items-center px-1 md:py-1.5 md:px-3 md:rounded-full md:hover:bg-[var(--button-bg)] hover:border-info ${pathname === '/home/foryou' || pathname === '/home/following' ? '' : orderBy === option.key && 'text-info '}`}
                                 onClick={() => handleOrderByChange(option.key)}
                             >
                                 {option.title}

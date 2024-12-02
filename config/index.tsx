@@ -30,7 +30,8 @@ export default function ContextProvider({ children, cookies }: { children: React
     const initialState = cookieToInitialState(wagmiAdapter.wagmiConfig as Config, cookies)
 
     const { theme } = useTheme();
-    const config = createAppKit({
+    createAppKit({
+
         adapters: [wagmiAdapter],
         metadata: metadata,
         projectId,
@@ -57,15 +58,15 @@ export default function ContextProvider({ children, cookies }: { children: React
     });
 
     return (
-        <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={initialState}>
-            <QueryClientProvider client={queryClient}>
-                <LensProvider config={lensConfig}>
-                    <ThemeProvider >
+        <ThemeProvider >
+            <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={initialState}>
+                <QueryClientProvider client={queryClient}>
+                    <LensProvider config={lensConfig}>
                         {children}
-                    </ThemeProvider>
-                </LensProvider>
-            </QueryClientProvider>
-        </WagmiProvider>
+                    </LensProvider>
+                </QueryClientProvider>
+            </WagmiProvider>
+        </ThemeProvider>
     )
 }
 

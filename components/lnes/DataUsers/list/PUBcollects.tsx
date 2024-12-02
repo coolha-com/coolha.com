@@ -26,7 +26,7 @@ export default function PUBcollects({ profile }) {
   return (
     <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-dvw">
       {data?.map((pub: any, index: number) => (
-        <div key={pub.id} className="bg-base-100  hover:bg-[--link-hover-background] md:max-w-3xl w-dvw mt-2 p-4 pt-2 ">
+        <div key={pub.id} className="bg-base-100   md:max-w-3xl w-dvw mt-2 p-4 pt-2 ">
 
 
           <>
@@ -55,7 +55,7 @@ export default function PUBcollects({ profile }) {
             {/* 如果是引用类型的帖子，显示引用的内容 */}
             {pub.__typename === "Quote" && (
               <div className="p-6 pl-0">
-                <div className="p-4 py-2 border rounded-2xl hover:bg-[--link-hover-background]">
+                <div className="p-4 py-2 border rounded-2xl ">
 
                   <div className="flex" >
                     <Avatarimg src={pub.quoteOn.by} href={pub.by.handle.localName} />

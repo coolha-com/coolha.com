@@ -41,7 +41,7 @@ export default function page() {
             <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-dvw">
                 {loading && <LoadingSpinner />}
                 {data?.map((pub) => (
-                    <div className=" bg-base-100 hover:bg-[--link-hover-background] w-dvw max-w-3xl lg:p-4 py-2 mt-2" key={`${pub.root.id}`}>
+                    <div className=" bg-base-100  w-dvw max-w-3xl lg:p-4 py-2 mt-2" key={`${pub.root.id}`}>
 
 
                         {/* 帖子主内容 */}
@@ -134,7 +134,7 @@ export default function page() {
                                         <Meide pub={pub.root.metadata?.asset} />
                                     </Link>
 
-                                    <div className="p-4 py-2 border rounded-2xl hover:bg-[--link-hover-background]">
+                                    <div className="p-4 py-2 border rounded-2xl ">
                                         <div className="flex" >
                                             <Avatarimg src={pub.root.quoteOn.by} href={pub.root.quoteOn.by.handle?.localName} />
                                             <AvatarName

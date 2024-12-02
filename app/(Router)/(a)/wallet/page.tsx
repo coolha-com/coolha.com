@@ -3,7 +3,7 @@ import { truncateEthAddress } from '@/utils/truncateEthAddress'
 import Link from 'next/link'
 import { RiTokenSwapLine, RiCoinsLine, RiNftLine, RiHistoryLine } from 'react-icons/ri'
 import { useAccount, useEnsAvatar, useEnsName } from 'wagmi'
-import Token from './_token/token'
+import Token from './token'
 
 
 export default function Wallet() {
@@ -18,7 +18,7 @@ export default function Wallet() {
         { label: '交易记录', href: '/wallet/tx_history', icon: RiHistoryLine, }
     ];
     return (
-        <div className=''>
+        <div className='mx-auto max-w-3xl'>
 
             {/*             <div className="">
                 {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
@@ -31,7 +31,7 @@ export default function Wallet() {
                             : truncateEthAddress(address)}↗
                     </Link>}
             </div> */}
-            <div className='bg-base-100  h-auto w-auto rounded-[--rounded-box]'>
+            <div className='bg-base-100  h-auto w-auto '>
                 <div className='flex-row  grid grid-cols-4 justify-items-center h-auto w-auto  p-3 my-2'>
                     {userData.map((item, index) => (
                         <div>

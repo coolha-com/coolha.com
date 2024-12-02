@@ -25,17 +25,16 @@ export default function page() {
             for: profileId(profile?.id ? profile?.id : ''),
         }));
         return (
-            <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-dvw ">
-                <div className='  lg:min-w-3xl mx-auto  w-full'>
+            <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full mx-auto max-w-3xl">
 
 
-                    <div className="flex mx-auto max-w-3xl justify-center">
+                    <div className="flex  justify-center">
 
                         <div className=' flex  lg:flex-wrap flex-col w-full '>
                             {RecommendedProfiles?.map(profile => (
                                 <div
                                     key={profile.id}
-                                    className="p-2 mt-2 bg-base-100 hover:bg-[--link-hover-background]  cursor-pointer"
+                                    className="p-2 mt-2 bg-base-100   cursor-pointer"
                                     onClick={() => router.push(`/u/${profile?.handle?.localName}`)}>
                                     <div className="space-y-3 flex">
                                         <div className="overflow-hidden rounded-md flex flex-row">
@@ -59,7 +58,6 @@ export default function page() {
                         </div>
                     )}
 
-                </div >
             </div >
         )
     }
@@ -76,7 +74,7 @@ export default function page() {
                     {profiles?.map(profile => (
                         <div
                             key={profile.id}
-                            className="p-2 mt-2 bg-base-100 hover:bg-[--link-hover-background]  cursor-pointer"
+                            className="p-2 mt-2 bg-base-100   cursor-pointer"
                             onClick={() => router.push(`/u/${profile.handle.localName}`)}>
                             <div className="space-y-3 flex">
                                 <div className="overflow-hidden rounded-md flex flex-row">

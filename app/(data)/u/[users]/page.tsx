@@ -18,7 +18,7 @@ export default function ProfileA({ params: { users }}) {
   });
 
   return (
-    <div className='lg:min-w-3xl mx-auto  '>
+    <div className='lg:min-w-3xl mx-auto  bg-base-200'>
       {loading && <div className=" w-full"><Loading /></div>}
       {profile && <PUBposts profile={profile} />}
 

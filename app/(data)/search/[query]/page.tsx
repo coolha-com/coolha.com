@@ -27,12 +27,12 @@ export default function page({ params: { query } }) {
         }
     }));
     return (
-        <div className=" min-h-dvh">
+        <div className=" min-h-dvh ">
             <div className=' flex  lg:flex-wrap flex-col w-full'>
                 {Profiles?.slice(0, 3).map(profile => (
                     <div
                         key={profile.id}
-                        className="p-4 mt-2 bg-base-100 hover:bg-[--link-hover-background]  cursor-pointer"
+                        className="p-4 mt-2 bg-base-100   cursor-pointer"
                         onClick={() => router.push(`/u/${profile?.handle?.localName}`)}>
                         <div className="space-y-3 flex">
                             <div className="overflow-hidden rounded-md flex flex-row">
@@ -51,7 +51,7 @@ export default function page({ params: { query } }) {
             </div>
 
             {Pub?.map((pub: any) => (
-                <div className=" bg-base-100 hover:bg-[--link-hover-background] w-dvw  lg: p-4 mt-2" key={pub.id}>
+                <div className=" bg-base-100  mx-auto max-w-3xl lg: p-4 mt-2" key={pub.id}>
 
                     {/* 帖子主内容 */}
                     <div className=" flex ">
@@ -83,7 +83,7 @@ export default function page({ params: { query } }) {
                         {/* 如果是引用类型的帖子，显示引用的内容 */}
                         {pub.__typename === "Quote" && (
                             <div className="pl-0 pt-2">
-                                <div className="p-4 border rounded-2xl hover:bg-[--link-hover-background]">
+                                <div className="p-4 border rounded-2xl ">
 
                                     <div className="flex" >
                                         <Avatarimg src={pub.quoteOn.by} href={pub.by.handle.localName} />

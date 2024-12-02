@@ -33,7 +33,7 @@ export default function followers({ params: { users }, }) {
           {ProfileFollowers?.map(Followers => (
             <div
               key={Followers.id}
-              className="p-4 py-2 mt-2 bg-base-100 hover:bg-[--link-hover-background]  cursor-pointer"
+              className="p-4 py-2 mt-2 bg-base-100   cursor-pointer"
               onClick={() => router.push(`/u/${Followers?.handle?.localName}`)}>
               <div className="space-y-3 flex">
                 <div className="overflow-hidden rounded-md flex flex-row">

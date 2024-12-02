@@ -32,7 +32,7 @@ export default function MutualFollowers({ params: { users }, }) {
                         {MutualFollowersData && MutualFollowersData.length > 0 ? <>
                             {MutualFollowersData?.map(MutualF => (
                                 <div key={MutualF.id}
-                                    className="p-4 py-2 mt-2 bg-base-100 hover:bg-[--link-hover-background]  cursor-pointer"
+                                    className="p-4 py-2 mt-2 bg-base-100   cursor-pointer"
                                     onClick={() => router.push(`/u/${MutualF?.handle?.localName}`)}>
                                     <div className="space-y-3 flex">
                                         <div className="overflow-hidden rounded-md flex flex-row">

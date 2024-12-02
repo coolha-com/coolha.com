@@ -53,7 +53,7 @@ export default function UsersMetadata({ profile }) {
 
             <div className="ml-2 lg:ml-4">
                 <b className="md:text-xl flex flex-row items-center  font-bold">{profile?.metadata?.displayName}<RiVerifiedBadgeFill className="ml-1 size-5 text-primary  rounded-full" /></b>
-                <p className="text-[#878787] text-sm"> {profile?.handle?.namespace}/{profile?.handle?.localName} {profile?.id}  </p>
+                <p className="text-[#878787] text-sm"> {profile?.handle?.namespace}/{profile?.handle?.localName}   </p>
 
 
 

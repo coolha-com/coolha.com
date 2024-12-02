@@ -45,7 +45,7 @@ function HeaderC() {
 
                 <div className="navbar-start gap-1">
 
-                    <Link href={`/`} className="avatar w-12 h-12 ">
+                    <Link href={`/home#hometop`} className="avatar w-12 h-12 ">
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Image
                                 src='/favicon.ico'
@@ -147,7 +147,7 @@ function NavbarLink() {
                 <li key={link.href}>
                     <Link
                         href={link.href}
-                        className={`btn dark:hover:bg-[var(--button-bg)]  ${pathname && pathname.startsWith(link.startsWith) ? " text-info " : ""}`}
+                        className={`btn hover:bg-[var(--button-bg)]  ${pathname && pathname.startsWith(link.startsWith) ? " text-base-content " : ""}`}
                     >
                         {pathname.startsWith(link.startsWith) ? <link.iconActive className="size-8" /> : <link.iconInactive className="size-8" />}
                         <span className=" hidden md:flex text-lg">

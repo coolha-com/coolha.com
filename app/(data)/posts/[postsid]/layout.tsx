@@ -73,7 +73,7 @@ export default function layout({ children, params }) {
           {
             pub.__typename === "Quote" && (
               <div className="p-6 pl-0">
-                <div className="p-4 py-2 border rounded-2xl hover:bg-[--link-hover-background]">
+                <div className="p-4 py-2 border rounded-2xl ">
 
                   <div className="flex" >
                     <Avatarimg src={pub.quoteOn.by} href={pub?.by?.handle?.localName} />

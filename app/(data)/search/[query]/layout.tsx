@@ -21,7 +21,7 @@ export default function layout({ params: { query }, children }) {
     ]
     const pathname = usePathname();
     return (
-        <div className="mx-auto  lg:justify-center pb-14 flex flex-col ">
+        <div className="mx-auto max-w-3xl lg:justify-center pb-14 flex flex-col ">
 
             <div className="flex flex-row z-20 h-10 ">
                 {linknav.map((item) => (

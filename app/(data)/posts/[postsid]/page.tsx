@@ -46,7 +46,7 @@ export default function page({ params }) {
       <div className="my-2 border-t bg-base-100" >
         {commentsData && commentsData.length > 0 ? (commentsData.map((comment) => (
 
-          <div key={comment.id} className="border-b p-4 py-2 hover:bg-[--link-hover-background]">
+          <div key={comment.id} className="border-b p-4 py-2 ">
             <div className="flex">
               {comment.by && comment.by.handle && comment.by.metadata && (
                 <div className="flex">
@@ -137,7 +137,7 @@ function ChildComments({ commentId }) {
       {childCommentsData && childCommentsData.length > 0 ? (
         childCommentsData.map((childComment) => (
           <div className="pb-2">
-            <div key={childComment.id} className="p-4 py-2 border rounded-2xl hover:bg-[--link-hover-background]">
+            <div key={childComment.id} className="p-4 py-2 border rounded-2xl ">
 
               <div className="flex">
                 {childComment.by && childComment.by.handle && childComment.by.metadata && (

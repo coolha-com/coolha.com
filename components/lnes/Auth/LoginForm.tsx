@@ -51,9 +51,9 @@ export default function LoginForm({ wallet, onSuccess }: { wallet: string; onSuc
 
         <div className="my-4 space-y-2">
           {profiles.map((profile, idx) => (
-            <label 
+            <label
               key={profile.id}
-              className=" btn btn-outline"
+              className=" btn dark:hover:bg-[var(--button-bg)] "
             >
               <input
                 disabled={isLoginPending}
@@ -63,6 +63,22 @@ export default function LoginForm({ wallet, onSuccess }: { wallet: string; onSuc
                 value={profile.id}
                 className="box-content h-1.5 w-1.5 appearance-none rounded-full border-[5px] border-white bg-white bg-clip-padding outline-none ring-1 ring-gray-950/10 checked:border-green-500 checked:ring-green-500"
               />
+              <div className="w-8 rounded-full ">
+                {profile?.metadata?.picture?.__typename === 'ImageSet' && (
+                  <img
+                    src={profile?.metadata?.picture?.optimized?.uri}
+                    className="rounded-full"
+                    alt="picture Set"
+                  />
+                )}
+                {profile?.metadata?.picture?.__typename === 'NftImage' && (
+                  <img
+                    src={profile?.metadata?.picture?.image?.optimized?.uri}
+                    className="rounded-full"
+                    alt="picture NFT"
+                  />
+                )}
+              </div>
               <span className="  text-sm font-semibold">
                 {profile.handle?.fullHandle ?? profile.id}
               </span>
@@ -76,9 +92,7 @@ export default function LoginForm({ wallet, onSuccess }: { wallet: string; onSuc
           </button>
         </div>
 
-
       </fieldset>
-      <legend className=" text-gray-500">仅限钱包登录,不可用于帖子更多互动</legend>
     </form>
   );
 }

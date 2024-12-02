@@ -1,18 +1,22 @@
 'use client'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { RiBardLine, RiFileTextLine, RiImageLine, RiMenuLine, RiMusic2Line, RiSearchLine, RiShapesLine, RiUserFollowLine, RiVideoLine } from 'react-icons/ri'
+import { RiAccountCircleFill, RiBardLine, RiFileTextLine, RiImageLine, RiMenuLine, RiMusic2Line, RiSearchLine, RiShapesLine, RiUserFollowLine, RiVideoLine } from 'react-icons/ri'
 import { OrderByProvider } from './_contexts/OrderByContext';
 import ButtonList from './_contexts/ButtonList';
 import CreatePos from '@/components/lnes/PosCreate/CreatePos';
 import { useState } from 'react';
 import Image from "next/image";
 import { motion } from 'framer-motion';
+import { SessionType, useSession } from '@lens-protocol/react-web';
+import Auth from '@/components/header/AuthButton';
+import AuthButton from '@/components/header/AuthButton';
 
 
 export default function HomeLayout({ children }) {
   const pathname = usePathname();
   const router = useRouter();
+  const { data: session, loading } = useSession();
   const linknav = [
     {
       href: "/home/foryou",
@@ -55,24 +59,23 @@ export default function HomeLayout({ children }) {
 
       <div className=" fixed md:hidden flex flex-row w-full max-w-3xl z-50 h-12  items-center  ">
         <div className="navbar w-full min-h-12 p-0 px-2 bg-base-100 z-50">
-          <div className="navbar-start gap-1"></div>
-          <div className="navbar-center">
-            <Link href={`/`} >
+          <div className="navbar-start gap-1">
+            <Link href={`/home#hometop`} >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <img src='/favicon.ico' className="w-8 h-8 rounded-full " alt='Coolha' />
+                <img src='/favicon.ico' className="w-9 h-9 rounded-full " alt='Coolha' />
               </motion.div>
             </Link>
-          </div>
-          <div className="navbar-end">
-            <button className="btn btn-square btn-ghost" onClick={() => router.push(`/search`)}>
-              <RiSearchLine className="w-6 h-6 " />
+            <button className="p-1 rounded-full hover:bg-[var(--button-bg)]" onClick={() => router.push(`/search`)}>
+              <RiSearchLine className="w-7 h-7 " />
             </button>
           </div>
+          <div className="navbar-center"></div>
+          <div className="navbar-end"><AuthButton /></div>
         </div>
       </div>
 
       {/* 类型 */}
-      <div className="flex flex-row-reverse w-full max-w-3xl z-40 h-10 md:h-12 mt-12 md:mt-0  items-center  ">
+      <div id='hometop' className="flex flex-row-reverse w-full max-w-3xl z-40 h-10 md:h-12 mt-12 md:mt-0  items-center  ">
         {linknav.slice(0, 3).map((item) => (
           <div className='mx-auto  w-1/3  z-20 flex flex-row-reverse ' key={item.href}>
 
