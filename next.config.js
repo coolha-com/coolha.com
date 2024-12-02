@@ -9,7 +9,7 @@ const nextConfig = {
       {
         source: '/',
         destination: '/home',
-        permanent: false, // 设置为 true 将使用永久重定向 308
+        permanent: true, // 设置为 true 将使用永久重定向 308
       },
     ]
   },
