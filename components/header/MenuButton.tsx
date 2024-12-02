@@ -30,12 +30,12 @@ export function MenuButton() {
                     </li>
                     {/*  <li><Link href={`/settings`}><RiTranslate size={24} />界面语言</Link></li> */}
                     <li className="my-1"></li>
-                   {/*  <li><Link href={`mailto:cs@coolha.top`}> <RiServiceLine size={24} />赞助合作</Link></li> */}
+                    {/*  <li><Link href={`mailto:cs@coolha.com`}> <RiServiceLine size={24} />赞助合作</Link></li> */}
                     <div className="">
-                        <Link href={`mailto:cs@coolha.top`} className=" text-sm hover:link "> 赞助合作</Link>
+                        <Link href={`mailto:cs@coolha.com`} className=" text-sm hover:link "> 赞助合作</Link>
                         <br />
                         <Link href={`/about`} className=" text-sm hover:link "> 关于应用</Link>
-                        <Link href={`https://github.com/coolha-top/coolha`} className=" text-sm hover:link " target='_blank'> v0.1.2_beta</Link>
+                        <Link href={`https://github.com/coolha-com/coolha`} className=" text-sm hover:link " target='_blank'> v0.1.2_beta</Link>
                         <br />
                         <Link href={`/fqa`} className=" text-sm hover:link "> 常见问题</Link>
                         <Link href={`/privacy`} className=" text-sm hover:link "> 隐私政策</Link>

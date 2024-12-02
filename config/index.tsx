@@ -20,8 +20,8 @@ if (!projectId) {
 export const metadata = {
     name: 'Coolha',
     description: 'Coolha Web Dapp',
-    url: 'https://coolha.top',
-    icons: ['https://coolha.top/favicon.ico']
+    url: 'https://coolha.com',
+    icons: ['https://coolha.com/favicon.ico']
 }
 
 

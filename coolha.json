@@ -1,21 +1,29 @@
 {
-    "appId": "coolha",
-    "name": "coolha",
-    "description": "Everyday app for web3 social. A community-focused social app for people to connect, interact, and transact in their daily lives on web3 built with Lens Protocol.",
-    "platform": "web",
-    "icon": {
-      "url": "https://coolha.top/favicon.ico",
-      "background": "#C0E218"
+  "appId": "coolha",
+  "name": "coolha",
+  "description": "Everyday app for web3 social. A community-focused social app for people to connect, interact, and transact in their daily lives on web3 built with Lens Protocol.",
+  "platform": "web",
+  "icon": {
+    "url": "https://coolha.com/favicon.ico",
+    "background": "#C0E218"
+  },
+  "routes": {
+    "home": "https://coolha.com/",
+    "profile": {
+      "url": "https://coolha.com/u/:handle"
     },
-    "routes": {
-      "home": "https://coolha.top/",
-      "profile": {
-        "url": "https://coolha.top/u/:handle"
-      },
-      "publication": {
-        "url": "https://coolha.top/posts/:id",
-        "supports": ["ARTICLE", "AUDIO", "EMBED", "IMAGE", "LINK", "TEXT_ONLY", "VIDEO"]
-      }
-    },
-    "twitter": "coolhatop"
-  }
+    "publication": {
+      "url": "https://coolha.com/posts/:id",
+      "supports": [
+        "ARTICLE",
+        "AUDIO",
+        "EMBED",
+        "IMAGE",
+        "LINK",
+        "TEXT_ONLY",
+        "VIDEO"
+      ]
+    }
+  },
+  "twitter": "coolhatop"
+}
