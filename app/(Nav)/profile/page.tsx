@@ -33,7 +33,7 @@ export default function page() {
 
    // 如果已登录并获取到 Profile 数据
    return (
-      <div className="h-full">
+      <div className="h-dvh">
          <div className='rounded-[--rounded-box] px-2 md:px-4'>
             <div className='rounded-[--rounded-box] bg-base-100 mt-4 py-2 px-1'>
                {Profile && <UsersMetadata profile={Profile} />}
@@ -89,7 +89,7 @@ function UsersMetadata({ profile }) {
                {profile?.metadata?.displayName}
                <RiVerifiedBadgeFill className=" size-4 ml-1 text-primary rounded-full" />
             </b>
-            <p className="text-[#878787] text-sm"> {profile?.handle?.namespace}/{profile?.handle?.localName} {profile?.id}  </p>
+            <p className="text-[#878787] text-sm"> @{profile?.handle?.localName}</p>
 
 
 

@@ -35,7 +35,7 @@ export function MenuButton() {
                         <Link href={`mailto:cs@coolha.com`} className=" text-sm hover:link "> 赞助合作</Link>
                         <br />
                         <Link href={`/about`} className=" text-sm hover:link "> 关于应用</Link>
-                        <Link href={`https://github.com/coolha-com/coolha`} className=" text-sm hover:link " target='_blank'> v0.1.2_beta</Link>
+                        <Link href={`https://github.com/coolha-com/coolha/releases/tag/alphav`} className=" text-sm hover:link " target='_blank'> v0.1.2-alphav</Link>
                         <br />
                         <Link href={`/fqa`} className=" text-sm hover:link "> 常见问题</Link>
                         <Link href={`/privacy`} className=" text-sm hover:link "> 隐私政策</Link>

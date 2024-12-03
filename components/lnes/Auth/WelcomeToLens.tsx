@@ -24,7 +24,7 @@ export function WelcomeToLens() {
             <div className=" gap-14 w-dvw">
                 <div className="mt-2 mb-16 flex flex-col md:flex-row  justify-between items-center gap-3">
                     <div className="flex flex-row justify-center items-center m-1 w-full">
-                        <button onClick={() => open()} className=" btn btn-primary flex flex-row">
+                        <button onClick={() => open()} className=" bg-primary rounded-full py-2 px-3 text-black hover:bg-primary/90">
                             {address && <div className=" hidden md:block ">  </div>}
                             {isConnecting ?
                                 (<div><span className="loading loading-spinner"></span></div>)
@@ -68,7 +68,7 @@ export function WelcomeToLens() {
                                         />
                                     )}
                                 </div>
-                                {data.profile.handle?.fullHandle ?? data.profile.id}
+                                @{data.profile.handle?.localName ?? data.profile.id}
                             </button>
                             <LogoutButton />
                         </div>

@@ -38,7 +38,7 @@ export default function page() {
             <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-[100vw]">
                 {loading && <LoadingSpinner />}
                 {data?.map((pub, idx) => (
-                    <div className=" bg-base-100  w-dvw max-w-3xl lg:p-4 py-2 mt-2" key={`${pub.id}-${idx}`}>
+                    <div className=" bg-base-100  w-dvw max-w-3xl p-4 py-2 mt-2" key={`${pub.id}-${idx}`}>
 
 
                         {/* 帖子主内容 */}

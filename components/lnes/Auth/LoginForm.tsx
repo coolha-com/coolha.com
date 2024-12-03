@@ -80,7 +80,7 @@ export default function LoginForm({ wallet, onSuccess }: { wallet: string; onSuc
                 )}
               </div>
               <span className="  text-sm font-semibold">
-                {profile.handle?.fullHandle ?? profile.id}
+                {profile.handle?.localName ?  `@${profile.handle?.localName}` : profile.id}
               </span>
             </label>
           ))}

@@ -99,7 +99,7 @@ export default function Auth() {
             {!session || session.type !== SessionType.WithProfile && <>
                 {address ?
                     <button
-                        className="bg-primary rounded-full py-2 px-3 text-black   mx-1"
+                        className="bg-primary rounded-full py-2 px-3 text-black hover:bg-primary/90  mx-1"
                         onClick={toggleModal}>
                         {ensName ? ensName : truncateEthAddress(address)}
                     </button>

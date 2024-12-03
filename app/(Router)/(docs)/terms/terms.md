@@ -67,7 +67,7 @@ Lens Protocol 部署在基于区块链的网络上，我们不对此类网络的
 
 指定版权代理：coolha.com
 
-电子邮件：[fqa@coolha.com](https://coolha-com.larksuite.com/share/base/form/shrusEjaSvOUuRv5Wbefsw3wcCb)
+电子邮件：[fqa@coolha.com](https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e)
 
 为了有效，您的通知必须包括以下内容：
 
@@ -131,4 +131,4 @@ Lens Protocol 部署在基于区块链的网络上，我们不对此类网络的
 
 ## 14. 联系信息
 
-有关本条款的问题，请通过 [fqa@coolha.com](https://coolha-com.larksuite.com/share/base/form/shrusEjaSvOUuRv5Wbefsw3wcCb)发送给我们。
+有关本条款的问题，请通过 [fqa@coolha.com](https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e)发送给我们。

@@ -6,7 +6,7 @@ export default function PosImage({ src }) {
  
 
     return (
-        <div className="pt-2 ">
+        <div className="pt-2 " >
                 {src && (
                   <img
                     alt="user posts img"

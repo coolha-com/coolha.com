@@ -18,15 +18,14 @@ import InteractCard from '@/components/lnes/PostsCard/InteractCard'
 import Avatar from '@/gui/flowbite/Avatar'
 import Avatarimg from '@/components/lnes/PostsCard/Avatarimg'
 import AvatarName from '@/components/lnes/PostsCard/AvatarName'
-import { PosAtext, UsersPosAtext } from '@/components/lnes/PostsCard/PosAtext'
+import { UsersPosAtext } from '@/components/lnes/PostsCard/PosAtext'
 import { useInfiniteScroll } from '@/components/lnes/DataUsers/hook/useInfiniteScroll'
 import Menu from '@/components/lnes/PostsCard/Menu/Menu'
 import PosVideo from '@/components/lnes/PostsCard/PosVideo'
-import { useOrderBy } from '../_contexts/OrderByContext'
-import { orderOptions } from '../_contexts/OrderBylist'
+import { useOrderBy } from '../../(Nav)/home/_contexts/OrderByContext'
+import { orderOptions } from '../../(Nav)/home/_contexts/OrderBylist'
 import PosImage from '@/components/lnes/PostsCard/PosImage'
 import Link from 'next/link'
-import Meide from '@/components/lnes/PostsCard/Meide'
 import LoadingSpinner from '@/gui/LoadingSpinner'
 
 export default function Page() {
@@ -39,7 +38,7 @@ export default function Page() {
     where: {
       publicationTypes: [ExplorePublicationType.Post],
       metadata: {
-        mainContentFocus: [PublicationMetadataMainFocusType.TextOnly, PublicationMetadataMainFocusType.Article, PublicationMetadataMainFocusType.Story]
+        mainContentFocus: [PublicationMetadataMainFocusType.Image]
       }
     }
   })) as any
@@ -61,7 +60,7 @@ export default function Page() {
 
         {musicPubs?.map(mpub => (
           <div
-            className="bg-base-100  w-dvw  md: p-4 py-2 mt-2 "
+            className="bg-base-100  w-dvw  lg:max-w-3xl p-4 py-2 mt-2 "
             key={mpub.id}
           /*  onClick={() => router.push(`https://share.lens.xyz/p/${mpub.id}`)} */
           >
@@ -88,31 +87,10 @@ export default function Page() {
 
               <UsersPosAtext content={mpub.metadata.content} />
 
+              <PosImage
+                src={mpub.metadata?.asset?.image?.optimized?.uri}
+              />
 
-              {/* 如果是引用类型的帖子，显示引用的内容 */}
-              {mpub.__typename === "Quote" && (
-                <div className="p-6 pl-0">
-                  <div className="p-4 py-2 border rounded-2xl ">
-
-                    <div className="flex" >
-                      <Avatarimg src={mpub.quoteOn.by} href={mpub.by.handle.localName} />
-                      <AvatarName
-                        localName={mpub.quoteOn.by.handle.localName}
-                        displayName={mpub.quoteOn.by.metadata?.displayName}
-                        namespace={mpub.quoteOn.by.handle.namespace}
-                        id={mpub.quoteOn}
-                        createdAt={mpub.quoteOn.createdAt}
-                      />
-
-                    </div>
-
-                    <Link href={`/posts/${mpub.quoteOn.id}`} passHref>
-                      <PosAtext content={mpub.quoteOn.metadata.content} />
-                      <Meide pub={mpub.quoteOn.metadata.asset} />
-                    </Link>
-                  </div>
-                </div>
-              )}
             </div>
 
 

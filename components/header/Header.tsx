@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { RiCompass3Fill, RiCompass3Line, RiUserFill, RiUserLine, RiSearchLine, RiChat1Line, RiChat1Fill, RiHomeFill, RiHomeLine } from "react-icons/ri";
 import { MenuButton } from "./MenuButton";
@@ -147,7 +147,7 @@ function NavbarLink() {
                 <li key={link.href}>
                     <Link
                         href={link.href}
-                        className={`btn hover:bg-[var(--button-bg)]  ${pathname && pathname.startsWith(link.startsWith) ? " text-base-content " : ""}`}
+                        className={`rounded-full py-2 px-3 text-base-content hover:bg-[var(--button-bg)]  ${pathname && pathname.startsWith(link.startsWith) && "bg-[var(--button-bg)]  "}`}
                     >
                         {pathname.startsWith(link.startsWith) ? <link.iconActive className="size-8" /> : <link.iconInactive className="size-8" />}
                         <span className=" hidden md:flex text-lg">

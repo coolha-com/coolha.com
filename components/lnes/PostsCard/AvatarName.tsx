@@ -9,7 +9,7 @@ export default function AvatarName({ localName, displayName, namespace, id, crea
     const router = useRouter()
     return (
         <>
-            <div className="ml-3">
+            <div className="ml-3" onClick={(e) => { e.stopPropagation(); }}>
 
                 <Link href={`/u/${localName ? localName : id.by.id}`} className="flex flex-row  items-center text-xs md:text-base">
                     <b className=" flex items-center overflow-hidden text-ellipsis whitespace-nowrap hover:underline hover:caret-primary hover:text-info ">{displayName ? displayName : ''} </b>

@@ -5,7 +5,7 @@ import Avatarimg from "@/components/lnes/PostsCard/Avatarimg";
 import AvatarName from "@/components/lnes/PostsCard/AvatarName";
 import InteractCard from "@/components/lnes/PostsCard/InteractCard";
 import Meide from "@/components/lnes/PostsCard/Meide";
-import {MenuComment} from "@/components/lnes/PostsCard/Menu/Menu";
+import { MenuComment } from "@/components/lnes/PostsCard/Menu/Menu";
 import { UsersPosAtext } from "@/components/lnes/PostsCard/PosAtext";
 import { usePublications, publicationId, LimitType, HiddenCommentsType } from "@lens-protocol/react-web";
 import Link from "next/link";
@@ -46,31 +46,29 @@ export default function page({ params }) {
       <div className="my-2 border-t bg-base-100" >
         {commentsData && commentsData.length > 0 ? (commentsData.map((comment) => (
 
-          <div key={comment.id} className="border-b p-4 py-2 ">
-            <div className="flex">
-              {comment.by && comment.by.handle && comment.by.metadata && (
+          <div key={comment.id} className="w-dvw md:max-w-3xl border-b p-4 py-2 ">
+            {comment.by && comment.by.handle && comment.by.metadata && (
+              <div className="flex">
                 <div className="flex">
-                  <div className="flex">
-                    <Avatarimg
-                      href={comment.by.handle.localName}
-                      src={comment.by}
-                    />
-                    <AvatarName
-                      localName={comment.by.handle.localName || 'unknown'}
-                      displayName={comment.by.metadata.displayName || 'unknown'}
-                      namespace={`lens`}
-                      id={comment}
-                      createdAt={comment.createdAt}
-                    />
-                  </div>
-                  <div className="flex-1 flex" >
-                    <Link href={`/posts/${comment.id}`} className="flex-1"></Link>
-                  </div>
-                  <MenuComment comment={comment} />
-                 
+                  <Avatarimg
+                    href={comment.by.handle.localName}
+                    src={comment.by}
+                  />
+                  <AvatarName
+                    localName={comment.by.handle.localName || 'unknown'}
+                    displayName={comment.by.metadata.displayName || 'unknown'}
+                    namespace={`lens`}
+                    id={comment}
+                    createdAt={comment.createdAt}
+                  />
                 </div>
-              )}
-            </div>
+                <div className="flex-1 flex" >
+                  <Link href={`/posts/${comment.id}`} className="flex-1"></Link>
+                </div>
+                <MenuComment comment={comment} />
+
+              </div>
+            )}
             <div className='mt-2'>
               {comment.__typename === "Mirror" ? (<></>) : (<>
                 {comment.metadata && (
@@ -88,14 +86,14 @@ export default function page({ params }) {
             {comment.__typename === "Mirror" ? (<></>) : (<>
               {comment.stats?.comments > 0 &&
                 <button onClick={() => toggleComment(comment.id)} className="text-info">
-                  {expandedComments[comment.id] ? '隐藏子评论' : `展开子评论${comment.stats?.comments}`}
+                  {expandedComments[comment.id] ? `隐藏子评论▲` : `展开${comment.stats?.comments}条子评论 ▼`}
                 </button>
               }
             </>)}
 
             {/* 在这里添加子评论帖的评论内容 */}
             {expandedComments[comment.id] && (
-              <div className="mt-4 pl-4">
+              <div className="mt-4 ">
                 <ChildComments commentId={comment.id} />
               </div>
             )}
@@ -133,50 +131,46 @@ function ChildComments({ commentId }) {
   if (childLoading) return <div>加载评论中...</div>;
 
   return (
-    <div>
+    <div className="w-full">
       {childCommentsData && childCommentsData.length > 0 ? (
         childCommentsData.map((childComment) => (
-          <div className="pb-2">
-            <div key={childComment.id} className="p-4 py-2 border rounded-2xl ">
+          <div key={childComment.id} className="w-full md:max-w-2xl  border rounded-2xl p-2">
 
-              <div className="flex">
-                {childComment.by && childComment.by.handle && childComment.by.metadata && (
-                  <div className=" flex">
-                    <div className=" flex">
-                      <Avatarimg
-                        href={childComment.by.handle.localName}
-                        src={childComment.by}
-                      />
-                      <AvatarName
-                        localName={childComment.by.handle.localName || 'unknown'}
-                        displayName={childComment.by.metadata.displayName || 'unknown'}
-                        namespace={`lens`}
-                        id={childComment}
-                        createdAt={childComment.createdAt}
-                      />
-                    </div>
-                    <div className="flex-1" ></div>
-                    <MenuComment comment={childComment} />
-                  </div>
-                )}
+            {childComment.by && childComment.by.handle && childComment.by.metadata && (
+              <div className=" flex">
+                <div className=" flex">
+                  <Avatarimg
+                    href={childComment.by.handle.localName}
+                    src={childComment.by}
+                  />
+                  <AvatarName
+                    localName={childComment.by.handle.localName || 'unknown'}
+                    displayName={childComment.by.metadata.displayName || 'unknown'}
+                    namespace={`lens`}
+                    id={childComment}
+                    createdAt={childComment.createdAt}
+                  />
+                </div>
+                <div className="flex-1 flex" ><Link href={`/posts/${childComment.id}`} className="flex-1"></Link></div>
+                <MenuComment comment={childComment} />
               </div>
+            )}
 
-              <div className='mt-2'>
-                <Link href={`/posts/${childComment.id}`}>
-                  {childComment.__typename === "Mirror" ? (<></>) : (<>
-                    {childComment.metadata && (
-                      <>
-                        <UsersPosAtext content={childComment.metadata.content} />
-                        <Meide pub={childComment.metadata.asset} />
-                      </>
-                    )}
-                  </>)}
-                </Link>
-              </div>
-
-              <InteractCard dataname={childComment} />
-
+            <div className='mt-2'>
+              <Link href={`/posts/${childComment.id}`}>
+                {childComment.__typename === "Mirror" ? (<></>) : (<>
+                  {childComment.metadata && (
+                    <>
+                      <UsersPosAtext content={childComment.metadata.content} />
+                      <Meide pub={childComment.metadata.asset} />
+                    </>
+                  )}
+                </>)}
+              </Link>
             </div>
+
+            <InteractCard dataname={childComment} />
+
           </div>
         ))
       ) : (

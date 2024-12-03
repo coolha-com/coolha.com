@@ -34,7 +34,7 @@ export default function ButtonList() {
             {pathname === '/home/foryou' || pathname === '/home/following' ? '' :
                 <div className="  flex md:flex-row  z-20 h-10 items-center bg-base-100  overflow-y-auto ">
                     {orderOptions.map((option) => (
-                        <div className='m-1  ' key={option.key}>
+                        <div className=' ' key={option.key}>
                             <button
                                 className={` whitespace-nowrap text-base-content/70 flex items-center px-1 md:py-1 md:px-3 md:rounded-full md:hover:bg-[var(--button-bg)] hover:border-info ${pathname === '/home/foryou' || pathname === '/home/following' ? '' : orderBy === option.key && 'text-info '}`}
                                 onClick={() => handleOrderByChange(option.key)}

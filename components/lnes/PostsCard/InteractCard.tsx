@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { RiChat3Line, RiCopperCoinLine, RiHeart3Fill, RiHeart3Line, RiLoopLeftFill, RiShoppingBagLine } from "react-icons/ri";
 
-const ButtonCSS = 'flex gap-0.5 justify-start items-center  rounded-full size-7 py-3 px-1 md:py-5 md:px-2 w-2/3 md:w-1/2 hover:bg-[var(--button-bg)]'
+const ButtonCSS = 'btn btn-xs xs:btn-sm btn-ghost hover:bg-[var(--button-bg)]'
 
 export default function interactCard({ dataname }) {
   const router = useRouter();
@@ -13,26 +13,26 @@ export default function interactCard({ dataname }) {
     <div className='flex justify-items-start   text-base-content/70 mt-2 '>
 
       {/* 评论 */}
-      <div className="w-1/4 md:w-1/5" >
-        <div className={`${ButtonCSS} btn-disabled text-zinc-400`} onClick={() => router.push(`/posts/${dataname.id}`)} >
+      <div className="w-1/4 md:w-1/5 lg:w-1/6 " onClick={(e) => { e.stopPropagation(); }}>
+        <div className={`${ButtonCSS} btn-disabled  text-zinc-400`} onClick={() => router.push(`/posts/${dataname.id}`)} >
           <RiChat3Line className="size-5 md:size-6 " />
           <p className="text-center text-sm">{formatNumberWithUnit(dataname.stats?.comments)}</p>
         </div>
       </div>
 
       {/* 转发 + 转贴 */}
-      <div className="w-1/4 md:w-1/5" >
+      <div className="w-1/4 md:w-1/5 lg:w-1/6" >
         <MirrorsToggle dataname={dataname} />
       </div>
 
 
       {/* 点赞 */}
-      <div className="w-1/4 md:w-1/5" >
+      <div className="w-1/4 md:w-1/5 lg:w-1/6" >
         <UpvoteToggle dataname={dataname} />
       </div>
 
       {/* 出版 收集 */}
-      <div className="w-1/4 md:w-1/5" >
+      <div className="w-1/4 md:w-1/5 lg:w-1/6" >
         <CollectsToggle dataname={dataname} />
       </div>
 
@@ -82,7 +82,7 @@ function MirrorsToggle({ dataname }) {
   }
 
   return (
-    <>
+    <div onClick={(e) => { e.stopPropagation(); }}>
 
       {isMirrored ?
           <button onClick={hideMirrorToggle} disabled={hidingMirror} className={`${ButtonCSS} hover:text-success text-success`}>
@@ -107,7 +107,7 @@ function MirrorsToggle({ dataname }) {
           <span className="block sm:inline">{isMirrored ? '转发成功！' : '转发已取消！'}</span>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
@@ -128,7 +128,7 @@ function UpvoteToggle({ dataname }) {
 
 
   return (
-    <>
+    <div onClick={(e) => { e.stopPropagation(); }}>
         <button onClick={Upvotetoggle} disabled={loading} className={` ${ButtonCSS} hover:bg-[var(--button-bg)]  hover:text-error ${dataname.operations.hasUpvoted ? 'text-red-500' : ''}`}  >
 
           {dataname.operations.hasUpvoted ? (
@@ -140,7 +140,7 @@ function UpvoteToggle({ dataname }) {
           <p className="text-center text-sm">{formatNumberWithUnit(dataname.stats.upvotes)}</p>
 
         </button>
-    </>
+    </div>
   )
 }
 
@@ -152,7 +152,7 @@ function CollectsToggle({ dataname }) {
 
   // 根据 canCollect 的状态，决定按钮的样式和功能
   return (
-    <>
+    <div onClick={(e) => { e.stopPropagation(); }}>
 
       <button className={`${ButtonCSS} btn-disabled text-zinc-400`}/*  onClick={() => handleCollect(dataname)} */>
         <RiShoppingBagLine className="size-5 md:size-6" />
@@ -182,6 +182,6 @@ function CollectsToggle({ dataname }) {
           <p>✓</p>
         </button>
       )} */}
-    </>
+    </div>
   );
 }

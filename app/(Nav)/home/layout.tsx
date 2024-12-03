@@ -7,7 +7,7 @@ import ButtonList from './_contexts/ButtonList';
 import CreatePos from '@/components/lnes/PosCreate/CreatePos';
 import { useState } from 'react';
 import Image from "next/image";
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { SessionType, useSession } from '@lens-protocol/react-web';
 import Auth from '@/components/header/AuthButton';
 import AuthButton from '@/components/header/AuthButton';
@@ -75,7 +75,7 @@ export default function HomeLayout({ children }) {
       </div>
 
       {/* 类型 */}
-      <div  className="flex flex-row-reverse w-full max-w-3xl z-40 h-10 md:h-12 mt-12 md:mt-0  items-center  ">
+      <div className="flex flex-row-reverse w-full max-w-3xl z-40 h-10 md:h-12 mt-12 md:mt-0  items-center  ">
         {linknav.slice(0, 3).map((item) => (
           <div className='mx-auto  w-1/3  z-20 flex flex-row-reverse ' key={item.href}>
 
@@ -126,7 +126,7 @@ export default function HomeLayout({ children }) {
 
       <OrderByProvider>
         <ButtonList />
-        <div className='w-full'>
+        <div className=''>
           {children}
         </div>
       </OrderByProvider>

@@ -41,7 +41,7 @@
 ## 6. 您的权利和选择
 
 - **Cookie**：我们只使用绝对必要的 cookie。这些 Cookie 对于您浏览网站和使用其功能（包括访问网站的安全区域）至关重要。
-- **请勿跟踪**：您的浏览器设置可能允许您自动将“请勿跟踪”信号传输到您访问的在线服务。但请注意，对于网站和应用程序运营商应该如何应对这些信号，行业还没有达成共识。因此，除非法律被解释为要求我们这样做，否则我们不会监控“请勿跟踪”信号或对其采取行动。有关“请勿跟踪”的更多信息，请访问 [fqa@coolha.com↗](https://coolha-com.larksuite.com/share/base/form/shrusEjaSvOUuRv5Wbefsw3wcCb)。
+- **请勿跟踪**：您的浏览器设置可能允许您自动将“请勿跟踪”信号传输到您访问的在线服务。但请注意，对于网站和应用程序运营商应该如何应对这些信号，行业还没有达成共识。因此，除非法律被解释为要求我们这样做，否则我们不会监控“请勿跟踪”信号或对其采取行动。有关“请勿跟踪”的更多信息，请访问 [fqa@coolha.com↗](https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e)。
 
 ## 7. 数据安全
 
@@ -57,4 +57,4 @@
 
 ## 10. 联系我们
 
-如果您对本隐私政策、我们的数据实践或我们对适用法律的遵守情况有任何疑问或意见，请通过 [fqa@coolha.com↗](https://coolha-com.larksuite.com/share/base/form/shrusEjaSvOUuRv5Wbefsw3wcCb) 与我们联系。
+如果您对本隐私政策、我们的数据实践或我们对适用法律的遵守情况有任何疑问或意见，请通过 [fqa@coolha.com↗](https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e) 与我们联系。
