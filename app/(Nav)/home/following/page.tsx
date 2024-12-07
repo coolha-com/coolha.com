@@ -2,7 +2,7 @@
 // @ts-nocheck
 
 'use client'
-import { useInfiniteScroll } from "@/components/lnes/DataUsers/hook/useInfiniteScroll";
+import { useInfiniteScroll } from "@/components/lnes/Data/u/hook/useInfiniteScroll";
 import Avatarimg from "@/components/lnes/PostsCard/Avatarimg";
 import AvatarName from "@/components/lnes/PostsCard/AvatarName";
 import InteractCard from "@/components/lnes/PostsCard/InteractCard";
@@ -21,8 +21,7 @@ export default function page() {
     if (sesssion && sesssion.type === SessionType.Anonymous) {
         return (
             <div className="">
-                <p>Profile</p>
-                <div>暂未登录 Lens 账户</div>
+                <div>暂未登录账户</div>
             </div>
         );
     }

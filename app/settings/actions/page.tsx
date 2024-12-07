@@ -1,5 +1,5 @@
 'use client'
-import { useInfiniteScroll } from '@/components/lnes/DataUsers/hook/useInfiniteScroll';
+import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import { formatDate } from '@/utils/formatDate';
 import { truncateEthAddress } from '@/utils/truncateEthAddress';
 import { useProfileActionHistory, LimitType } from '@lens-protocol/react-web';

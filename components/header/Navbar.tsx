@@ -73,7 +73,7 @@ function NavLink({ href, activeIcon, icon, activeHrefs, text }) {
         <Link
             className={`flex-1 flex flex-col items-center justify-center h-full  transition-shadow text-base-content/60  hover:bg-[var(--button-bg)] rounded-full  ${isActive ? '' : ''}`}
             href={href}
-            prefetch={true} passHref
+            prefetch={true} passHref 
         >
 
             <div className={`flex flex-col items-center justify-center  ${isActive && 'text-base-content'} `}>

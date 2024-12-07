@@ -2,5 +2,12 @@
     "i18next.i18nPaths": "e:/AAAAAAAAA-VSCode/qinjiangban/VimCord/locales,e:/AAAAAAAAA-VSCode/qinjiangban/VimCord/app/(Router)/locales",
     "i18n-ally.localesPaths": [
         "app/(Router)/(Menu)/settings/locales"
+    ],
+    "draw.folder.structure.exclude":[
+        "**/node_modules",
+        "**/*.git",
+        "**/dist",
+        "**/*.next",
+        "**/out"
     ]
 }

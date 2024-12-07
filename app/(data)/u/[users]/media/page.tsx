@@ -1,9 +1,9 @@
 'use client'
 
-import PUBmedia from "@/components/lnes/DataUsers/list/PUBmedia"
+import PUBmedia from "@/components/lnes/Data/u/list/PUBmedia"
 import { useProfile } from "@lens-protocol/react-web";
 
-export default function page({params: { users },}) {
+export default function page({ params: { users }, }) {
   let { data: profile, loading } = useProfile({
     forHandle: `lens/${users}`
   });

@@ -18,12 +18,11 @@ export default function page() {
    // 如果未登录
    if (data?.type !== SessionType.WithProfile) {
       return (
-         <div>
+         <div className='mx-auto max-w-3xl'>
             <div className='rounded-[--rounded-box] px-2 md:px-4'>
                <div className='rounded-[--rounded-box] bg-base-100 mt-4 py-2 px-1'>
                   <div className="h-16 md:h-24 ml-2 lg:ml-4">
-                     <p>Profile</p>
-                     <div>暂未登录 Lens 账户</div>
+                     <div>暂未登录账户</div>
                   </div>
                </div>
             </div>
@@ -33,7 +32,7 @@ export default function page() {
 
    // 如果已登录并获取到 Profile 数据
    return (
-      <div className="h-dvh">
+      <div className="mx-auto max-w-3xl">
          <div className='rounded-[--rounded-box] px-2 md:px-4'>
             <div className='rounded-[--rounded-box] bg-base-100 mt-4 py-2 px-1'>
                {Profile && <UsersMetadata profile={Profile} />}
@@ -137,7 +136,7 @@ function Card() {
             {/* <h1 className="p-2 md:p-4 text-xl font-bold">资产</h1> */}
             <div className='flex-row grid grid-cols-4 justify-items-stretch   h-auto w-auto  p-3 '>
                {assetData.map((item, index) => (
-                  <Link href={item.href} key={index} className=' grid justify-items-center hover:bg-[--button-bg] rounded-xl sm:rounded-full p-2 my-2 md:p-3'>
+                  <Link href={item.href} key={index} className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
                      <item.icon size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>{item.label}</p>
                   </Link>
                ))}
@@ -149,7 +148,7 @@ function Card() {
             {/* <h1 className="p-2 md:p-4 text-xl font-bold">用户</h1> */}
             <div className='flex-row  grid grid-cols-4 justify-items-stretch h-auto w-auto  p-3 '>
                {userData.map((item, index) => (
-                  <Link href={item.href ? item.href : ''} key={index} className='  grid justify-items-center hover:bg-[--button-bg]  rounded-xl sm:rounded-full p-2 my-2 md:p-3 '>
+                  <Link href={item.href ? item.href : ''} key={index} className='  grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3 '>
                      <item.icon size={24} /> <p className='text-[0.5rem] xs:text-xs md:text-base'>{item.label}</p>
                   </Link>
                ))}

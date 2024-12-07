@@ -1,9 +1,9 @@
 'use client'
 
-import PUBcollects from "@/components/lnes/DataUsers/list/PUBcollects"
+import PUBcollects from "@/components/lnes/Data/u/list/PUBcollects"
 import { useProfile } from "@lens-protocol/react-web";
 
-export default function page({params: { users },}) {
+export default function page({ params: { users }, }) {
   let { data: profile } = useProfile({
     forHandle: `lens/${users}`
   });

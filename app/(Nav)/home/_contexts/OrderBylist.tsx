@@ -21,12 +21,3 @@ export const orderOptions = [
     { title: '趋势', key: ExplorePublicationsOrderByType.TopCollectedOpenAction },
     { title: '分享', key: ExplorePublicationsOrderByType.TopQuoted },
 ];
-export const tabs = [
-    { title: '视频', key: PublicationMetadataMainFocusType.Video },
-    { title: '视频', key: PublicationMetadataMainFocusType.Video },
-    { title: '视频', key: PublicationMetadataMainFocusType.Video },
-    { title: '视频', key: PublicationMetadataMainFocusType.Video },
-    { title: '视频', key: PublicationMetadataMainFocusType.Video },
-    { title: '视频', key: PublicationMetadataMainFocusType.Video },
-    { title: '视频', key: PublicationMetadataMainFocusType.Video },
-];

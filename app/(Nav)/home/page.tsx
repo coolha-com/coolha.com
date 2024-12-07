@@ -12,7 +12,7 @@ import AvatarName from '@/components/lnes/PostsCard/AvatarName';
 import { PosAtext } from '@/components/lnes/PostsCard/PosAtext';
 import InteractCard from '@/components/lnes/PostsCard/InteractCard';
 
-import { useInfiniteScroll } from '@/components/lnes/DataUsers/hook/useInfiniteScroll';
+import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import Meide from '@/components/lnes/PostsCard/Meide';
 import Menu from '@/components/lnes/PostsCard/Menu/Menu';
 import { useOrderBy } from './_contexts/OrderByContext';
@@ -59,7 +59,7 @@ export default function Page() {
 
 
       <div className="flex flex-wrap flex-col justify-normal lg:justify-center w-full">
-        {loadingPubs && <LoadingSpinner /> }
+        {loadingPubs && <LoadingSpinner />}
 
         {publications?.map((pub: any) => (
           <div className=" bg-base-100  w-dvw md:max-w-3xl p-4 py-2 mt-2" key={pub.id}>

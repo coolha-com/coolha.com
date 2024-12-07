@@ -1,15 +1,15 @@
 'use client'
-import BFollow from '@/components/lnes/DataUsers/hook/BFollow';
-import { useInfiniteScroll } from '@/components/lnes/DataUsers/hook/useInfiniteScroll';
+import BFollow from '@/components/lnes/Data/u/hook/BFollow';
+import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import Avatarimg from '@/components/lnes/PostsCard/Avatarimg';
 import AvatarName from '@/components/lnes/PostsCard/AvatarName';
 import Avatar from '@/gui/flowbite/Avatar';
-import { useSearchProfiles,LimitType } from '@lens-protocol/react-web';
+import { useSearchProfiles, LimitType } from '@lens-protocol/react-web';
 import { useRouter } from 'next/navigation';
 
 export default function SearchProfiles({ params: { query } }) {
 
-  const { data, error, loading, hasMore, observeRef } = useInfiniteScroll(useSearchProfiles({ query: query ,limit: LimitType.Ten,}));
+  const { data, error, loading, hasMore, observeRef } = useInfiniteScroll(useSearchProfiles({ query: query, limit: LimitType.Ten, }));
   const router = useRouter()
 
   if (loading) return <p>Loading...</p>;

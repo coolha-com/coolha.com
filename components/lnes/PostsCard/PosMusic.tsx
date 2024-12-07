@@ -3,7 +3,7 @@
 export default function PosMusic({type,src}) {
     return (
         <div className="pt-2 " >
-            <audio controls className={`max-w-[200px] md:max-w-[400px] `}>
+            <audio controls className={`w-full  `}>
                 <source
                     type={type}
                     src={src}

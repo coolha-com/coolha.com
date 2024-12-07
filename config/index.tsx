@@ -46,7 +46,7 @@ export default function ContextProvider({ children, cookies }: { children: React
             emailShowWallets: true,
         },
         allWallets: 'SHOW',
-        themeMode: theme === 'light' ? 'light' : 'dark',
+        themeMode: theme === 'dark' ? 'dark' : 'light',
         themeVariables: {
             '--w3m-accent': '#accf00',
         },
@@ -58,7 +58,7 @@ export default function ContextProvider({ children, cookies }: { children: React
     });
 
     return (
-        <ThemeProvider >
+        < >
             <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={initialState}>
                 <QueryClientProvider client={queryClient}>
                     <LensProvider config={lensConfig}>
@@ -66,7 +66,7 @@ export default function ContextProvider({ children, cookies }: { children: React
                     </LensProvider>
                 </QueryClientProvider>
             </WagmiProvider>
-        </ThemeProvider>
+        </>
     )
 }
 

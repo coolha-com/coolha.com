@@ -1,46 +1,52 @@
 'use client'
-
 import { truncateEthAddress } from "@/utils/truncateEthAddress";
 import { useSession, SessionType, useLogout } from "@lens-protocol/react-web";
-import { useTheme } from "next-themes";
-import { useState } from "react";
-import { RiAccountCircleFill, RiArrowLeftRightFill, RiAtLine, RiEmotionHappyLine, RiGlobalLine, RiLogoutCircleRLine, RiMoonClearLine, RiServiceLine, RiSettingsLine, RiSunLine, RiWallet3Line } from "react-icons/ri";
+import { RiAccountCircleFill, RiAtLine, RiGlobalLine, RiLogoutCircleRLine, RiWallet3Line } from "react-icons/ri";
 import { useAccount, useEnsName } from "wagmi";
-import { WelcomeToLens } from "../lnes/Auth/WelcomeToLens";
-import Cover04Text from '@/public/lens/Cover04-Text.png'
-import web3背景 from '@/public/coolha.com/web3背景.png'
 
 import { config } from "@/config/Wagmi";
-import Image from "next/image";
 import Link from "next/link";
 import { useAppKit, useAppKitNetwork } from "@reown/appkit/react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 export default function Auth() {
-    const { theme, setTheme } = useTheme();
-    const { address } = useAccount({ config });
+    const router = useRouter();
+    const { address, isConnected } = useAccount({ config });
     const { data: ensName } = useEnsName({ address })
     const { data: session, loading } = useSession();
     const { execute } = useLogout();
     const { caipNetwork, caipNetworkId, chainId, switchNetwork } = useAppKitNetwork()
     const { open, close } = useAppKit()
 
-
-    // 添加一个状态来控制模态框的显示和隐藏
-    const [showModal, setShowModal] = useState(false);
-
-    const toggleModal = () => {
-        setShowModal(!showModal);
-    };
-    const handleOutsideClick = (event) => {
-        if (event.target.classList.contains("bg-black") || event.target.classList.contains("bg-opacity-50")) {
-            setShowModal(false);
+    // 跳转状态控制
+    const [hasRedirected, setHasRedirected] = useState(false);
+    // 监听钱包连接状态变化
+    useEffect(() => {
+        if (isConnected && session?.type === SessionType.JustWallet && !hasRedirected) {
+            setHasRedirected(true); // 标记为已跳转
+            router.push("/login"); // 跳转到 /login 页面
         }
-    };
+    }, [isConnected, session, router, hasRedirected]);
     return (
         <>
             {loading && <>
                 <button className="btn btn-primary btn-sm md:btn-md text-black  text-xl mx-1" >
                     <span className="loading loading-xs md:loading-sm loading-spinner"></span>
                 </button>
+            </>}
+
+
+            {/* 未登入显示 */}
+            {!session || session.type !== SessionType.WithProfile && <>
+                {address ?
+                    <Link href="/login" className="bg-primary rounded-full py-2 px-3 text-black hover:bg-primary/90  mx-1" >
+                        {ensName ? ensName : truncateEthAddress(address)}
+                    </Link>
+                    :
+                    <button onClick={() => open()} className="bg-primary rounded-full py-1.5 px-3 text-black text-base md:text-xl  mx-1">
+                        登录
+                    </button>
+                }
             </>}
 
             {/* 登入成功显示 */}
@@ -95,48 +101,8 @@ export default function Auth() {
             }
 
 
-            {/* 未登入显示 */}
-            {!session || session.type !== SessionType.WithProfile && <>
-                {address ?
-                    <button
-                        className="bg-primary rounded-full py-2 px-3 text-black hover:bg-primary/90  mx-1"
-                        onClick={toggleModal}>
-                        {ensName ? ensName : truncateEthAddress(address)}
-                    </button>
-                    :
-                    <button onClick={toggleModal} type="button" className="bg-primary rounded-full py-1.5 px-3 text-black text-base md:text-xl  mx-1">
-                        登录
-                    </button>
-                }
-            </>}
-            {showModal &&
-                <div className=" w-full h-full fixed inset-0 flex justify-center items-center  z-50   transition-opacity duration-300 ease-in-out   bg-black bg-opacity-90" onClick={handleOutsideClick}>
-                    <div className=" w-11/12 md:w-[450px] rounded-2xl max-w-md  scale-95  transition-transform duration-300 ease-in-out transform bg-base-100     z-auto border ">
-                        <div style={{ position: 'absolute', top: '10px', right: '10px' }}>
-                            <button className="btn btn-circle btn-sm btn-primary text-lg" onClick={() => setShowModal(false)}>✕</button>
-                        </div>
-                        <figure>
-                            <Image
-                                src={web3背景}
-                                alt="web3背景"
-                                sizes="100%"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }}
-                                className=" rounded-t-2xl"
-                            />
 
-                        </figure>
-                        <div className="card-body border-opacity-50">
-                            <WelcomeToLens />
-                        </div>
-                    </div>
-                    {/*                     <form onClick={toggleModal}>
-                        <button>close</button>
-                    </form> */}
-                </div>
-            }
+
 
 
 

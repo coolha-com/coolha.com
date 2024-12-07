@@ -3,9 +3,7 @@
 import { RiSettingsLine, RiServiceLine, RiSunLine, RiMoonClearLine, } from "react-icons/ri";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-
 import { CgMenuGridO } from "react-icons/cg";
-import AuthButton from "./AuthButton";
 
 export function MenuButton() {
     const { theme, setTheme } = useTheme();
@@ -19,15 +17,13 @@ export function MenuButton() {
         <>
             {/* 菜单按钮 */}
             <div className="dropdown dropdown-bottom dropdown-end mx-1">
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-sm md:btn-md  "><CgMenuGridO className="size-6 md:size-8" /></div>
+                <div tabIndex={0} role="button" className="p-2 rounded-full hover:bg-[var(--button-bg)] "><CgMenuGridO className="size-6 md:size-8" /></div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 border text-lg">
                     <li><Link href={`/settings`}><RiSettingsLine size={24} />应用设置</Link></li>
-                    <li><a onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-                        {theme === 'dark' ?
-                            (<RiSunLine size={24} />)
-                            : (<RiMoonClearLine size={24} />)}
-                        <span>切换主题</span></a>
-                    </li>
+                    <li><div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+                        {theme === 'dark' ? (<RiSunLine size={24} />) : (<RiMoonClearLine size={24} />)}
+                        <span>切换主题</span>
+                    </div></li>
                     {/*  <li><Link href={`/settings`}><RiTranslate size={24} />界面语言</Link></li> */}
                     <li className="my-1"></li>
                     {/*  <li><Link href={`mailto:cs@coolha.com`}> <RiServiceLine size={24} />赞助合作</Link></li> */}
@@ -50,7 +46,7 @@ export function MenuButton() {
             </div>
 
 
-            <AuthButton />
+
 
 
         </>

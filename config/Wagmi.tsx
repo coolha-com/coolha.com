@@ -1,6 +1,6 @@
 
 import { cookieStorage, createStorage, http } from 'wagmi'
-import { mainnet, polygon } from '@reown/appkit/networks'
+import { mainnet, polygon, zksync } from '@reown/appkit/networks'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
 
@@ -10,7 +10,7 @@ if (!projectId) {
   throw new Error('Project ID is not defined')
 }
 
-export const networks = [polygon, mainnet,]
+export const networks = [polygon, mainnet,zksync]
 
 export const wagmiAdapter = new WagmiAdapter({
   storage: createStorage({
@@ -22,6 +22,8 @@ export const wagmiAdapter = new WagmiAdapter({
   transports: {
     [polygon.id]: http(`https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`),
     [mainnet.id]: http(`https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`),
+    [zksync.id]: http(`https://zksync-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`),
+    
   },
 })
 

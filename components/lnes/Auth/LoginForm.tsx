@@ -1,9 +1,11 @@
 'use client'
 import { profileId, useLogin, useProfilesManaged } from "@lens-protocol/react-web";
+import { useRouter } from "next/navigation";
 
 
 
 export default function LoginForm({ wallet, onSuccess }: { wallet: string; onSuccess?: () => void }) {
+  const router = useRouter()
   const { execute: login, loading: isLoginPending } = useLogin();
   const { data: profiles, error, loading } = useProfilesManaged({ for: wallet, includeOwned: true });
 
@@ -22,7 +24,9 @@ export default function LoginForm({ wallet, onSuccess }: { wallet: string; onSuc
 
     if (result.isSuccess()) {
       console.info(`欢迎 ${String(result.value?.handle?.fullHandle ?? result.value?.id)}`);
-      window.location.reload();
+      if (window.location.pathname === "/login") {
+        router.back();
+      }
       return onSuccess?.();
     }
 
@@ -80,7 +84,7 @@ export default function LoginForm({ wallet, onSuccess }: { wallet: string; onSuc
                 )}
               </div>
               <span className="  text-sm font-semibold">
-                {profile.handle?.localName ?  `@${profile.handle?.localName}` : profile.id}
+                {profile.handle?.localName ? `@${profile.handle?.localName}` : profile.id}
               </span>
             </label>
           ))}

@@ -8,9 +8,8 @@ export default function layout({ children }) {
   return (
     <div id='hometop' className='bg-base-200'>
       <Header />
-      <div className="h-0 md:h-16" />
       <NavHeader />
-      <div className='mx-auto max-w-3xl min-h-[calc(100dvh-4rem)]  justify-center'>
+      <div className=' min-h-[100svh]  justify-center pt-0 md:pt-16 '>
         {children}
       </div>
       <Navbar />
