@@ -13,7 +13,7 @@
       "url": "https://coolha.com/u/:handle"
     },
     "publication": {
-      "url": "https://coolha.com/posts/:id",
+      "url": "https://coolha.com/p/:id",
       "supports": [
         "ARTICLE",
         "AUDIO",

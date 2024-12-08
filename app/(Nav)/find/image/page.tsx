@@ -70,7 +70,7 @@ export default function Page() {
                 {musicPubs
                   .slice(groupIndex * 3, groupIndex * 3 + 3)
                   .map((mpub) => (
-                    <Link href={`/posts//${mpub.id}`} key={mpub.id} className="" >
+                    <Link href={`/p//${mpub.id}`} key={mpub.id} className="" >
                       {/* 图片部分 */}
                       <img
                         className="h-auto max-w-full rounded-lg"

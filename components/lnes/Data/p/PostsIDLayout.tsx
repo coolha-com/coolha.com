@@ -88,7 +88,7 @@ export default function PostsIDLayout({ children, params }) {
 
                   </div>
 
-                  <Link href={`/posts/${pub.quoteOn.id}`} passHref>
+                  <Link href={`/p/${pub.quoteOn.id}`} passHref>
                     <UsersPosAtext content={pub.quoteOn?.metadata?.content} />
                     <Meide pub={pub.quoteOn.metadata.asset} />
                   </Link>

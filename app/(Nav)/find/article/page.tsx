@@ -72,7 +72,7 @@ export default function Page() {
           {musicPubs?.map(mpub => (
             <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }} key={mpub.id}>
 
-              <div className="card bg-base-100 w-full sm:w-80 md:h-[500px] shadow-xl shadow-base-content/10 cursor-pointer" onClick={() => router.push(`/posts//${mpub.id}`)} >
+              <div className="card bg-base-100 w-full sm:w-80 md:h-[500px] shadow-xl shadow-base-content/10 cursor-pointer" onClick={() => router.push(`/p//${mpub.id}`)} >
                 <figure > <div className=' w-full h-32 flex justify-center items-center bg-primary'><p className='text-black text-xl'>{mpub.by?.metadata?.displayName ? mpub.by?.metadata?.displayName : ''}</p>  </div> </figure>
                 <div className="card-body">
                   <div className="card-title">

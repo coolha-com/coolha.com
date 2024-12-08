@@ -63,7 +63,7 @@ export default function PostsID({ params }) {
                   />
                 </div>
                 <div className="flex-1 flex" >
-                  <Link href={`/posts/${comment.id}`} className="flex-1"></Link>
+                  <Link href={`/p/${comment.id}`} className="flex-1"></Link>
                 </div>
                 <MenuComment comment={comment} />
 
@@ -72,7 +72,7 @@ export default function PostsID({ params }) {
             <div className='mt-2'>
               {comment.__typename === "Mirror" ? (<></>) : (<>
                 {comment.metadata && (
-                  <Link href={`/posts/${comment.id}`}>
+                  <Link href={`/p/${comment.id}`}>
                     <UsersPosAtext content={comment.metadata.content} />
                     <Meide pub={comment.metadata.asset} />
                   </Link>
@@ -151,13 +151,13 @@ function ChildComments({ commentId }) {
                     createdAt={childComment.createdAt}
                   />
                 </div>
-                <div className="flex-1 flex" ><Link href={`/posts/${childComment.id}`} className="flex-1"></Link></div>
+                <div className="flex-1 flex" ><Link href={`/p/${childComment.id}`} className="flex-1"></Link></div>
                 <MenuComment comment={childComment} />
               </div>
             )}
 
             <div className='mt-2'>
-              <Link href={`/posts/${childComment.id}`}>
+              <Link href={`/p/${childComment.id}`}>
                 {childComment.__typename === "Mirror" ? (<></>) : (<>
                   {childComment.metadata && (
                     <>

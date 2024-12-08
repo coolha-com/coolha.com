@@ -1,4 +1,4 @@
-import { Login } from "@/app/(Auth)/login/login";
+import { Login } from "@/app/login/login";
 
 export default function Page() {
     return (

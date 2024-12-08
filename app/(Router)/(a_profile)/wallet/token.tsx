@@ -4,6 +4,8 @@ import { config } from '@/config/Wagmi'
 import { useAccount, useBalance } from 'wagmi'
 import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import { polygon } from 'wagmi/chains';
+import { truncateEthAddress } from '@/utils/truncateEthAddress';
+import LoadingSpinner from '@/gui/LoadingSpinner';
 
 export default function Token() {
   const { isConnected, address } = useAccount({ config });
@@ -54,7 +56,7 @@ function CurrencyRow({ currency, Address }: { currency: Erc20, Address: string }
   });
 
   // 格式化余额
-  const formattedBalance = isBalanceLoading ? '加载中...' : balanceData?.value ? balanceData?.value : '00';
+  const formattedBalance = isBalanceLoading ? <LoadingSpinner /> : balanceData?.value ? balanceData?.value : '00';
 
   return (
     <tr className="hover">
@@ -66,7 +68,7 @@ function CurrencyRow({ currency, Address }: { currency: Erc20, Address: string }
         </div>
       </td>
       <td>{currency.symbol}</td>
-      <td>{currency.address}</td>
+      <td>{truncateEthAddress(currency.address)}</td>
       <td>{formattedBalance}</td>
     </tr>
   );

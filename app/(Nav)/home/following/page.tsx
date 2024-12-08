@@ -62,10 +62,10 @@ export default function page() {
                                         createdAt={pub.root.createdAt}
                                     />
                                 </div>
-                                <div className="flex-1 flex" ><Link href={`/posts/${pub.id}`} className="flex-1"></Link></div>
+                                <div className="flex-1 flex" ><Link href={`/p/${pub.id}`} className="flex-1"></Link></div>
                                 <Menu pub={pub} />
                             </div>
-                            <Link href={`/posts/${pub.id}`} >
+                            <Link href={`/p/${pub.id}`} >
                                 <PosAtext content={pub.root.metadata?.content} />
                                 <Meide pub={pub.root.metadata?.asset} />
                             </Link>
@@ -91,11 +91,11 @@ export default function page() {
                                         id={pub.root}
                                         createdAt={pub.root.createdAt}
                                     />
-                                    <div className="flex-1 flex" ><Link href={`/posts/${pub.root.id}`} className="flex-1"></Link></div>
+                                    <div className="flex-1 flex" ><Link href={`/p/${pub.root.id}`} className="flex-1"></Link></div>
                                     <Menu pub={pub.root} />
                                 </div>
 
-                                <Link href={`/posts/${pub.root.id}`} passHref>
+                                <Link href={`/p/${pub.root.id}`} passHref>
                                     <UsersPosAtext content={pub.root.metadata.content} />
                                     <Meide pub={pub.root.metadata.asset} />
                                 </Link>
@@ -125,10 +125,10 @@ export default function page() {
                                                 createdAt={pub.root.createdAt}
                                             />
                                         </div>
-                                        <div className="flex-1 flex" ><Link href={`/posts/${pub.id}`} className="flex-1"></Link></div>
+                                        <div className="flex-1 flex" ><Link href={`/p/${pub.id}`} className="flex-1"></Link></div>
                                         <Menu pub={pub} />
                                     </div>
-                                    <Link href={`/posts/${pub.id}`} >
+                                    <Link href={`/p/${pub.id}`} >
                                         <PosAtext content={pub.root.metadata?.content} />
                                         <Meide pub={pub.root.metadata?.asset} />
                                     </Link>
@@ -143,10 +143,10 @@ export default function page() {
                                                 id={pub.root.quoteOn}
                                                 createdAt={pub.root.quoteOn.createdAt}
                                             />
-                                            <div className="flex-1 flex" ><Link href={`/posts/${pub.root.quoteOn.id}`} passHref className="flex-1"></Link></div>
+                                            <div className="flex-1 flex" ><Link href={`/p/${pub.root.quoteOn.id}`} passHref className="flex-1"></Link></div>
                                         </div>
 
-                                        <Link href={`/posts/${pub.root.quoteOn.id}`} passHref>
+                                        <Link href={`/p/${pub.root.quoteOn.id}`} passHref>
                                             <PosAtext content={pub?.root?.quoteOn?.metadata?.content} />
                                             <Meide pub={pub.root.quoteOn.metadata?.asset} />
                                         </Link>

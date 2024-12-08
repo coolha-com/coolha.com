@@ -48,7 +48,7 @@ export default function PUBcomments({ profile }) {
                     <Menu pub={comment.commentOn} />
                   </div>
 
-                  <Link href={`/posts/${comment.commentOn.id}`} passHref>
+                  <Link href={`/p/${comment.commentOn.id}`} passHref>
                     <UsersPosAtext content={comment.commentOn.metadata.content} />
                     <Meide pub={comment.commentOn.metadata.asset} />
                   </Link>
@@ -79,7 +79,7 @@ export default function PUBcomments({ profile }) {
 
                 {/* users posts data */}
                 <div className=''>
-                  <Link href={`/posts/${comment.id}`}>
+                  <Link href={`/p/${comment.id}`}>
                     {comment.metadata.content && <UsersPosAtext content={comment.metadata.content} />}
                     {comment.metadata.asset && <Meide pub={comment.metadata.asset} />}
                   </Link>

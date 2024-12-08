@@ -66,7 +66,7 @@ export default function Page() {
                     id={mpub}
                     createdAt={mpub.createdAt} />
                 </div>
-                <div className="flex-1 flex" ><Link href={`/posts/${mpub.id}`} className="flex-1"></Link></div>
+                <div className="flex-1 flex" ><Link href={`/p/${mpub.id}`} className="flex-1"></Link></div>
                 <Menu pub={mpub} />
               </div>
 

@@ -94,10 +94,10 @@ export default function page({ params: { query } }) {
                                             id={pub.quoteOn}
                                             createdAt={pub.quoteOn.createdAt}
                                         />
-                                        <div className="flex-1 flex" ><Link href={`/posts/${pub.quoteOn.id}`} passHref className="flex-1"></Link></div>
+                                        <div className="flex-1 flex" ><Link href={`/p/${pub.quoteOn.id}`} passHref className="flex-1"></Link></div>
                                     </div>
 
-                                    <Link href={`/posts/${pub.quoteOn.id}`} passHref>
+                                    <Link href={`/p/${pub.quoteOn.id}`} passHref>
                                         <PosAtext content={pub.quoteOn.metadata.content} />
                                         <Meide pub={pub.quoteOn.metadata.asset} />
                                     </Link>

@@ -50,10 +50,10 @@ export default function PUBmedia({ profile }) {
                     createdAt={pub.createdAt}
                   />
                 </div>
-                <div className="flex-1 flex" ><Link href={`/posts/${pub.id}`} className="flex-1"></Link></div>
+                <div className="flex-1 flex" ><Link href={`/p/${pub.id}`} className="flex-1"></Link></div>
                 <Menu pub={pub} />
               </div>
-              <Link href={`/posts/${pub.id}`} passHref legacyBehavior>
+              <Link href={`/p/${pub.id}`} passHref legacyBehavior>
                 <div>
 
                   <UsersPosAtext content={pub.metadata.content} />
@@ -75,10 +75,10 @@ export default function PUBmedia({ profile }) {
                         id={pub.quoteOn}
                         createdAt={pub.quoteOn.createdAt}
                       />
-                      <div className="flex-1 flex" ><Link href={`/posts/${pub.quoteOn.id}`} className="flex-1"></Link></div>
+                      <div className="flex-1 flex" ><Link href={`/p/${pub.quoteOn.id}`} className="flex-1"></Link></div>
                     </div>
 
-                    <Link href={`/posts/${pub.quoteOn.id}`} passHref>
+                    <Link href={`/p/${pub.quoteOn.id}`} passHref>
                       <UsersPosAtext content={pub.quoteOn.metadata.content} />
                       <Meide pub={pub.quoteOn.metadata.asset} />
                     </Link>
@@ -104,11 +104,11 @@ export default function PUBmedia({ profile }) {
                   id={pub.mirrorOn}
                   createdAt={pub.mirrorOn.createdAt}
                 />
-                <div className="flex-1 flex" ><Link href={`/posts/${pub.mirrorOn.id}`} className="flex-1"></Link></div>
+                <div className="flex-1 flex" ><Link href={`/p/${pub.mirrorOn.id}`} className="flex-1"></Link></div>
                 <Menu pub={pub.mirrorOn} />
               </div>
 
-              <Link href={`/posts/${pub.mirrorOn.id}`} passHref>
+              <Link href={`/p/${pub.mirrorOn.id}`} passHref>
                 <UsersPosAtext content={pub.mirrorOn.metadata.content} />
                 <Meide pub={pub.mirrorOn.metadata.asset} />
               </Link>
@@ -126,10 +126,10 @@ export default function PUBmedia({ profile }) {
                         id={pub.quoteOn}
                         createdAt={pub.quoteOn.createdAt}
                       />
-                      <div className="flex-1 flex" ><Link href={`/posts/${pub.quoteOn.id}`} className="flex-1"></Link></div>
+                      <div className="flex-1 flex" ><Link href={`/p/${pub.quoteOn.id}`} className="flex-1"></Link></div>
                     </div>
 
-                    <Link href={`/posts/${pub.quoteOn.id}`} passHref>
+                    <Link href={`/p/${pub.quoteOn.id}`} passHref>
                       <UsersPosAtext content={pub.quoteOn.metadata.content} />
                       <Meide pub={pub.quoteOn.metadata.asset} />
                     </Link>
