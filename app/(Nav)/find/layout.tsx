@@ -13,9 +13,7 @@ export default function HomeLayout({ children }) {
     <>
       <OrderByProvider>
         <Linknav />
-        <div className='w-full'>
-          {children}
-        </div>
+        {children}
       </OrderByProvider>
 
 

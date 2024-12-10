@@ -4,7 +4,7 @@ import { config } from '@/config/Wagmi'
 import { useAccount, useBalance } from 'wagmi'
 import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import { polygon } from 'wagmi/chains';
-import { truncateEthAddress } from '@/utils/truncateEthAddress';
+import { AddressTruncate } from '@/utils/AddressTruncate';
 import LoadingSpinner from '@/gui/LoadingSpinner';
 
 export default function Token() {
@@ -68,7 +68,7 @@ function CurrencyRow({ currency, Address }: { currency: Erc20, Address: string }
         </div>
       </td>
       <td>{currency.symbol}</td>
-      <td>{truncateEthAddress(currency.address)}</td>
+      <td>{AddressTruncate(currency.address)}</td>
       <td>{formattedBalance}</td>
     </tr>
   );

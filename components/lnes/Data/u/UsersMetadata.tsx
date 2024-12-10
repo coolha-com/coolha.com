@@ -1,7 +1,7 @@
 'use client'
 
 import UseFollow from "@/components/lnes/Data/u/hook/BFollow";
-import { truncateEthAddress } from "@/utils/truncateEthAddress"
+import { AddressTruncate } from "@/utils/AddressTruncate"
 import { SessionType, useFollow, useProfile, useSession } from "@lens-protocol/react-web";
 import Link from "next/link"
 import { RiCheckboxCircleFill, RiFileCopyLine, RiVerifiedBadgeFill } from "react-icons/ri";
@@ -19,7 +19,7 @@ export default function UsersMetadata({ profile }) {
     const ensName = profile?.onchainIdentity?.ens?.name;
     const ethAddress = profile?.ownedBy?.address;
     const ethAddressText = ensName ?
-        <> {ensName} <img className="size-4 ml-1" src="/logo/ens_mark_primary.svg" alt="ENS.logo" /></> : truncateEthAddress(`${ethAddress}`);
+        <> {ensName} <img className="size-4 ml-1" src="/logo/ens_mark_primary.svg" alt="ENS.logo" /></> : AddressTruncate(`${ethAddress}`);
     return (
         <div className="flex flex-row items-center pt-2  px-4 bg-base-100">
 
@@ -64,7 +64,7 @@ export default function UsersMetadata({ profile }) {
 
                 </p>
                 {/* <p className="badge badge-outline text-gray-500"> <span className="font-bold w-full">{profile?.createdAt ? formatDate(profile?.createdAt) : ''}</span> </p> */}
-                {/*  <p className="text-gray-500"><span className="font-bold">{truncateEthAddress(`${profile?.ownedBy?.address}`)}</span>   </p> */}
+                {/*  <p className="text-gray-500"><span className="font-bold">{AddressTruncate(`${profile?.ownedBy?.address}`)}</span>   </p> */}
             </div>
             <div className="flex-1 lg:ml-2"></div>
 

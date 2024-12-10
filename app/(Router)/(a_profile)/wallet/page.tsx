@@ -1,5 +1,5 @@
 'use client'
-import { truncateEthAddress } from '@/utils/truncateEthAddress'
+import { AddressTruncate } from '@/utils/AddressTruncate'
 import Link from 'next/link'
 import { RiTokenSwapLine, RiCoinsLine, RiNftLine, RiHistoryLine } from 'react-icons/ri'
 import { useAccount, useEnsAvatar, useEnsName } from 'wagmi'
@@ -27,8 +27,8 @@ export default function Wallet() {
                         href={`https://debank.com/profile/${ensName ? ensName : address}`}
                         className=' link link-hover btn'
                         target='_blank'>
-                        {ensName ? `${ensName} (${truncateEthAddress(address)})`
-                            : truncateEthAddress(address)}↗
+                        {ensName ? `${ensName} (${AddressTruncate(address)})`
+                            : AddressTruncate(address)}↗
                     </Link>}
             </div> */}
             <div className='bg-base-100  h-auto w-auto '>

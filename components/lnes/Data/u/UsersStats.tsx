@@ -1,6 +1,6 @@
 'use client'
 
-import { truncateEthAddress } from "@/utils/truncateEthAddress"
+import { AddressTruncate } from "@/utils/AddressTruncate"
 import { formatDate } from "@/utils/formatDate"
 import Link from "next/link"
 import { formatNumberWithUnit } from "@/utils/formatNumber";

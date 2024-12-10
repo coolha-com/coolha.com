@@ -68,7 +68,7 @@ export default function Page() {
 
         {loadingMusicPubs && <LoadingSpinner />}
 
-        <div className='"place-items-center grid grid-flow-row grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 '>
+        <div className='"place-items-center grid grid-flow-row grid-cols-1 md:grid-cols-2  xl:grid-cols-3  gap-4 '>
           {musicPubs?.map(mpub => (
             <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }} key={mpub.id}>
 

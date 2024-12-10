@@ -3,7 +3,7 @@ import { config } from '@/config/Wagmi'
 import { type BaseError, useReadContracts, useAccount, useWriteContract, useWaitForTransactionReceipt } from 'wagmi'
 import { coolhatopAPI } from './coolhatopAPI'
 import { weiToDawei } from '@/utils/uint256to'
-import { truncateEthAddress } from '@/utils/truncateEthAddress'
+import { AddressTruncate } from '@/utils/AddressTruncate'
 import { useEffect, useState } from 'react';
 
 const coolhatopNFTContract = {
@@ -30,7 +30,7 @@ export default function MintNFT() {
             { ...coolhatopNFTContract, functionName: 'walletLimit', },
             { ...coolhatopNFTContract, functionName: 'name', },
             { ...coolhatopNFTContract, functionName: 'symbol', },
-            { ...coolhatopNFTContract, functionName: 'tokenURI'},
+            { ...coolhatopNFTContract, functionName: 'tokenURI' },
         ]
     });
 
@@ -54,7 +54,7 @@ export default function MintNFT() {
         return <div>Error: {error.message}</div>;
     }
 
-    const [balanceOf, currentPrice, saleIsActive, MAX_SUPPLY, totalSupply,walletLimit, name, symbol, tokenURI] = data.map(item => item.result?.toString());
+    const [balanceOf, currentPrice, saleIsActive, MAX_SUPPLY, totalSupply, walletLimit, name, symbol, tokenURI] = data.map(item => item.result?.toString());
 
     const priceInBigInt = currentPrice ? BigInt(currentPrice) : BigInt(0);
 
@@ -81,12 +81,12 @@ export default function MintNFT() {
                 <div className="card-body border-t">
                     <div>名称: {name}</div>
                     <div>符号: {symbol}</div>
-                    <div>合约地址: <a href={`https://www.oklink.com/zh-hans/polygon/address/${coolhatopNFTContract.address}`} className='link link-hover' target='_blank'>{truncateEthAddress(coolhatopNFTContract.address)}↗</a> </div>
+                    <div>合约地址: <a href={`https://www.oklink.com/zh-hans/polygon/address/${coolhatopNFTContract.address}`} className='link link-hover' target='_blank'>{AddressTruncate(coolhatopNFTContract.address)}↗</a> </div>
                     <div>铸造价格: {currentPrice ? `${weiToDawei(currentPrice)}` : 'N/A'}</div>
                     <div>已铸造: {totalSupply}/{MAX_SUPPLY}</div>
                     <div>限量持有: {walletLimit}</div>
                     <div className="card-actions flex justify-between mt-4 ">
-                        <button className='btn btn-primary btn-ghost'>{!isConnected ?(<p>未连接钱包</p>): (<p>账户拥有: {balanceOf}</p>)}</button>
+                        <button className='btn btn-primary btn-ghost'>{!isConnected ? (<p>未连接钱包</p>) : (<p>账户拥有: {balanceOf}</p>)}</button>
                         <form onSubmit={submit}>
                             <button type="submit" disabled={isPending} className='btn btn-primary'>
                                 {!saleIsActive ?
@@ -97,7 +97,7 @@ export default function MintNFT() {
                             </button>
                         </form>
                         {hash && <div>交易 Hash:
-                            <a href={`https://explorer.buildbear.io/classical-kingpin-385d0670/tx/${hash}`} className='link link-hover' target='_blank'>{truncateEthAddress(hash)}↗</a>
+                            <a href={`https://explorer.buildbear.io/classical-kingpin-385d0670/tx/${hash}`} className='link link-hover' target='_blank'>{AddressTruncate(hash)}↗</a>
                         </div>}
                         {isConfirming && <div>等待交易确认...</div>}
                         {isConfirmed && <div>交易成功.</div>}

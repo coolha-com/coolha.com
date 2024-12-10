@@ -1,25 +1,26 @@
 'use client'
-import Header from '@/components/header/Header'
+import Sidebar from '@/components/header/Sidebar';
 import { useRouter } from "next/navigation";
 import { RiArrowLeftLine } from 'react-icons/ri'
 
 
 
 export default function layout({ children }) {
-  // 获取路由器实例
+
   const router = useRouter();
 
-  // 处理返回上一页功能
-  const handleBack = () => {
-    router.back(); // 调用路由器的 back 方法返回上一页
-  };
   return (
-    <div className='bg-base-200'>
+    <div className='bg-base-200 flex flex-col  '>
 
-      <div className=" lg:min-w-4xl mx-auto   w-full h-full bg-base-100">
-        <div className="navbar py-0 ">
+
+      <div className="md:w-20 xl:w-56">
+        <Sidebar />
+      </div>
+
+      <div className='w-full  mx-auto max-w-3xl'>
+        <div className="navbar p-0 px-2 bg-base-100">
           <div className=" navbar-start">
-            <button className="btn btn-square btn-ghost" onClick={handleBack} >
+            <button className="btn btn-square btn-ghost" onClick={() => router.back()} >
               <RiArrowLeftLine size={24} />
             </button>
           </div>
@@ -28,11 +29,11 @@ export default function layout({ children }) {
         </div>
       </div>
 
-      <Header />
-
-      <div className='mx-auto  min-h-[calc(100dvh-4rem)] flex-1 justify-center'>
+      <div className=" flex-1">
         {children}
       </div>
+
+      <div className="lg:w-20 xl:w-32" />
 
 
     </div>

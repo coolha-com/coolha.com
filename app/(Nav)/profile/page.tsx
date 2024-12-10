@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { SessionType, useProfile, useSession } from "@lens-protocol/react-web";
-import { truncateEthAddress } from '@/utils/truncateEthAddress';
+import { AddressTruncate } from '@/utils/AddressTruncate';
 import { RiBarChart2Line, RiPuzzleLine, RiVerifiedBadgeLine, RiVerifiedBadgeFill, RiMedalLine, RiUserVoiceLine, RiBookmarkLine, RiServiceLine, RiWallet3Line, RiGiftLine } from "react-icons/ri";
 
 
@@ -32,7 +32,7 @@ export default function page() {
 
    // 如果已登录并获取到 Profile 数据
    return (
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl ">
          <div className='rounded-[--rounded-box] px-2 md:px-4'>
             <div className='rounded-[--rounded-box] bg-base-100 mt-4 py-2 px-1'>
                {Profile && <UsersMetadata profile={Profile} />}
@@ -50,7 +50,7 @@ function UsersMetadata({ profile }) {
    const ethAddressText = ensName ?
       <> {ensName} <img className="size-4 ml-1" src="/logo/ens_mark_primary.svg" alt="ENS.logo" /></>
       :
-      truncateEthAddress(`${ethAddress}`);
+      AddressTruncate(`${ethAddress}`);
 
    return (
       <div className="flex flex-row items-center ">
@@ -98,7 +98,7 @@ function UsersMetadata({ profile }) {
                </Link>
             </p>
             {/* <p className="badge badge-outline text-gray-500"> <span className="font-bold w-full">{profile?.createdAt ? formatDate(profile?.createdAt) : ''}</span> </p> */}
-            {/*  <p className="text-gray-500"><span className="font-bold">{truncateEthAddress(`${profile?.ownedBy?.address}`)}</span>   </p> */}
+            {/*  <p className="text-gray-500"><span className="font-bold">{AddressTruncate(`${profile?.ownedBy?.address}`)}</span>   </p> */}
          </div>
          <div className="flex-1 lg:ml-2"></div>
 

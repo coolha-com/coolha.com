@@ -33,11 +33,6 @@ export default function Page() {
     }
   })) as any
 
-
-
-
-
-
   return (
     <>
 
@@ -49,10 +44,10 @@ export default function Page() {
         {loadingMusicPubs && <LoadingSpinner />}
 
 
-        <div className="carousel carousel-vertical h-[calc(100vh-154px)]  w-full   items-center ">
+        <div className="carousel carousel-vertical h-[calc(100vh-90px)]  ">
           {musicPubs?.map(mpub => (
 
-            <div className={`carousel-item mx-auto max-w-3xl h-full md:h-[calc(100svh-154px)] w-full flex flex-col bg-base-100`} >
+            <div className={`carousel-item mx-auto max-w-3xl h-full  w-full flex flex-col bg-base-100`} >
               <div className=" flex p-2">
                 <div className="flex ">
                   <Avatarimg
@@ -70,7 +65,7 @@ export default function Page() {
                 <Menu pub={mpub} />
               </div>
 
-              <video controls key={mpub.id} className='h-full md:max-h-[60svh] md:rounded-2xl w-full '>
+              <video controls  key={mpub.id} className='max-h-[calc(100svh-270px)] md:h-full md:rounded-2xl w-full '>
                 <source src={mpub.metadata?.asset?.video?.optimized?.uri} type="video/mp4" className='' />
               </video>
 

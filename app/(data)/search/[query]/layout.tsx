@@ -23,7 +23,7 @@ export default function layout({ params: { query }, children }) {
     return (
         <div className="mx-auto max-w-3xl lg:justify-center pb-14 flex flex-col ">
 
-            <div className="flex flex-row z-20 h-10 ">
+            <div className="flex flex-row z-20 h-10 max-w-3xl mx-auto w-full fixed top-16 ">
                 {linknav.map((item) => (
                     <div className=' flex-col sm:flex-row  w-1/3 flex  z-20  ' key={item.href}>
                         <Link href={item.href} className={`z-20 flex items-center justify-center w-[100%] h-10  flex-col sm:flex-row  text-[#878787] border-b-0 bg-base-100 hover:bg-[--link-hover-background] ${(item.isExact ? pathname === item.href : pathname.startsWith(item.href)) ? 'text-info border-b-info border-b-2' : ''
@@ -33,7 +33,7 @@ export default function layout({ params: { query }, children }) {
                     </div>
                 ))}
             </div>
-
+<div className="pt-10"></div>
 
             {children}
 

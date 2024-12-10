@@ -1,5 +1,5 @@
 'use client'
-import { truncateEthAddress } from "@/utils/truncateEthAddress";
+import { AddressTruncate } from "@/utils/AddressTruncate";
 import { useSession, SessionType, useLogout } from "@lens-protocol/react-web";
 import { RiAccountCircleFill, RiAtLine, RiGlobalLine, RiLogoutCircleRLine, RiWallet3Line } from "react-icons/ri";
 import { useAccount, useEnsName } from "wagmi";
@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useAppKit, useAppKitNetwork } from "@reown/appkit/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import makeBlockie from 'ethereum-blockies-base64';
 export default function Auth() {
     const router = useRouter();
     const { address, isConnected } = useAccount({ config });
@@ -27,10 +28,12 @@ export default function Auth() {
             router.push("/login"); // 跳转到 /login 页面
         }
     }, [isConnected, session, router, hasRedirected]);
+
+
     return (
-        <>
+        <div className="">
             {loading && <>
-                <button className="btn btn-primary btn-sm md:btn-md text-black  text-xl mx-1" >
+                <button className="btn btn-ghost btn-circle btn-sm md:btn-md text-black  text-xl mx-1" >
                     <span className="loading loading-xs md:loading-sm loading-spinner"></span>
                 </button>
             </>}
@@ -39,49 +42,50 @@ export default function Auth() {
             {/* 未登入显示 */}
             {!session || session.type !== SessionType.WithProfile && <>
                 {address ?
-                    <Link href="/login" className="bg-primary rounded-full py-2 px-3 text-black hover:bg-primary/90  mx-1" >
-                        {ensName ? ensName : truncateEthAddress(address)}
+                    <Link href="/login" className="xl:w-40 btn btn-ghost btn-circle xl:justify-start xl:pl-2" >
+                        <img src={makeBlockie(address)} className="w-9 h-9 rounded-full"/>
+                        <span className="xl:block hidden">{ensName ? ensName : AddressTruncate(address)}</span>
                     </Link>
                     :
-                    <button onClick={() => open()} className="bg-primary rounded-full py-1.5 px-3 text-black text-base md:text-xl  mx-1">
+                    <Link href="/login" className="bg-primary hover:bg-primary/80 rounded-full py-1.5 px-3 xl:py-2.5 xl:px-14 text-black text-base md:text-xl  mx-1 md:mx-0">
                         登录
-                    </button>
+                    </Link>
                 }
             </>}
 
             {/* 登入成功显示 */}
             {session && session.type === SessionType.WithProfile && session.profile?.metadata?.picture &&
-                <div className="dropdown dropdown-bottom dropdown-end  dropdown-hover mx-1 ">
+                <div className="dropdown dropdown-bottom dropdown-end  md:dropdown-right  z-50">
 
                     <div tabIndex={0} role="button" >
-                        <button className="avatar items-center flex">
+                        <div className="xl:w-40 btn md:btn-ghost btn-circle xl:justify-start xl:pl-2">
                             {session.profile?.metadata?.picture ? (
-                                <div className="w-9 md:w-12 rounded-full ">
+                                <>
                                     {session.profile.metadata.picture.__typename === 'ImageSet' && (
                                         <img
                                             src={session.profile.metadata.picture.optimized?.uri}
-                                            className="rounded-full"
+                                            className=" w-9 rounded-full"
                                             alt="picture Set"
                                         />
                                     )}
                                     {session.profile.metadata.picture.__typename === 'NftImage' && (
                                         <img
                                             src={session.profile.metadata.picture.image.optimized?.uri}
-                                            className="rounded-full"
+                                            className=" w-9 rounded-full"
                                             alt="picture NFT"
                                         />
                                     )}
-                                </div>
+                                    <span className="xl:block hidden text-ellipsis">
+                                        {session?.profile?.handle?.localName}
+                                    </span>
+                                </>
                             ) : (
-                                <><RiAccountCircleFill className=" size-12 rounded-full border border-base-content" /></>
+                                <><RiAccountCircleFill className=" size-9 rounded-full border border-base-content" /></>
                             )}
-                        </button>
+                        </div>
                     </div>
 
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 border text-lg">
-
-
-
+                    <ul tabIndex={0} className="dropdown-content z-50 menu p-2 shadow bg-base-100 rounded-box w-52 border text-lg">
                         <li><div onClick={() => open()} ><RiWallet3Line size={24} />{address ? '查看钱包' : '连接钱包'}</div></li>
                         <li><div onClick={() => open({ view: 'Networks' })}><RiGlobalLine size={24} />切换网络</div> </li>
                         <img src={caipNetwork?.assets?.imageUrl} alt={caipNetwork?.assets?.imageUrl} />
@@ -93,7 +97,6 @@ export default function Auth() {
                         <li className="my-1"></li>
                         {/* <li><div > <RiArrowLeftRightFill size={24} />切换账号</div></li> */}
                         <li><div onClick={() => execute()}> <RiLogoutCircleRLine size={24} />注销</div></li>
-
                     </ul>
 
 
@@ -109,6 +112,6 @@ export default function Auth() {
 
 
 
-        </>
+        </div>
     )
 }

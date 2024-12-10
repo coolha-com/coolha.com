@@ -57,7 +57,7 @@ export default function LoginForm({ wallet, onSuccess }: { wallet: string; onSuc
           {profiles.map((profile, idx) => (
             <label
               key={profile.id}
-              className=" btn dark:hover:bg-[var(--button-bg)] "
+              className="btn btn-ghost   dark:hover:bg-[var(--button-bg)] "
             >
               <input
                 disabled={isLoginPending}
