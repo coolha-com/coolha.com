@@ -7,6 +7,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { headers } from "next/headers";
 import ContextProvider from "@/config";
+import Link from "next/link";
+import { ThemeProvider } from "next-themes";
 
 
 
@@ -23,25 +25,21 @@ export const metadata = {
     shortcut: '/shortcut-icon.png',
     apple: '/apple-icon.png',
   },
-
+  manifest: '/manifest.json',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ auth, children, }:any) {
   const cookies = headers().get('cookie')
   return (
     <html lang="zh_CN">
       <head>
         <meta charSet="utf-8" />
-        <meta property="twitter:image" content="/favicon.ico" />
+        <meta property="twitter:image" content="/icon.png" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Coolha:Lens Protocol Web3 Content social" />
         <meta property="twitter:description" content="Lens Protocol Web3 Content social" />
         <meta property="description" content="基于Lens协议构建,为中文用户构建,内容社交,社群聊天,放大创作者经济,灵感保证原创,Web3优质内容的去中心化平台" />
-        <meta property="og:image" content="/favicon.ico" />
+        <meta property="og:image" content="/icon.png" />
         <meta property="og:site_name" content="Coolha Dapp:基于Lens协议构建,为中文用户设计的去中心化平台" />
         <meta property="og:title" content="Coolha"></meta>
         <meta property="og:description" content="基于Lens协议构建,为中文用户构建,内容社交,社群聊天,放大创作者经济,灵感保证原创,Web3优质内容的去中心化平台" />
@@ -61,11 +59,15 @@ export default function RootLayout({
 
       <body className={`${inter.className} bg-base-200 `}>
 
-        <ContextProvider cookies={cookies}  >
 
-          {children}
+        <ThemeProvider>
+          <ContextProvider cookies={cookies}  >
 
-        </ContextProvider>
+            {children}
+            <div>{auth}</div>
+
+          </ContextProvider>
+        </ThemeProvider>
 
 
 

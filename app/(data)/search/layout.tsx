@@ -20,28 +20,31 @@ export default function layout({ children }) {
         }
     };
     return (
-        <>
-            <div className="navbar py-0 bg-base-100 border-b md:hidden fixed z-50">
-                <div className=" navbar-start">
-                    <button className="btn btn-ghost btn-square" onClick={() => router.back()}>
-                        <RiArrowLeftLine size={24} />
-                    </button>
-                </div>
-                <div className=" navbar-center flex flex-1 w-full ">
-                    <label className="input input-bordered flex flex-1 items-center w-full  md:hidden">
-                        <input type="text" className="grow" placeholder="搜索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
-                            onKeyDown={handleKeyDown} />
+        <div className="">
 
-                    </label>
-                </div>
-                <div className=" navbar-end">
-                    <button className="btn btn-ghost btn-square" onClick={handleButtonClick}>
-                        <RiSearchLine size={24} />
-                    </button>
+            <div className="">
+                <div className="navbar py-0 bg-base-100 border-b  fixed z-50 max-w-3xl mx-auto w-full">
+                    <div className=" navbar-start">
+                        <button className="btn btn-ghost btn-square" onClick={() => router.back()}>
+                            <RiArrowLeftLine size={24} />
+                        </button>
+                    </div>
+                    <div className=" navbar-center flex flex-1 w-full ">
+                        <label className="input input-bordered flex flex-1 items-center ">
+                            <input type="text" className="grow" placeholder="搜索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleKeyDown} />
+
+                        </label>
+                    </div>
+                    <div className=" navbar-end">
+                        <button className="btn btn-ghost btn-square" onClick={handleButtonClick}>
+                            <RiSearchLine size={24} />
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div className="h-16 md:h-0" />
+
+            <div className="pt-16" />
             {children}
-        </>
+        </div>
     )
 }

@@ -1,5 +1,5 @@
 'use client'
-import UsersPicimg from "@/components/lnes/DataUsers/UsersPicimg";
+import UsersPicimg from "@/components/lnes/Data/u/UsersPicimg";
 import { SessionType, useProfile, useSession, useSetProfileMetadata } from "@lens-protocol/react-web";
 import { MetadataAttributeType, profile as createProfileMetadata } from '@lens-protocol/metadata';
 import { useEffect, useState } from "react";
@@ -36,8 +36,7 @@ export default function page() {
   if (data && data.type === SessionType.Anonymous) {
     return (
       <div className="">
-        <b>Profile</b>
-        <div>暂未登录 Lens 账户</div>
+        <div>暂未登录账户</div>
       </div>
     );
   }

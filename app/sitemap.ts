@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 1,
       },
       {
-        url: 'https://coolha.com/posts',
+        url: 'https://coolha.com/p',
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.8,

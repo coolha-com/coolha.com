@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 'use client'
-import { useInfiniteScroll } from "@/components/lnes/DataUsers/hook/useInfiniteScroll";
+import { useInfiniteScroll } from "@/components/lnes/Data/u/hook/useInfiniteScroll";
 import Avatarimg from "@/components/lnes/PostsCard/Avatarimg";
 import AvatarName from "@/components/lnes/PostsCard/AvatarName";
 import InteractCard from "@/components/lnes/PostsCard/InteractCard";
@@ -20,8 +20,7 @@ export default function page() {
     if (sesssion && sesssion.type === SessionType.Anonymous) {
         return (
             <div className="">
-                <p>Profile</p>
-                <div>暂未登录 Lens 账户</div>
+                <div>暂未登录账户</div>
             </div>
         );
     }
@@ -38,7 +37,7 @@ export default function page() {
             <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-[100vw]">
                 {loading && <LoadingSpinner />}
                 {data?.map((pub, idx) => (
-                    <div className=" bg-base-100  w-dvw max-w-3xl lg:p-4 py-2 mt-2" key={`${pub.id}-${idx}`}>
+                    <div className=" bg-base-100  w-dvw max-w-3xl p-4 py-2 mt-2" key={`${pub.id}-${idx}`}>
 
 
                         {/* 帖子主内容 */}
@@ -57,12 +56,12 @@ export default function page() {
                                     createdAt={pub.createdAt}
                                 />
                             </div>
-                            <div className="flex-1 flex" ><Link href={`/posts/${pub.id}`} className="flex-1"></Link></div>
+                            <div className="flex-1 flex" ><Link href={`/p/${pub.id}`} className="flex-1"></Link></div>
                             <Menu pub={pub} />
                         </div>
 
                         <div>
-                            <Link href={`/posts/${pub.id}`} >
+                            <Link href={`/p/${pub.id}`} >
                                 <PosAtext content={pub.metadata?.content} />
                                 <Meide pub={pub.metadata?.asset} />
                             </Link>
@@ -81,10 +80,10 @@ export default function page() {
                                                 id={pub.quoteOn}
                                                 createdAt={pub.quoteOn.createdAt}
                                             />
-                                            <div className="flex-1 flex" ><Link href={`/posts/${pub.quoteOn.id}`} passHref className="flex-1"></Link></div>
+                                            <div className="flex-1 flex" ><Link href={`/p/${pub.quoteOn.id}`} passHref className="flex-1"></Link></div>
                                         </div>
 
-                                        <Link href={`/posts/${pub.quoteOn.id}`} passHref>
+                                        <Link href={`/p/${pub.quoteOn.id}`} passHref>
                                             <PosAtext content={pub?.quoteOn?.metadata?.content} />
                                             <Meide pub={pub.quoteOn.metadata?.asset} />
                                         </Link>

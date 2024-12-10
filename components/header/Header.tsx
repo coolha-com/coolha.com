@@ -2,11 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { RiCompass3Fill, RiCompass3Line, RiUserFill, RiUserLine, RiSearchLine, RiChat1Line, RiChat1Fill, RiHomeFill, RiHomeLine } from "react-icons/ri";
 import { MenuButton } from "./MenuButton";
 import { useRef, useState } from "react";
+import AuthButton from "./AuthButton";
 export default function Header() {
     const pathname = usePathname();
     return (
@@ -45,7 +46,7 @@ function HeaderC() {
 
                 <div className="navbar-start gap-1">
 
-                    <Link href={`/home#hometop`} className="avatar w-12 h-12 ">
+                    <Link href={`/home`} className="avatar w-12 h-12 ">
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Image
                                 src='/favicon.ico'
@@ -88,6 +89,7 @@ function HeaderC() {
 
                 <div className="navbar-end">
                     <MenuButton />
+                    <AuthButton />
                 </div>
 
             </div>
@@ -147,7 +149,7 @@ function NavbarLink() {
                 <li key={link.href}>
                     <Link
                         href={link.href}
-                        className={`btn hover:bg-[var(--button-bg)]  ${pathname && pathname.startsWith(link.startsWith) ? " text-base-content " : ""}`}
+                        className={`rounded-full py-2 px-3 text-base-content hover:bg-[var(--button-bg)]  ${pathname && pathname.startsWith(link.startsWith) && "bg-[var(--button-bg)]  "}`}
                     >
                         {pathname.startsWith(link.startsWith) ? <link.iconActive className="size-8" /> : <link.iconInactive className="size-8" />}
                         <span className=" hidden md:flex text-lg">

@@ -1,5 +1,4 @@
 'use client'
-import Header from "@/components/header/Header";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { RiArrowDropLeftLine, RiArrowLeftLine, RiCursorLine, RiDatabase2Line, RiEditLine, RiHandCoinLine, RiLinksLine, RiLock2Line, RiShieldKeyholeLine, RiSoundModuleLine, RiSparkling2Line, RiTimeLine, RiUserForbidLine, RiUserSettingsLine } from "react-icons/ri";
@@ -71,8 +70,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     const router = useRouter()
     return (
         <div>
-            <Header />
-            <div className="navbar py-0 bg-base-100 border-b md:hidden">
+            <div className="navbar py-0 bg-base-100 border-b fixed z-50">
                 <div className=" navbar-start">
                     <button className="btn btn-square btn-ghost" onClick={() => router.back()}>
                         <RiArrowLeftLine size={24} />
@@ -81,11 +79,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className=" navbar-center">设置</div>
                 <div className=" navbar-end"></div>
             </div>
-            <div className="h-0 md:h-16" />
 
 
             {/* 侧边栏 */}
-            <aside className=" md:w-64  md:h-dvh md:fixed bg-base-100 shadow-md p-4 border-b">
+            <aside className=" md:w-64  md:h-dvh md:fixed pt-20 md:pt-16 bg-base-100 shadow-md p-4 border-b">
                 <nav className="space-y-2 p-1">
                     {LinkEditProfile.map((litm) => (
                         <Link

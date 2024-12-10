@@ -12,7 +12,7 @@ import AvatarName from '@/components/lnes/PostsCard/AvatarName';
 import { PosAtext } from '@/components/lnes/PostsCard/PosAtext';
 import InteractCard from '@/components/lnes/PostsCard/InteractCard';
 
-import { useInfiniteScroll } from '@/components/lnes/DataUsers/hook/useInfiniteScroll';
+import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import Meide from '@/components/lnes/PostsCard/Meide';
 import Menu from '@/components/lnes/PostsCard/Menu/Menu';
 import { useOrderBy } from './_contexts/OrderByContext';
@@ -58,8 +58,8 @@ export default function Page() {
 
 
 
-      <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-dvw">
-        {loadingPubs && <LoadingSpinner /> }
+      <div className="flex flex-wrap flex-col justify-normal lg:justify-center w-full">
+        {loadingPubs && <LoadingSpinner />}
 
         {publications?.map((pub: any) => (
           <div className=" bg-base-100  w-dvw md:max-w-3xl p-4 py-2 mt-2" key={pub.id}>
@@ -79,13 +79,13 @@ export default function Page() {
                 />
               </div>
 
-              <div className="flex-1 flex" ><Link href={`/posts/${pub.id}`} className="flex-1"></Link></div>
+              <div className="flex-1 flex" ><Link href={`/p/${pub.id}`} className="flex-1"></Link></div>
               <Menu pub={pub} />
 
             </div>
 
             <div >
-              <Link href={`/posts/${pub.id}`} >
+              <Link href={`/p/${pub.id}`} >
                 <PosAtext content={pub.metadata.content} />
                 <Meide pub={pub.metadata.asset} />
               </Link>
@@ -104,10 +104,10 @@ export default function Page() {
                         id={pub.quoteOn}
                         createdAt={pub.quoteOn.createdAt}
                       />
-                      <div className="flex-1 flex" ><Link href={`/posts/${pub.quoteOn.id}`} passHref className="flex-1"></Link></div>
+                      <div className="flex-1 flex" ><Link href={`/p/${pub.quoteOn.id}`} passHref className="flex-1"></Link></div>
                     </div>
 
-                    <Link href={`/posts/${pub.quoteOn.id}`} passHref>
+                    <Link href={`/p/${pub.quoteOn.id}`} passHref>
                       <PosAtext content={pub.quoteOn.metadata.content} />
                       <Meide pub={pub.quoteOn.metadata.asset} />
                     </Link>

@@ -1,77 +1,44 @@
-'use client'
-import { useProfile, useSession, SessionType, useProfiles, profileId } from '@lens-protocol/react-web';
 
+import LayoutUse from "@/components/lnes/Data/u/LayoutUse"
+import { useProfile } from "@lens-protocol/react-web";
+import { ResolvingMetadata, Metadata } from "next";
 
-import UsersHeader from '@/components/lnes/DataUsers/UsersHeader';
-import UsersPicimg from '@/components/lnes/DataUsers/UsersPicimg';
-import UsersMetadata from '@/components/lnes/DataUsers/UsersMetadata';
-import UsersStats from '@/components/lnes/DataUsers/UsersStats';
-import UseBio from '@/components/lnes/DataUsers/UseBio';
+type Props = {
+    params: { id: string }
+    searchParams: { [key: string]: string | string[] | undefined }
+}
 
-import UsersNav from '@/components/lnes/DataUsers/UsersNav';
+export async function generateMetadata(
+    { params }: any,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    // read route params
+    const users = params.users
+    const handle = `lens/${users}`;
+    const { data: profileByHandle } = useProfile({ forHandle: handle });
 
+    return {
+        title: profileByHandle?.handle?.localName,
+        description: `${profileByHandle?.metadata?.bio},${profileByHandle?.metadata?.displayName},${profileByHandle?.handle?.linkedTo},${profileByHandle?.ownedBy.address}`,
+        openGraph: {
+            images: ['/logo/icon144.png',],
+        },
 
-
+        twitter: {
+            card: 'summary_large_image',
+            title: `Coolha: ${profileByHandle?.handle?.localName} `,
+            description: 'Web3 Content social',
+            images: ['https://coolha.com/favicon.ico'],
+          },
+    }
+}
 export default function layout({ children, params: { users } }) {
 
-    let profileData;
-    let handle;
-
-    const isProfileId = /^0x[0-9a-fA-F]+$/.test(users);
-
-    if (isProfileId) {
-        // 如果是 profileId，尝试获取对应的 handle
-        const { data: profileById } = useProfile({
-            forProfileId: users
-        });
-
-        if (profileById) {
-            handle = profileById.handle?.localName
-            if (handle) {
-                const { data: profileByHandle } = useProfile({ forHandle: `lens/${profileById.handle?.localName}` });
-                profileData = profileByHandle;
-            }
-        }
-    } else {
-        // 如果是 handle，直接使用
-        handle = `lens/${users}`;
-        const { data: profileByHandle } = useProfile({ forHandle: handle });
-        profileData = profileByHandle;
-    }
-
-
     return (
-        <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full w-dvw bg-base-200">
-            <div className='  lg:min-w-3xl mx-auto max-w-3xl  w-full'>
+        <LayoutUse users={users}>
+            {children}
+        </LayoutUse>
 
-                <UsersHeader name={users} profile={profileData} />
-                <div className=' flex-1 bg-base-200'>
-                    {/* 当路由lens/${users}是profileHandle时显示profileWithProfile的组件,不是时显示params: { users }lens/${users}传入profile的组件 */}
-
-                    <>
-
-                        {/* 背景 */}
-                        <UsersPicimg profile={profileData} />
-                        {/* 用户信息 */}
-                        <UsersMetadata profile={profileData} />
-                        {/* 用户数据 */}
-                        <div className='bg-base-100'>
-                            <UsersStats profile={profileData} name={users} />
-                        </div>
-                        {/* 简介 */}
-                        <div className='w-full'>
-                            <UseBio profile={profileData} />
-                        </div>
-                        {/* 展开选项卡 */}
-                        <UsersNav profile={profileData} name={users} />
-                    </>
-
-                    {children}
-                </div>
-
-
-            </div>
-        </div >
     )
 }
 

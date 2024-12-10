@@ -1,5 +1,5 @@
 'use client'
-import { truncateEthAddress } from '@/utils/truncateEthAddress';
+import { AddressTruncate } from '@/utils/AddressTruncate';
 import { weiToDawei } from '@/utils/uint256to';
 import { SessionType, useProfileManagers, useSession, useUpdateProfileManagers } from '@lens-protocol/react-web';
 import Link from 'next/link';
@@ -57,7 +57,7 @@ export default function ProfilesManaged() {
                   <div className="overflow-hidden rounded-md flex flex-row items-center" >
 
                     <Link href={`https://polygonscan.com/address/${address}`} className="link link-hover" target='_blank'>
-                      <span className=""> {truncateEthAddress(address)}↗ </span>
+                      <span className=""> {AddressTruncate(address)}↗ </span>
                     </Link>
                     - {isLensManager ? 'Lens Profile Manager' : 'Other'}
                   </div>

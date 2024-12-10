@@ -1,6 +1,6 @@
 'use client'
 /* import BFollow from '@/components/lnes/DataUsers/hook/BFollow'; */
-import { useInfiniteScroll } from '@/components/lnes/DataUsers/hook/useInfiniteScroll';
+import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import Avatarimg from '@/components/lnes/PostsCard/Avatarimg';
 import AvatarName from '@/components/lnes/PostsCard/AvatarName';
 import { useProfile, useMutualFollowers, useSession, SessionType } from '@lens-protocol/react-web';

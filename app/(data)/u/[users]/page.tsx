@@ -2,11 +2,11 @@
 
 import { useProfile } from '@lens-protocol/react-web'
 
-import { PUBposts } from '@/components/lnes/DataUsers/list/PUBposts';
+import { PUBposts } from '@/components/lnes/Data/u/list/PUBposts';
 import Loading from './loading';
 
 
-export default function ProfileA({ params: { users }}) {
+export default function ProfileA({ params: { users } }) {
 
   // 将用户的名字和命名空间从 'users' 参数中拆分出来
   //users = users.split('.')[0];

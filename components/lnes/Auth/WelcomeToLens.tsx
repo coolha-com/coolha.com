@@ -6,12 +6,13 @@ import { config } from "@/config/Wagmi";
 //import { useWeb3Modal } from '@web3modal/wagmi/react'
 import { ConnectWalletButton } from "@/components/wagmi/ConnectWalletButton";
 import { DisconnectWalletButton } from "@/components/wagmi/DisconnectWalletButton";
-import { truncateEthAddress } from "@/utils/truncateEthAddress";
+import { AddressTruncate } from "@/utils/AddressTruncate";
 import ThemeSwap from "@/gui/ThemeSwap";
 import LoginForm from "@/components/lnes/Auth/LoginForm";
 import { LogoutButton } from "@/components/lnes/Auth/LogoutButton";
 import Link from "next/link";
 import { useAppKit } from "@reown/appkit/react";
+import makeBlockie from "ethereum-blockies-base64";
 
 export function WelcomeToLens() {
     const { isConnected, address, isConnecting } = useAccount({ config });
@@ -24,12 +25,17 @@ export function WelcomeToLens() {
             <div className=" gap-14 w-dvw">
                 <div className="mt-2 mb-16 flex flex-col md:flex-row  justify-between items-center gap-3">
                     <div className="flex flex-row justify-center items-center m-1 w-full">
-                        <button onClick={() => open()} className=" btn btn-primary flex flex-row">
-                            {address && <div className=" hidden md:block ">  </div>}
+                        <button onClick={() => open()} className=" btn btn-ghost  xl:justify-start xl:pl-2">
+                          
                             {isConnecting ?
                                 (<div><span className="loading loading-spinner"></span></div>)
                                 :
-                                (isConnected ? ensName ? ensName : truncateEthAddress(address) : "连接钱包")
+                                (isConnected ?
+                                    <>
+                                        <img src={makeBlockie(address as `0x${string}`)} className="w-9 h-9 rounded-full" />
+                                        <span className="">{ensName ? ensName : AddressTruncate(address)}</span>
+                                    </>
+                                    : "连接钱包")
                             }
                         </button>
 
@@ -68,7 +74,7 @@ export function WelcomeToLens() {
                                         />
                                     )}
                                 </div>
-                                {data.profile.handle?.fullHandle ?? data.profile.id}
+                                @{data.profile.handle?.localName ?? data.profile.id}
                             </button>
                             <LogoutButton />
                         </div>

@@ -1,14 +1,17 @@
 
-import Header from '@/components/header/Header'
+import Sidebar from '@/components/header/Sidebar'
 
 
 
 export default function layout({ children }) {
   return (
-    <div className='bg-base-200'>
-      <Header />
-      <div className="h-0 md:h-16" />
-      {children}
+    <div className='bg-base-200 flex'>
+      <div className="w-56">
+        <Sidebar />
+      </div>
+      <div className='flex-1'>
+        {children}
+      </div>
     </div>
   )
 }

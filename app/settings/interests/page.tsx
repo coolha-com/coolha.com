@@ -29,8 +29,7 @@ export default function page() {
   if (data.type === SessionType.Anonymous) {
     return (
       <div className="">
-        <b>Profile</b>
-        <div>暂未登录 Lens 账户</div>
+        <div>暂未登录账户</div>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useInfiniteScroll } from "@/components/lnes/DataUsers/hook/useInfiniteScroll";
+import { useInfiniteScroll } from "@/components/lnes/Data/u/hook/useInfiniteScroll";
 import Avatarimg from "@/components/lnes/PostsCard/Avatarimg";
 import AvatarName from "@/components/lnes/PostsCard/AvatarName";
 import Avatar from "@/gui/flowbite/Avatar";
@@ -28,35 +28,35 @@ export default function page() {
             <div className="flex flex-wrap flex-col justify-normal lg:justify-center lg:w-full mx-auto max-w-3xl">
 
 
-                    <div className="flex  justify-center">
+                <div className="flex  justify-center">
 
-                        <div className=' flex  lg:flex-wrap flex-col w-full '>
-                            {RecommendedProfiles?.map(profile => (
-                                <div
-                                    key={profile.id}
-                                    className="p-2 mt-2 bg-base-100   cursor-pointer"
-                                    onClick={() => router.push(`/u/${profile?.handle?.localName}`)}>
-                                    <div className="space-y-3 flex">
-                                        <div className="overflow-hidden rounded-md flex flex-row">
-                                            <Avatarimg
-                                                href={profile.handle ? profile.handle.localName : profile.id}
-                                                src={profile} />
-                                            <AvatarName localName={profile.handle?.localName ?? profile.id} displayName={profile?.metadata?.displayName} namespace={`lens`} createdAt={profile.createdAt} id={profile} />
-                                        </div>
-                                        <div className='flex-1'></div>
-                                        {/* <BFollow profile={profile} /> */}
+                    <div className=' flex  lg:flex-wrap flex-col w-full '>
+                        {RecommendedProfiles?.map(profile => (
+                            <div
+                                key={profile.id}
+                                className="p-2 mt-2 bg-base-100   cursor-pointer"
+                                onClick={() => router.push(`/u/${profile?.handle?.localName}`)}>
+                                <div className="space-y-3 flex">
+                                    <div className="overflow-hidden rounded-md flex flex-row">
+                                        <Avatarimg
+                                            href={profile.handle ? profile.handle.localName : profile.id}
+                                            src={profile} />
+                                        <AvatarName localName={profile.handle?.localName ?? profile.id} displayName={profile?.metadata?.displayName} namespace={`lens`} createdAt={profile.createdAt} id={profile} />
                                     </div>
+                                    <div className='flex-1'></div>
+                                    {/* <BFollow profile={profile} /> */}
                                 </div>
-                            ))}
-                        </div>
-
+                            </div>
+                        ))}
                     </div>
 
-                    {hasMore && (
-                        <div className="flex justify-center my-4">
-                            <span ref={observeRef} className="loading loading-spinner loading-lg"></span>
-                        </div>
-                    )}
+                </div>
+
+                {hasMore && (
+                    <div className="flex justify-center my-4">
+                        <span ref={observeRef} className="loading loading-spinner loading-lg"></span>
+                    </div>
+                )}
 
             </div >
         )

@@ -1,9 +1,8 @@
 'use client'
 /* import BFollow from '@/components/lnes/DataUsers/hook/BFollow'; */
-import { useInfiniteScroll } from '@/components/lnes/DataUsers/hook/useInfiniteScroll';
+import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import Avatarimg from '@/components/lnes/PostsCard/Avatarimg';
 import AvatarName from '@/components/lnes/PostsCard/AvatarName';
-import Avatar from '@/gui/flowbite/Avatar';
 import { useProfile, useProfileFollowers } from '@lens-protocol/react-web';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'

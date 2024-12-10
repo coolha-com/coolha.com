@@ -1,7 +1,7 @@
 'use client'
-import { useInfiniteScroll } from '@/components/lnes/DataUsers/hook/useInfiniteScroll';
+import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll';
 import { formatDate } from '@/utils/formatDate';
-import { truncateEthAddress } from '@/utils/truncateEthAddress';
+import { AddressTruncate } from '@/utils/AddressTruncate';
 import { useProfileActionHistory, LimitType } from '@lens-protocol/react-web';
 
 export default function ActionHistory() {
@@ -30,9 +30,9 @@ export default function ActionHistory() {
               <tr key={item.id}>
                 <td>{actionTypeMapping[item.actionType] || item.actionType}</td>
                 <td>{formatDate(item.actionedOn)}</td>
-                <td>{truncateEthAddress(item.txHash ? item.txHash : '')}</td>
+                <td>{AddressTruncate(item.txHash ? item.txHash : '')}</td>
                 {/* <td>{item.id}</td> */}
-                <td>{truncateEthAddress(item.who)}</td>
+                <td>{AddressTruncate(item.who)}</td>
               </tr>
             ))}
           </tbody>

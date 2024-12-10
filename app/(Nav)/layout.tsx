@@ -1,19 +1,27 @@
 
-import Header from '@/components/header/Header'
+import Sidebar from '@/components/header/Sidebar'
 import Navbar from '@/components/header/Navbar'
-import NavHeader from '@/components/header/NavHeader'
+import NavFooter from '@/components/header/NavFooter'
 
 
 export default function layout({ children }) {
   return (
-    <div id='hometop' className='bg-base-200'>
-      <Header />
-      <div className="h-0 md:h-16" />
-      <NavHeader />
-      <div className='mx-auto max-w-3xl min-h-[calc(100dvh-4rem)] flex-1 justify-center'>
-        {children}
+    <div id='hometop' className='bg-base-200  min-h-dvh flex'>
+
+      <div className="md:w-20 xl:w-56">
+        <Sidebar />
       </div>
+
+      <div className="flex-1 flex flex-col">
       <Navbar />
+        <div className="flex-1">
+          {children}
+        </div>
+      <NavFooter />
+      </div>
+
+      <div className="lg:w-20 xl:w-32"/>
+
     </div>
   )
 }
