@@ -25,7 +25,7 @@ export function WelcomeToLens() {
             <div className=" gap-14 w-dvw">
                 <div className="mt-2 mb-16 flex flex-col md:flex-row  justify-between items-center gap-3">
                     <div className="flex flex-row justify-center items-center m-1 w-full">
-                        <button onClick={() => open()} className=" btn btn-ghost  xl:justify-start xl:pl-2">
+                        <button onClick={() => open()} className=" btn btn-primary">
                           
                             {isConnecting ?
                                 (<div><span className="loading loading-spinner"></span></div>)

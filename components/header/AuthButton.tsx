@@ -31,9 +31,9 @@ export default function Auth() {
 
 
     return (
-        <div className="">
+        <div className="md:my-2">
             {loading && <>
-                <button className="btn btn-ghost btn-circle btn-sm md:btn-md text-black  text-xl mx-1" >
+                <button className="xl:w-40 btn  btn-sm md:btn-md text-base-content  text-xl mx-1" >
                     <span className="loading loading-xs md:loading-sm loading-spinner"></span>
                 </button>
             </>}
@@ -92,7 +92,7 @@ export default function Auth() {
 
                         <li className="my-1"></li>
                         {/* <li><Link href={``}> <RiEmotionHappyLine size={24} />设置状态</Link></li> */}
-                        <li><Link href={`/u/${session?.profile?.handle?.localName}`}><RiAtLine size={24} />{session?.profile?.handle?.localName}</Link></li>
+                        <li><Link href={`/u/${session?.profile?.handle?.localName}`}><RiAtLine size={24} />查看主页</Link></li>
 
                         <li className="my-1"></li>
                         {/* <li><div > <RiArrowLeftRightFill size={24} />切换账号</div></li> */}

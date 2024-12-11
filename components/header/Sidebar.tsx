@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { RiHomeFill, RiHomeLine, RiCompass3Fill, RiCompass3Line, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSettingsLine, RiSunLine, RiMoonClearLine, RiSearchLine } from "react-icons/ri";
+import { RiHomeFill, RiHomeLine, RiCompass3Fill, RiCompass3Line, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSettingsLine, RiSunLine, RiMoonClearLine, RiSearchLine, RiMenu2Fill } from "react-icons/ri";
 import AuthButton from "./AuthButton";
 import { MenuButton } from "./MenuButton";
 import { motion } from "motion/react";
@@ -11,7 +11,7 @@ import { useTheme } from "next-themes";
 import { useState } from "react";
 export default function Sidebar() {
     return (
-        <div className=" hidden md:block min-h-full max-w-20 xl:max-w-56 fixed top-0 left-0 z-50">
+        <div className=" hidden md:block min-h-full max-w-16 xl:max-w-56 fixed top-0 left-0 z-50">
 
 
             <div className="h-svh z-50">
@@ -145,14 +145,19 @@ function Linkabout() {
                 <Link href={`/settings`} className="btn btn-ghost btn-circle"><RiSettingsLine className="size-8" /></Link>
             </div>
 
-            <div className=" hidden xl:block ">
-                <Link href={`mailto:cs@coolha.com`} className=" text-sm hover:link "> 赞助合作</Link>
-                <Link href={`/about`} className=" text-sm hover:link "> 关于应用</Link>
-                <Link href={`https://github.com/coolha-com/coolha/releases/tag/alphav`} className=" text-sm hover:link " target='_blank'> v0.1.2-alphav</Link>
-                <Link href={`/fqa`} className=" text-sm hover:link "> 常见问题</Link>
-                <Link href={`/privacy`} className=" text-sm hover:link "> 隐私政策</Link>
-                <Link href={`/terms`} className=" text-sm hover:link "> 条款规则</Link>
-                <div className=" text-sm  "> <p>© {new Date().getFullYear()} coolha.com </p></div>
+            <div className="flex xl:hidden btn btn-ghost btn-circle">
+                <RiMenu2Fill className="size-8" />
+            </div>
+
+            <div className=" hidden xl:block text-base-content/50 text-sm">
+                <Link href={`/about`} className="  hover:link "> 关于应用</Link>
+                <Link href={`mailto:cs@coolha.com`} className="  hover:link "> 赞助合作</Link>
+                <br />
+                <Link href={`/fqa`} className="  hover:link "> 常见问题</Link>
+                <Link href={`/terms`} className="  hover:link "> 条款规则</Link>
+                <Link href={`/privacy`} className="  hover:link "> 隐私政策</Link>
+                <div className=""> <p>© {new Date().getFullYear()} coolha.com </p></div>
+                <Link href={`https://github.com/coolha-com/coolha/releases/tag/alphav`} className="text-xs  hover:link " target='_blank'> v0.1.2-alphav</Link>
             </div>
 
         </div>
