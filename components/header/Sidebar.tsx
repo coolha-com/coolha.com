@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { RiHomeFill, RiHomeLine, RiCompass3Fill, RiCompass3Line, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSettingsLine, RiSunLine, RiMoonClearLine, RiSearchLine, RiMenu2Fill } from "react-icons/ri";
+import { RiHomeFill, RiHomeLine, RiCompass3Fill, RiCompass3Line, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSettingsLine, RiSunLine, RiMoonClearLine, RiSearchLine, RiMenu2Fill, RiMoonLine } from "react-icons/ri";
 import AuthButton from "./AuthButton";
-import { MenuButton } from "./MenuButton";
+import ButtonMenu from "./ButtonMenu";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -15,14 +15,14 @@ export default function Sidebar() {
 
 
             <div className="h-svh z-50">
-                <ul className="menu bg-base-100 min-h-full w-full  gap-2 z-50">
+                <ul className="menu bg-base-100 min-h-full w-full  gap-1 z-50">
                     <Logo />
                     <Search />
                     <NavbarLink />
-                    <div className="">
+                    <div className="mt-auto">
                         <AuthButton />
                     </div>
-                    <div className="mt-auto">
+                    <div className="">
                         <Linkabout />
                     </div>
                 </ul>
@@ -33,17 +33,22 @@ export default function Sidebar() {
 }
 function Logo() {
     return (
-        <Link href={`/home`} className="avatar w-12 h-12 ">
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Image
-                    src='/favicon.ico'
-                    width={40}
-                    height={40}
-                    className="w-12 h-12 rounded-full "
-                    alt='Q'
-                />
-            </motion.div>
-        </Link>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link href={`/home`} className="flex flex-row items-center justify-center gap-2">
+                <div className="avatar ">
+                    <Image
+                        src='/favicon.ico'
+                        width={40}
+                        height={40}
+                        className="w-12 h-12 rounded-full "
+                        alt='Q'
+                    />
+                </div>
+                <div className="text-3xl font-bold xl:block hidden">
+                    Coolha
+                </div>
+            </Link>
+        </motion.div>
     )
 }
 function Search() {
@@ -67,17 +72,17 @@ function Search() {
     };
     return (
         <>
-            <div className="">
-                <label className="input input-bordered xl:flex items-center w-40 gap-2  hidden">
+            <div className="my-1">
+                <label className="input input-bordered xl:flex items-center w-40 hidden">
                     <span className="btn btn-ghost btn-circle btn-sm " onClick={handleButtonClick}>
-                        <RiSearchLine className=" size-6 " />
+                        <RiSearchLine className=" size-5 " />
                     </span>
                     <input type="text" className="grow" placeholder="搜索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleKeyDown} />
 
                 </label>
             </div>
             <div role="button" className="btn btn-ghost btn-circle flex xl:hidden" onClick={handleButtonClick}>
-                <RiSearchLine className=" size-8 " />
+                <RiSearchLine className=" size-7 " />
             </div>
         </>
     )
@@ -122,7 +127,7 @@ function NavbarLink() {
                         href={link.href}
                         className={`xl:w-40 btn btn-ghost btn-circle xl:justify-start xl:pl-2  ${pathname && pathname.startsWith(link.startsWith) && "bg-[var(--button-bg)]  "}`}
                     >
-                        {pathname.startsWith(link.startsWith) ? <link.iconActive className="size-8" /> : <link.iconInactive className="size-8" />}
+                        {pathname.startsWith(link.startsWith) ? <link.iconActive className="size-7" /> : <link.iconInactive className="size-7" />}
                         <span className=" hidden xl:flex text-lg">
                             {link.title}
                         </span>
@@ -138,26 +143,28 @@ function Linkabout() {
     return (
         <div className="flex flex-col h-full gap-2">
 
-            <div className="flex flex-col xl:flex-row w-40 gap-2">
+            <div className="hidden xl:flex flex-col xl:flex-row w-40 gap-1 ">
                 <div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="btn btn-ghost btn-circle">
-                    {theme === 'dark' ? (<RiSunLine className="size-8" />) : (<RiMoonClearLine className="size-8" />)}
+                    {theme === 'dark' ? (<RiSunLine className="size-7" />) : (<RiMoonLine className="size-7" />)}
                 </div>
-                <Link href={`/settings`} className="btn btn-ghost btn-circle"><RiSettingsLine className="size-8" /></Link>
+                <Link href={`/settings`} className="btn btn-ghost btn-circle"><RiSettingsLine className="size-7" /></Link>
             </div>
 
-            <div className="flex xl:hidden btn btn-ghost btn-circle">
-                <RiMenu2Fill className="size-8" />
-            </div>
 
             <div className=" hidden xl:block text-base-content/50 text-sm">
+                <Link href={`https://github.com/coolha-com/coolha/releases/tag/alphav`} className="text-xs  hover:link " target='_blank'> v0.1.2-alphav</Link>
+                <br />
                 <Link href={`/about`} className="  hover:link "> 关于应用</Link>
                 <Link href={`mailto:cs@coolha.com`} className="  hover:link "> 赞助合作</Link>
                 <br />
                 <Link href={`/fqa`} className="  hover:link "> 常见问题</Link>
                 <Link href={`/terms`} className="  hover:link "> 条款规则</Link>
                 <Link href={`/privacy`} className="  hover:link "> 隐私政策</Link>
-                <div className=""> <p>© {new Date().getFullYear()} coolha.com </p></div>
-                <Link href={`https://github.com/coolha-com/coolha/releases/tag/alphav`} className="text-xs  hover:link " target='_blank'> v0.1.2-alphav</Link>
+                <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
+            </div>
+
+            <div className=" block xl:hidden">
+                <ButtonMenu />
             </div>
 
         </div>
