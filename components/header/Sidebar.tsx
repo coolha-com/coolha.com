@@ -35,7 +35,7 @@ function Logo() {
     return (
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link href={`/home`} className="flex flex-row items-center justify-center gap-2">
-                <div className="avatar ">
+                <div className="avatar">
                     <Image
                         src='/favicon.ico'
                         width={40}

@@ -72,14 +72,14 @@ export default function Auth() {
                                         {session.profile.metadata.picture.__typename === 'ImageSet' && (
                                             <img
                                                 src={session.profile.metadata.picture.optimized?.uri}
-                                                className=" w-7 md:w-9 rounded-full"
+                                                className=" w-9 rounded-full"
                                                 alt="picture Set"
                                             />
                                         )}
                                         {session.profile.metadata.picture.__typename === 'NftImage' && (
                                             <img
                                                 src={session.profile.metadata.picture.image.optimized?.uri}
-                                                className=" w-7 md:w-9 rounded-full"
+                                                className=" w-9 rounded-full"
                                                 alt="picture NFT"
                                             />
                                         )}
