@@ -52,7 +52,7 @@ export default function Auth() {
                         </div>
                     </Link>
                     :
-                    <Link href="/login" className="btn btn-primary   text-sm xl:text-xl xl:w-40">
+                    <Link href="/login" className="btn btn-primary btn-sm md:btn-md  text-sm xl:text-xl xl:w-40">
                         登录
                     </Link>
                 }
