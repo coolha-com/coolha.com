@@ -1,7 +1,7 @@
 
 import { OrderByProvider } from './_contexts/OrderByContext';
 import ButtonList from './_contexts/ButtonList';
-import Linknav from './_contexts/Linknav';
+import Linknav from './Linknav';
 
 
 export default function HomeLayout({ children }) {

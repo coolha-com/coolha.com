@@ -34,7 +34,7 @@ export default function RootLayout({ auth, children, }:any) {
     <html lang="zh_CN">
       <head>
         <meta charSet="utf-8" />
-        <meta property="twitter:image" content="/icon.png" />
+        <meta property="twitter:image" content="/twitter-image" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Coolha:Lens Protocol Web3 Content social" />
         <meta property="twitter:description" content="Lens Protocol Web3 Content social" />

@@ -22,10 +22,11 @@ export default function page() {
             <div className='rounded-[--rounded-box] px-2 md:px-4'>
                <div className='rounded-[--rounded-box] bg-base-100 mt-4 py-2 px-1'>
                   <div className="h-16 md:h-24 ml-2 lg:ml-4">
-                     <div>暂未登录账户</div>
+                     <p>暂未登录账户</p>
                   </div>
                </div>
             </div>
+            <Card />
          </div>
       );
    }

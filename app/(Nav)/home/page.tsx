@@ -62,7 +62,7 @@ export default function Page() {
         {loadingPubs && <LoadingSpinner />}
 
         {publications?.map((pub: any) => (
-          <div className=" bg-base-100  w-dvw md:max-w-3xl p-4 py-2 mt-2" key={pub.id}>
+          <div className=" bg-base-100  w-dvw md:w-full md:max-w-3xl p-4 py-2 mt-2" key={pub.id}>
             {/* 帖子主内容 */}
             <div className=" flex ">
               <div className="flex " onClick={(e) => e.stopPropagation()}>

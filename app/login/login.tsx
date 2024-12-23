@@ -1,6 +1,6 @@
 'use client';
 
-import { WelcomeToLens } from "@/components/lnes/Auth/WelcomeToLens";
+import { WelcomeToLens } from "@/app/login/WelcomeToLens";
 import { useRouter } from "next/navigation";
 import web3背景 from '@/public/coolha.com/web3背景.png'
 import Image from "next/image";

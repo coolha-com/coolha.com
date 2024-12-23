@@ -1,10 +1,10 @@
 'use client'
 import { usePathname, useRouter } from "next/navigation";
 import { RiAddCircleLine, RiSearchLine } from "react-icons/ri";
-import { MenuButton } from "./MenuButton";
+import  MenuButton  from "./ButtonMenu";
 import AuthButton from "./AuthButton";
 
-export default function Navbar() {
+export default function NavBar() {
     const pathname = usePathname();
 
     return (
@@ -42,7 +42,7 @@ function Message() {
             <div className=" navbar-center">消息</div>
             <div className=" navbar-end">
                 <button className="btn btn-square  btn-ghost" >
-                    <RiAddCircleLine size={24} />
+                    <RiAddCircleLine className="size-7" />
                 </button>
             </div>
         </>
