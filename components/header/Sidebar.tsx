@@ -34,8 +34,8 @@ export default function Sidebar() {
 function Logo() {
     return (
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link href={`/home`} className="flex flex-row items-center justify-center gap-2">
-                <div className="avatar">
+            <Link href={`/home`} className="flex flex-row items-center justify-center gap-2 max-h-12">
+                <div className="avatar  max-h-12">
                     <Image
                         src='/favicon.ico'
                         width={40}
@@ -52,6 +52,7 @@ function Logo() {
     )
 }
 function Search() {
+    const pathname = usePathname();
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -81,7 +82,7 @@ function Search() {
 
                 </label>
             </div>
-            <div role="button" className="btn btn-ghost btn-circle flex xl:hidden" onClick={handleButtonClick}>
+            <div role="button" className={`btn btn-ghost btn-circle flex xl:hidden ${pathname && pathname.startsWith('/search') && "bg-[var(--button-bg)]  "}`} onClick={handleButtonClick}>
                 <RiSearchLine className=" size-7 " />
             </div>
         </>
