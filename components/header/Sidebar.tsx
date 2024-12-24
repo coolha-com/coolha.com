@@ -33,22 +33,19 @@ export default function Sidebar() {
 }
 function Logo() {
     return (
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link href={`/home`} className="flex flex-row items-center justify-center gap-2 max-h-12">
-                <div className="avatar  max-h-12">
-                    <Image
-                        src='/favicon.ico'
-                        width={40}
-                        height={40}
-                        className="w-12 h-12 rounded-full "
-                        alt='Q'
-                    />
-                </div>
-                <div className="text-3xl font-bold xl:block hidden">
-                    Coolha
-                </div>
-            </Link>
-        </motion.div>
+        <div className="max-h-12">
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link href={`/home`} className="flex flex-row items-center justify-center gap-2 ">
+                    <div className="max-h-12">
+                        <img src='/favicon.ico' className="w-12 h-12 rounded-full "alt='Q'/>
+                    </div>
+                    <div className="text-3xl font-bold xl:block hidden">
+                        Coolha
+                    </div>
+                </Link>
+            </motion.div>
+        </div>
     )
 }
 function Search() {
