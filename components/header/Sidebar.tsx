@@ -38,7 +38,7 @@ function Logo() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link href={`/home`} className="flex flex-row items-center justify-center gap-2 ">
                     <div className="max-h-12">
-                        <img src='/favicon.ico' className="w-12 h-12 rounded-full "alt='Q'/>
+                        <img src='/favicon.ico' className="w-12 h-12 rounded-full " alt='Q' />
                     </div>
                     <div className="text-3xl font-bold xl:block hidden">
                         Coolha
@@ -150,14 +150,14 @@ function Linkabout() {
 
 
             <div className=" hidden xl:block text-base-content/50 text-sm">
-                <Link href={`https://github.com/coolha-com/coolha/releases/tag/alphav`} className="text-xs  hover:link " target='_blank'> v0.1.2-alphav</Link>
+                <span className="text-xs" >v0.1.2-alphav</span>
                 <br />
-                <Link href={`/about`} className="  hover:link "> 关于应用</Link>
-                <Link href={`mailto:cs@coolha.com`} className="  hover:link "> 赞助合作</Link>
+                <Link href={`https://about.coolha.com`} className="  hover:link ">关于</Link>
+                <Link href={`mailto:cs@coolha.com`} className="  hover:link ">合作</Link>
                 <br />
-                <Link href={`/fqa`} className="  hover:link "> 常见问题</Link>
-                <Link href={`/terms`} className="  hover:link "> 条款规则</Link>
-                <Link href={`/privacy`} className="  hover:link "> 隐私政策</Link>
+                <Link href={`/fqa`} className="  hover:link ">帮助</Link>
+                <Link href={`/terms`} className="  hover:link ">条款</Link>
+                <Link href={`/privacy`} className="  hover:link ">隐私</Link>
                 <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
             </div>
 
