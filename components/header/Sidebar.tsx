@@ -150,14 +150,17 @@ function Linkabout() {
 
 
             <div className=" hidden xl:block text-base-content/50 text-sm">
-                <span className="text-xs" >v0.1.2-alphav</span>
-                <br />
-                <Link href={`https://about.coolha.com`} className="  hover:link ">关于</Link>
-                <Link href={`mailto:cs@coolha.com`} className="  hover:link ">合作</Link>
-                <br />
-                <Link href={`/fqa`} className="  hover:link ">帮助</Link>
-                <Link href={`/terms`} className="  hover:link ">条款</Link>
-                <Link href={`/privacy`} className="  hover:link ">隐私</Link>
+                <span className="text-xs">v0.1.2-alphav</span>
+                <div className="flex gap-1">
+                    <Link href={`https://about.coolha.com`} className="  hover:link ">关于</Link>
+                    <Link href={`mailto:cs@coolha.com`} className="  hover:link ">合作</Link>
+                    <Link href={`mailto:cs@coolha.com`} className="  hover:link ">业务</Link>
+                </div>
+                <div className=" flex gap-1">
+                    <Link href={`/fqa`} className="  hover:link ">帮助</Link>
+                    <Link href={`/terms`} className="  hover:link ">条款</Link>
+                    <Link href={`/privacy`} className="  hover:link ">隐私</Link>
+                </div>
                 <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
             </div>
 

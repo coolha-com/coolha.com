@@ -14,7 +14,7 @@ export default function Linknav() {
     const linknav = [
         {
             href: "/home/foryou",
-            name: "给你",
+            name: "推荐",
             logo: <RiBardLine />
         },
         {

@@ -6,14 +6,14 @@ import { PUBposts } from '@/components/lnes/Data/u/list/PUBposts';
 import Loading from './loading';
 
 
-export default function ProfileA({ params: { users } }) {
+export default function page({ params: { users } }) {
 
   // 将用户的名字和命名空间从 'users' 参数中拆分出来
   //users = users.split('.')[0];
   //const namespace = users.split('.')[1];
 
   // 使用拆分出来的命名空间和用户名调用 useProfile 钩子
-  let { data: profile, loading } = useProfile({
+  const { data: profile, loading } = useProfile({
     forHandle: `lens/${users}`
   });
 

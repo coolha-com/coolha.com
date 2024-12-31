@@ -17,7 +17,7 @@ export default function ButtonMenu() {
         <>
             {/* 菜单按钮 */}
             <div className="dropdown dropdown-bottom dropdown-end md:dropdown-top md:dropdown-right">
-                <div tabIndex={0} role="button" className="p-2 rounded-full hover:bg-[var(--button-bg)] "><CgMenuGridO className="size-6 md:size-8" /></div>
+                <div tabIndex={0} role="button" className=" p-1 md:p-2 mr-1 md:mr-0 rounded-full hover:bg-[var(--button-bg)] "><CgMenuGridO className="size-6 md:size-8" /></div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 border text-lg">
                     <li><Link href={`/settings`}><RiSettingsLine className="size-7" />应用设置</Link></li>
                     <li><div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
@@ -27,14 +27,17 @@ export default function ButtonMenu() {
                     <li className="my-1"></li>
                     <div className="text-base-content/50 text-sm">
                         <span className="text-xs">v0.1.2-alphav</span>
-                        <br />
-                        <Link href={`https://about.coolha.com`} className="  hover:link ">关于</Link>
-                        <Link href={`mailto:cs@coolha.com`} className="  hover:link ">合作</Link>
-                        <br />
-                        <Link href={`/fqa`} className="  hover:link ">帮助</Link>
-                        <Link href={`/terms`} className="  hover:link ">条款</Link>
-                        <Link href={`/privacy`} className="  hover:link ">隐私</Link>
-                        <div className=""> <p>© {new Date().getFullYear()} coolha.com </p></div>
+                        <div className="flex gap-1">
+                            <Link href={`https://about.coolha.com`} className="  hover:link ">关于</Link>
+                            <Link href={`mailto:cs@coolha.com`} className="  hover:link ">合作</Link>
+                            <Link href={`mailto:cs@coolha.com`} className="  hover:link ">业务</Link>
+                        </div>
+                        <div className=" flex gap-1">
+                            <Link href={`/fqa`} className="  hover:link ">帮助</Link>
+                            <Link href={`/terms`} className="  hover:link ">条款</Link>
+                            <Link href={`/privacy`} className="  hover:link ">隐私</Link>
+                        </div>
+                        <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
                     </div>
 
                 </ul>
