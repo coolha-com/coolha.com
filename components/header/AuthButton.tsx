@@ -1,7 +1,7 @@
 'use client'
 import { AddressTruncate } from "@/utils/AddressTruncate";
 import { useSession, SessionType, useLogout } from "@lens-protocol/react-web";
-import { RiAccountCircleFill, RiAtLine, RiGlobalLine, RiLogoutCircleRLine, RiMenu2Fill, RiMoreFill, RiWallet3Line } from "react-icons/ri";
+import { RiAccountCircleFill, RiAtLine, RiGlobalLine, RiLoginCircleLine, RiLogoutCircleRLine, RiMenu2Fill, RiMoreFill, RiWallet3Line } from "react-icons/ri";
 import { useAccount, useEnsName } from "wagmi";
 
 import { config } from "@/config/Wagmi";
@@ -43,17 +43,23 @@ export default function Auth() {
             {!session || session.type !== SessionType.WithProfile && <>
                 {address ?
                     <Link href="/login">
-                        <div  className=" btn btn-primary btn-ghost btn-circle flex xl:hidden  xl:pl-2" >
+                        <div className=" btn btn-primary btn-ghost btn-circle flex xl:hidden  xl:pl-2" >
                             <img src={makeBlockie(address)} className="w-9 h-9 rounded-full" />
                         </div>
-                        <div  className="  btn btn-primary hidden xl:flex xl:justify-start xl:w-40 xl:pl-2 " >
-                                <img src={makeBlockie(address)} className="w-9 h-9  rounded-full" />
-                                <span className="">{ensName ? ensName : AddressTruncate(address)}</span>
+                        <div className="  btn btn-primary hidden xl:flex xl:justify-start xl:w-40 xl:pl-2 " >
+                            <img src={makeBlockie(address)} className="w-9 h-9  rounded-full" />
+                            <span className="">{ensName ? ensName : AddressTruncate(address)}</span>
                         </div>
                     </Link>
                     :
-                    <Link href="/login" className="btn btn-primary btn-sm md:btn-md  text-sm xl:text-xl xl:w-40">
-                        登录
+                    <Link href="/login" >
+                        <div className="btn btn-primary btn-sm md:btn-md md:btn-circle flex xl:hidden text-sm xl:text-xl xl:w-40">
+                            <RiLoginCircleLine className=" size-6 md:size-8 hidden md:block" />
+                            <span className=" block md:hidden">登录</span>
+                        </div>
+                        <div className="btn btn-primary btn-sm md:btn-md hidden xl:flex text-sm xl:text-xl xl:w-40">
+                            <span className=" hidden xl:block">登录</span>
+                        </div>
                     </Link>
                 }
             </>}

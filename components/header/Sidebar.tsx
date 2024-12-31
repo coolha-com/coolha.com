@@ -33,25 +33,23 @@ export default function Sidebar() {
 }
 function Logo() {
     return (
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link href={`/home`} className="flex flex-row items-center justify-center gap-2">
-                <div className="avatar">
-                    <Image
-                        src='/favicon.ico'
-                        width={40}
-                        height={40}
-                        className="w-12 h-12 rounded-full "
-                        alt='Q'
-                    />
-                </div>
-                <div className="text-3xl font-bold xl:block hidden">
-                    Coolha
-                </div>
-            </Link>
-        </motion.div>
+        <div className="max-h-12">
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link href={`/home`} className="flex flex-row items-center justify-center gap-2 ">
+                    <div className="max-h-12">
+                        <img src='/favicon.ico' className="w-12 h-12 rounded-full " alt='Q' />
+                    </div>
+                    <div className="text-3xl font-bold xl:block hidden">
+                        Coolha
+                    </div>
+                </Link>
+            </motion.div>
+        </div>
     )
 }
 function Search() {
+    const pathname = usePathname();
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -81,7 +79,7 @@ function Search() {
 
                 </label>
             </div>
-            <div role="button" className="btn btn-ghost btn-circle flex xl:hidden" onClick={handleButtonClick}>
+            <div role="button" className={`btn btn-ghost btn-circle flex xl:hidden ${pathname && pathname.startsWith('/search') && "bg-[var(--button-bg)]  "}`} onClick={handleButtonClick}>
                 <RiSearchLine className=" size-7 " />
             </div>
         </>
@@ -152,14 +150,17 @@ function Linkabout() {
 
 
             <div className=" hidden xl:block text-base-content/50 text-sm">
-                <Link href={`https://github.com/coolha-com/coolha/releases/tag/alphav`} className="text-xs  hover:link " target='_blank'> v0.1.2-alphav</Link>
-                <br />
-                <Link href={`/about`} className="  hover:link "> 关于应用</Link>
-                <Link href={`mailto:cs@coolha.com`} className="  hover:link "> 赞助合作</Link>
-                <br />
-                <Link href={`/fqa`} className="  hover:link "> 常见问题</Link>
-                <Link href={`/terms`} className="  hover:link "> 条款规则</Link>
-                <Link href={`/privacy`} className="  hover:link "> 隐私政策</Link>
+                <span className="text-xs">v0.1.2-alphav</span>
+                <div className="flex gap-1">
+                    <Link href={`https://about.coolha.com`} className="  hover:link ">关于</Link>
+                    <Link href={`mailto:cs@coolha.com`} className="  hover:link ">合作</Link>
+                    <Link href={`mailto:cs@coolha.com`} className="  hover:link ">业务</Link>
+                </div>
+                <div className=" flex gap-1">
+                    <Link href={`/fqa`} className="  hover:link ">帮助</Link>
+                    <Link href={`/terms`} className="  hover:link ">条款</Link>
+                    <Link href={`/privacy`} className="  hover:link ">隐私</Link>
+                </div>
                 <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
             </div>
 

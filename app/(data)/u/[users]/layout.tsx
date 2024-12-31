@@ -1,18 +1,9 @@
-
+'use client'
 import LayoutUse from "@/components/lnes/Data/u/LayoutUse"
 import { useProfile } from "@lens-protocol/react-web";
-import { ResolvingMetadata, Metadata } from "next";
 
-type Props = {
-    params: { id: string }
-    searchParams: { [key: string]: string | string[] | undefined }
-}
 
-export async function generateMetadata(
-    { params }: any,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
-    // read route params
+/* export async function generateMetadata({ params }: any) {
     const users = params.users
     const handle = `lens/${users}`;
     const { data: profileByHandle } = useProfile({ forHandle: handle });
@@ -31,7 +22,7 @@ export async function generateMetadata(
             images: ['https://coolha.com/favicon.ico'],
           },
     }
-}
+} */
 export default function layout({ children, params: { users } }) {
 
     return (
