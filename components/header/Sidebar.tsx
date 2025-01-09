@@ -152,8 +152,8 @@ function Linkabout() {
             <div className=" hidden xl:block text-base-content/50 text-sm">
                 <span className="text-xs">v0.1.2-alphav</span>
                 <div className="flex gap-1">
-                    <Link href={`https://about.coolha.com`} className="  hover:link ">关于</Link>
-                    <Link href={`https://link3.to/coolha`} className="  hover:link ">联系</Link>
+                    <Link href={`https://about.coolha.com`} className="  hover:link " target='_blank'>关于</Link>
+                    <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系</Link>
                 </div>
                 <div className=" flex gap-1">
                     <Link href={`/fqa`} className="  hover:link ">帮助</Link>
