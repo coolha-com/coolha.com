@@ -28,13 +28,13 @@ export default function ButtonMenu() {
                     <div className="text-base-content/50 text-sm">
                         <span className="text-xs">v0.1.2-alphav</span>
                         <div className="flex gap-1">
-                            <Link href={`https://about.coolha.com`} className="  hover:link ">关于</Link>
-                            <Link href={`https://link3.to/coolha`} className="  hover:link ">联系</Link>
+                            <Link href={`https://about.coolha.com`} className="  hover:link " target='_blank'>关于</Link>
+                            <Link href={`https://docs.coolha.com`} className="  hover:link " target='_blank'>文档</Link>
+                            <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系</Link>
                         </div>
                         <div className=" flex gap-1">
-                            <Link href={`/fqa`} className="  hover:link ">帮助</Link>
-                            <Link href={`/terms`} className="  hover:link ">条款</Link>
-                            <Link href={`/privacy`} className="  hover:link ">隐私</Link>
+                            <Link href={`https://docs.coolha.com/apps/privacy`} className="  hover:link " target='_blank'>隐私</Link>
+                            <Link href={`https://docs.coolha.com/apps/terms`} className="  hover:link " target='_blank'>条款</Link>
                         </div>
                         <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
                     </div>
