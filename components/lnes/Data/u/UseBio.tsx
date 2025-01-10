@@ -39,12 +39,12 @@ export default function UseBio({ profile }) {
 
 
 
-      <div className='md:grid md:justify-items-start  md:grid-cols-3  md:gap-2 flex flex-col items-start  py-1 px-4 gap-0.5'>
+      <div className=' flex flex-col md:flex-row items-start  py-1 px-4 gap-0.5'>
         {location &&
           <div>
             <Link
               href={`https://www.google.com/maps/search/?api=1&query=${location}`}
-              className=' hover:text-primary hover:underline text-base flex flex-row justify-center items-center' target='_blank'>
+              className='   text-base   items-center btn  btn-ghost  btn-sm' target='_blank'>
               <RiMapPin2Line size={14} />{location}
             </Link>
           </div>
@@ -53,7 +53,7 @@ export default function UseBio({ profile }) {
           <div>
             <Link
               href={`${website}`}
-              className=' hover:text-primary hover:underline text-base flex flex-row justify-center items-center' target='_blank'>
+              className='   text-base   items-center btn  btn-ghost btn-sm' target='_blank'>
               <RiAttachment2 size={14} />{website}
             </Link>
           </div>
@@ -62,7 +62,7 @@ export default function UseBio({ profile }) {
           <div>
             <Link
               href={`https://x.com/${x}`}
-              className=' hover:text-primary hover:underline text-base flex flex-row justify-center items-center' target='_blank'>
+              className='   text-base   items-center btn  btn-ghost btn-sm' target='_blank'>
               <RiTwitterXFill size={14} />{x}
             </Link>
           </div>
@@ -71,7 +71,7 @@ export default function UseBio({ profile }) {
           <div>
             <Link
               href={`https://www.youtube.com/${youtube}`}
-              className=' hover:text-primary hover:underline text-base flex flex-row justify-center items-center' target='_blank'>
+              className='   text-base   items-center btn  btn-ghost btn-sm' target='_blank'>
               <RiYoutubeLine size={14} />{youtube}
             </Link>
           </div>
@@ -80,7 +80,7 @@ export default function UseBio({ profile }) {
           <div>
             <Link
               href={`https://www.spotify.com/${spotify}`}
-              className=' hover:text-primary hover:underline text-base flex flex-row justify-center items-center' target='_blank'>
+              className='   text-base   items-center btn  btn-ghost btn-sm' target='_blank'>
               <RiSpotifyLine size={14} />{spotify}
             </Link>
           </div>
