@@ -141,7 +141,7 @@ function Linkabout() {
     return (
         <div className="flex flex-col h-full gap-2">
 
-            <div className="hidden xl:flex flex-col xl:flex-row w-40 gap-1 ">
+{/*             <div className="hidden xl:flex flex-col xl:flex-row w-40 gap-1 ">
                 <div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="btn btn-ghost btn-circle">
                     {theme === 'dark' ? (<RiSunLine className="size-7" />) : (<RiMoonLine className="size-7" />)}
                 </div>
@@ -161,9 +161,9 @@ function Linkabout() {
                     <Link href={`https://docs.coolha.com/apps/terms`} className="  hover:link " target='_blank'>条款</Link>
                 </div>
                 <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
-            </div>
+            </div> */}
 
-            <div className=" block xl:hidden">
+            <div className="">
                 <ButtonMenu />
             </div>
 

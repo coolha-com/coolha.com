@@ -17,14 +17,24 @@ export default function ButtonMenu() {
         <>
             {/* 菜单按钮 */}
             <div className="dropdown dropdown-bottom dropdown-end md:dropdown-top md:dropdown-right">
-                <div tabIndex={0} role="button" className=" p-1 md:p-2 mr-1 md:mr-0 rounded-full hover:bg-[var(--button-bg)] "><CgMenuGridO className="size-6 md:size-8" /></div>
+
+                <div tabIndex={0} role="button" className=" xl:w-40 btn btn-ghost btn-circle btn-sm md:btn-md xl:justify-start xl:pl-2 mx-1 md:mx-0">
+                    <CgMenuGridO className="size-6 md:size-8" />
+                    <span className=" hidden xl:flex text-lg">更多</span>
+                </div>
+
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 border text-lg">
+
                     <li><Link href={`/settings`}><RiSettingsLine className="size-7" />应用设置</Link></li>
-                    <li><div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-                        {theme === 'dark' ? (<RiSunLine className="size-7" />) : (<RiMoonLine className="size-7" />)}
-                        <span>切换主题</span>
-                    </div></li>
+                    <li>
+                        <div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+                            {theme === 'dark' ? (<RiSunLine className="size-7" />) : (<RiMoonLine className="size-7" />)}
+                            <span>切换主题</span>
+                        </div>
+                    </li>
+
                     <li className="my-1"></li>
+
                     <div className="text-base-content/50 text-sm">
                         <span className="text-xs">v0.1.2-alphav</span>
                         <div className="flex gap-1">

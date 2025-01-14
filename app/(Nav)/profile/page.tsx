@@ -119,15 +119,14 @@ function Card() {
    const assetData = [
       { label: '资产', href: '/wallet', icon: RiWallet3Line, },
       { label: '会员', href: '/vip', icon: RiVerifiedBadgeLine, },
-      { label: '成就等级', href: '/grade', icon: RiMedalLine, },
-      { label: '数据分析', href: '/analyse', icon: RiBarChart2Line, },
       { label: '我的书签', href: '/bookmarks', icon: RiBookmarkLine, },
    ];
-
+   
    const userData = [
-      { label: '扩展功能', href: '/extend', icon: RiPuzzleLine, },
+      { label: '成就等级', href: '/grade', icon: RiMedalLine, },
       { label: '邀请用户', href: '/invite', icon: RiUserVoiceLine, },
       { label: '测试奖励', href: '/mintNFT', icon: RiGiftLine, },
+      { label: '扩展功能', href: '/extend', icon: RiPuzzleLine, },
    ];
 
    return (
@@ -141,6 +140,9 @@ function Card() {
                      <item.icon size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>{item.label}</p>
                   </Link>
                ))}
+                  <Link href={`/creator`}  className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
+                     <RiBarChart2Line size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>创作室</p>
+                  </Link>
             </div>
          </div>
 

@@ -53,12 +53,12 @@ export default function Auth() {
                     </Link>
                     :
                     <Link href="/login" >
-                        <div className="btn btn-primary btn-sm md:btn-md md:btn-circle flex xl:hidden text-sm xl:text-xl xl:w-40">
-                            <RiLoginCircleLine className=" size-6 md:size-8 hidden md:block" />
-                            <span className=" block md:hidden">登录</span>
+                        <div className="btn btn-primary  md:btn-circle xl:text-xl xl:w-40 hidden md:flex xl:hidden ">
+                            <RiLoginCircleLine className=" size-8 " />
+                            <span className=" md:hidden xl:block block">登录</span>
                         </div>
-                        <div className="btn btn-primary btn-sm md:btn-md hidden xl:flex text-sm xl:text-xl xl:w-40">
-                            <span className=" hidden xl:block">登录</span>
+                        <div className="btn btn-primary btn-sm md:btn-md md:hidden xl:flex text-sm xl:text-xl xl:w-40">
+                            <span className="">登录</span>
                         </div>
                     </Link>
                 }
