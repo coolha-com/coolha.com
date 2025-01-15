@@ -31,8 +31,8 @@ export function PUBposts({
           {/* 转发的帖子 */}
           {pub.__typename === "Mirror" ? (
             <>
-              <div className=" flex flex-row gap-0.5 text-base-content/70">
-                <RiLoopLeftFill className="size-6" />
+              <div className=" flex flex-row gap-0.5 text-base-content/70 text-base">
+                <RiLoopLeftFill className="size-5" />
                 <b className=""> {pub.by.metadata?.displayName} </b>
                 <span className=""> 转发了</span>
               </div>

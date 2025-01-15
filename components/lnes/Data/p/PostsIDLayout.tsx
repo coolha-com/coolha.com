@@ -42,7 +42,7 @@ export default function PostsIDLayout({ children, params }) {
 
 
         {/* 主帖 */}
-        <div key={pub.id} className="w-dvw md:max-w-3xl md:p-4 pb-2 pt-0 bg-base-100">
+        <div key={pub.id} className=" md:max-w-3xl p-4 pb-2 pt-0 bg-base-100">
 
           {pub.__typename === "Mirror" ? (<></>) : (<>
             <div className="flex">

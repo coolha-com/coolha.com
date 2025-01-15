@@ -58,7 +58,7 @@ export default function Page() {
 
 
 
-      <div className="flex flex-wrap flex-col justify-normal lg:justify-center w-full">
+      <div className="flex flex-wrap flex-col justify-normal lg:justify-center mx-auto max-w-3xl">
         {loadingPubs && <LoadingSpinner />}
 
         {publications?.map((pub: any) => (

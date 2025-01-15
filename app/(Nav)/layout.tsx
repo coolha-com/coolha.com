@@ -18,7 +18,7 @@ export default function layout({ children }) {
         <NavFooter />
         </div>
 
-      <div className="lg:w-20 xl:w-32" />
+      <div className="lg:w-20 xl:w-56" />
 
     </div>
   )

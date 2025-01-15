@@ -4,14 +4,14 @@ import Link from "next/link";
 
 import { usePathname, } from 'next/navigation'
 
-import { RiApps2Fill, RiApps2Line, RiArchiveFill, RiArchiveLine, RiChat1Fill, RiChat1Line, RiCompass3Fill, RiCompass3Line, RiHome5Fill, RiHome5Line, RiHomeFill, RiHomeLine, RiMailFill, RiMailLine, RiMessageFill, RiMessageLine, RiSearchFill, RiSearchLine, RiUserFill, RiUserLine } from "react-icons/ri";
+import { RiApps2Fill, RiApps2Line, RiArchiveFill, RiArchiveLine, RiChat1Fill, RiChat1Line, RiCompass3Fill, RiCompass3Line, RiCompassFill, RiCompassLine, RiHome5Fill, RiHome5Line, RiHomeFill, RiHomeLine, RiMailFill, RiMailLine, RiMessageFill, RiMessageLine, RiSearchFill, RiSearchLine, RiUserFill, RiUserLine } from "react-icons/ri";
 
 
 export default function NavFooter() {
     return (
         <div >
 
-            <div className="md:hidden flex fixed bottom-0 w-full h-14 bg-[var(--background-end-rgb)] backdrop-filter backdrop-saturate-180 backdrop-blur-16 border-t z-50 p-1">
+            <div className="md:hidden flex fixed bottom-0 w-full h-14 bg-[var(--background-end-rgb)] backdrop-filter backdrop-saturate-180 backdrop-blur-16  z-50 p-1">
 
                 <NavLink
                     href='/home'
@@ -24,8 +24,8 @@ export default function NavFooter() {
                 <NavLink
                     href='/find'
                     activeHrefs={['/find']}
-                    icon={<RiCompass3Line className="size-7" />}
-                    activeIcon={<RiCompass3Fill className="size-7" />}
+                    icon={<RiCompassLine  className="size-7" />}
+                    activeIcon={<RiCompassFill className="size-7" />}
                     text='发现'
                 />
 

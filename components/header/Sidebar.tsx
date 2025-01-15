@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { RiHomeFill, RiHomeLine, RiCompass3Fill, RiCompass3Line, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSettingsLine, RiSunLine, RiMoonClearLine, RiSearchLine, RiMenu2Fill, RiMoonLine } from "react-icons/ri";
+import { RiHomeFill, RiHomeLine, RiCompass3Fill, RiCompass3Line, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSettingsLine, RiSunLine, RiMoonClearLine, RiSearchLine, RiMenu2Fill, RiMoonLine, RiCompassFill, RiCompassLine } from "react-icons/ri";
 import AuthButton from "./AuthButton";
 import ButtonMenu from "./ButtonMenu";
 import { motion } from "motion/react";
@@ -23,7 +23,7 @@ export default function Sidebar() {
                         <AuthButton />
                     </div>
                     <div className="">
-                        <Linkabout />
+                        <ButtonMenu />
                     </div>
                 </ul>
             </div>
@@ -71,9 +71,9 @@ function Search() {
     return (
         <>
             <div className="my-1">
-                <label className="input input-bordered xl:flex items-center w-40 hidden">
+                <label className="input input-bordered xl:flex items-center justify-start w-40 hidden">
                     <span className="btn btn-ghost btn-circle btn-sm " onClick={handleButtonClick}>
-                        <RiSearchLine className=" size-5 " />
+                        <RiSearchLine className=" size-7 " />
                     </span>
                     <input type="text" className="grow" placeholder="搜索" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleKeyDown} />
 
@@ -98,8 +98,8 @@ function NavbarLink() {
         {
             title: '发现',
             href: '/find',
-            iconActive: RiCompass3Fill,
-            iconInactive: RiCompass3Line,
+            iconActive: RiCompassFill,
+            iconInactive: RiCompassLine,
             startsWith: '/find'
         },
         {
@@ -123,7 +123,7 @@ function NavbarLink() {
                 <li key={link.href}>
                     <Link
                         href={link.href}
-                        className={`xl:w-40 btn btn-ghost btn-circle xl:justify-start xl:pl-2  ${pathname && pathname.startsWith(link.startsWith) && "bg-[var(--button-bg)]  "}`}
+                        className={`btn btn-ghost btn-circle no-animation xl:justify-start xl:w-40  xl:pl-2  ${pathname && pathname.startsWith(link.startsWith) && "bg-[var(--button-bg)]  "}`}
                     >
                         {pathname.startsWith(link.startsWith) ? <link.iconActive className="size-7" /> : <link.iconInactive className="size-7" />}
                         <span className=" hidden xl:flex text-lg">
@@ -134,39 +134,5 @@ function NavbarLink() {
             ))}
 
         </>
-    )
-}
-function Linkabout() {
-    const { theme, setTheme } = useTheme();
-    return (
-        <div className="flex flex-col h-full gap-2">
-
-{/*             <div className="hidden xl:flex flex-col xl:flex-row w-40 gap-1 ">
-                <div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="btn btn-ghost btn-circle">
-                    {theme === 'dark' ? (<RiSunLine className="size-7" />) : (<RiMoonLine className="size-7" />)}
-                </div>
-                <Link href={`/settings`} className="btn btn-ghost btn-circle"><RiSettingsLine className="size-7" /></Link>
-            </div>
-
-
-            <div className=" hidden xl:block text-base-content/50 text-sm">
-                <span className="text-xs">v0.1.2-alphav</span>
-                <div className="flex gap-1">
-                    <Link href={`https://about.coolha.com`} className="  hover:link " target='_blank'>关于</Link>
-                    <Link href={`https://docs.coolha.com`} className="  hover:link " target='_blank'>文档</Link>
-                    <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系</Link>
-                </div>
-                <div className=" flex gap-1">
-                    <Link href={`https://docs.coolha.com/apps/privacy`} className="  hover:link " target='_blank'>隐私</Link>
-                    <Link href={`https://docs.coolha.com/apps/terms`} className="  hover:link " target='_blank'>条款</Link>
-                </div>
-                <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
-            </div> */}
-
-            <div className="">
-                <ButtonMenu />
-            </div>
-
-        </div>
     )
 }

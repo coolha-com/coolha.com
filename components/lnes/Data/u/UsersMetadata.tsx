@@ -28,14 +28,14 @@ export default function UsersMetadata({ profile }) {
                     <>
                         {profile.metadata.picture.optimized?.uri && (
                             <img
-                                className="rounded-full border border-base-content w-16 h-16 md:w-24 md:h-24 "
+                                className="rounded-full  w-16 h-16 md:w-24 md:h-24 "
                                 src={profile.metadata.picture.optimized.uri}
                                 alt="picture Set"
                             />
                         )}
                         {profile.metadata.picture.__typename === 'ProfilePicture_NftImage_' && (
                             <img
-                                className="rounded-full border border-base-content w-16 h-16 md:w-24 md:h-24 "
+                                className="rounded-full  w-16 h-16 md:w-24 md:h-24 "
                                 src={profile.metadata.picture.uri}
                                 alt="picture NFT"
                             />
@@ -43,7 +43,7 @@ export default function UsersMetadata({ profile }) {
                     </>
                 ) : (
                     <img
-                        className="rounded-full border border-base-content w-16 h-16 md:w-24 md:h-24 "
+                        className="rounded-full  w-16 h-16 md:w-24 md:h-24 "
                         src="/rlogo.png" // 使用默认的占位符图片
                         alt="optimized on"
                     />

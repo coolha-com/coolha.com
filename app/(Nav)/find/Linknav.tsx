@@ -35,7 +35,7 @@ export default function Linknav() {
         },
         {
             href: "/find",
-            name: "活动",
+            name: "探索",
             logo: <RiApps2Line />
         }
     ]
@@ -43,7 +43,7 @@ export default function Linknav() {
         <>
 
             {/* 类型 */}
-            <div className="flex flex-row-reverse w-full  max-w-3xl mx-auto  items-center justify-center z-40 h-12 ">
+            <div className="flex flex-row-reverse mx-auto  max-w-3xl   items-center justify-center z-40 h-12 ">
                 {linknav.map((item) => (
                     <div className='mx-auto  w-1/3  z-20 flex flex-row-reverse tabs tabs-bordered' key={item.href}>
 

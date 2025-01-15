@@ -60,7 +60,7 @@ export default function RootLayout({ auth, children, }:any) {
       <body className={`${inter.className} bg-base-200 `}>
 
 
-        <ThemeProvider>
+        <ThemeProvider  attribute="data-theme">
           <ContextProvider cookies={cookies}  >
 
             {children}

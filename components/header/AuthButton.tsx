@@ -72,7 +72,7 @@ export default function Auth() {
                     <div className="dropdown dropdown-bottom dropdown-end  md:dropdown-right  z-50">
                         {/* md:用户资料 */}
                         <div tabIndex={0} role="button" className="">
-                            <div className="xl:w-40 btn md:btn-ghost btn-circle xl:justify-start xl:pl-2">
+                            <div className=" xl:w-40 md:btn md:btn-ghost md:btn-circle no-animation xl:justify-start xl:pl-2">
                                 {session.profile?.metadata?.picture ? (
                                     <>
                                         {session.profile.metadata.picture.__typename === 'ImageSet' && (
@@ -126,7 +126,7 @@ export default function Auth() {
 
                             <li className="my-1"></li>
                             {/* <li><div > <RiArrowLeftRightFill className="size-7" />切换账号</div></li> */}
-                            <li><div onClick={() => execute()}> <RiLogoutCircleRLine className="size-7" />注销</div></li>
+                            <li><div onClick={() => execute()} className="text-error"> <RiLogoutCircleRLine className="size-7" />注销</div></li>
                         </ul>
 
 

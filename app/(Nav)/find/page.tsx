@@ -4,7 +4,8 @@
 
 export default function Page() {
   return (
-    <div className=' '>
+    <div className='mx-auto max-w-3xl '>
+      
     </div>
   )
 }
