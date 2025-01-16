@@ -43,7 +43,7 @@ export default function Linknav() {
         <>
 
             {/* 类型 */}
-            <div className="flex flex-row-reverse mx-auto  max-w-3xl   items-center justify-center z-40 h-12 ">
+            <div className="flex flex-row-reverse mx-auto     items-center justify-center z-40 h-12 ">
                 {linknav.map((item) => (
                     <div className='mx-auto  w-1/3  z-20 flex flex-row-reverse tabs tabs-bordered' key={item.href}>
 
@@ -57,7 +57,7 @@ export default function Linknav() {
             </div>
 
 
-            <div className={`w-full mx-auto max-w-3xl ${pathname === '/find' && 'hidden'}`}>
+            <div className={`w-full mx-auto  ${pathname === '/find' && 'hidden'}`}>
                 <ButtonList />
             </div>
         </>

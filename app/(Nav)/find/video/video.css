@@ -1,0 +1,18 @@
+/* 全局样式 */
+html, body {
+    scroll-snap-type: y mandatory;
+    overflow: hidden;
+  }
+  
+  .scroll-snap-y-mandatory {
+    scroll-snap-type: y mandatory;
+  }
+  
+  .snap-center {
+    scroll-snap-align: center;
+  }
+  
+  video {
+    object-fit: cover;
+  }
+  

@@ -124,8 +124,8 @@ function Card() {
    
    const userData = [
       { label: '成就等级', href: '/grade', icon: RiMedalLine, },
-      { label: '邀请用户', href: '/invite', icon: RiUserVoiceLine, },
       { label: '测试奖励', href: '/mintNFT', icon: RiGiftLine, },
+      { label: '邀请用户', href: '/invite', icon: RiUserVoiceLine, },
       { label: '扩展功能', href: '/extend', icon: RiPuzzleLine, },
    ];
 
