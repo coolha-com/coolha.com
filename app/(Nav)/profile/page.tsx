@@ -140,8 +140,8 @@ function Card() {
                      <item.icon size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>{item.label}</p>
                   </Link>
                ))}
-                  <Link href={`/creator`}  className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
-                     <RiBarChart2Line size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>创作室</p>
+                  <Link href={`/creator`} target='_blank' className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
+                     <RiBarChart2Line size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>创作中心</p>
                   </Link>
             </div>
          </div>

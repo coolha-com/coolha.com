@@ -9,7 +9,7 @@ export default function ButtonMenu() {
     const { theme, setTheme, resolvedTheme } = useTheme();
 
 
-    
+
 
 
     return (
@@ -34,7 +34,7 @@ export default function ButtonMenu() {
                     </li>
                     <li className="my-1"></li>
 
-{/*                     <div role="tablist" className="tabs tabs-boxed" >
+                    {/*                     <div role="tablist" className="tabs tabs-boxed" >
                         <a role="tab" className={`tab ${theme === "light" ? "tab-active" : ""}`} onClick={() => setTheme("light")}  >
                             <RiSunLine size={24} />
                         </a>
@@ -47,11 +47,12 @@ export default function ButtonMenu() {
                     <div className="text-base-content/50 text-sm">
                         <span className="text-xs">v0.1.2-alphav</span>
                         <div className="flex gap-1">
-                            <Link href={`https://about.coolha.com`} className="  hover:link " target='_blank'>关于</Link>
-                            <Link href={`https://docs.coolha.com`} className="  hover:link " target='_blank'>文档</Link>
                             <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系</Link>
+                            <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="  hover:link " target='_blank'>反馈</Link>
                         </div>
                         <div className=" flex gap-1">
+                            <Link href={`https://about.coolha.com`} className="  hover:link " target='_blank'>关于</Link>
+                            <Link href={`https://docs.coolha.com`} className="  hover:link " target='_blank'>文档</Link>
                             <Link href={`https://docs.coolha.com/apps/privacy`} className="  hover:link " target='_blank'>隐私</Link>
                             <Link href={`https://docs.coolha.com/apps/terms`} className="  hover:link " target='_blank'>条款</Link>
                         </div>
