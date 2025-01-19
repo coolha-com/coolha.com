@@ -16,6 +16,7 @@ export default function UsersNav({ name, profile }) {
 
                         <Link
                             replace
+                            prefetch={false}
                             href={`/u/${name}${item.href}`}
                             className={`z-20 flex md:flex-row items-center justify-center w-[100%] h-16 md:h-12 text-[#878787]  border-b-0 hover:bg-[var(--button-bg)]
                         ${pathname === `/u/${name}${item.href}` ? 'text-info border-b-2 border-b-info ' : ''}

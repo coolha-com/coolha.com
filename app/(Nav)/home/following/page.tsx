@@ -37,10 +37,10 @@ export default function page() {
 
 
         return (
-            <div className="flex flex-wrap flex-col justify-normal lg:justify-center w-full">
+            <div className="flex flex-wrap flex-col justify-normal lg:justify-center mx-auto max-w-3xl">
                 {loading && <LoadingSpinner />}
                 {data?.map((pub) => (
-                    <div className=" bg-base-100   w-dvw md:w-full md:max-w-3xl p-4 py-2 mt-2" key={`${pub.root.id}`}>
+                    <div className=" bg-base-100 w-dvw md:w-full md:max-w-3xl p-4 py-2 mt-2" key={`${pub.root.id}`}>
 
 
                         {/* 帖子主内容 */}

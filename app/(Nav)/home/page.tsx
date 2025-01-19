@@ -52,12 +52,6 @@ export default function Page() {
   });
 
   return (
-    <>
-
-      {/* 算法 */}
-
-
-
       <div className="flex flex-wrap flex-col justify-normal lg:justify-center mx-auto max-w-3xl">
         {loadingPubs && <LoadingSpinner />}
 
@@ -129,7 +123,6 @@ export default function Page() {
         )}
 
       </div>
-    </>
   )
 }
 

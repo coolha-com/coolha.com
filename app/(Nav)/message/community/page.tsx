@@ -10,7 +10,7 @@ export default function communitypage() {
     return (
         <div>
             {chatData.map((chat, index) => (
-                <Link key={index} href={`/chat/${chat.name}`} className="flex p-4  bg-base-100 hover:bg-[--link-hover-background]">
+                <Link key={index} href={`/chat/${chat.name}`} className="flex p-3  bg-base-100 hover:bg-[--link-hover-background] border-b">
 
                     <div className="flex-none w-14">
                         <img src={chat.img} alt={chat.name} className=" rounded-full bg-white" />

@@ -1,6 +1,6 @@
 'use client'
+import Sidebar from "@/components/header/Sidebar"
 import LayoutUse from "@/components/lnes/Data/u/LayoutUse"
-import { useProfile } from "@lens-protocol/react-web";
 
 
 /* export async function generateMetadata({ params }: any) {
@@ -26,9 +26,22 @@ import { useProfile } from "@lens-protocol/react-web";
 export default function layout({ children, params: { users } }) {
 
     return (
-        <LayoutUse users={users}>
-            {children}
-        </LayoutUse>
+        <div className='bg-base-200 min-h-dvh  flex'>
+
+            <div className="md:w-20 xl:w-56">
+                <Sidebar />
+            </div>
+
+            <div className='flex-1'>
+                <LayoutUse users={users}>
+                    {children}
+                </LayoutUse>
+            </div>
+
+            <div className="lg:w-20 xl:w-56" />
+
+        </div>
+
 
     )
 }

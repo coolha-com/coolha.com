@@ -1,7 +1,8 @@
+'use client'
 import { convertLinksToHTML } from '@/utils/convertLinksToHTML';
 import Link from 'next/link';
 import React from 'react';
-import { RiAttachment2, RiMapPin2Line, RiSpotifyLine, RiTwitterXFill, RiYoutubeLine } from 'react-icons/ri';
+import { RiAttachment2, RiMapPin2Line, RiSpotifyLine, RiTwitterXFill, RiTwitterXLine, RiYoutubeLine } from 'react-icons/ri';
 
 export default function UseBio({ profile }) {
   const bioText = profile?.metadata?.bio || '';
@@ -63,7 +64,7 @@ export default function UseBio({ profile }) {
             <Link
               href={`https://x.com/${x}`}
               className='  btn  btn-ghost btn-circle btn-sm' target='_blank'>
-              <RiTwitterXFill size={20} />
+              <RiTwitterXLine size={20} />
             </Link>
           </div>
         }

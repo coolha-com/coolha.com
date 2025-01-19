@@ -51,10 +51,10 @@ export default function Linknav() {
     ]
     return (
         <>
-            <div className=" fixed md:hidden flex flex-row w-full max-w-3xl z-50 h-12  items-center  ">
+            <div className=" fixed top-0 md:hidden flex flex-row w-dvw max-w-3xl z-50 h-12  items-center  ">
                 <div className="navbar w-full min-h-12 p-0 px-2 bg-base-100 z-50">
                     <div className="navbar-start gap-1">
-                        <Link href={`/home#hometop`} >
+                        <Link href={`/home`} >
                             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                 <img src='/favicon.ico' className="w-9 h-9 rounded-full " alt='Coolha' />
                             </motion.div>

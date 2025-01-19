@@ -47,7 +47,7 @@ export default function Linknav() {
                 {linknav.map((item) => (
                     <div className='mx-auto  w-1/3  z-20 flex flex-row-reverse tabs tabs-bordered' key={item.href}>
 
-                        <Link href={item.href} className={`z-20 flex flex-row  items-center justify-center w-full h-12  text-[#878787] border-b-0 bg-base-100 hover:bg-[--link-hover-background] ${pathname === item.href ? 'text-info  border-b-info border-b-2' : ''}`}>
+                        <Link href={item.href} prefetch={false} className={`z-20 flex flex-row  items-center justify-center w-full h-12  text-[#878787] border-b-0 bg-base-100 hover:bg-[--link-hover-background] ${pathname === item.href ? 'text-info  border-b-info border-b-2' : ''}`}>
                             <div className=' justify-center text-xl xs:text-2xl sm:text-3xl z-20'> {item.logo} </div>
                             <p className="text-sm text-inherit z-20 text-center md:text-base md:ml-1 hidden sm:flex ">{item.name}</p>
                         </Link>

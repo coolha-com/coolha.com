@@ -33,9 +33,18 @@ export default function Auth() {
     return (
         <div className="">
             {loading && <>
-                <button className="xl:w-40 btn  btn-sm md:btn-md text-base-content  text-xl " >
-                    <span className="loading loading-xs md:loading-sm loading-spinner"></span>
-                </button>
+                <div className="xl:w-40 btn  btn-sm md:btn-md text-base-content hidden xl:flex  text-xl " >
+                    <div className="flex items-center gap-4">
+                        <div className="skeleton h-9 w-9 shrink-0 rounded-full"></div>
+                        <div className="flex flex-col gap-2">
+                            <div className=" hidden md:block skeleton h-4 xl:w-20"></div>
+                            <div className=" hidden md:block skeleton h-4 xl:w-20"></div>
+                        </div>
+                    </div>
+                </div>
+                <div className=" btn btn-primary btn-ghost btn-circle flex xl:hidden  xl:pl-2" >
+                    <div className="skeleton h-9 w-9 shrink-0 rounded-full"></div>
+                </div>
             </>}
 
 

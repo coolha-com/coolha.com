@@ -136,11 +136,11 @@ function Card() {
             {/* <h1 className="p-2 md:p-4 text-xl font-bold">资产</h1> */}
             <div className='flex-row grid grid-cols-4 justify-items-stretch   h-auto w-auto  p-3 '>
                {assetData.map((item, index) => (
-                  <Link href={item.href} key={index} className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
+                  <Link href={item.href} prefetch={false} key={index} className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
                      <item.icon size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>{item.label}</p>
                   </Link>
                ))}
-                  <Link href={`/creator`} target='_blank' className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
+                  <Link href={`/creator`} prefetch={false} target='_blank' className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
                      <RiBarChart2Line size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>创作中心</p>
                   </Link>
             </div>
@@ -151,7 +151,7 @@ function Card() {
             {/* <h1 className="p-2 md:p-4 text-xl font-bold">用户</h1> */}
             <div className='flex-row  grid grid-cols-4 justify-items-stretch h-auto w-auto  p-3 '>
                {userData.map((item, index) => (
-                  <Link href={item.href ? item.href : ''} key={index} className='  grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3 '>
+                  <Link href={item.href ? item.href : ''} key={index} prefetch={false} className='  grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3 '>
                      <item.icon size={24} /> <p className='text-[0.5rem] xs:text-xs md:text-base'>{item.label}</p>
                   </Link>
                ))}
