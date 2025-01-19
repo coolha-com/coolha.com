@@ -9,7 +9,7 @@ import { mainnet, polygon } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { ThemeProvider, useTheme } from "next-themes";
-import { ThirdwebProvider } from "thirdweb/react";
+/* import { ThirdwebProvider } from "thirdweb/react"; */
 
 
 export const queryClient = new QueryClient()
@@ -63,9 +63,7 @@ export default function ContextProvider({ children, cookies }: { children: React
             <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={initialState}>
                 <QueryClientProvider client={queryClient}>
                     <LensProvider config={lensConfig}>
-                        <ThirdwebProvider>
                         {children}
-                        </ThirdwebProvider>
                     </LensProvider>
                 </QueryClientProvider>
             </WagmiProvider>

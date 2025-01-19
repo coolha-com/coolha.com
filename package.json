@@ -33,7 +33,6 @@
     "react-markdown": "^9.0.1",
     "remark-gfm": "^4.0.0",
     "sharp": "^0.33.5",
-    "thirdweb": "^5.85.0",
     "viem": "^2.21.50",
     "wagmi": "^2.13.0",
     "zod": "^3.23.8"
