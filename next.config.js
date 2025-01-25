@@ -4,7 +4,7 @@ const nextConfig = {
     config.externals.push('pino-pretty', 'lokijs', 'encoding')
     return config
   },
-  async redirects() {
+/*   async redirects() {
     return [
       {
         source: '/',
@@ -12,7 +12,7 @@ const nextConfig = {
         permanent: true, // 设置为 true 将使用永久重定向 308
       },
     ]
-  },
+  }, */
 };
 
 module.exports = nextConfig;

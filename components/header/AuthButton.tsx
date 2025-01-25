@@ -7,10 +7,11 @@ import { useAccount, useEnsName } from "wagmi";
 import { config } from "@/config/Wagmi";
 import Link from "next/link";
 import { useAppKit, useAppKitNetwork } from "@reown/appkit/react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import makeBlockie from 'ethereum-blockies-base64';
 export default function Auth() {
+    const pathname = usePathname();
     const router = useRouter();
     const { address, isConnected } = useAccount({ config });
     const { data: ensName } = useEnsName({ address })
@@ -78,7 +79,7 @@ export default function Auth() {
                 <div className=" flex flex-col gap-1">
 
 
-                    <div className="dropdown dropdown-bottom dropdown-end  md:dropdown-right  z-50">
+                    <div className={`dropdown  dropdown-bottom dropdown-end  md:dropdown-right dropdown-hover z-50`}>
                         {/* md:用户资料 */}
                         <div tabIndex={0} role="button" className="">
                             <div className=" xl:w-40 md:btn md:btn-ghost md:btn-circle no-animation xl:justify-start xl:pl-2">

@@ -22,7 +22,7 @@ export default function ButtonMenu() {
                     <span className=" hidden xl:flex text-lg">更多</span>
                 </div>
 
-                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 border text-lg">
+                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box min-w-52 border text-lg">
 
                     <li><Link href={`/settings`}><RiSettingsLine className="size-7" />应用设置</Link></li>
 
@@ -46,17 +46,26 @@ export default function ButtonMenu() {
 
                     <div className="text-base-content/50 text-sm">
                         <span className="text-xs">v0.1.2-alphav</span>
-                        <div className="flex gap-1">
+
+                        <div className="flex gap-2">
+                            <Link href={`/`} className="  hover:link ">关于应用</Link>
+                            <Link href={`https://labs.coolha.com`} className="  hover:link " target='_blank'>开发团队</Link>
                             <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系</Link>
-                            <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="  hover:link " target='_blank'>反馈</Link>
                         </div>
-                        <div className=" flex gap-1">
-                            <Link href={`https://about.coolha.com`} className="  hover:link " target='_blank'>关于</Link>
+
+                        <div className="flex gap-2">
+                            <Link href={`https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e`} className="  hover:link " target='_blank'>帮助反馈</Link>
+                            <Link href={`/fqa`} className="  hover:link " target='_blank'>常见问题</Link>
+                        </div>
+
+                        <div className=" flex gap-2">
                             <Link href={`https://docs.coolha.com`} className="  hover:link " target='_blank'>文档</Link>
                             <Link href={`https://docs.coolha.com/apps/privacy`} className="  hover:link " target='_blank'>隐私</Link>
                             <Link href={`https://docs.coolha.com/apps/terms`} className="  hover:link " target='_blank'>条款</Link>
                         </div>
-                        <div className=""> <p>©{new Date().getFullYear()} coolha.com </p></div>
+
+                        <div className=""> <span>©{new Date().getFullYear()} coolha.com </span></div>
+
                     </div>
 
                 </ul>
