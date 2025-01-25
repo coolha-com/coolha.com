@@ -41,8 +41,6 @@ export default function layout({ children, params: { users } }) {
             <div className="lg:w-20 xl:w-56" />
 
         </div>
-
-
     )
 }
 

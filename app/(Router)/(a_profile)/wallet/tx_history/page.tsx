@@ -1,6 +1,4 @@
 'use client'
-/* 
-import EmbedPay from "@/components/thirdweb/EmbedPay" */
 
 export default function page() {
   return (

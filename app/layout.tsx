@@ -39,7 +39,7 @@ export default function RootLayout({ auth, children, }:any) {
         <meta property="twitter:title" content="Coolha:Lens Protocol Web3 Content social" />
         <meta property="twitter:description" content="Lens Protocol Web3 Content social" />
         <meta property="description" content="基于Lens协议构建,为中文用户构建,内容社交,社群聊天,放大创作者经济,灵感保证原创,Web3优质内容的去中心化平台" />
-        <meta property="og:image" content="/icon.png" />
+        <meta property="og:image" content="/favicon.ico" />
         <meta property="og:site_name" content="Coolha Dapp:基于Lens协议构建,为中文用户设计的去中心化平台" />
         <meta property="og:title" content="Coolha"></meta>
         <meta property="og:description" content="基于Lens协议构建,为中文用户构建,内容社交,社群聊天,放大创作者经济,灵感保证原创,Web3优质内容的去中心化平台" />
