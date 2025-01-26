@@ -55,7 +55,7 @@ export default function ButtonMenu() {
 
                         <div className="flex gap-2">
                             <Link href={`https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e`} className="  hover:link " target='_blank'>帮助反馈</Link>
-                            <Link href={`/fqa`} className="  hover:link " target='_blank'>常见问题</Link>
+                            <Link href={`https://docs.coolha.com/fqa`} className="  hover:link " target='_blank'>常见问题</Link>
                         </div>
 
                         <div className=" flex gap-2">

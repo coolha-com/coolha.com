@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import MediaLink from "./MediaLink";
 import Auth from "../header/AuthButton";
+import ThemeSwap from "@/gui/ThemeSwap";
 export default function Header() {
     const pathname = usePathname();
     const { theme, setTheme } = useTheme();
@@ -34,8 +35,8 @@ export default function Header() {
 
                 {/* 按钮 */}
                 <div className="navbar-end">{/* 右 */}
-
-                    <Link href={'/home'} role="button" className=" hidden md:flex btn btn-primary text-lg font-bold rounded-full " >
+                    <ThemeSwap />
+                    <Link href={'/home'} role="button" className=" hidden md:flex btn btn-primary text-lg font-bold rounded-full" >
                         启动
                     </Link>
                     <div className="dropdown dropdown-end flex-row flex gap-2">
@@ -121,9 +122,9 @@ function LinkMenu() {
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                     <summary className="cursor-pointer">关于</summary>
                     <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li> <Link href={`https://labs.coolha.com`} target='_blank'>团队</Link></li>
+                        <li> <Link href={`https://labs.coolha.com`} target='_blank'>开发团队</Link></li>
                         <li> <Link href={`https://link3.to/coolha`} target='_blank'>联系</Link></li>
-                        <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>反馈</Link></li>
+                        <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>帮助反馈</Link></li>
                     </ul>
                 </details>
             </li>

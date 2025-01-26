@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link"
 import { useState } from "react";
 import { FaCircleChevronLeft, FaDiscord, FaGithub, FaSquareXTwitter, FaTelegram, FaTiktok } from 'react-icons/fa6';
-import { RiBlueskyFill, RiLinkedinBoxFill, RiMailFill, RiWechatFill, RiWeiboFill } from "react-icons/ri";
+import { RiBlueskyFill, RiLinkedinBoxFill, RiMailFill, RiTiktokFill, RiWechatFill, RiWeiboFill } from "react-icons/ri";
 export default function MediaLink() {
   const [showImage, setShowImage] = useState(false);
 
@@ -70,17 +70,23 @@ export default function MediaLink() {
       </motion.div>
 
       <motion.div whileHover={{ scale: 1.2 }} >
+        <Link href="https://bsky.app/profile/coolha.com" target='_blank' >
+          <RiBlueskyFill className="w-8 h-8" />
+        </Link >
+      </motion.div>
+      
+      <motion.div whileHover={{ scale: 1.2 }} >
+        <Link href="https://www.tiktok.com/@coolha.com" target='_blank' >
+          <RiTiktokFill className="w-8 h-8" />
+        </Link >
+      </motion.div>
+
+      <motion.div whileHover={{ scale: 1.2 }} >
         <Link href="https://t.me/coolha_com" target='_blank'>
           <FaTelegram className="w-8 h-8" />
         </Link>
       </motion.div>
 
-      <motion.div whileHover={{ scale: 1.2 }} >
-        <Link href="https://bsky.app/profile/coolha.com" target='_blank' >
-          <RiBlueskyFill className="w-8 h-8" />
-        </Link >
-      </motion.div>
-       
       <motion.div whileHover={{ scale: 1.2 }} >
         <Link href="https://github.com/coolha-com" target='_blank' >
           <FaGithub className="w-8 h-8" />

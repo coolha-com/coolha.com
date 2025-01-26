@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link";
 import MediaLink from "./MediaLink";
-
 export default function Footer() {
     return (
         <div className="bg-base-200">
@@ -25,9 +24,9 @@ export default function Footer() {
                     </nav>
                     <nav>
                         <h6 className="footer-title">关于</h6>
-                        <Link href={`https://labs.coolha.com`} className="link link-hover " target='_blank'>团队</Link>
+                        <Link href={`https://labs.coolha.com`} className="link link-hover " target='_blank'>开发团队</Link>
                         <Link href={`https://link3.to/coolha`} className=" link link-hover  " target='_blank'>联系</Link>
-                        <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="link link-hover " target='_blank'>反馈</Link>
+                        <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="link link-hover " target='_blank'>帮助反馈</Link>
                     </nav>
                     <nav>
                         <h6 className="footer-title">法律</h6>
