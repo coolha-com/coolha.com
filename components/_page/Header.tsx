@@ -20,7 +20,7 @@ export default function Header() {
                 <div className="navbar-start">{/* 左 */}
                     <Link href={'/'} className="border-base-content">
                         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                            <Image src="/logo/透明LOGO绿色.png" alt="透明LOGO绿色.png" width={42} height={42} className=" rounded-full " />
+                            <Image src="/logo/logo.png" alt="logo.png" width={42} height={42} className=" rounded-full " />
                         </motion.div>
                     </Link>
                 </div>
@@ -122,9 +122,9 @@ function LinkMenu() {
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                     <summary className="cursor-pointer">关于</summary>
                     <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li> <Link href={`https://labs.coolha.com`} target='_blank'>开发团队</Link></li>
+                        <li> <Link href={`https://labs.coolha.com`} target='_blank'>团队</Link></li>
                         <li> <Link href={`https://link3.to/coolha`} target='_blank'>联系</Link></li>
-                        <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>帮助反馈</Link></li>
+                        <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>反馈</Link></li>
                     </ul>
                 </details>
             </li>

@@ -20,7 +20,7 @@ export default function Page() {
 
         <div className=" flex flex-col justify-center items-center text-center  text-neutral-content h-[calc(100vh-69px)]  ">
 
-          <img src="/logo/透明LOGO绿色.png" alt="/logo/透明LOGO绿色.png" className='drop-shadow-[2px_2px_2px_black] image-full w-2/5 md:w-60  m-4' />
+          <img src="/logo/logo.png" alt="/logo/logo.png" className=' image-full w-2/5 md:w-60  m-4' />
 
           <div className="max-w-4xl ">
             <h1 className="text-7xl font-bold "><span className="text-[#C0E218]  drop-shadow-[2px_2px_2px_black]">Coolha </span></h1>
