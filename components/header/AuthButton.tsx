@@ -7,10 +7,11 @@ import { useAccount, useEnsName } from "wagmi";
 import { config } from "@/config/Wagmi";
 import Link from "next/link";
 import { useAppKit, useAppKitNetwork } from "@reown/appkit/react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import makeBlockie from 'ethereum-blockies-base64';
 export default function Auth() {
+    const pathname = usePathname();
     const router = useRouter();
     const { address, isConnected } = useAccount({ config });
     const { data: ensName } = useEnsName({ address })
@@ -33,9 +34,18 @@ export default function Auth() {
     return (
         <div className="">
             {loading && <>
-                <button className="xl:w-40 btn  btn-sm md:btn-md text-base-content  text-xl " >
-                    <span className="loading loading-xs md:loading-sm loading-spinner"></span>
-                </button>
+                <div className="xl:w-40 btn  btn-sm md:btn-md text-base-content hidden xl:flex  text-xl " >
+                    <div className="flex items-center gap-4">
+                        <div className="skeleton h-9 w-9 shrink-0 rounded-full"></div>
+                        <div className="flex flex-col gap-2">
+                            <div className=" hidden md:block skeleton h-4 xl:w-20"></div>
+                            <div className=" hidden md:block skeleton h-4 xl:w-20"></div>
+                        </div>
+                    </div>
+                </div>
+                <div className=" btn btn-primary btn-ghost btn-circle flex xl:hidden  xl:pl-2" >
+                    <div className="skeleton h-9 w-9 shrink-0 rounded-full"></div>
+                </div>
             </>}
 
 
@@ -53,12 +63,12 @@ export default function Auth() {
                     </Link>
                     :
                     <Link href="/login" >
-                        <div className="btn btn-primary btn-sm md:btn-md md:btn-circle flex xl:hidden text-sm xl:text-xl xl:w-40">
-                            <RiLoginCircleLine className=" size-6 md:size-8 hidden md:block" />
-                            <span className=" block md:hidden">登录</span>
+                        <div className="btn btn-primary  md:btn-circle xl:text-xl xl:w-40 hidden md:flex xl:hidden ">
+                            <RiLoginCircleLine className=" size-8 " />
+                            <span className=" md:hidden xl:block block">登录</span>
                         </div>
-                        <div className="btn btn-primary btn-sm md:btn-md hidden xl:flex text-sm xl:text-xl xl:w-40">
-                            <span className=" hidden xl:block">登录</span>
+                        <div className="btn btn-primary btn-sm md:btn-md md:hidden xl:flex text-sm xl:text-xl xl:w-40">
+                            <span className="">登录</span>
                         </div>
                     </Link>
                 }
@@ -69,10 +79,10 @@ export default function Auth() {
                 <div className=" flex flex-col gap-1">
 
 
-                    <div className="dropdown dropdown-bottom dropdown-end  md:dropdown-right  z-50">
+                    <div className={`dropdown  dropdown-bottom dropdown-end  md:dropdown-right dropdown-hover z-50`}>
                         {/* md:用户资料 */}
                         <div tabIndex={0} role="button" className="">
-                            <div className="xl:w-40 btn md:btn-ghost btn-circle xl:justify-start xl:pl-2">
+                            <div className=" xl:w-40 md:btn md:btn-ghost md:btn-circle no-animation xl:justify-start xl:pl-2">
                                 {session.profile?.metadata?.picture ? (
                                     <>
                                         {session.profile.metadata.picture.__typename === 'ImageSet' && (
@@ -126,7 +136,7 @@ export default function Auth() {
 
                             <li className="my-1"></li>
                             {/* <li><div > <RiArrowLeftRightFill className="size-7" />切换账号</div></li> */}
-                            <li><div onClick={() => execute()}> <RiLogoutCircleRLine className="size-7" />注销</div></li>
+                            <li><div onClick={() => execute()} className="text-error"> <RiLogoutCircleRLine className="size-7" />注销</div></li>
                         </ul>
 
 

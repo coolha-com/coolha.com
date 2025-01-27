@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Profile, useFollow } from '@lens-protocol/react-web';
 

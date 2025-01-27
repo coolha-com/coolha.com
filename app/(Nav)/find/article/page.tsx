@@ -60,19 +60,16 @@ export default function Page() {
 
 
   return (
-    <>
-
-
-      <div className="flex flex-wrap flex-col items-center justify-center  w-full p-4 mb-16 md:mb-0">
+      <div className="flex flex-col p-4 mb-16 md:mb-0">
 
 
         {loadingMusicPubs && <LoadingSpinner />}
 
-        <div className='"place-items-center grid grid-flow-row grid-cols-1 md:grid-cols-2  xl:grid-cols-3  gap-4 '>
+        <div className='   grid grid-flow-row grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  gap-4 '>
           {musicPubs?.map(mpub => (
             <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }} key={mpub.id}>
 
-              <div className="card bg-base-100 w-full sm:w-80 md:h-[500px] shadow-xl shadow-base-content/10 cursor-pointer" onClick={() => router.push(`/p//${mpub.id}`)} >
+              <div className="card bg-base-100 w-full md:w-80 md:h-[400px] shadow-xl shadow-base-content/10 cursor-pointer" onClick={() => router.push(`/p//${mpub.id}`)} >
                 <figure > <div className=' w-full h-32 flex justify-center items-center bg-primary'><p className='text-black text-xl'>{mpub.by?.metadata?.displayName ? mpub.by?.metadata?.displayName : ''}</p>  </div> </figure>
                 <div className="card-body">
                   <div className="card-title">
@@ -114,7 +111,6 @@ export default function Page() {
         )}
 
       </div>
-    </>
   )
 }
 

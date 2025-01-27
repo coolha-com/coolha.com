@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ChatPage() {
     const chatData = [
-        { name: 'Lens', message: 'Hello! CoolhaTop users' ,img:'/lens/Icon-T-Black_@2x.png'},
+        { name: 'Lens', message: 'Hello! Coolha users' ,img:'/lens/Icon-T-Black_@2x.png'},
         { name: 'Coolha', message: '暂未集成 XMTP' ,img:'/favicon.ico'},
         { name: 'Coolha', message: '暂未集成 XMTP' ,img:'/favicon.ico'},
         { name: 'Coolha', message: '暂未集成 XMTP' ,img:'/favicon.ico'},
@@ -19,7 +19,7 @@ export default function ChatPage() {
     return (
         <>
             {chatData.map((chat, index) => (
-                <Link key={index} href={`/chat/${chat.name}`} className="flex p-4  bg-base-100 hover:bg-[--link-hover-background]">
+                <Link key={index} href={`/chat/${chat.name}`} className="flex p-3  bg-base-100 hover:bg-[--link-hover-background] border-b">
 
                     <div className="flex-none w-14">
                         <img src={chat.img} alt={chat.name} className=" rounded-full bg-white" />

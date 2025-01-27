@@ -1,9 +1,9 @@
 'use client'
 
 export default function page() {
-   return (
-     <>
-     tx_history
-     </>
-   )
+  return (
+    <div className="mx-auto max-w-3xl h-screen">
+      tx_history
+    </div>
+  )
 }

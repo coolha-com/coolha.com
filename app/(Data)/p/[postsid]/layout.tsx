@@ -1,3 +1,4 @@
+'use client'
 import PostsIDLayout from "@/components/lnes/Data/p/PostsIDLayout";
 
 

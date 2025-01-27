@@ -15,6 +15,18 @@
   --button-bg: #00000011;
 }
 
+[data-theme='light'] {
+  --foreground-rgb: #000000;
+  --background-start-rgb: #d6dbdc;
+  --background-end-rgb: #ffffff;
+
+  /* UI */
+  --link-hover-background: rgba(255, 255, 255, 0.5) !important;
+  --navlink-color: #545353d3 !important;
+  --navlink-active: #3f1de7;
+  --button-bg: #00000011;
+}
+
 [data-theme='dark'] {
   --foreground-rgb: #ffffff;
   --background-start-rgb: #000000;
@@ -51,7 +63,7 @@ body {
 ::selection {
   background: #C0E218;
   color: #000000;
-  
+
 }
 
 ::-moz-selection {
@@ -67,4 +79,3 @@ body {
 .wui-font-micro-600 {
     color: #3f1de7 !important;
 } */
-

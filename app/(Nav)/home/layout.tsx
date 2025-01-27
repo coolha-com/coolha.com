@@ -7,18 +7,12 @@ import Linknav from './Linknav';
 export default function HomeLayout({ children }) {
 
   return (
-    <div className="mx-auto max-w-3xl lg:justify-center pb-14 flex flex-col ">
-
-
-      <Linknav />
+    <div>
 
       <OrderByProvider>
-        <ButtonList />
-        <div className=''>
-          {children}
-        </div>
+        <Linknav />
+        {children}
       </OrderByProvider>
-
 
     </div>
   )

@@ -5,51 +5,53 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { RiChat3Line, RiCopperCoinLine, RiHeart3Fill, RiHeart3Line, RiLoopLeftFill, RiShoppingBagLine } from "react-icons/ri";
 
-const ButtonCSS = 'btn btn-xs xs:btn-sm btn-ghost hover:bg-[var(--button-bg)] '
+const ButtonCSS = 'px-2 py-1.5 text-white'
 
-export default function interactCard({ dataname }) {
-  const router = useRouter();
+/* 点赞 */
+export function Upvote({ dataname }) {
+  const { execute: upvotetoggle, loading, error } = useReactionToggle();
+
+  const Upvotetoggle = async () => {
+    await upvotetoggle({
+      reaction: PublicationReactionType.Upvote,
+      publication: dataname,
+    });
+  };
+  if (error) {
+    return <p>Error reacting to publication: {error}</p>;
+  }
+
+
   return (
-    <div className='flex justify-items-start   text-base-content/70 mt-2 '>
+    <div onClick={(e) => { e.stopPropagation(); }}>
+      <button onClick={Upvotetoggle} disabled={loading} className={` ${ButtonCSS}   hover:text-error `}  >
 
-      {/* 评论 */}
-      <div className="w-1/4 md:w-1/5 lg:w-1/6 " onClick={(e) => { e.stopPropagation(); }}>
-      <Comments dataname={dataname} />
-      </div>
+        {dataname.operations.hasUpvoted ? (
+          <div className={`${dataname.operations.hasUpvoted && 'text-red-500'} p-2 bg-[#ffffff2e] rounded-full`}><RiHeart3Fill className="size-8" /></div> // 红色填充图标表示已点赞
+        ) : (
+          <div className="  p-2 bg-[#ffffff2e] rounded-full"><RiHeart3Line className="size-8" /></div> // 空心图标表示未点赞
+        )}
 
-      {/* 转发 + 转贴 */}
-      <div className="w-1/4 md:w-1/5 lg:w-1/6" >
-        <MirrorsToggle dataname={dataname} />
-      </div>
+        <span className=" text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats.upvotes)}</span>
 
-
-      {/* 点赞 */}
-      <div className="w-1/4 md:w-1/5 lg:w-1/6" >
-        <UpvoteToggle dataname={dataname} />
-      </div>
-
-      {/* 出版 收集 */}
-      <div className="w-1/4 md:w-1/5 lg:w-1/6" >
-        <CollectsToggle dataname={dataname} />
-      </div>
-
-
+      </button>
     </div>
   )
 }
 
+/* 评论 */
 export function Comments({ dataname }) {
   const router = useRouter();
   return (
-    <div className={`${ButtonCSS} btn-disabled  text-zinc-400`} onClick={() => router.push(`/p/${dataname.id}`)} >
-      <RiChat3Line className="size-5 md:size-6 " />
-      <p className="text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats?.comments)}</p>
+    <div className={`${ButtonCSS} text-start hover:text-white/80`}  onClick={() => router.push(`/p/${dataname.id}`)} >
+      <div className="  p-2 bg-[#ffffff2e] rounded-full"><RiChat3Line className="size-8 " /></div>
+      <span className="   text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats?.comments)}</span>
     </div>
   )
 }
 
 /* 转发 */
-export function MirrorsToggle({ dataname }) {
+export function Mirrors({ dataname }) {
   const [showSuccessModal, setShowSuccessModal] = useState(false); // 控制弹窗的显示
   const { execute: createMirror, loading: creatingMirror } = useCreateMirror();
   const { execute: hideMirror, loading: hidingMirror } = useHidePublication();
@@ -90,18 +92,18 @@ export function MirrorsToggle({ dataname }) {
     <div onClick={(e) => { e.stopPropagation(); }}>
 
       {isMirrored ?
-        <button onClick={hideMirrorToggle} disabled={hidingMirror} className={`${ButtonCSS} hover:text-success text-success`}>
-          <RiLoopLeftFill className="size-1 xs:size-3 md:size-5 lg:size-6" />
-          <p className="text-center text-sm hidden xs:block">
+        <button onClick={hideMirrorToggle} disabled={hidingMirror} className={`${ButtonCSS} hover:text-green-500 text-green-500`}>
+          <div className=" p-2 bg-[#ffffff2e] rounded-full"><RiLoopLeftFill className="size-8" /></div>
+          <span className=" text-center text-sm hidden xs:block">
             {formatNumberWithUnit(dataname.stats.mirrors + dataname.stats.quotes)}
-          </p>
+          </span>
         </button>
         :
-        <button onClick={createMirrorToggle} disabled={creatingMirror} className={`${ButtonCSS} hover:bg-[var(--button-bg)] hover:text-success`}>
-          <RiLoopLeftFill className="size-5 md:size-6" />
-          <p className="text-center text-sm hidden xs:block">
+        <button onClick={createMirrorToggle} disabled={creatingMirror} className={`${ButtonCSS}  hover:text-green-500`}>
+          <div className="  p-2 bg-[#ffffff2e] rounded-full"><RiLoopLeftFill className="size-8" /></div>
+          <span className=" text-center text-sm hidden xs:block">
             {formatNumberWithUnit(dataname.stats.mirrors + dataname.stats.quotes)}
-          </p>
+          </span>
         </button>
       }
 
@@ -116,40 +118,8 @@ export function MirrorsToggle({ dataname }) {
   );
 }
 
-
-/* 点赞 */
-export function UpvoteToggle({ dataname }) {
-  const { execute: upvotetoggle, loading, error } = useReactionToggle();
-
-  const Upvotetoggle = async () => {
-    await upvotetoggle({
-      reaction: PublicationReactionType.Upvote,
-      publication: dataname,
-    });
-  };
-  if (error) {
-    return <p>Error reacting to publication: {error}</p>;
-  }
-
-
-  return (
-    <div onClick={(e) => { e.stopPropagation(); }}>
-      <button onClick={Upvotetoggle} disabled={loading} className={` ${ButtonCSS} hover:bg-[var(--button-bg)]  hover:text-error ${dataname.operations.hasUpvoted ? 'text-red-500' : ''}`}  >
-
-        {dataname.operations.hasUpvoted ? (
-          <RiHeart3Fill className="size-5 md:size-6" /> // 红色填充图标表示已点赞
-        ) : (
-          <RiHeart3Line className="size-5 md:size-6" /> // 空心图标表示未点赞
-        )}
-
-        <p className="text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats.upvotes)}</p>
-
-      </button>
-    </div>
-  )
-}
-
-export function CollectsToggle({ dataname }) {
+/* 收集 */
+export function Collects({ dataname }) {
   const canCollectValue = dataname?.operations?.canCollect;
   const isCollectibleNo = canCollectValue === 'NO';
   const isCollectibleUnknown = canCollectValue === 'UNKNOWN';
@@ -160,13 +130,13 @@ export function CollectsToggle({ dataname }) {
     <div onClick={(e) => { e.stopPropagation(); }}>
 
       <button className={`${ButtonCSS} btn-disabled text-zinc-400`}/*  onClick={() => handleCollect(dataname)} */>
-        <RiShoppingBagLine className="size-5 md:size-6" />
-        <p className="text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats?.collects)}</p>
+      <div className="  p-2 bg-[#ffffff2e] rounded-full"><RiShoppingBagLine className="size-8" /></div>
+        <span className=" text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats?.collects)}</span>
       </button>
 
       {/*       {isCollectibleNo && (
         <button className={`${ButtonCSS} btn-disabled text-zinc-400`} disabled>
-          <RiShoppingBagLine className="size-5 md:size-6" />
+          <RiShoppingBagLine className="size-8" />
           <p className="text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats?.collects)}</p>
           <p>✕</p>
         </button>
@@ -174,15 +144,15 @@ export function CollectsToggle({ dataname }) {
 
       {isCollectibleUnknown && (
         <button className={`${ButtonCSS} btn-disabled text-zinc-400`} disabled>
-          <RiShoppingBagLine className="size-5 md:size-6" />
+          <RiShoppingBagLine className="size-8" />
           <p className="text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats?.collects)}</p>
           <p>?</p>
         </button>
       )}
 
       {isCollectibleYes && (
-        <button className={`${ButtonCSS} hover:text-success`}>
-          <RiShoppingBagLine className="size-5 md:size-6" />
+        <button className={`${ButtonCSS} hover:text--green-500`}>
+          <RiShoppingBagLine className="size-8" />
           <p className="text-center text-sm hidden xs:block">{formatNumberWithUnit(dataname.stats?.collects)}</p>
           <p>✓</p>
         </button>

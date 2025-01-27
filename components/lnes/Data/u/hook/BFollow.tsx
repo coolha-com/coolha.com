@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import FollowButton from './Follow';
 import UnFollowButton from './UnFollow';

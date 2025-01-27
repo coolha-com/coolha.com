@@ -18,7 +18,7 @@ export default function Avatarimg({ href, src }) {
                         src.metadata.picture.__typename === 'ImageSet' ? (
                             src.metadata.picture.__typename === 'ImageSet' && (
                                 <img
-                                    className="w-10 h-10 rounded-full border border-base-content"
+                                    className="w-10 h-10 rounded-full"
                                     src={src.metadata.picture.optimized?.uri}
                                     alt={src.metadata.picture.optimized?.uri}
                                 />
@@ -26,7 +26,7 @@ export default function Avatarimg({ href, src }) {
                         ) : (
                             src.metadata.picture.__typename === 'NftImage' && (
                                 <img
-                                    className="w-10 h-10 rounded-full border border-base-content"
+                                    className="w-10 h-10 rounded-full"
                                     src={src.metadata.picture.image.optimized?.uri}
                                     alt={src.metadata.picture.image.optimized?.uri}
                                 />

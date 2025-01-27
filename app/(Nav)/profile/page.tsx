@@ -61,14 +61,14 @@ function UsersMetadata({ profile }) {
                <>
                   {profile.metadata.picture.optimized?.uri && (
                      <img
-                        className="rounded-full border border-base-content w-16 h-16 md:w-24 md:h-24 "
+                        className="rounded-full  w-16 h-16 md:w-24 md:h-24 "
                         src={profile.metadata.picture.optimized.uri}
                         alt="picture Set"
                      />
                   )}
                   {profile.metadata.picture.__typename === 'ProfilePicture_NftImage_' && (
                      <img
-                        className="rounded-full border border-base-content w-16 h-16 md:w-24 md:h-24 "
+                        className="rounded-full  w-16 h-16 md:w-24 md:h-24 "
                         src={profile.metadata.picture.uri}
                         alt="picture NFT"
                      />
@@ -76,7 +76,7 @@ function UsersMetadata({ profile }) {
                </>
             ) : (
                <img
-                  className="rounded-full border border-base-content w-16 h-16 md:w-24 md:h-24 "
+                  className="rounded-full  w-16 h-16 md:w-24 md:h-24 "
                   src="/rlogo.png" // 使用默认的占位符图片
                   alt="optimized on"
                />
@@ -119,15 +119,14 @@ function Card() {
    const assetData = [
       { label: '资产', href: '/wallet', icon: RiWallet3Line, },
       { label: '会员', href: '/vip', icon: RiVerifiedBadgeLine, },
-      { label: '成就等级', href: '/grade', icon: RiMedalLine, },
-      { label: '数据分析', href: '/analyse', icon: RiBarChart2Line, },
-      { label: '我的书签', href: '/bookmarks', icon: RiBookmarkLine, },
+      { label: '书签', href: '/bookmarks', icon: RiBookmarkLine, },
    ];
-
+   
    const userData = [
-      { label: '扩展功能', href: '/extend', icon: RiPuzzleLine, },
-      { label: '邀请用户', href: '/invite', icon: RiUserVoiceLine, },
+      { label: '成就等级', href: '/grade', icon: RiMedalLine, },
       { label: '测试奖励', href: '/mintNFT', icon: RiGiftLine, },
+      { label: '邀请用户', href: '/invite', icon: RiUserVoiceLine, },
+      { label: '扩展功能', href: '/extend', icon: RiPuzzleLine, },
    ];
 
    return (
@@ -137,10 +136,13 @@ function Card() {
             {/* <h1 className="p-2 md:p-4 text-xl font-bold">资产</h1> */}
             <div className='flex-row grid grid-cols-4 justify-items-stretch   h-auto w-auto  p-3 '>
                {assetData.map((item, index) => (
-                  <Link href={item.href} key={index} className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
+                  <Link href={item.href} prefetch={false} key={index} className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
                      <item.icon size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>{item.label}</p>
                   </Link>
                ))}
+                  <Link href={`/creator`} prefetch={false} target='_blank' className=' grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3'>
+                     <RiBarChart2Line size={24} /> <p className='text-[0.5rem] xs:text-xs  md:text-base'>创作中心</p>
+                  </Link>
             </div>
          </div>
 
@@ -149,7 +151,7 @@ function Card() {
             {/* <h1 className="p-2 md:p-4 text-xl font-bold">用户</h1> */}
             <div className='flex-row  grid grid-cols-4 justify-items-stretch h-auto w-auto  p-3 '>
                {userData.map((item, index) => (
-                  <Link href={item.href ? item.href : ''} key={index} className='  grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3 '>
+                  <Link href={item.href ? item.href : ''} key={index} prefetch={false} className='  grid justify-items-center hover:bg-[--button-bg] rounded-full p-2 my-2 md:p-3 '>
                      <item.icon size={24} /> <p className='text-[0.5rem] xs:text-xs md:text-base'>{item.label}</p>
                   </Link>
                ))}

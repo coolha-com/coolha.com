@@ -10,17 +10,18 @@ export default function UsersNav({ name, profile }) {
 
     return (
         <>
-            <div className="flex flex-row  w-full z-20 h-16  items-center bg-base-100">
+            <div className="flex flex-row  w-full z-20 h-16 md:h-12  items-center bg-base-100">
                 {linknav.map((item) => (
                     <div className='mx-auto max-w-3xl flex-col sm:flex-row  justify-around w-1/4 flex ' key={item.href}>
 
                         <Link
                             replace
+                            prefetch={false}
                             href={`/u/${name}${item.href}`}
-                            className={`z-20 flex md:flex-row items-center justify-center w-[100%]  h-16 text-[#878787]  border-b-0 hover:bg-[var(--button-bg)]
+                            className={`z-20 flex md:flex-row items-center justify-center w-[100%] h-16 md:h-12 text-[#878787]  border-b-0 hover:bg-[var(--button-bg)]
                         ${pathname === `/u/${name}${item.href}` ? 'text-info border-b-2 border-b-info ' : ''}
                         `}>
-                            <div className='flex-col sm:flex-row'>
+                            <div className='flex flex-col sm:flex-row items-center '>
 
                                 {/*                             <div className=' justify-center text-2xl sm:text-3xl z-20'> {item.logo} </div> */}
                                 <p className=" text-lg text-inherit z-20 text-center ">{item.name}</p>
@@ -32,7 +33,7 @@ export default function UsersNav({ name, profile }) {
                                     </p>
                                 )}
                                 {item.name !== '帖子' && (
-                                    <p className="text-center">{formatNumberWithUnit(profile?.globalStats?.[item.globalStats])}</p>
+                                    <p className="text-center ">{formatNumberWithUnit(profile?.globalStats?.[item.globalStats])}</p>
                                 )}
                             </div>
                         </Link>

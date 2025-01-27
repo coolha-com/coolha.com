@@ -15,7 +15,7 @@ export default function Menu({ pub }) {
         <div  onClick={(e) => { e.stopPropagation(); }}>
             <div className="dropdown dropdown-end ">
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle  btn-sm text-base-content/70 hover:text-base-content"><RiMore2Fill className="size-6 " /></div>
-                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1]  w-52 p-2 shadow border">
+                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-50  w-52 p-2 shadow border">
                     <li>  <RewardToggle publication={pub} /> </li>
 
                     {isSessionWithProfile && <>

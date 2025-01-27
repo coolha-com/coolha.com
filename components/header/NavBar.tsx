@@ -9,10 +9,10 @@ export default function NavBar() {
 
     return (
         <>
-            {["/find", , "/profile"].includes(pathname) ? (
+            {[/* "/find", */  "/profile"].includes(pathname) ? (
                 <div className=" flex md:hidden  md:border-0 w-dvw p-0 bg-base-100 h-12">
                     <div className="navbar min-h-12 py-0 p-0 px-2">
-                        {pathname === "/find" && <Find />}
+                        {/* {pathname === "/find" && <Find />} */}
                         {/* {pathname === "/message/chat" && <Message />} */}
                         {pathname && pathname.startsWith("/profile") && null}
                         {pathname === "/profile" && <Profile />}

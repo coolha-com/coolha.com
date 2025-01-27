@@ -35,7 +35,7 @@ export default function Linknav() {
         },
         {
             href: "/find",
-            name: "活动",
+            name: "探索",
             logo: <RiApps2Line />
         }
     ]
@@ -43,11 +43,11 @@ export default function Linknav() {
         <>
 
             {/* 类型 */}
-            <div className="flex flex-row-reverse w-full  max-w-3xl mx-auto  items-center justify-center z-40 h-12 ">
+            <div className="flex flex-row-reverse mx-auto     items-center justify-center z-40 h-12 ">
                 {linknav.map((item) => (
                     <div className='mx-auto  w-1/3  z-20 flex flex-row-reverse tabs tabs-bordered' key={item.href}>
 
-                        <Link href={item.href} className={`z-20 flex flex-row  items-center justify-center w-full h-12  text-[#878787] border-b-0 bg-base-100 hover:bg-[--link-hover-background] ${pathname === item.href ? 'text-info  border-b-info border-b-2' : ''}`}>
+                        <Link href={item.href} prefetch={false} className={`z-20 flex flex-row  items-center justify-center w-full h-12  text-[#878787] border-b-0 bg-base-100 hover:bg-[--link-hover-background] ${pathname === item.href ? 'text-info  border-b-info border-b-2' : ''}`}>
                             <div className=' justify-center text-xl xs:text-2xl sm:text-3xl z-20'> {item.logo} </div>
                             <p className="text-sm text-inherit z-20 text-center md:text-base md:ml-1 hidden sm:flex ">{item.name}</p>
                         </Link>
@@ -57,7 +57,7 @@ export default function Linknav() {
             </div>
 
 
-            <div className={`w-full mx-auto max-w-3xl ${pathname === '/find' && 'hidden'}`}>
+            <div className={`w-full mx-auto  ${pathname === '/find' && 'hidden'}`}>
                 <ButtonList />
             </div>
         </>

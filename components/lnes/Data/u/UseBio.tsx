@@ -1,7 +1,8 @@
+'use client'
 import { convertLinksToHTML } from '@/utils/convertLinksToHTML';
 import Link from 'next/link';
 import React from 'react';
-import { RiAttachment2, RiMapPin2Line, RiSpotifyLine, RiTwitterXFill, RiYoutubeLine } from 'react-icons/ri';
+import { RiAttachment2, RiMapPin2Line, RiSpotifyLine, RiTwitterXFill, RiTwitterXLine, RiYoutubeLine } from 'react-icons/ri';
 
 export default function UseBio({ profile }) {
   const bioText = profile?.metadata?.bio || '';
@@ -35,17 +36,17 @@ export default function UseBio({ profile }) {
     <div className='bg-base-100'>
 
 
-      <div className='py-2 px-4'><p className="text-base" dangerouslySetInnerHTML={{ __html: formattedBio }}></p></div>
+      <div className='py-1 px-4'><p className="text-base" dangerouslySetInnerHTML={{ __html: formattedBio }}></p></div>
 
 
 
-      <div className=' flex flex-col md:flex-row items-start  py-1 px-4 gap-0.5'>
+      <div className='flex flex-wrap items-start  py-1 px-4 gap-1'>
         {location &&
           <div>
             <Link
               href={`https://www.google.com/maps/search/?api=1&query=${location}`}
-              className='   text-base   items-center btn  btn-ghost  btn-sm' target='_blank'>
-              <RiMapPin2Line size={14} />{location}
+              className='  btn  btn-ghost   btn-sm' target='_blank'>
+              <RiMapPin2Line size={20} />{location}
             </Link>
           </div>
         }
@@ -53,8 +54,8 @@ export default function UseBio({ profile }) {
           <div>
             <Link
               href={`${website}`}
-              className='   text-base   items-center btn  btn-ghost btn-sm' target='_blank'>
-              <RiAttachment2 size={14} />{website}
+              className='  btn  btn-ghost  btn-sm' target='_blank'>
+              <RiAttachment2 size={20} />{website}
             </Link>
           </div>
         }
@@ -62,8 +63,8 @@ export default function UseBio({ profile }) {
           <div>
             <Link
               href={`https://x.com/${x}`}
-              className='   text-base   items-center btn  btn-ghost btn-sm' target='_blank'>
-              <RiTwitterXFill size={14} />{x}
+              className='  btn  btn-ghost btn-circle btn-sm' target='_blank'>
+              <RiTwitterXLine size={20} />
             </Link>
           </div>
         }
@@ -71,8 +72,8 @@ export default function UseBio({ profile }) {
           <div>
             <Link
               href={`https://www.youtube.com/${youtube}`}
-              className='   text-base   items-center btn  btn-ghost btn-sm' target='_blank'>
-              <RiYoutubeLine size={14} />{youtube}
+              className='  btn  btn-ghost btn-circle btn-sm' target='_blank'>
+              <RiYoutubeLine size={20} />
             </Link>
           </div>
         }
@@ -80,8 +81,8 @@ export default function UseBio({ profile }) {
           <div>
             <Link
               href={`https://www.spotify.com/${spotify}`}
-              className='   text-base   items-center btn  btn-ghost btn-sm' target='_blank'>
-              <RiSpotifyLine size={14} />{spotify}
+              className='  btn  btn-ghost btn-circle btn-sm' target='_blank'>
+              <RiSpotifyLine size={20} />
             </Link>
           </div>
         }
