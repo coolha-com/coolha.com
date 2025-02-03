@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useState } from "react";
 import { FaCircleChevronLeft, FaDiscord, FaGithub, FaSquareXTwitter, FaTelegram, FaTiktok } from 'react-icons/fa6';
 import { RiBlueskyFill, RiLinkedinBoxFill, RiMailFill, RiTiktokFill, RiWechatFill, RiWeiboFill } from "react-icons/ri";
+import { BsFillLightningChargeFill } from "react-icons/bs";
 export default function MediaLink() {
   const [showImage, setShowImage] = useState(false);
 
