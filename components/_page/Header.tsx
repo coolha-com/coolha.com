@@ -112,8 +112,7 @@ function LinkMenu() {
                         <div className="grid grid-flow-row grid-cols-3 gap-4 p-2">
                             <MediaLink />
                         </div>
-                        <li><Link href="https://guild.xyz/coolha" target='_blank'>公会↗</Link></li>
-                        <li><Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" target='_blank'>DAO↗</Link></li>
+
                     </ul>
                 </details>
             </li>
@@ -122,7 +121,7 @@ function LinkMenu() {
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                     <summary className="cursor-pointer">关于</summary>
                     <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li> <Link href={`https://labs.coolha.com`} target='_blank'>团队</Link></li>
+                        <li> <Link href={`/about_us`} prefetch={false}>团队</Link></li>
                         <li> <Link href={`https://link3.to/coolha`} target='_blank'>联系</Link></li>
                         <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>反馈</Link></li>
                     </ul>

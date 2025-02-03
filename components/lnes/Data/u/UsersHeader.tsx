@@ -1,6 +1,6 @@
 
 'use client'
-import { UnblockButton } from "@/app/settings/blocked/UnblockButton";
+import { UnblockButton } from "@/app/(Dashboard)/settings/blocked/UnblockButton";
 import { SessionType, useBlockProfiles, useSession, useUnblockProfiles } from "@lens-protocol/react-web";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

@@ -2,12 +2,10 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { RiHomeFill, RiHomeLine, RiCompass3Fill, RiCompass3Line, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSettingsLine, RiSunLine, RiMoonClearLine, RiSearchLine, RiMenu2Fill, RiMoonLine, RiCompassFill, RiCompassLine } from "react-icons/ri";
+import { RiHomeFill, RiHomeLine, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSearchLine, RiCompassFill, RiCompassLine, RiWallet3Line, RiVerifiedBadgeLine, RiBookmarkLine } from "react-icons/ri";
 import AuthButton from "./AuthButton";
 import ButtonMenu from "./ButtonMenu";
 import { motion } from "motion/react";
-import Image from "next/image";
-import { useTheme } from "next-themes";
 import { useState } from "react";
 export default function Sidebar() {
     return (
@@ -115,7 +113,29 @@ function NavbarLink() {
             iconActive: RiUserFill,
             iconInactive: RiUserLine,
             startsWith: '/profile'
-        }
+        },
+        {
+            title: '资产',
+            href: '/wallet',
+            iconActive: RiWallet3Line,
+            iconInactive: RiWallet3Line,
+            startsWith: '/wallet'
+        },
+        {
+            title: '会员',
+            href: '/vip',
+            iconActive: RiVerifiedBadgeLine,
+            iconInactive: RiVerifiedBadgeLine,
+            startsWith: '/vip'
+        },
+        {
+            title: '书签',
+            href: '/bookmarks',
+            iconActive: RiBookmarkLine,
+            iconInactive: RiBookmarkLine,
+            startsWith: '/bookmarks'
+        },
+
     ];
     return (
         <>

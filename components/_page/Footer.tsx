@@ -19,12 +19,10 @@ export default function Footer() {
                         <div className="grid grid-flow-row grid-cols-6 gap-4 py-2">
                             <MediaLink />
                         </div>
-                        <Link href="https://guild.xyz/coolha" className="link link-hover " target='_blank'>公会↗</Link>
-                        <Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" className="link link-hover " target='_blank'>DAO↗</Link>
                     </nav>
                     <nav>
                         <h6 className="footer-title">关于</h6>
-                        <Link href={`https://labs.coolha.com`} className="link link-hover " target='_blank'>团队</Link>
+                        <Link href={`/about_us`} prefetch={false} className="link link-hover " >团队</Link>
                         <Link href={`https://link3.to/coolha`} className=" link link-hover  " target='_blank'>联系</Link>
                         <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="link link-hover " target='_blank'>反馈</Link>
                     </nav>
