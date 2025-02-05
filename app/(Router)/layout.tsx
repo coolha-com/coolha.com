@@ -29,7 +29,7 @@ export default function layout({ children }) {
         </div>
       </div>
 
-      <div className=" flex-1">
+      <div className="flex flex-1 bg-base-200">
         {children}
       </div>
 

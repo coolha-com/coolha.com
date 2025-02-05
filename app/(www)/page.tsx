@@ -1,8 +1,8 @@
 // app/page.tsx
 'use client';
 
-import Header from "@/components/_page/Header";
-import Footer from "@/components/_page/Footer";
+import Header from "@/app/(www)/_page/Header";
+import Footer from "@/app/(www)/_page/Footer";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <Header />
 
-      <div className=" max-h-[80vh] min-h-[100vh]  relative isolate overflow-hidden" /* style={{ backgroundImage: 'url(/repeated-square-dark.png)' }} */>
+      <div className=" max-h-[80vh] min-h-[100vh] bg-base-100 relative isolate overflow-hidden" /* style={{ backgroundImage: 'url(/repeated-square-dark.png)' }} */>
         <div className="hero-overlay bg-opacity-60"></div>
 
 

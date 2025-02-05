@@ -17,9 +17,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: {
     template: '%s | Coolha',
-    default: 'Coolha',
+    default: 'Coolha Apps | Decentralized social applications',
   },
-  description: "coolha.com, Coolha is a decentralized social application built on Lens Protocol",
+  description: "coolha.com, Coolha is a decentralized social application built on Lens Protocol / Lens Chain",
   icons: {
     icon: '/favicon.ico',
     shortcut: '/shortcut-icon.png',

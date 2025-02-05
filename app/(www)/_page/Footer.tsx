@@ -3,10 +3,10 @@ import Link from "next/link";
 import MediaLink from "./MediaLink";
 export default function Footer() {
     return (
-        <div className="bg-base-200">
+        <div className="">
 
 
-            <div className="flex justify-center ">
+            <div className="flex justify-center bg-base-100">
                 <footer className="footer  max-w-screen-xl p-6 lg:p-8  text-base-content">
                     {/*                     <aside>
                         <Link href={`/`} className="">
@@ -36,10 +36,10 @@ export default function Footer() {
                 </footer>
             </div>
 
-            <div className="flex justify-center border-t bg-base-200 text-base-content border-base-300 ">
+            <div className="flex justify-center bg-base-100 text-base-content border-base-300 ">
                 <div className=" footer max-w-screen-xl px-6 lg:px-8 py-4">
-                    <div className="place-self-start md:place-self-center text-gray-400 flex flex-col md:flex-row gap-2">
-                        <p className="flex flex-col gap-1 md:flex-row"><span> © 2024 coolha.com All rights reserved.</span></p>
+                    <div className="place-self-start md:place-self-center text-base-content/70 flex flex-col md:flex-row gap-2">
+                        <p className="flex flex-col gap-1 md:flex-row"><span> © 2025 coolha.com all rights reserved.</span></p>
                     </div>
                 </div>
             </div >

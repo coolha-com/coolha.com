@@ -7,14 +7,12 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import MediaLink from "./MediaLink";
-import Auth from "../header/AuthButton";
+import Auth from "../../../components/header/AuthButton";
 import ThemeSwap from "@/gui/ThemeSwap";
 export default function Header() {
-    const pathname = usePathname();
-    const { theme, setTheme } = useTheme();
     return (
-        <div className="min-w-80 w-screen bg-base-200 justify-around  z-50  flex  fixed top-0 left-0 right-0 transition-transform duration-300 px-2">
-            <div className="navbar bg-base-200  max-w-screen-xl mx-auto  ">
+        <div className="min-w-80 w-screen bg-base-100 justify-around  z-50  flex  fixed top-0 left-0 right-0 transition-transform duration-300 px-2">
+            <div className="navbar  max-w-screen-xl mx-auto  ">
 
 
                 <div className="navbar-start">{/* 左 */}
@@ -36,7 +34,7 @@ export default function Header() {
                 {/* 按钮 */}
                 <div className="navbar-end">{/* 右 */}
                     <ThemeSwap />
-                    <Link href={'/home'} role="button" className=" hidden md:flex btn btn-primary text-lg font-bold rounded-full" >
+                    <Link href={'/home'} role="button" className=" hidden md:flex btn btn-primary text-lg font-bold rounded-full ml-1" >
                         启动
                     </Link>
                     <div className="dropdown dropdown-end flex-row flex gap-2">
