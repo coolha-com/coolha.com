@@ -18,7 +18,7 @@ export default function Wallet() {
         { label: '交易记录', href: '/wallet/tx_history', icon: RiHistoryLine, }
     ];
     return (
-        <div className='mx-auto max-w-3xl'>
+        <div className=''>
 
             {/*             <div className="">
                 {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}

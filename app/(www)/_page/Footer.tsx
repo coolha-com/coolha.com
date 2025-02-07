@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="">
 
 
-            <div className="flex justify-center bg-base-100">
+            <div className="flex justify-center bg-base-100 border-t">
                 <footer className="footer  max-w-screen-xl p-6 lg:p-8  text-base-content">
                     {/*                     <aside>
                         <Link href={`/`} className="">

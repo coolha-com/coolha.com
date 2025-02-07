@@ -17,11 +17,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: {
     template: '%s | Coolha',
-    default: 'Coolha Apps | Decentralized social applications',
+    default: 'Coolha',
   },
   description: "coolha.com, Coolha is a decentralized social application built on Lens Protocol / Lens Chain",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo/logo.png',
     shortcut: '/shortcut-icon.png',
     apple: '/apple-icon.png',
   },
@@ -31,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ auth, children, }:any) {
   const cookies = headers().get('cookie')
   return (
-    <html lang="zh_CN">
+    <html lang="zh_CN" className=" bg-base-200">
       <head>
         <meta charSet="utf-8" />
         <meta property="twitter:image" content="/twitter-image" />
@@ -57,7 +57,7 @@ export default function RootLayout({ auth, children, }:any) {
         {/*  <meta property="og:url" content="Canonical link preview URL"></meta> */}
       </head>
 
-      <body className={`${inter.className} bg-base-200 `}>
+      <body className={`${inter.className} `}>
 
 
         <ThemeProvider  attribute="data-theme">

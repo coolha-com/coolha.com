@@ -1,17 +1,12 @@
 'use client'
 
-import { RiSettingsLine, RiSunLine, RiMoonLine, RiComputerLine, } from "react-icons/ri";
+import { RiSettingsLine, RiSunLine, RiMoonLine, RiComputerLine, RiPuzzleLine, } from "react-icons/ri";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { CgMenuGridO } from "react-icons/cg";
 
 export default function ButtonMenu() {
     const { theme, setTheme, resolvedTheme } = useTheme();
-
-
-
-
-
     return (
         <>
             {/* 菜单按钮 */}
@@ -32,6 +27,8 @@ export default function ButtonMenu() {
                             <span>切换主题</span>
                         </div>
                     </li>
+                    <li><Link href={`/extend`}><RiPuzzleLine className="size-7" />扩展功能</Link></li>
+
                     <li className="my-1"></li>
 
                     {/*                     <div role="tablist" className="tabs tabs-boxed" >

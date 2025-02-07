@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function layout({ children }) {
     return (
-        <>
+        <div className=" bg-base-100 pt-20">
             {children}
-        </>
+        </div>
     )
 }
