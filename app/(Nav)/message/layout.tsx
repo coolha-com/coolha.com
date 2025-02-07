@@ -12,7 +12,7 @@ export default function Message({ children }) {
   const shouldDisplayNav = displayPaths.includes(pathname);
 
   return (
-    <div className='pb-14 mx-auto max-w-3xl'>
+    <div className='pb-14 w-dvw md:mx-auto md:max-w-3xl'>
 
 
       {shouldDisplayNav &&

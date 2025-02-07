@@ -17,12 +17,13 @@ export default function Sidebar() {
                     <Logo />
                     {/* <Search /> */}
                     <NavbarLink />
-                    <div className="mt-auto">
-                        <AuthButton />
-                    </div>
                     <div className="">
                         <ButtonMenu />
                     </div>
+                    <div className="mt-auto">
+                        <AuthButton />
+                    </div>
+
                 </ul>
             </div>
 

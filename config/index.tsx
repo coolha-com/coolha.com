@@ -5,7 +5,7 @@ import { lensConfig } from "./Lens"
 import { projectId, wagmiAdapter } from './Wagmi';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { createAppKit } from "@reown/appkit/react";
-import { mainnet, polygon } from '@reown/appkit/networks'
+import { mainnet, polygon, zksync,arbitrum, optimism, base, worldchain,  blast, linea, scroll } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { ThemeProvider, useTheme } from "next-themes";
@@ -35,14 +35,14 @@ export default function ContextProvider({ children, cookies }: { children: React
         adapters: [wagmiAdapter],
         metadata: metadata,
         projectId,
-        networks: [polygon, mainnet],
+        networks: [mainnet, polygon, zksync,  arbitrum, optimism, base, worldchain,blast, linea, scroll],
         defaultNetwork: polygon,
         features: {
             onramp: false,
             swaps: false,
             analytics: true,
-            email: false,
-            socials: [/* 'google','x','facebook','farcaster','apple' */],
+            email: true,
+            socials: [ 'google', 'apple', /* 'github','farcaster','facebook','x' */],
             emailShowWallets: true,
         },
         allWallets: 'SHOW',

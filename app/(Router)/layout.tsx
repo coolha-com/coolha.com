@@ -17,7 +17,7 @@ export default function layout({ children }) {
         <Sidebar />
       </div>
 
-      <div className='w-full  mx-auto max-w-3xl'>
+      <div className='w-full  mx-auto max-w-3xl '>
         <div className="navbar p-0 px-2 bg-base-100">
           <div className=" navbar-start">
             <button className="btn btn-square btn-ghost" onClick={() => router.back()} >

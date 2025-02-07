@@ -10,7 +10,7 @@ export default function ButtonMenu() {
     return (
         <>
             {/* 菜单按钮 */}
-            <div className="dropdown dropdown-bottom dropdown-end md:dropdown-top md:dropdown-right">
+            <div className="dropdown dropdown-bottom dropdown-end  dropdown-hover md:dropdown-top md:dropdown-right">
 
                 <div tabIndex={0} role="button" className=" rounded-full hover:bg-[var(--button-bg)] md:no-animation p-2 md:p-0 xl:w-40 md:btn md:btn-ghost md:btn-circle  xl:justify-start xl:pl-2 mx-1 md:mx-0">
                     <CgMenuGridO className="size-6 md:size-7" />
