@@ -35,7 +35,7 @@ export default function UsersStats({ name, profile }) {
 
                 <div className="flex  flex-row justify-around  rounded-md  w-[100%] lg:w-1/2">
                     {statsData.map((item, index) => (
-                        <Link replace href={item.link} key={index} className="stat-item text-left  text-base md:text-xl w-1/3 flex items-center hover:text-primary">
+                        <Link replace prefetch={false}  href={item.link} key={index} className="stat-item text-left  text-base md:text-xl w-1/3 flex items-center hover:text-primary">
                             <span className=" font-bold">{item.value}</span>
                             <span className="stat-label text-base text-[#878787] block ml-1">{item.label}</span>
                         </Link>

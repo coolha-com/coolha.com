@@ -55,7 +55,7 @@ export default function UseBio({ profile }) {
             <Link
               href={`${website}`}
               className='  btn  btn-ghost  btn-sm' target='_blank'>
-              <RiAttachment2 size={20} />{website}
+              <RiAttachment2 size={20} />{website.replace(/^https?:\/\//, '')}
             </Link>
           </div>
         }

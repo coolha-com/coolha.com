@@ -22,8 +22,8 @@ export default function Footer() {
                     </nav>
                     <nav>
                         <h6 className="footer-title">关于</h6>
-                        <Link href={`/about_us`} prefetch={false} className="link link-hover " >团队</Link>
-                        <Link href={`https://link3.to/coolha`} className=" link link-hover  " target='_blank'>联系</Link>
+                        <Link href={`/about_us`} prefetch={false} className="link link-hover " >关于我们</Link>
+                        <Link href={`https://link3.to/coolha`} className=" link link-hover  " target='_blank'>联系我们</Link>
                         <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="link link-hover " target='_blank'>反馈</Link>
                     </nav>
                     <nav>

@@ -49,7 +49,7 @@ function UsersMetadata({ profile }) {
    const ensName = profile?.onchainIdentity?.ens?.name;
    const ethAddress = profile?.ownedBy?.address;
    const ethAddressText = ensName ?
-      <> {ensName} <img className="size-4 ml-1" src="/logo/ens_mark_primary.svg" alt="ENS.logo" /></>
+      <> {ensName} <img className="size-4 ml-1" src="/web3/ens-mark-Blue.svg" alt="ENS.logo" /></>
       :
       AddressTruncate(`${ethAddress}`);
 

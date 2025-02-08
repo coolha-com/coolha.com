@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { RiBardLine, RiUserFollowLine, RiShapesLine, RiFileTextLine, RiImageLine, RiMusic2Line, RiVideoLine, RiSearchLine, RiApps2Line } from "react-icons/ri";
-import ButtonList from "../home/_contexts/ButtonList";
+import ButtonList from "../(home)/home/_contexts/ButtonList";
 
 export default function Linknav() {
     const pathname = usePathname();

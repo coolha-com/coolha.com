@@ -10,7 +10,7 @@ import Avatarimg from '@/components/lnes/PostsCard/Avatarimg'
 import AvatarName from '@/components/lnes/PostsCard/AvatarName'
 import { useInfiniteScroll } from '@/components/lnes/Data/u/hook/useInfiniteScroll'
 import Menu from '@/components/lnes/PostsCard/Menu/Menu'
-import { useOrderBy } from '../../home/_contexts/OrderByContext'
+import { useOrderBy } from '../../(home)/home/_contexts/OrderByContext'
 import Link from 'next/link'
 import LoadingSpinner from '@/gui/LoadingSpinner'
 import './video.css'
@@ -35,7 +35,7 @@ export default function Page() {
       {loadingMusicPubs && <LoadingSpinner />}
 
       <div className="h-[calc(100vh-146px)]  md:h-[calc(100vh-90px)]  overflow-y-scroll scroll-snap-y-mandatory">
-        {musicPubs?.map((mpub,index) => (
+        {musicPubs?.map((mpub, index) => (
           <div
             key={mpub.id}
             className="snap-center h-full flex flex-col relative"
@@ -77,7 +77,7 @@ export default function Page() {
               <Comments dataname={mpub} />
               <Mirrors dataname={mpub} />
               <Collects dataname={mpub} />
-{/*               <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black">
+              {/*               <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black">
                 👍
               </button> */}
             </div>

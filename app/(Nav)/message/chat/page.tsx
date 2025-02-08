@@ -24,7 +24,7 @@ export default function ChatPage() {
 
                 <div className="flex-auto pl-2">
                     <p className="font-bold">DeepSeek</p>
-                    <p className="text-[--navlink-color] truncate ...">DeepSeek Chat 仅在开发测试，未部署生产</p>
+                    <p className="text-sm md:text-base text-[--navlink-color] text-ellipsis ...">DeepSeek Chat 仅在开发测试，未部署生产</p>
                 </div>
 
                 <div className="truncate ... text-sm text-gray-500">
@@ -41,7 +41,7 @@ export default function ChatPage() {
 
                     <div className="flex-auto pl-2">
                         <p className="font-bold">{chat.name}</p>
-                        <p className="text-[--navlink-color] truncate ...">{chat.message}</p>
+                        <p className="text-sm md:text-base text-[--navlink-color] text-ellipsis ...">{chat.message}</p>
                     </div>
 
                     <div className="truncate ... text-sm text-gray-500">

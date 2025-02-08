@@ -16,7 +16,7 @@ export default function Message({ children }) {
 
 
       {shouldDisplayNav &&
-        <div className="flex flex-row  w-full  z-20 h-12  items-center ">
+        <div className="flex flex-row w-dvw md:w-full  z-20 h-12  items-center ">
 
           {linknav.map((item) => (
             <div className='mx-auto max-w-3xl flex-row w-1/3 justify-around flex  bg-base-100 hover:bg-[--link-hover-background]  z-20' key={item.href}>
