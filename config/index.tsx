@@ -5,7 +5,7 @@ import { lensConfig } from "./Lens"
 import { projectId, wagmiAdapter } from './Wagmi';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { createAppKit } from "@reown/appkit/react";
-import { mainnet, polygon, zksync,arbitrum, optimism, base, worldchain,  blast, linea, scroll } from '@reown/appkit/networks'
+import { mainnet, polygon, zksync, arbitrum, optimism, base, worldchain, blast, linea, scroll, confluxESpace, bsc, avalanche, xLayer } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { ThemeProvider, useTheme } from "next-themes";
@@ -35,14 +35,23 @@ export default function ContextProvider({ children, cookies }: { children: React
         adapters: [wagmiAdapter],
         metadata: metadata,
         projectId,
-        networks: [mainnet, polygon, zksync,  arbitrum, optimism, base, worldchain,blast, linea, scroll],
+        networks: [mainnet, polygon, zksync, arbitrum, optimism, base, worldchain, blast, linea, scroll,xLayer,bsc,avalanche,confluxESpace],
         defaultNetwork: polygon,
+        chainImages: {
+            324:'/web3/zksync.png',
+            480: '/web3/world.jpg',
+            81457:'/web3/blast.png',
+            59_144:'/web3/linea.png',
+            534_352:'/web3/scroll.png',
+            196:'/web3/xLayer.png',
+            1_030:'/web3/cfx.png',
+        },
         features: {
             onramp: false,
             swaps: false,
             analytics: true,
             email: true,
-            socials: [ 'google', 'apple', /* 'github','farcaster','facebook','x' */],
+            socials: ['google', 'apple', /* 'github','farcaster','facebook','x' */],
             emailShowWallets: true,
         },
         allWallets: 'SHOW',

@@ -19,7 +19,7 @@ export default function UsersMetadata({ profile }) {
     const ensName = profile?.onchainIdentity?.ens?.name;
     const ethAddress = profile?.ownedBy?.address;
     const ethAddressText = ensName ?
-        <> {ensName} <img className="size-4 ml-1" src="/web3/ens-mark-Blue.svg" alt="ENS.logo" /></> : AddressTruncate(`${ethAddress}`);
+        <> {ensName} <img className="size-4" src="/web3/ens-mark-Blue.svg" alt="ENS.logo" /></> : AddressTruncate(`${ethAddress}`);
     return (
         <div className="flex flex-row items-center pt-2  px-4 bg-base-100">
 

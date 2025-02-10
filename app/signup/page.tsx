@@ -1,9 +1,11 @@
 'use client'
 
+import { Signup } from "./signup"
+
 export default function page() {
    return (
      <>
-     创作中心
+     <Signup />
      </>
    )
 }

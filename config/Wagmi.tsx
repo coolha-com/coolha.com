@@ -1,6 +1,6 @@
 
 import { cookieStorage, createStorage, http } from 'wagmi'
-import { mainnet, polygon, zksync,arbitrum, optimism, base, worldchain,  blast, linea, scroll } from '@reown/appkit/networks'
+import { mainnet, polygon, zksync,arbitrum, optimism, base, worldchain,  blast, linea, scroll, confluxESpace, bsc, avalanche, xLayer } from '@reown/appkit/networks'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
 
@@ -10,7 +10,7 @@ if (!projectId) {
   throw new Error('Project ID is not defined')
 }
 
-export const networks = [mainnet, polygon, zksync,arbitrum, optimism, base, worldchain, blast, linea, scroll]
+export const networks = [mainnet, polygon, zksync,arbitrum, optimism, base, worldchain, blast, linea, scroll,xLayer,bsc,avalanche,confluxESpace]
 
 export const wagmiAdapter = new WagmiAdapter({
   storage: createStorage({
@@ -30,6 +30,10 @@ export const wagmiAdapter = new WagmiAdapter({
     [blast.id]: http(`https://blast-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`),
     [linea.id]: http(`https://linea-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`),
     [scroll.id]: http(`https://scroll-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`),
+    [xLayer.id]: http(),
+    [bsc.id]: http(),
+    [avalanche.id]: http(`https://avax-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`),
+    [confluxESpace.id]: http(),
 
   },
 })

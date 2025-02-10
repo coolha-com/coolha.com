@@ -119,8 +119,8 @@ function LinkMenu() {
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                     <summary className="cursor-pointer">关于</summary>
                     <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li> <Link href={`/about_us`} prefetch={false}>关于我们</Link></li>
-                        <li> <Link href={`https://link3.to/coolha`} target='_blank'>联系我们</Link></li>
+                        <li> <Link href={`/about_us`} prefetch={false}>我们</Link></li>
+                        <li> <Link href={`https://link3.to/coolha`} target='_blank'>联系</Link></li>
                         <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>反馈</Link></li>
                     </ul>
                 </details>

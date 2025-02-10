@@ -42,7 +42,7 @@ export default function ButtonMenu() {
                     </div> */}
 
                     <div className="text-base-content/50 text-sm">
-                        
+
 
                         <div className="flex items-center gap-2">
                             <Link href={`/about`} className="  hover:link ">关于应用</Link>
@@ -50,8 +50,8 @@ export default function ButtonMenu() {
                         </div>
 
                         <div className="flex gap-2">
-                            <Link href={`/about_us`} prefetch={false} className="  hover:link " >关于我们</Link>
-                            <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系我们</Link>
+                            <Link href={`/about_us`} prefetch={false} className="  hover:link " >我们</Link>
+                            <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系</Link>
                             <Link href={`https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e`} className="  hover:link " target='_blank'>反馈</Link>
                         </div>
 

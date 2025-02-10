@@ -3,7 +3,7 @@
 export default function page() {
    return (
      <>
-     创作中心
+     AI
      </>
    )
 }
