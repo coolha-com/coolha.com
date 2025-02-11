@@ -5,7 +5,7 @@ import { lensConfig } from "./Lens"
 import { projectId, wagmiAdapter } from './Wagmi';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { createAppKit } from "@reown/appkit/react";
-import { mainnet, polygon, zksync, arbitrum, optimism, base, worldchain, blast, linea, scroll, confluxESpace, bsc, avalanche, xLayer } from '@reown/appkit/networks'
+import { mainnet, polygon, zksync, arbitrum, optimism, base, worldchain, blast, linea, scroll, xLayer } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { ThemeProvider, useTheme } from "next-themes";
@@ -13,9 +13,6 @@ import { ThemeProvider, useTheme } from "next-themes";
 
 export const queryClient = new QueryClient()
 
-if (!projectId) {
-    throw new Error('Project ID is not defined')
-}
 
 export const metadata = {
     name: 'Coolha',
@@ -35,7 +32,7 @@ export default function ContextProvider({ children, cookies }: { children: React
         adapters: [wagmiAdapter],
         metadata: metadata,
         projectId,
-        networks: [mainnet, polygon, zksync, arbitrum, optimism, base, worldchain, blast, linea, scroll,xLayer,bsc,avalanche,confluxESpace],
+        networks: [mainnet, polygon, zksync, arbitrum, optimism, base, worldchain, blast, linea, scroll,xLayer],
         defaultNetwork: polygon,
         chainImages: {
             324:'/web3/zksync.png',
@@ -44,7 +41,6 @@ export default function ContextProvider({ children, cookies }: { children: React
             59_144:'/web3/linea.png',
             534_352:'/web3/scroll.png',
             196:'/web3/xLayer.png',
-            1_030:'/web3/cfx.png',
         },
         features: {
             onramp: false,
