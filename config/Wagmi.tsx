@@ -1,14 +1,16 @@
 
 import { cookieStorage, createStorage, http } from 'wagmi'
-import { mainnet, polygon, zksync,arbitrum, optimism, base, worldchain,  blast, linea, scroll, xLayer } from '@reown/appkit/networks'
+import { mainnet, polygon, zksync, arbitrum, optimism, base, worldchain, blast, linea, scroll, xLayer } from '@reown/appkit/networks'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 
 
-export const projectId = process.env.REOWN_ID||'';
+export const projectId = process.env.NEXT_PUBLIC_REOWN_ID || '';
 
+if (!projectId) {
+  throw new Error('Project ID is not defined')
+}
 
-
-export const networks = [mainnet, polygon, zksync,arbitrum, optimism, base, worldchain, blast, linea, scroll,xLayer]
+export const networks = [mainnet, polygon, zksync, arbitrum, optimism, base, worldchain, blast, linea, scroll, xLayer]
 
 export const wagmiAdapter = new WagmiAdapter({
   storage: createStorage({

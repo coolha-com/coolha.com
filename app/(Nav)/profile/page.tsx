@@ -127,7 +127,7 @@ function Card() {
    ];
 
    const BusData = [
-      { label: '商业会员', href: 'https://business.coolha.com', icon: RiBuilding2Line, },
+      { label: '商业版', href: 'https://business.coolha.com', icon: RiBuilding2Line, },
       { label: '商店', href: 'https://shop.coolha.com', icon: RiShoppingBag4Line, },
       { label: '推广', href: 'https://ads.coolha.com', icon: RiAdvertisementLine, },
    ];
