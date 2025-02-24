@@ -69,7 +69,7 @@ export default function Page() {
 
       {loadingMusicPubs && <LoadingSpinner />}
 
-      <div className='mx-auto max-w-3xl w-full justify-center items-center'>
+      <div className=' w-full'>
         {musicPubs?.map(mpub => (
           <div
             className="bg-base-100  p-4 py-2 mt-2 "

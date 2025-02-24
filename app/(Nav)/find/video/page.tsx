@@ -31,7 +31,7 @@ export default function Page() {
   })) as any
 
   return (
-    <div className="flex flex-col mx-auto  h-screen overflow-hidden ">
+    <div className="flex flex-col mx-auto  overflow-hidden ">
       {loadingMusicPubs && <LoadingSpinner />}
 
       <div className="h-[calc(100vh-146px)]  md:h-[calc(100vh-90px)]  overflow-y-scroll scroll-snap-y-mandatory">

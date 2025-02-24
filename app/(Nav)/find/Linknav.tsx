@@ -56,10 +56,12 @@ export default function Linknav() {
                 ))}
             </div>
 
+            {pathname === '/find' ? <></> :
+                <div className={`w-full mx-auto `}>
+                    <ButtonList />
+                </div>
+            }
 
-            <div className={`w-full mx-auto  ${pathname === '/find' && 'hidden'}`}>
-                <ButtonList />
-            </div>
         </>
     )
 }

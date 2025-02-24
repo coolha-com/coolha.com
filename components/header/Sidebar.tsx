@@ -12,19 +12,20 @@ export default function Sidebar() {
         <div className=" hidden md:block min-h-full max-w-16 xl:max-w-56 fixed top-0 left-0 z-50">
 
 
-            <div className="h-svh z-50">
-                <ul className="menu bg-base-100 min-h-full w-full  gap-1 z-50">
-                    <Logo />
-                    {/* <Search /> */}
-                    <NavbarLink />
-                    <div className="">
-                        <ButtonMenu />
-                    </div>
-                    <div className="mt-auto">
-                        <AuthButton />
-                    </div>
+            <div className="menu bg-base-100 min-h-full h-svh w-full gap-1 z-50">
 
-                </ul>
+                <Logo />
+                {/* <Search /> */}
+                <NavbarLink />
+
+                <div className="">
+                    <ButtonMenu />
+                </div>
+
+                <div className="mt-auto">
+                    <AuthButton />
+                </div>
+
             </div>
 
         </div>

@@ -21,13 +21,13 @@ export default function Footer() {
                         </div>
                     </nav>
                     <nav>
-                        <h6 className="footer-title">关于</h6>
-                        <Link href={`/about_us`} prefetch={false} className="link link-hover " >我们</Link>
+                        <h6 className="footer-title">信息</h6>
+                        <Link href={`/about_us`} prefetch={false} className="link link-hover " >关于我们</Link>
                         <Link href={`https://link3.to/coolha`} className=" link link-hover  " target='_blank'>联系</Link>
                         <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="link link-hover " target='_blank'>反馈</Link>
                     </nav>
                     <nav>
-                        <h6 className="footer-title">法律</h6>
+                        <h6 className="footer-title">资源</h6>
                         <Link href={`https://docs.coolha.com`} className="link link-hover" target='_blank'>文档</Link>
                         <Link href="https://docs.coolha.com/apps/privacy" className="link link-hover" target='_blank'>隐私</Link >
                         <Link href="https://docs.coolha.com/apps/terms" className="link link-hover" target='_blank'>条款</Link >

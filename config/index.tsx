@@ -49,9 +49,9 @@ export default function ContextProvider({ children, cookies }: { children: React
             onramp: false,
             swaps: false,
             analytics: true,
-            email: true,
-            socials: ['google', 'apple', /* 'github','farcaster','facebook','x' */],
-            emailShowWallets: true,
+            email: false,
+            socials: [/* 'google', 'apple',  *//* 'github','farcaster','facebook','x' */],
+            emailShowWallets: false,
         },
         allWallets: 'SHOW',
         themeMode: theme === 'dark' ? 'dark' : 'light',
@@ -59,12 +59,12 @@ export default function ContextProvider({ children, cookies }: { children: React
             '--w3m-accent': '#accf00',
         },
         featuredWalletIds: [
-            'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96',//metamask
             '971e689d0a5be527bac79629b4ee9b925e82208e5168b733496a09c0faed0709',//okx
+            'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96',//metamask
             'fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa',//Coinbase
-            '225affb176778569276e484e1b92637ad061b01e13a048b35a9d280c3b58970f',//Safe
             '1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369',//Rainbow
-            '4622a2b2d6af1c9844944291e5e7351a6aa24cd7b23099efac1b2fd875da31a0',//Trust
+            '225affb176778569276e484e1b92637ad061b01e13a048b35a9d280c3b58970f',//Safe
+            //'4622a2b2d6af1c9844944291e5e7351a6aa24cd7b23099efac1b2fd875da31a0',//Trust
         ]
     });
 

@@ -4,13 +4,14 @@ import { RiSettingsLine, RiSunLine, RiMoonLine, RiComputerLine, RiPuzzleLine, } 
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { CgMenuGridO } from "react-icons/cg";
+import ThemeSwap from "@/gui/ThemeSwap";
 
 export default function ButtonMenu() {
     const { theme, setTheme, resolvedTheme } = useTheme();
     return (
         <>
             {/* 菜单按钮 */}
-            <div className="dropdown dropdown-bottom dropdown-end  dropdown-hover md:dropdown-right">
+            <div className="dropdown dropdown-bottom dropdown-end md:dropdown-right dropdown-hover ">
 
                 <div tabIndex={0} role="button" className=" rounded-full hover:bg-[var(--button-bg)] md:no-animation p-2 md:p-0 xl:w-40 md:btn md:btn-ghost md:btn-circle  xl:justify-start xl:pl-2 mx-1 md:mx-0">
                     <CgMenuGridO className="size-6 md:size-7" />
@@ -19,27 +20,20 @@ export default function ButtonMenu() {
 
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box min-w-52 border text-lg">
 
-                    <li><Link href={`/settings`}><RiSettingsLine className="size-7" />应用设置</Link></li>
+                    <div role="tablist" className="tabs tabs-boxed border my-0.5" >
+                        <span role="tab" className={`tab ${theme === "light" && "tab-active"}`} onClick={() => setTheme("light")}  >
+                            <RiSunLine size={24} />
+                        </span>
 
-                    <li>
-                        <div onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-                            {theme === 'dark' ? (<RiSunLine className="size-7" />) : (<RiMoonLine className="size-7" />)}
-                            <span>切换主题</span>
-                        </div>
-                    </li>
-                    <li><Link href={`/extend`}><RiPuzzleLine className="size-7" />扩展功能</Link></li>
+                        <span role="tab" className={`tab ${theme === "dark" && "tab-active"}`} onClick={() => setTheme("dark")} >
+                            <RiMoonLine size={24} />
+                        </span>
+                    </div>
+                    
+                    <li><Link href={`/settings`} prefetch={false} ><RiSettingsLine className="size-7" />应用设置</Link></li>
+                    <li><Link href={`/extend`} prefetch={false} ><RiPuzzleLine className="size-7" />扩展功能</Link></li>
 
                     <li className="my-1"></li>
-
-                    {/*                     <div role="tablist" className="tabs tabs-boxed" >
-                        <a role="tab" className={`tab ${theme === "light" ? "tab-active" : ""}`} onClick={() => setTheme("light")}  >
-                            <RiSunLine size={24} />
-                        </a>
-
-                        <a role="tab" className={`tab ${theme === "dark" ? "tab-active" : ""}`} onClick={() => setTheme("dark")} >
-                            <RiMoonLine size={24} />
-                        </a>
-                    </div> */}
 
                     <div className="text-base-content/50 text-sm">
 
@@ -50,7 +44,7 @@ export default function ButtonMenu() {
                         </div>
 
                         <div className="flex gap-2">
-                            <Link href={`/about_us`} prefetch={false} className="  hover:link " >我们</Link>
+                            <Link href={`/about_us`} prefetch={false} className="  hover:link " >关于我们</Link>
                             <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系</Link>
                             <Link href={`https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e`} className="  hover:link " target='_blank'>反馈</Link>
                         </div>

@@ -13,12 +13,12 @@ import InteractCard from "../../../PostsCard/InteractCard"
 
 export default function PUBmedia({ profile }) {
   const { data, hasMore, loading, observeRef } = useInfiniteScroll(usePublications({
-    limit: LimitType.TwentyFive,
+    limit: LimitType.Ten,
     where: {
       from: [profile?.id],
       publicationTypes: [PublicationType.Post, PublicationType.Comment],
       metadata: {
-        mainContentFocus: [PublicationMetadataMainFocusType.Image, PublicationMetadataMainFocusType.Audio, PublicationMetadataMainFocusType.Video,]
+        mainContentFocus: [PublicationMetadataMainFocusType.Image, PublicationMetadataMainFocusType.Audio, PublicationMetadataMainFocusType.Video,PublicationMetadataMainFocusType.ShortVideo]
       }
     }
   }))

@@ -28,7 +28,7 @@ export const metadata = {
   manifest: '/manifest.json',
 };
 
-export default function RootLayout({ auth, children, }:any) {
+export default function RootLayout({ auth, children, }: any) {
   const cookies = headers().get('cookie')
   return (
     <html lang="zh_CN" className=" bg-base-200">
@@ -60,10 +60,13 @@ export default function RootLayout({ auth, children, }:any) {
       <body className={`${inter.className} `}>
 
 
-        <ThemeProvider  attribute="data-theme">
+        <ThemeProvider attribute="data-theme">
           <ContextProvider cookies={cookies}  >
 
-            {children}
+              <main className="overscroll-contain overflow-auto h-screen">
+                {children}
+              </main>
+
             <div>{auth}</div>
 
           </ContextProvider>
