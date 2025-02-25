@@ -21,15 +21,15 @@ export default function ButtonMenu() {
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box min-w-52 border text-lg">
 
                     <div role="tablist" className="tabs tabs-boxed border my-0.5" >
-                        <span role="tab" className={`tab ${theme === "light" && "tab-active"}`} onClick={() => setTheme("light")}  >
+                        <span role="tab" className={`tab ${theme === "light" ? "tab-active" : ''}`} onClick={() => setTheme("light")}  >
                             <RiSunLine size={24} />
                         </span>
 
-                        <span role="tab" className={`tab ${theme === "dark" && "tab-active"}`} onClick={() => setTheme("dark")} >
+                        <span role="tab" className={`tab ${theme === "dark" ? "tab-active" : ''}`} onClick={() => setTheme("dark")} >
                             <RiMoonLine size={24} />
                         </span>
                     </div>
-                    
+
                     <li><Link href={`/settings`} prefetch={false} ><RiSettingsLine className="size-7" />应用设置</Link></li>
                     <li><Link href={`/extend`} prefetch={false} ><RiPuzzleLine className="size-7" />扩展功能</Link></li>
 
