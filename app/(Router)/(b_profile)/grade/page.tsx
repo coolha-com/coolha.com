@@ -1,9 +1,9 @@
 'use client'
 
 export default function page() {
-   return (
-     <>
-     grade
-     </>
-   )
+  return (
+    <>
+      成就等级
+    </>
+  )
 }

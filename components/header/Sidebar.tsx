@@ -130,13 +130,13 @@ function NavbarLink() {
             iconInactive: RiWallet3Line,
             startsWith: '/wallet'
         },
-        {
+/*         {
             title: '书签',
             href: '/bookmarks',
             iconActive: RiBookmarkLine,
             iconInactive: RiBookmarkLine,
             startsWith: '/bookmarks'
-        }
+        } */
 
     ];
     return (
