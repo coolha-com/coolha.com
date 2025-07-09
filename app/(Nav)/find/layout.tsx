@@ -1,6 +1,6 @@
 
-import ButtonList from '../home/_contexts/ButtonList';
-import { OrderByProvider } from '../home/_contexts/OrderByContext';
+import ButtonList from '../(home)/home/_contexts/ButtonList';
+import { OrderByProvider } from '../(home)/home/_contexts/OrderByContext';
 import Linknav from './Linknav';
 
 

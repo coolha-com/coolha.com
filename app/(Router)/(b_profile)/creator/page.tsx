@@ -3,7 +3,7 @@
 export default function page() {
    return (
      <>
-     创作者中心
+     创作中心
      </>
    )
 }

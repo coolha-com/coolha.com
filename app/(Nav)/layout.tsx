@@ -13,7 +13,7 @@ export default function layout({ children }) {
   return (
     <div className='bg-base-200  min-h-dvh flex'>
 
-      <div className="md:w-20 xl:w-56">
+      <div className="md:w-20 xl:w-52">
         <Sidebar />
       </div>
 
@@ -23,7 +23,7 @@ export default function layout({ children }) {
         <NavFooter />
       </div>
 
-      <div className={` ${isActive && `lg:w-20 xl:w-56`}`} />
+      <div className={` ${isActive && `lg:w-20 xl:w-52`}`} />
 
     </div>
   )

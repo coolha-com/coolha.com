@@ -28,7 +28,7 @@ export default function Linknav() {
             name: "全部",
             logo: <RiShapesLine />
         },
-        {
+/*         {
             href: "/home/article",
             name: "文章",
             logo: <RiFileTextLine />
@@ -47,7 +47,7 @@ export default function Linknav() {
             href: "/home/video",
             name: "视频",
             logo: <RiVideoLine />
-        }
+        } */
     ]
     return (
         <>

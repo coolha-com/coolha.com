@@ -9,7 +9,7 @@
 # testing
 /coverage
 .vscode
-
+/app/(Router)/deepseek
 # next.js
 /.next/
 /out/

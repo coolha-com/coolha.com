@@ -13,7 +13,7 @@ import { UsersPosAtext } from "../../../PostsCard/PosAtext"
 export default function PUBcollects({ profile }) {
 
   const { data, hasMore, observeRef } = useInfiniteScroll(usePublications({
-    limit: LimitType.TwentyFive,
+    limit: LimitType.Ten,
     where: {
       from: [profile?.id],
       publicationTypes: [PublicationType.Post],

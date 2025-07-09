@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function communitypage() {
 
     const chatData = [
-        { name: 'Lens', message: 'Hello! CoolhaTop users' ,img:'/lens/Icon-T-Black_@2x.png'},
+        { name: 'Lens Community', message: 'Hello! Coolha Community users' ,img:'/lens/Icon-T-Black_@2x.png'},
         { name: 'Groups', message: '暂未集成' ,img:'/favicon.ico'},
 
     ];

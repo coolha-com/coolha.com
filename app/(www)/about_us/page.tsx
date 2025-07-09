@@ -1,6 +1,6 @@
 'use client'
-import Footer from "@/components/_page/Footer";
-import Header from "@/components/_page/Header";
+import Footer from "@/app/(www)/_page/Footer";
+import Header from "@/app/(www)/_page/Header";
 import Link from "next/link";
 import React from "react";
 import { FaBtc, FaEthereum, FaCommentsDollar, FaDonate } from "react-icons/fa";
@@ -74,9 +74,9 @@ export default function page() {
         },
     ]
     return (
-        <div className="  mt-20">
+        <>
             <Header />
-            <div className="flex flex-col justify-center items-center bg-[#1d1d1d] py-16">
+            <div className="flex flex-col justify-center items-center  py-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
 
@@ -84,12 +84,12 @@ export default function page() {
 
                     {/* 介绍 */}
                     <div className="mx-auto  lg:text-center">
-                        <p className="mt-2 text-3xl text-primary  font-bold tracking-tight  sm:text-5xl">
+                        <h1 className="mt-2 text-3xl text-primary drop-shadow-[1px_1px_1px_black] font-bold tracking-tight  sm:text-5xl">
                             {'酷哈实验室'}
-                        </p>
-                        <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl text-white">
+                        </h1>
+                        <h2 className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl text-base-content ">
                             {'让数据信息可拥有、可信任、有价值'}
-                        </p>
+                        </h2>
                         <p className="mt-6 text-xl leading-8 text-[#6a6a6a]">
                             <br />
                             {'希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好'}
@@ -104,14 +104,14 @@ export default function page() {
                     <div className="mx-auto  max-w-2xl md:max-w-4xl mt-8">
                         <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-5 md:max-w-none md:grid-cols-2 lg:gap-y-8">
                             {Idea.map((idea) => (
-                                <div key={idea.name} className="relative pl-20 shadow-md p-6  rounded-2xl border bg-[#000000] hover:bg-[var(--button-bg)] ">
-                                    <div className=" text-2xl font-semibold leading-7 text-primary">
+                                <div key={idea.name} className="relative pl-20 shadow-md p-6  rounded-2xl border bg-base-100 hover:border-primary ">
+                                    <div className=" text-2xl font-semibold leading-7 text-info ">
                                         <div className="absolute left-5 top-7 flex h-10 w-10 items-start  rounded-2xl ">
                                             <idea.icon className="h-6 w-6 " aria-hidden="true" />
                                         </div>
-                                        <span className=" text-primary">  {idea.name}</span>
+                                        <span >  {idea.name}</span>
                                     </div>
-                                    <span className="mt-2 text-xl text-white leading-7">{idea.description}</span>
+                                    <span className="mt-2 text-xl text-base-content leading-7">{idea.description}</span>
                                 </div>
                             ))}
                         </div>
@@ -130,15 +130,15 @@ export default function page() {
 
                     {/* 业务 */}
                     <div className="mx-auto max-w-2xl md:max-w-4xl mt-40 grid grid-cols-1 md:grid-cols-2 gap-8 ">
-                        {Case.map((item) => (
-                            <div key={item.name} className="rounded-2xl relative shadow-md bg-[#000000] border h-auto p-6 pl-20 hover:bg-[var(--button-bg)]">
-                                <dt className=" text-2xl font-semibold leading-7 text-primary ">
+                        {Bus.map((item) => (
+                            <div key={item.name} className="rounded-2xl relative shadow-md bg-base-100 border h-auto p-6 pl-20 hover:border-primary">
+                                <dt className=" text-2xl font-semibold leading-7 text-info  ">
                                     <div className="absolute left-5 top-7 flex h-10 w-10 items-start  rounded-2xl ">
-                                        <item.icon className="h-6 w-6 text-primary " aria-hidden="true" />
+                                        <item.icon className="h-6 w-6" aria-hidden="true" />
                                     </div>
-                                    <span className=" text-primary">  {item.name}</span>
+                                    <span>  {item.name}</span>
                                 </dt>
-                                <dd className="mt-2 text-xl text-white leading-7 ">{item.description}</dd>
+                                <dd className="mt-2 text-xl text-base-content leading-7 ">{item.description}</dd>
                             </div>
                         ))}
                     </div>
@@ -148,14 +148,14 @@ export default function page() {
                     <div className="mx-auto max-w-2xl  md:max-w-4xl mt-8">
                         <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-5 md:max-w-none md:grid-cols-2 lg:gap-y-8">
                             {Case.map((cases) => (
-                                <div key={cases.name} className="relative pl-20 shadow-md p-6  rounded-2xl border bg-[#000000] hover:bg-[var(--button-bg)] ">
-                                    <div className=" text-2xl font-semibold leading-7 text-primary ">
-                                        <div className="absolute left-5 top-7 flex h-10 w-10 items-start  rounded-2xl ">
+                                <div key={cases.name} className="relative pl-20 shadow-md p-6  rounded-2xl border bg-base-100 hover:border-primary ">
+                                    <div className=" text-2xl font-semibold leading-7 text-info  ">
+                                        <div className="absolute left-5 top-7 flex h-10 w-10 items-start text-info rounded-2xl ">
                                             <cases.icon className="h-6 w-6 " aria-hidden="true" />
                                         </div>
-                                        <span className=" text-primary">  {cases.name}</span>
+                                        <span>  {cases.name}</span>
                                     </div>
-                                    <span className="mt-2 text-xl  text-white leading-7 ">{cases.description}</span>
+                                    <span className="mt-2 text-xl  text-base-content leading-7 ">{cases.description}</span>
                                 </div>
                             ))}
                         </div>
@@ -183,7 +183,7 @@ export default function page() {
 
             <Footer />
 
-        </div>
+        </>
     )
 }
 

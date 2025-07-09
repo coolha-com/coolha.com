@@ -1,8 +1,8 @@
 // app/page.tsx
 'use client';
 
-import Header from "@/components/_page/Header";
-import Footer from "@/components/_page/Footer";
+import Header from "@/app/(www)/_page/Header";
+import Footer from "@/app/(www)/_page/Footer";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -11,21 +11,22 @@ import { motion } from "motion/react";
 
 export default function Page() {
   return (
-    <>
+    <div className=" bg-base-100">
       <Header />
 
-      <div className=" max-h-[80vh] min-h-[100vh]  relative isolate overflow-hidden" /* style={{ backgroundImage: 'url(/repeated-square-dark.png)' }} */>
+      <div className=" min-h-screen  bg-base-100 relative isolate overflow-hidden" /* style={{ backgroundImage: 'url(/repeated-square-dark.png)' }} */>
         <div className="hero-overlay bg-opacity-60"></div>
 
 
-        <div className=" flex flex-col justify-center items-center text-center  text-neutral-content h-[calc(100vh-69px)]  ">
+        <div className=" flex flex-col justify-center items-center text-center  text-neutral-content  mt-20">
 
           <img src="/logo/logo.png" alt="/logo/logo.png" className=' image-full w-2/5 md:w-60  m-4' />
 
           <div className="max-w-4xl ">
-            <h1 className="text-7xl font-bold "><span className="text-[#C0E218]  drop-shadow-[2px_2px_2px_black]">Coolha </span></h1>
-            <p className="p-2  text-base-content text-xl md:text-2xl">为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务 </p>
-            <p className='p-2 mb-5 text-xl text-base-content'>基于Lens协议开发的去中心化社交应用</p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-10"><span className="text-[#C0E218]  drop-shadow-[2px_2px_2px_black]">Coolha </span></h1>
+            <p className="text-base-content  text-2xl">数字增长新动力，使更多用户连接到Web3世界 </p>
+            <p className="text-base-content  text-2xl">为创作者、品牌、社区、组织赋能 </p>
+            <p className='p-1 mb-5 text-base-content'>基于以太坊区块链第二层 Lens Chain 开发的去中心化社交应用</p>
 
 
             <div className='mt-5 self-center flex gap-2 w-full sm:w-auto flex-col sm:flex-row justify-center px-12'>
@@ -45,7 +46,7 @@ export default function Page() {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

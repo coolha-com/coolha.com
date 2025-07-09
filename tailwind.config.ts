@@ -42,7 +42,7 @@ const config: Config = {
           "accent": "#ffffff",
           "neutral": "#9dba0d",
           "base-100": "#ffffff",
-          "base-200": "#EDEDED",
+          "base-200": "#fafafa",
           "base-content": "#1d1d1d",
           "info": "#A1C103",
           "success": "#1F7A1F",

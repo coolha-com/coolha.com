@@ -2,7 +2,7 @@
 
 import { WelcomeToLens } from "@/app/login/WelcomeToLens";
 import { useRouter } from "next/navigation";
-import web3背景 from '@/public/coolha.com/web3背景.png'
+import Coolha小 from '@/public//logo/Coolha小.png'
 import Image from "next/image";
 export function Login() {
     const router = useRouter()
@@ -15,8 +15,8 @@ export function Login() {
                 </div>
                 <figure>
                     <Image
-                        src={web3背景}
-                        alt="web3背景"
+                        src={Coolha小}
+                        alt="Coolha小"
                         sizes="100%"
                         style={{
                             width: '100%',

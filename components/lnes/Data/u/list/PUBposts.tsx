@@ -1,5 +1,5 @@
 'use client'
-import { ExplorePublicationsOrderByType, LimitType, Profile, profileId, PublicationType, usePublications } from "@lens-protocol/react-web"
+import { ExplorePublicationsOrderByType, LimitType, Profile, profileId, PublicationType, useProfile, usePublications } from "@lens-protocol/react-web"
 import Avatarimg from "../../../PostsCard/Avatarimg"
 import AvatarName from "../../../PostsCard/AvatarName"
 import InteractCard from "../../../PostsCard/InteractCard"
@@ -10,14 +10,19 @@ import Meide from "../../../PostsCard/Meide"
 import Menu from "../../../PostsCard/Menu/Menu"
 import { RiLoopLeftFill } from "react-icons/ri"
 
-export function PUBposts({
-  profile
-}) {
-  let { data: publications, hasMore, loading, observeRef } = useInfiniteScroll(usePublications({
-    limit: LimitType.TwentyFive,
+export function PUBposts({ users }) {
+  // 使用拆分出来的命名空间和用户名调用 useProfile 钩子
+  const { data: profile } = useProfile({
+    forHandle: `lens/${users}`
+  });
+
+
+
+  const { data: publications, hasMore, loading, observeRef } = useInfiniteScroll(usePublications({
+    limit: LimitType.Ten,
     //orderBy: ExplorePublicationsOrderByType.LensCurated,
     where: {
-      from: [profile?.id],
+      from: profile ? [profileId(profile.id)] : [],
       publicationTypes: [PublicationType.Mirror, PublicationType.Post, PublicationType.Quote],
     },
   }))
@@ -150,7 +155,7 @@ export function PUBposts({
       )}
 
       {loading && (
-        <div className="flex justify-center mt-4 bg-base-100">
+        <div className="flex justify-center mt-4 ">
           <span className="loading loading-spinner loading-lg"></span>
         </div>
       )}

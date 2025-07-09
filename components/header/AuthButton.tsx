@@ -103,7 +103,7 @@ export default function Auth() {
                                             <span className="text-ellipsis">
                                                 {session?.profile?.metadata?.displayName}
                                             </span>
-                                            <span className="text-ellipsis text-[#878787] text-sm">
+                                            <span className="text-ellipsis text-[#878787] text-xs">
                                                 @{session?.profile?.handle?.localName}
                                             </span>
                                         </div>

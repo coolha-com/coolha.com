@@ -63,7 +63,7 @@ function CurrencyRow({ currency, Address }: { currency: Erc20, Address: string }
       <td>
         <div className="avatar">
           <div className="w-10 rounded-full">
-            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt={currency.symbol} />
+            <img src="/" alt={currency.symbol} />
           </div>
         </div>
       </td>

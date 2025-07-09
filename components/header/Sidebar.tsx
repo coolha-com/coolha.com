@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { RiHomeFill, RiHomeLine, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSearchLine, RiCompassFill, RiCompassLine, RiWallet3Line, RiVerifiedBadgeLine, RiBookmarkLine } from "react-icons/ri";
+import { RiHomeFill, RiHomeLine, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSearchLine, RiCompassFill, RiCompassLine, RiWallet3Line, RiVerifiedBadgeLine, RiBookmarkLine, RiSearchFill } from "react-icons/ri";
 import AuthButton from "./AuthButton";
 import ButtonMenu from "./ButtonMenu";
 import { motion } from "motion/react";
@@ -12,18 +12,20 @@ export default function Sidebar() {
         <div className=" hidden md:block min-h-full max-w-16 xl:max-w-56 fixed top-0 left-0 z-50">
 
 
-            <div className="h-svh z-50">
-                <ul className="menu bg-base-100 min-h-full w-full  gap-1 z-50">
-                    <Logo />
-                    <Search />
-                    <NavbarLink />
-                    <div className="mt-auto">
-                        <AuthButton />
-                    </div>
-                    <div className="">
-                        <ButtonMenu />
-                    </div>
-                </ul>
+            <div className="menu bg-base-100 min-h-full h-svh w-full gap-1 z-50">
+
+                <Logo />
+                {/* <Search /> */}
+                <NavbarLink />
+
+                <div className="">
+                    <ButtonMenu />
+                </div>
+
+                <div className="mt-auto">
+                    <AuthButton />
+                </div>
+
             </div>
 
         </div>
@@ -87,6 +89,13 @@ function NavbarLink() {
     const pathname = usePathname();
     const links = [
         {
+            title: '搜索',
+            href: '/search',
+            iconActive: RiSearchFill,
+            iconInactive: RiSearchLine,
+            startsWith: '/search'
+        },
+        {
             title: '首页',
             href: '/home',
             iconActive: RiHomeFill,
@@ -121,20 +130,13 @@ function NavbarLink() {
             iconInactive: RiWallet3Line,
             startsWith: '/wallet'
         },
-        {
-            title: '会员',
-            href: '/vip',
-            iconActive: RiVerifiedBadgeLine,
-            iconInactive: RiVerifiedBadgeLine,
-            startsWith: '/vip'
-        },
-        {
+/*         {
             title: '书签',
             href: '/bookmarks',
             iconActive: RiBookmarkLine,
             iconInactive: RiBookmarkLine,
             startsWith: '/bookmarks'
-        },
+        } */
 
     ];
     return (

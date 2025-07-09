@@ -26,19 +26,11 @@ import LayoutUse from "@/components/lnes/Data/u/LayoutUse"
 export default function layout({ children, params: { users } }) {
 
     return (
-        <div className='bg-base-200 min-h-dvh  flex'>
+        <div>
 
-            <div className="md:w-20 xl:w-56">
-                <Sidebar />
-            </div>
-
-            <div className='flex-1'>
-                <LayoutUse users={users}>
-                    {children}
-                </LayoutUse>
-            </div>
-
-            <div className="lg:w-20 xl:w-56" />
+            <LayoutUse users={users}>
+                {children}
+            </LayoutUse>
 
         </div>
     )
