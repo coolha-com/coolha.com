@@ -1,7 +1,7 @@
 'use client'
 
 
-import { PUBposts } from '@/components/lnes/Data/u/list/PUBposts';
+
 
 
 export default function page({ params: { users } }) {
@@ -14,7 +14,7 @@ export default function page({ params: { users } }) {
 
   return (
     <div className='lg:min-w-3xl mx-auto  bg-base-200'>
-      {users && <PUBposts users={users} />}
+    {/*   {users && <PUBposts users={users} />} */}
 
     </div>
   )

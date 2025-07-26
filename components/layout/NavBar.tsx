@@ -2,6 +2,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { RiAddCircleLine, RiSearchLine } from "react-icons/ri";
 import ButtonMenu from "./ButtonMenu";
+import ConnectButton from "../web3/ConnectButton";
 /* import AuthButton from "./AuthButton"; */
 
 export default function NavBar() {
@@ -57,6 +58,7 @@ function Profile() {
             <div className="navbar-center"> </div>
             <div className="navbar-end">
                 <ButtonMenu />
+                <ConnectButton />
                 {/* <AuthButton /> */}
             </div>
         </>

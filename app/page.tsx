@@ -1,14 +1,11 @@
 'use client'
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
 
-export default function Home() {
-  const t =  useTranslations();
+import { redirect } from 'next/navigation'
 
-  return (
+export default function Page() {
+  redirect('/home') // 立即重定向到 /home
+  return(
     <>
-      <Link href={`/about`} className=" btn btn-primary">{t('关于')}</Link>
     </>
-  );
+  )
 }

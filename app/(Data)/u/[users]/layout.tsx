@@ -1,6 +1,5 @@
 'use client'
-import Sidebar from "@/components/header/Sidebar"
-import LayoutUse from "@/components/lnes/Data/u/LayoutUse"
+
 
 
 /* export async function generateMetadata({ params }: any) {
@@ -28,9 +27,9 @@ export default function layout({ children, params: { users } }) {
     return (
         <div>
 
-            <LayoutUse users={users}>
+      
                 {children}
-            </LayoutUse>
+     
 
         </div>
     )

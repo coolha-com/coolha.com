@@ -7,6 +7,7 @@ import { RiHomeFill, RiHomeLine, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLin
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ButtonMenu from "./ButtonMenu";
+import ConnectButton from "../web3/ConnectButton";
 export default function Sidebar() {
     return (
         <div className=" hidden md:block min-h-full max-w-16 xl:max-w-56 fixed top-0 left-0 z-50">
@@ -23,7 +24,7 @@ export default function Sidebar() {
                 </div>
 
                 <div className="mt-auto">
-                 {/*    <AuthButton /> */}
+                    <ConnectButton />
                 </div>
 
             </div>
@@ -38,7 +39,7 @@ function Logo() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link href={`/home`} className="flex flex-row items-center justify-center gap-2 ">
                     <div className="max-h-12">
-                        <img src='/favicon.ico' className="w-12 h-12 rounded-full " alt='Q' />
+                        <img src='/favicon.ico' className="w-10 h-10 rounded-full " alt='Q' />
                     </div>
                     <div className="text-3xl font-bold xl:block hidden">
                         Coolha
@@ -130,13 +131,13 @@ function NavbarLink() {
             iconInactive: RiWallet3Line,
             startsWith: '/wallet'
         },
-/*         {
-            title: '书签',
-            href: '/bookmarks',
-            iconActive: RiBookmarkLine,
-            iconInactive: RiBookmarkLine,
-            startsWith: '/bookmarks'
-        } */
+        /*         {
+                    title: '书签',
+                    href: '/bookmarks',
+                    iconActive: RiBookmarkLine,
+                    iconInactive: RiBookmarkLine,
+                    startsWith: '/bookmarks'
+                } */
 
     ];
     return (

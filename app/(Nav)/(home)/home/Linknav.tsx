@@ -55,7 +55,7 @@ export default function Linknav() {
                                 <img src='/favicon.ico' className="w-9 h-9 rounded-full " alt='Coolha' />
                             </motion.div>
                         </Link>
-                        <button className="p-1 rounded-full hover:bg-[var(--button-bg)]" onClick={() => router.push(`/search`)}>
+                        <button className="p-1 btn btn-ghost btn-circle" onClick={() => router.push(`/search`)}>
                             <RiSearchLine className="w-7 h-7 " />
                         </button>
                     </div>
@@ -69,7 +69,7 @@ export default function Linknav() {
                 {linknav.slice(0, 3).map((item) => (
                     <div className='mx-auto  w-1/3  z-20 flex flex-row-reverse ' key={item.href}>
 
-                        <Link href={item.href} className={`z-20 flex flex-row  items-center justify-center w-full h-10 md:h-12  text-[#878787] border-b-0 bg-base-100 hover:bg-[--link-hover-background] ${pathname === item.href ? 'text-info  border-b-info border-b-2' : ''}`}>
+                        <Link href={item.href} className={`z-20 flex flex-row  items-center justify-center w-full h-10 md:h-12  text-[#878787] border-b-0 bg-base-100 hover:bg-base-content/5 ${pathname === item.href ? 'text-info  border-b-info border-b-2' : ''}`}>
                             <div className=' justify-center text-base xs:text-2xl sm:text-3xl z-20'> {item.logo} </div>
                             <p className="text-sm text-inherit z-20 text-center md:text-base md:ml-1 hidden xs:flex ">{item.name}</p>
                         </Link>

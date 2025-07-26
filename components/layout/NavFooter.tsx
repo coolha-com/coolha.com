@@ -11,7 +11,7 @@ export default function NavFooter() {
     return (
         <div >
 
-            <div className="md:hidden flex fixed bottom-0 w-full h-14 bg-[var(--background-end-rgb)] backdrop-filter backdrop-saturate-180 backdrop-blur-16  z-50 p-1">
+            <div className="md:hidden flex fixed bottom-0 w-full h-14 bg-base-100 backdrop-filter backdrop-saturate-180 backdrop-blur-16  z-50 p-1">
 
                 <NavLink
                     href='/home'
@@ -71,7 +71,7 @@ function NavLink({ href, activeIcon, icon, activeHrefs, text }) {
 
     return (
         <Link
-            className={`flex-1 flex flex-col items-center justify-center h-full  transition-shadow text-base-content/60  hover:bg-[var(--button-bg)] rounded-full  ${isActive ? '' : ''}`}
+            className={`flex-1 flex flex-col items-center justify-center h-full  transition-shadow text-base-content/60  hover:bg-base-content/20 rounded-full  ${isActive ? '' : ''}`}
             href={href}
             prefetch={true} passHref 
         >

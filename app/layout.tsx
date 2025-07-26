@@ -4,7 +4,8 @@ import "./globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
 import Providers from "@/config/Providers";
-
+import { headers } from 'next/headers'
+import Wagmi_Provider from "@/config/Wagmi_Provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,8 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+  const headersObj = await headers();
+  const cookies = headersObj.get('cookie')
   const locale = await getLocale();
   const t = await getTranslations();
   return (
@@ -41,9 +44,9 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
       >
         <NextIntlClientProvider>
           <Providers>
-
-            {children}
-
+            <Wagmi_Provider cookies={cookies}>
+              {children}
+            </Wagmi_Provider>
           </Providers>
         </NextIntlClientProvider>
       </body>
