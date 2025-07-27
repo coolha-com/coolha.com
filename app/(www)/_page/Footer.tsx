@@ -6,8 +6,8 @@ export default function Footer() {
         <div className="">
 
 
-            <div className="flex justify-center bg-base-100 border-t">
-                <footer className="footer  max-w-screen-xl p-6 lg:p-8  text-base-content">
+            <div className="flex justify-center bg-base-100 ">
+                <footer className="footer sm:footer-horizontal max-w-screen-xl p-6 lg:p-8  text-base-content">
                     {/*                     <aside>
                         <Link href={`/`} className="">
                             <img src="/logo/透明LOGO白色.png" alt="/logo/透明LOGO白色.png" className="max-w-32 " />
@@ -29,8 +29,8 @@ export default function Footer() {
                     <nav>
                         <h6 className="footer-title">资源</h6>
                         <Link href={`https://docs.coolha.com`} className="link link-hover" target='_blank'>文档</Link>
-                        <Link href="https://docs.coolha.com/apps/privacy" className="link link-hover" target='_blank'>隐私</Link >
-                        <Link href="https://docs.coolha.com/apps/terms" className="link link-hover" target='_blank'>条款</Link >
+                        <Link href="https://docs.coolha.com/docs/apps/privacy" className="link link-hover" target='_blank'>隐私</Link >
+                        <Link href="https://docs.coolha.com/docs/apps/terms" className="link link-hover" target='_blank'>条款</Link >
                     </nav>
 
                 </footer>

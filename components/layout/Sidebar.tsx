@@ -146,7 +146,7 @@ function NavbarLink() {
                 <li key={link.href}>
                     <Link
                         href={link.href}
-                        className={`btn btn-ghost btn-circle no-animation xl:justify-start xl:w-40  xl:pl-2  ${pathname && pathname.startsWith(link.startsWith) && "bg-base-content/30   "}`}
+                        className={`btn btn-ghost btn-circle no-animation xl:justify-start xl:w-40  xl:pl-2  ${pathname && pathname.startsWith(link.startsWith) && "bg-base-content/10   "}`}
                     >
                         {pathname.startsWith(link.startsWith) ? <link.iconActive className="size-7" /> : <link.iconInactive className="size-7" />}
                         <span className=" hidden xl:flex text-lg">

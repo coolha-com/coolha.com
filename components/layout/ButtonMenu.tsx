@@ -43,8 +43,8 @@ export default function ButtonMenu() {
 
                         <div className=" flex gap-2">
                             <Link href={`https://docs.coolha.com`} className="  hover:link " target='_blank'>文档</Link>
-                            <Link href={`https://docs.coolha.com/apps/privacy`} className="  hover:link " target='_blank'>隐私</Link>
-                            <Link href={`https://docs.coolha.com/apps/terms`} className="  hover:link " target='_blank'>条款</Link>
+                            <Link href={`https://docs.coolha.com/docs/apps/privacy`} className="  hover:link " target='_blank'>隐私</Link>
+                            <Link href={`https://docs.coolha.com/docs/apps/terms`} className="  hover:link " target='_blank'>条款</Link>
                         </div>
 
                         <div className=""> <span>©{new Date().getFullYear()} coolha.com </span></div>
