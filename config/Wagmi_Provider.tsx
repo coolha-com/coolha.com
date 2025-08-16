@@ -7,7 +7,6 @@ import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { projectId, wagmiAdapter } from './wagmi'
 import { useTheme } from 'next-themes'
-
 // Set up queryClient
 export const queryClient = new QueryClient()
 
