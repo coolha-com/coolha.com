@@ -22,7 +22,7 @@
           },
     }
 } */
-export default function layout({ children, params: { users } }) {
+export default function layout({ children }) {
 
     return (
         <div>

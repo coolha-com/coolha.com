@@ -4,7 +4,7 @@
 
 
 
-export default function page({ params: { users } }) {
+export default function page() {
 
   // 将用户的名字和命名空间从 'users' 参数中拆分出来
   //users = users.split('.')[0];
