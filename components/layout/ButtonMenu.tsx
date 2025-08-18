@@ -32,7 +32,7 @@ export default function ButtonMenu() {
 
                         <div className="flex items-center gap-2">
                             <Link href={`/about`} className="  hover:link ">关于</Link>
-                            <span className="text-xs">v0.1.2-alphav</span>
+                            <span className="text-xs">v0.1-alphav</span>
                         </div>
 
                         <div className="flex gap-2">

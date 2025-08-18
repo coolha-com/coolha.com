@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import Image from "next/image";
 import Link from "next/link"
 import { useState } from "react";
-import { FaCircleChevronLeft, FaDiscord, FaGithub, FaSquareXTwitter, FaTelegram, FaTiktok } from 'react-icons/fa6';
+import { FaCircleChevronLeft, FaDiscord, FaGithub, FaSquareXTwitter, FaTelegram, FaTiktok,  } from 'react-icons/fa6';
 import { RiBlueskyFill, RiLinkedinBoxFill, RiMailFill, RiTiktokFill, RiWechatFill, RiWeiboFill } from "react-icons/ri";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 export default function MediaLink() {
@@ -52,7 +52,7 @@ export default function MediaLink() {
       </MLink> */}
 
       <MLink href="https://paragraph.com/@coolha" >
-        <svg xmlns="http://www.w3.org/2000/svg" width="81" height="82" viewBox="0 0 81 82" className="w-7 h-7 text-base-content" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="81" height="82" viewBox="0 0 81 82" className="w-6 h-6 text-base-content" fill="none">
           <path d="M6 0V76.1345H81" stroke="currentColor" stroke-width="10.6585" stroke-miterlimit="10" />
           <path d="M34.4067 5.30176L6 76.1337L76.0722 46.9673" stroke="currentColor" stroke-width="10.6585" stroke-linejoin="round" />
           <path d="M6 76.129L59.0302 21.5845" stroke="currentColor" stroke-width="10.6585" stroke-miterlimit="10" />
@@ -69,6 +69,10 @@ export default function MediaLink() {
 
       <MLink href="https://github.com/coolha-com" >
         <FaGithub className="w-7 h-7" />
+      </MLink>
+
+      <MLink href="https://mp.weixin.qq.com/s/otkEV9CUeOXQSmm8_zpbog" >
+        <RiWechatFill className="w-7 h-7" />
       </MLink>
 
       {/*       <MLink href="https://www.linkedin.com/company/coolha/" >
