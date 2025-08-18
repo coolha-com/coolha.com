@@ -1,6 +1,6 @@
 'use client';
 
-import { WelcomeToLens } from "@/app/login/WelcomeToLens";
+
 import { useRouter } from "next/navigation";
 import Coolha小 from '@/public//logo/Coolha小.png'
 import Image from "next/image";
