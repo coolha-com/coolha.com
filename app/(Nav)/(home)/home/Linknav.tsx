@@ -70,7 +70,7 @@ export default function Linknav() {
                     <div className='mx-auto  w-1/3  z-20 flex flex-row-reverse ' key={item.href}>
 
                         <Link href={item.href} className={`z-20 flex flex-row  items-center justify-center w-full h-10 md:h-12  text-[#878787] border-b-0 bg-base-100 hover:bg-base-content/5 ${pathname === item.href ? 'text-info  border-b-info border-b-2' : ''}`}>
-                            <div className=' justify-center text-base xs:text-2xl sm:text-3xl z-20'> {item.logo} </div>
+                            <span className=' justify-center text-base xs:text-2xl sm:text-3xl z-20'> {item.logo} </span>
                             <p className="text-sm text-inherit z-20 text-center md:text-base md:ml-1 hidden xs:flex ">{item.name}</p>
                         </Link>
 

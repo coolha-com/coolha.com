@@ -11,14 +11,14 @@ export default function ButtonMenu() {
     return (
         <>
             {/* 菜单按钮 */}
-            <div className="dropdown dropdown-bottom dropdown-end md:dropdown-right dropdown-hover ">
+            <div className="dropdown dropdown-bottom dropdown-end md:dropdown-right  ">
 
                 <div tabIndex={0} role="button" className=" rounded-full hover:bg-base-content/10  md:no-animation p-2 md:p-0 xl:w-40 md:btn md:btn-ghost md:btn-circle  xl:justify-start xl:pl-2 mx-1 md:mx-0">
                     <CgMenuGridO className="size-6 md:size-7" />
                     <span className=" hidden xl:flex text-lg">更多</span>
                 </div>
 
-                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box min-w-52 border text-lg">
+                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2  bg-base-100 rounded-box border-accent-content border-[0.1px] min-w-52  text-lg">
 
                     <ThemeSwap />
 
@@ -31,14 +31,14 @@ export default function ButtonMenu() {
 
 
                         <div className="flex items-center gap-2">
-                            <Link href={`/about`} className="  hover:link ">关于</Link>
+                            <Link href={`/about`} className="  hover:link " target='_blank'>关于</Link>
                             <span className="text-xs">v0.1-alphav</span>
                         </div>
 
                         <div className="flex gap-2">
-                            <Link href={`/about_us`} prefetch={false} className="  hover:link " >关于我们</Link>
+                            <Link href={`/about_us`} prefetch={false} className="  hover:link " target='_blank'>关于我们</Link>
                             <Link href={`https://link3.to/coolha`} className="  hover:link " target='_blank'>联系</Link>
-                            <Link href={`https://coolha-com.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e`} className="  hover:link " target='_blank'>反馈</Link>
+                            <Link href={`https://coolha-com.sg.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e`} className="  hover:link " target='_blank'>反馈</Link>
                         </div>
 
                         <div className=" flex gap-2">
