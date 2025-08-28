@@ -3,47 +3,49 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useTranslations } from 'next-intl'
 import { RiBardLine, RiUserFollowLine, RiShapesLine, RiFileTextLine, RiImageLine, RiMusic2Line, RiVideoLine, RiSearchLine } from "react-icons/ri";
 
 export default function Linknav() {
     const pathname = usePathname();
     const router = useRouter();
+    const t = useTranslations('home')
     const linknav = [
         {
             href: "/home/foryou",
-            name: "推荐",
+            name: t('recommended'),
             logo: <RiBardLine />
         },
         {
             href: "/home/following",
-            name: "关注",
+            name: t('following'),
             logo: <RiUserFollowLine />
         },
         {
             href: "/home",
-            name: "全部",
+            name: t('all'),
             logo: <RiShapesLine />
         },
-/*         {
-            href: "/home/article",
-            name: "文章",
-            logo: <RiFileTextLine />
-        },
-        {
-            href: "/home/image",
-            name: "图片",
-            logo: <RiImageLine />
-        },
-        {
-            href: "/home/music",
-            name: "音乐",
-            logo: <RiMusic2Line />
-        },
-        {
-            href: "/home/video",
-            name: "视频",
-            logo: <RiVideoLine />
-        } */
+        /*         {
+                    href: "/home/article",
+                    name: "文章",
+                    logo: <RiFileTextLine />
+                },
+                {
+                    href: "/home/image",
+                    name: "图片",
+                    logo: <RiImageLine />
+                },
+                {
+                    href: "/home/music",
+                    name: "音乐",
+                    logo: <RiMusic2Line />
+                },
+                {
+                    href: "/home/video",
+                    name: "视频",
+                    logo: <RiVideoLine />
+                } */
     ]
     return (
         <>

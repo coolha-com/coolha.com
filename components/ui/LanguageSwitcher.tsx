@@ -26,7 +26,7 @@ export default function LanguageSwitcher() {
                 {locales.map(l => (
                     <li key={l.code}>
                         <a
-                            className={l.code === locale ? 'bg-primary text-base-200 ' : ''}
+                            className={l.code === locale ? 'bg-primary text-base-100 ' : ''}
                             onClick={() => handleSelect(l.code)}
                         >
                             {l.label}

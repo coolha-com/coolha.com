@@ -36,13 +36,13 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
   const headersObj = await headers();
   const cookies = headersObj.get('cookie')
   const locale = await getLocale();
-  const t = await getTranslations();
+  const messages = (await import(`../i18n/${locale}.json`)).default;
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <Wagmi_Provider cookies={cookies}>
               {children}

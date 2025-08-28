@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-
+import { useTranslations } from 'next-intl'
 import { usePathname, } from 'next/navigation'
 
-import { RiApps2Fill, RiApps2Line, RiArchiveFill, RiArchiveLine, RiChat1Fill, RiChat1Line, RiCompass3Fill, RiCompass3Line, RiCompassFill, RiCompassLine, RiHome5Fill, RiHome5Line, RiHomeFill, RiHomeLine, RiMailFill, RiMailLine, RiMessageFill, RiMessageLine, RiSearchFill, RiSearchLine, RiUserFill, RiUserLine } from "react-icons/ri";
+import { RiChat1Fill, RiChat1Line, RiCompassFill, RiCompassLine, RiHomeFill, RiHomeLine, RiUserFill, RiUserLine } from "react-icons/ri";
 
 
 export default function NavFooter() {
+    const t = useTranslations('navigation')
     return (
         <div >
 
@@ -18,15 +19,15 @@ export default function NavFooter() {
                     activeHrefs={['/home']}
                     icon={<RiHomeLine className="size-7" />}
                     activeIcon={<RiHomeFill className="size-7" />}
-                    text='首页'
+                    text={t('home')}
                 />
 
                 <NavLink
                     href='/find'
                     activeHrefs={['/find']}
-                    icon={<RiCompassLine  className="size-7" />}
+                    icon={<RiCompassLine className="size-7" />}
                     activeIcon={<RiCompassFill className="size-7" />}
-                    text='发现'
+                    text={t('discover')}
                 />
 
 
@@ -35,7 +36,7 @@ export default function NavFooter() {
                     activeHrefs={['/message',]}
                     icon={<RiChat1Line className="size-7" />}
                     activeIcon={<RiChat1Fill className="size-7" />}
-                    text='消息'
+                    text={t('messages')}
                 />
 
                 <NavLink
@@ -43,7 +44,7 @@ export default function NavFooter() {
                     activeHrefs={[`/profile`]}
                     icon={<RiUserLine className="size-7" />}
                     activeIcon={<RiUserFill className="size-7" />}
-                    text='个人'
+                    text={t('profile')}
                 />
 
                 {/*        {address ? () : (
@@ -73,7 +74,7 @@ function NavLink({ href, activeIcon, icon, activeHrefs, text }) {
         <Link
             className={`flex-1 flex flex-col items-center justify-center h-full  transition-shadow text-base-content/60  hover:bg-base-content/20 rounded-full  ${isActive ? '' : ''}`}
             href={href}
-            prefetch={true} passHref 
+            prefetch={true} passHref
         >
 
             <div className={`flex flex-col items-center justify-center  ${isActive && 'text-base-content'} `}>

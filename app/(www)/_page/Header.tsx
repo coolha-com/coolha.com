@@ -9,7 +9,9 @@ import { useState, useEffect } from "react";
 import MediaLink from "./MediaLink";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import ThemeSwap from "@/components/ui/ThemeSwap";
+import { useTranslations } from "next-intl";
 export default function Header() {
+    const t = useTranslations('header');
     return (
         <div className="min-w-80 w-screen bg-base-100 justify-around  z-50  flex  fixed top-0 left-0 right-0 transition-transform duration-300 px-2">
             <div className="navbar  max-w-screen-xl mx-auto  ">
@@ -34,9 +36,9 @@ export default function Header() {
                 {/* 按钮 */}
                 <div className="navbar-end gap-1">{/* 右 */}
                     <ThemeSwap />
-                   <LanguageSwitcher />
+                    <LanguageSwitcher />
                     <Link href={'/home'} role="button" className=" hidden md:flex btn btn-primary text-lg font-bold rounded-full " >
-                        启动
+                        {t("launch")}
                     </Link>
                     <div className="dropdown dropdown-end flex-row flex gap-2">
                         <div className="dropdown dropdown-bottom dropdown-end">
@@ -70,6 +72,7 @@ function LinkNavbar({ href, Name }: any) {
 
 
 function LinkMenu() {
+    const t = useTranslations('header');
     const [isMdScreen, setIsMdScreen] = useState(false);
 
     useEffect(() => {
@@ -100,14 +103,14 @@ function LinkMenu() {
         <>
             <li>
                 <Link href={'/home'} role="button" className="md:hidden btn btn-primary text-lg font-bold rounded-full " >
-                    启动
+                    {t("launch")}
                 </Link>
             </li>
 
             <li>
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-                    <summary className="cursor-pointer">媒体</summary>
-                    <ul className="w-52 bg-base-100 md:absolute md:top-6 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                    <summary className="cursor-pointer">{t("media")}</summary>
+                    <ul className="w-52 bg-base-100 md:absolute md:top-6 md:left-0  md:rounded-2xl md:shadow-lg md:z-10">
                         <div className="grid grid-flow-row grid-cols-3 gap-4 p-2">
                             <MediaLink />
                         </div>
@@ -118,22 +121,22 @@ function LinkMenu() {
 
             <li>
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-                    <summary className="cursor-pointer">信息</summary>
-                    <ul className="w-56 bg-base-100 md:absolute md:top-6 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li> <Link href={`/about_us`} prefetch={false}>关于我们</Link></li>
-                        <li> <Link href={`https://link3.to/coolha`} target='_blank'>联系</Link></li>
-                        <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>反馈</Link></li>
+                    <summary className="cursor-pointer">{t("info")}</summary>
+                    <ul className="w-56 bg-base-100 md:absolute md:top-6 md:left-0  md:rounded-2xl md:shadow-lg md:z-10">
+                        <li> <Link href={`/about_us`} prefetch={false}>{t("about_us")}</Link></li>
+                        <li> <Link href={`https://link3.to/coolha`} target='_blank'>{t("contact")}</Link></li>
+                        <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>{t("feedback")}</Link></li>
                     </ul>
                 </details>
             </li>
 
             <li>
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <summary className="cursor-pointer">资源</summary>
-                    <ul className="w-56 bg-base-100 md:absolute md:top-6 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li> <Link href={`https://docs.coolha.com`} target='_blank'>文档</Link></li>
-                        <li><Link href="https://docs.coolha.com/apps/privacy" target='_blank'>隐私</Link></li>
-                        <li><Link href="https://docs.coolha.com/apps/terms" target='_blank'>条款</Link></li>
+                    <summary className="cursor-pointer">{t("resources")}</summary>
+                    <ul className="w-56 bg-base-100 md:absolute md:top-6 md:left-0  md:rounded-2xl md:shadow-lg md:z-10">
+                        <li> <Link href={`https://docs.coolha.com`} target='_blank'>{t("docs")}</Link></li>
+                        <li><Link href="https://docs.coolha.com/apps/privacy" target='_blank'>{t("privacy")}</Link></li>
+                        <li><Link href="https://docs.coolha.com/apps/terms" target='_blank'>{t("terms")}</Link></li>
                     </ul>
                 </details>
             </li>

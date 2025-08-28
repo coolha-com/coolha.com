@@ -5,11 +5,13 @@ import Header from "@/app/(www)/_page/Header";
 import Footer from "@/app/(www)/_page/Footer";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 //import LoadingDotsLogo from "@/gui/LoadingDotsLogo";
 
 
 export default function Page() {
+  const t = useTranslations("about");
   return (
     <div className=" bg-base-100">
       <Header />
@@ -20,19 +22,48 @@ export default function Page() {
 
         <div className=" flex flex-col justify-center items-center text-center  text-neutral-content  mt-20">
 
-          <img src="/logo/logo.png" alt="/logo/logo.png" className=' image-full w-2/5 md:w-60  m-4' />
+          <img src="/logo/logo.png" alt="/logo/logo.png" className=' image-full w-2/5 md:w-48  m-4' />
 
           <div className="max-w-4xl ">
-            <h1 className="text-5xl md:text-7xl font-bold mb-10"><span className="text-[#C0E218]  drop-shadow-[2px_2px_2px_black]">Coolha </span></h1>
-            <p className="text-base-content  text-2xl">数字增长新动力，使更多用户连接到Web3世界 </p>
-            <p className="text-base-content  text-2xl">为创作者、品牌、社区、组织赋能 </p>
-            <p className='p-1 mb-5 text-base-content'>基于以太坊区块链第二层 Lens Chain 开发的去中心化社交应用</p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8">
+              <span className="text-[#C0E218] drop-shadow-[2px_2px_2px_black]">
+                {t("title")}
+              </span>
+            </h1>
+            
+            <div className="space-y-6 mb-12">
+              <p className="text-base-content/90 text-lg md:text-xl font-light tracking-wide leading-8">
+                {t("subtitle1")}
+              </p>
+              <p className="text-base-content/90 text-lg md:text-xl font-light tracking-wide leading-8">
+                {t("subtitle2")}
+              </p>
+            </div>
+            
+            <div className="mb-10">
+              <p className="text-base-content/70 text-base md:text-lg font-light leading-7 max-w-xl mx-auto tracking-wide">
+                {t("description")}
+              </p>
+            </div>
 
-
-            <div className='mt-5 self-center flex gap-2 w-full sm:w-auto flex-col sm:flex-row justify-center px-12'>
-              <motion.div whileHover={{ scale: 1.05 }} >
-                <Link href={'/home'} role="button" className="btn btn-outline text-base-content hover:btn-primary text-xl md:text-2xl font-bold rounded-full "  >
-                  开始使用 →
+            <div className="flex justify-center">
+              <motion.div 
+                whileHover={{ scale: 1.02, y: -2 }} 
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <Link 
+                  href="/home" 
+                  className="group inline-flex items-center gap-3 bg-transparent border border-base-content/20 hover:border-[#C0E218] text-base-content hover:text-[#C0E218] px-10 py-4 rounded-full text-lg font-light tracking-wider transition-all duration-500 hover:shadow-[0_0_30px_rgba(192,226,24,0.3)] backdrop-blur-sm"
+                >
+                  <span>{t("开始使用")}</span>
+                  <motion.span 
+                    className="text-xl"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                  >
+                    →
+                  </motion.span>
                 </Link>
               </motion.div>
             </div>

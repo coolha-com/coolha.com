@@ -2,14 +2,34 @@
 
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { RiChat3Line, RiFileTextLine, RiImageLine, RiMessage2Line, RiMusic2Line, RiNotification3Line, RiQuestionAnswerLine, RiShapesLine, RiTeamLine, RiVideoLine } from 'react-icons/ri'
 export default function Message({ children }) {
   const pathname = usePathname();
+  const t = useTranslations('message')
 
   // 指定要显示导航栏的路径列表
   const displayPaths = ["/message/chat", "/message/community", "/message/notice"];
   // 判断当前路径是否在指定列表中
   const shouldDisplayNav = displayPaths.includes(pathname);
+
+  const linknav = [
+    {
+      href: "/message/chat",
+      name: t('chat'),
+      logo: <RiMessage2Line />
+    },
+    {
+      href: "/message/community",
+      name: t('community'),
+      logo: <RiTeamLine />
+    },
+    {
+      href: "/message/notice",
+      name: t('notifications'),
+      logo: <RiNotification3Line />
+    },
+  ]
 
   return (
     <div className='pb-14 w-dvw md:mx-auto md:max-w-3xl'>
@@ -37,22 +57,3 @@ export default function Message({ children }) {
     </div>
   );
 }
-
-const linknav = [
-  {
-    href: "/message/chat",
-    name: "聊天",
-    logo: <RiMessage2Line />
-  },
-  {
-    href: "/message/community",
-    name: "社区",
-    logo: <RiTeamLine />
-  },
-  {
-    href: "/message/notice",
-    name: "通知",
-    logo: <RiNotification3Line />
-  },
-
-]

@@ -4,37 +4,39 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useTranslations } from 'next-intl'
 import { RiBardLine, RiUserFollowLine, RiShapesLine, RiFileTextLine, RiImageLine, RiMusic2Line, RiVideoLine, RiSearchLine, RiApps2Line } from "react-icons/ri";
 
 
 export default function Linknav() {
     const pathname = usePathname();
     const router = useRouter();
+    const t = useTranslations('find')
 
     const linknav = [
         {
             href: "/find/article",
-            name: "文章",
+            name: t('articles'),
             logo: <RiFileTextLine />
         },
         {
             href: "/find/image",
-            name: "图片",
+            name: t('images'),
             logo: <RiImageLine />
         },
         {
             href: "/find/music",
-            name: "音乐",
+            name: t('music'),
             logo: <RiMusic2Line />
         },
         {
             href: "/find/video",
-            name: "视频",
+            name: t('videos'),
             logo: <RiVideoLine />
         },
         {
             href: "/find",
-            name: "探索",
+            name: t('explore'),
             logo: <RiApps2Line />
         }
     ]
@@ -57,7 +59,7 @@ export default function Linknav() {
 
             {pathname === '/find' ? <></> :
                 <div className={`w-full mx-auto `}>
-                  {/*   <ButtonList /> */}
+                    {/*   <ButtonList /> */}
                 </div>
             }
 

@@ -6,6 +6,7 @@ import { RiHomeFill, RiHomeLine, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLin
 /* import AuthButton from "./AuthButton"; */
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslations } from 'next-intl'
 import ButtonMenu from "./ButtonMenu";
 import ConnectButton from "../web3/ConnectButton";
 export default function Sidebar() {
@@ -37,11 +38,11 @@ function Logo() {
         <div className="max-h-12">
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href={`/home`} className="flex flex-row items-center justify-center gap-2 ">
+                <Link href={`/home`} className="flex flex-row items-center gap-2 ">
                     <div className="max-h-12">
                         <img src='/favicon.ico' className="w-10 h-10 rounded-full " alt='Q' />
                     </div>
-                    <div className="text-3xl font-bold xl:block hidden">
+                    <div className="text-3xl font-bold xl:block hidden ">
                         Coolha
                     </div>
                 </Link>
@@ -88,44 +89,45 @@ function Search() {
 }
 function NavbarLink() {
     const pathname = usePathname();
+    const t = useTranslations('sidebar')
     const links = [
         {
-            title: '搜索',
+            title: t('search'),
             href: '/search',
             iconActive: RiSearchFill,
             iconInactive: RiSearchLine,
             startsWith: '/search'
         },
         {
-            title: '首页',
+            title: t('home'),
             href: '/home',
             iconActive: RiHomeFill,
             iconInactive: RiHomeLine,
             startsWith: '/home'
         },
         {
-            title: '发现',
+            title: t('discover'),
             href: '/find',
             iconActive: RiCompassFill,
             iconInactive: RiCompassLine,
             startsWith: '/find'
         },
         {
-            title: '消息',
+            title: t('messages'),
             href: '/message/chat',
             iconActive: RiChat1Fill,
             iconInactive: RiChat1Line,
             startsWith: '/message'
         },
         {
-            title: '用户',
+            title: t('profile'),
             href: '/profile',
             iconActive: RiUserFill,
             iconInactive: RiUserLine,
             startsWith: '/profile'
         },
         {
-            title: '资产',
+            title: t('wallet'),
             href: '/wallet',
             iconActive: RiWallet3Line,
             iconInactive: RiWallet3Line,
@@ -146,7 +148,7 @@ function NavbarLink() {
                 <li key={link.href}>
                     <Link
                         href={link.href}
-                        className={`btn btn-ghost btn-circle no-animation xl:justify-start xl:w-40  xl:pl-2  ${pathname && pathname.startsWith(link.startsWith) && "bg-base-content/10   "}`}
+                        className={`btn btn-ghost btn-circle no-animation xl:justify-start xl:w-40  xl:pl-2  ${pathname && pathname.startsWith(link.startsWith) && "btn-active "}`}
                     >
                         {pathname.startsWith(link.startsWith) ? <link.iconActive className="size-7" /> : <link.iconInactive className="size-7" />}
                         <span className=" hidden xl:flex text-lg">

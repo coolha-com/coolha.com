@@ -1,3 +1,128 @@
 {
-  "关于": "关于"
+  "about": {
+    "title": "Coolha",
+    "subtitle1": "数字增长新动力，使更多用户连接到Web3世界",
+    "subtitle2": "为创作者、品牌、社区、组织赋能",
+    "description": "基于以太坊区块链第二层 Lens Chain 开发的去中心化社交应用",
+    "开始使用": "开始使用"
+  },
+  "about_us": {
+    "title": "酷哈有限公司",
+    "subtitle": "让数据信息可拥有、可信任、有价值",
+    "description1": "希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好",
+    "description2": "相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念",
+    "description3": "公共区块链是世界大同、世界人民大团结、民主治理、解决信任的一项重要技术",
+    "mission": "使命",
+    "mission_desc": "为推动互联网进步和世界文明进步，创造激动人心的产品服务，让世界变得更好",
+    "vision": "愿景",
+    "vision_desc": "让数据信息可拥有、可信任、有价值",
+    "values": "价值观",
+    "values_desc": "始终以用户为核心，不希望利益化和过度金融化，所有权益公平",
+    "innovation": "技术创新",
+    "innovation_desc": "致力于不断探索和应用前沿技术,提供更好的Web3产品和服务解决方案。",
+    "development": "开发",
+    "development_desc": "DAPP、前端网站、EVM智能合约solidify、UI/UX设计、产品架构，区块链应用技术",
+    "market": "市场",
+    "market_desc": "市场研究报告,数据分析,技术研究文章等",
+    "marketing": "营销",
+    "marketing_desc": "广告流量,NFT营销方案等技术,为创作者和企业提供创收方案",
+    "planning": "策划",
+    "planning_desc": "Web3商业模式研究，为您提供市场研究、营销策划方案、内容创意、品牌策划、企业形象设计等",
+    "digital_marketing": "数字营销方案",
+    "digital_marketing_desc": "基于区块链技术发行数字资产，增强品牌忠诚度和创造独特价值，为用户和品牌建立更紧密的联系",
+    "web3_application": "Web3应用场景落地",
+    "web3_application_desc": "Dapp开发，链上智能合约开发，web3项目网站。结合业务场景需求，定制开发",
+    "exposure_growth": "曝光和增长",
+    "exposure_growth_desc": "平台垂直广告，精准营销。为品牌调研和内容策划，增强消费者和粉丝粘性。",
+    "brand_building": "品牌建设与推广",
+    "brand_building_desc": "策划品牌活动，品牌推广策略，品牌形象设计",
+    "join_us": "加入我们",
+    "contact_us": "联系我们"
+  },
+  "header": {
+    "launch": "启动",
+    "media": "媒体",
+    "info": "信息",
+    "about_us": "关于我们",
+    "contact": "联系",
+    "feedback": "反馈",
+    "resources": "资源",
+    "docs": "文档",
+    "privacy": "隐私",
+    "terms": "条款"
+  },
+  "footer": {
+    "media": "媒体",
+    "info": "信息",
+    "about_us": "关于我们",
+    "contact": "联系",
+    "feedback": "反馈",
+    "resources": "资源",
+    "docs": "文档",
+    "privacy": "隐私",
+    "terms": "条款"
+  },
+  "web3": {
+    "connect_wallet": "连接钱包",
+    "account": "账户"
+  },
+  "navigation": {
+    "home": "首页",
+    "discover": "发现",
+    "messages": "消息",
+    "profile": "个人"
+  },
+  "menu": {
+    "more": "更多",
+    "app_settings": "应用设置",
+    "extensions": "扩展功能",
+    "about": "关于",
+    "about_us": "关于我们",
+    "contact": "联系",
+    "feedback": "反馈",
+    "docs": "文档",
+    "privacy": "隐私",
+    "terms": "条款"
+  },
+  "sidebar": {
+    "search": "搜索",
+    "home": "首页",
+    "discover": "发现",
+    "messages": "消息",
+    "profile": "用户",
+    "wallet": "资产"
+  },
+  "home": {
+    "recommended": "推荐",
+    "following": "关注",
+    "all": "全部",
+    "version_notice": "Coolha目前处于v0.1-alpha版本，我们正在努力开发中，敬请期待。"
+  },
+  "find": {
+    "articles": "文章",
+    "images": "图片",
+    "music": "音乐",
+    "videos": "视频",
+    "explore": "探索"
+  },
+  "message": {
+    "chat": "聊天",
+    "community": "社区",
+    "notifications": "通知"
+  },
+  "profile": {
+    "wallet": "资产",
+    "orders": "订单",
+    "membership": "会员",
+    "bookmarks": "书签",
+    "business": "商业版",
+    "store": "商店",
+    "promotion": "推广",
+    "ai_agent": "AI Agent",
+    "creator_center": "创作中心",
+    "analytics": "数据分析",
+    "achievements": "成就等级",
+    "test_rewards": "测试奖励",
+    "invite_users": "邀请用户"
+  }
 }

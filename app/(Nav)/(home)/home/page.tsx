@@ -1,13 +1,14 @@
 'use client'
+import { useTranslations } from 'next-intl'
 import MediaLink from '@/app/(www)/_page/MediaLink'
 
 export default function page() {
+  const t = useTranslations('home')
   return (
     <div className='container mx-auto p-2 space-y-8 min-h-screen'>
       <div role="alert" className="alert shadow-lg max-w-3xl mx-auto">
-        <span className='text-base sm:text-lg text-center'> 
-          Coolha正在开发中，目前处于v0.1-alpha版本，
-          我们正在努力开发中，敬请期待。
+        <span className='text-base sm:text-lg text-center'>
+          {t('version_notice')}
         </span>
       </div>
 

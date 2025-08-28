@@ -1,7 +1,9 @@
 'use client'
 import Link from "next/link";
 import MediaLink from "./MediaLink";
+import { useTranslations } from "next-intl";
 export default function Footer() {
+    const t = useTranslations('footer');
     return (
         <div className="">
 
@@ -15,22 +17,22 @@ export default function Footer() {
                     </aside> */}
 
                     <nav>
-                        <h6 className="footer-title">媒体</h6>
+                        <h6 className="footer-title">{t("media")}</h6>
                         <div className="grid grid-flow-row grid-cols-6 gap-4 py-2">
                             <MediaLink />
                         </div>
                     </nav>
                     <nav>
-                        <h6 className="footer-title">信息</h6>
-                        <Link href={`/about_us`} prefetch={false} className="link link-hover " >关于我们</Link>
-                        <Link href={`https://link3.to/coolha`} className=" link link-hover  " target='_blank'>联系</Link>
-                        <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="link link-hover " target='_blank'>反馈</Link>
+                        <h6 className="footer-title">{t("info")}</h6>
+                        <Link href={`/about_us`} prefetch={false} className="link link-hover " >{t("about_us")}</Link>
+                        <Link href={`https://link3.to/coolha`} className=" link link-hover  " target='_blank'>{t("contact")}</Link>
+                        <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} className="link link-hover " target='_blank'>{t("feedback")}</Link>
                     </nav>
                     <nav>
-                        <h6 className="footer-title">资源</h6>
-                        <Link href={`https://docs.coolha.com`} className="link link-hover" target='_blank'>文档</Link>
-                        <Link href="https://docs.coolha.com/docs/apps/privacy" className="link link-hover" target='_blank'>隐私</Link >
-                        <Link href="https://docs.coolha.com/docs/apps/terms" className="link link-hover" target='_blank'>条款</Link >
+                        <h6 className="footer-title">{t("resources")}</h6>
+                        <Link href={`https://docs.coolha.com`} className="link link-hover" target='_blank'>{t("docs")}</Link>
+                        <Link href="https://docs.coolha.com/docs/apps/privacy" className="link link-hover" target='_blank'>{t("privacy")}</Link >
+                        <Link href="https://docs.coolha.com/docs/apps/terms" className="link link-hover" target='_blank'>{t("terms")}</Link >
                     </nav>
 
                 </footer>

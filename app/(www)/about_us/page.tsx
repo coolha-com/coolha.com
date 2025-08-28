@@ -1,75 +1,77 @@
 'use client'
 import Footer from "@/app/(www)/_page/Footer";
 import Header from "@/app/(www)/_page/Header";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 import { FaBtc, FaEthereum, FaCommentsDollar, FaDonate } from "react-icons/fa";
 import { RiCodeBoxLine, RiBarChart2Line, RiLineChartLine, RiListCheck3, RiAdvertisementLine, RiApps2Line, RiFundsLine, RiNftLine } from "react-icons/ri";
 
 export default function page() {
+    const t = useTranslations("about_us");
     const Idea = [
         {
-            name: '使命',
-            description: '为推动互联网进步和世界文明进步，创造激动人心的产品服务，让世界变得更好',
+            name: t("mission"),
+            description: t("mission_desc"),
             icon: FaBtc,
         },
         {
-            name: '愿景',
-            description: '让数据信息可拥有、可信任、有价值',
+            name: t("vision"),
+            description: t("vision_desc"),
             icon: FaEthereum,
         },
         {
-            name: '价值观',
-            description: '始终以用户为核心，不希望利益化和过度金融化，所有权益公平',
+            name: t("values"),
+            description: t("values_desc"),
             icon: FaCommentsDollar,
         },
         {
-            name: '技术创新',
-            description: '致力于不断探索和应用前沿技术,提供更好的Web3产品和服务解决方案。',
+            name: t("innovation"),
+            description: t("innovation_desc"),
             icon: FaDonate,
         },
     ]
     const Bus = [
         {
-            name: '开发',
-            description: 'DAPP、前端网站、EVM智能合约solidify、UI/UX设计、产品架构，区块链应用技术',
+            name: t("development"),
+            description: t("development_desc"),
             icon: RiCodeBoxLine,
         },
         {
-            name: '市场',
-            description: '市场研究报告,数据分析,技术研究文章等',
+            name: t("market"),
+            description: t("market_desc"),
             icon: RiBarChart2Line,
         },
         {
-            name: '营销',
-            description: '广告流量,NFT营销方案等技术,为创作者和企业提供创收方案',
+            name: t("marketing"),
+            description: t("marketing_desc"),
             icon: RiLineChartLine,
         },
         {
-            name: '策划',
-            description: 'Web3商业模式研究，为您提供市场研究、营销策划方案、内容创意、品牌策划、企业形象设计等',
+            name: t("planning"),
+            description: t("planning_desc"),
             icon: RiListCheck3,
         },
     ]
     const Case = [
         {
-            name: '数字营销方案',
-            description: '基于区块链技术发行数字资产，增强品牌忠诚度和创造独特价值，为用户和品牌建立更紧密的联系',
+            name: t("digital_marketing"),
+            description: t("digital_marketing_desc"),
             icon: RiNftLine,
         },
         {
-            name: 'Web3应用场景落地',
-            description: 'Dapp开发，链上智能合约开发，web3项目网站。结合业务场景需求，定制开发',
+            name: t("web3_application"),
+            description: t("web3_application_desc"),
             icon: RiApps2Line,
         },
         {
-            name: '曝光和增长',
-            description: '平台垂直广告，精准营销。为品牌调研和内容策划，增强消费者和粉丝粘性。',
+            name: t("exposure_growth"),
+            description: t("exposure_growth_desc"),
             icon: RiAdvertisementLine,
         },
         {
-            name: '品牌建设与推广',
-            description: '策划品牌活动，品牌推广策略，品牌形象设计',
+            name: t("brand_building"),
+            description: t("brand_building_desc"),
             icon: RiFundsLine,
         },
     ]
@@ -85,18 +87,18 @@ export default function page() {
                     {/* 介绍 */}
                     <div className="mx-auto  lg:text-center">
                         <h1 className="mt-2 text-3xl text-primary drop-shadow-[1px_1px_1px_black] font-bold tracking-tight  sm:text-5xl">
-                            {'酷哈实验室'}
+                            {t("title")}
                         </h1>
                         <h2 className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl text-base-content ">
-                            {'让数据信息可拥有、可信任、有价值'}
+                            {t("subtitle")}
                         </h2>
                         <p className="mt-6 text-xl leading-8 text-[#6a6a6a]">
                             <br />
-                            {'希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好'}
+                            {t("description1")}
                             <br />
-                            {'相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念'}
+                            {t("description2")}
                             <br />
-                            {'公共区块链是世界大同、世界人民大团结、民主治理、解决信任的一项重要技术。'}
+                            {t("description3")}
                         </p>
                     </div>
 
@@ -119,7 +121,7 @@ export default function page() {
 
                     <div className=" mt-14 flex justify-center ">
                         <Link href={'mailto:ceo@coolha.com'} role="button" target='_blank' className="  btn btn-primary    text-xl  font-bold rounded-full ">
-                            {'加入我们'} ↗
+                            {t("join_us")} ↗
                         </Link>
                     </div>
 
@@ -163,7 +165,7 @@ export default function page() {
 
                     <div className="mt-14 flex justify-center ">
                         <Link href={'mailto:cs@coolha.com'} role="button" target='_blank' className="  btn btn-primary    text-xl  font-bold rounded-full "   >
-                            {'联系我们'} ↗
+                            {t("contact_us")} ↗
                         </Link>
                     </div>
 

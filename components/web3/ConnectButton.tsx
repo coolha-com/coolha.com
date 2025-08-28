@@ -1,8 +1,10 @@
 'use client'
 
 import { useAppKit, useAppKitAccount, useAppKitBalance, useAppKitNetwork, useDisconnect } from '@reown/appkit/react'
+import { useTranslations } from 'next-intl'
 
 export default function Connect() {
+  const t = useTranslations('web3')
   const { address, isConnected, caipAddress, status, embeddedWalletInfo } = useAppKitAccount()
 
   const { disconnect } = useDisconnect()
@@ -17,9 +19,9 @@ export default function Connect() {
     return (
       <button
         onClick={() => open()}
-        className="btn btn-primary md:min-w-full"
+        className="btn btn-primary "
       >
-        连接钱包
+        {t('connect_wallet')}
       </button>
     )
   }
@@ -30,7 +32,7 @@ export default function Connect() {
         onClick={() => open({ view: "Account" })}
         className="btn btn-primary"
       >
-        {address ? formatAddress(address) : '账户'}
+        {address ? formatAddress(address) : t('account')}
       </button>
     </div>
   )
