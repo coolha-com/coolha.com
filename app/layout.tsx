@@ -6,6 +6,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import Providers from "@/config/Providers";
 import { headers } from 'next/headers'
 import Wagmi_Provider from "@/config/Wagmi_Provider";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
             </Wagmi_Provider>
           </Providers>
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
