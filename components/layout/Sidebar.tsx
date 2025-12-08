@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { RiHomeFill, RiHomeLine, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiSearchLine, RiCompassFill, RiCompassLine, RiWallet3Line, RiVerifiedBadgeLine, RiBookmarkLine, RiSearchFill } from "react-icons/ri";
-/* import AuthButton from "./AuthButton"; */
+/* import AuthButton from "AuthButton"; */
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslations } from 'next-intl'
 import ButtonMenu from "./ButtonMenu";
-import ConnectButton from "../web3/ConnectButton";
+import dynamic from "next/dynamic";
+const ConnectButton = dynamic(() => import("../web3/ConnectButton"), { ssr: false });
 export default function Sidebar() {
     return (
         <div className=" hidden md:block min-h-full max-w-16 xl:max-w-56 fixed top-0 left-0 z-50">

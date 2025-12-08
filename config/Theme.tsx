@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 export default function Theme({ children }: any) {
     return (
         <>
-            <ThemeProvider>
+            <ThemeProvider attribute="data-theme" defaultTheme="light" enableSystem={true}>
                 {children}
             </ThemeProvider>
         </>

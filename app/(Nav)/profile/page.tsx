@@ -75,8 +75,8 @@ function Card() {
       },
       {
          data: [
-            { label: t('business'), href: ' ', icon: RiBuilding2Line },
-            { label: t('store'), href: ' ', icon: RiShoppingBag4Line },
+            { label: t('business'), href: '/business', icon: RiBuilding2Line },
+            { label: t('store'), href: '/shop', icon: RiShoppingBag4Line },
             { label: t('promotion'), href: ' ', icon: RiAdvertisementLine },
             { label: t('ai_agent'), href: ' ', icon: RiAiGenerate },
          ],

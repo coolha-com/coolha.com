@@ -1,8 +1,9 @@
 'use client'
 import { usePathname, useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 import { RiAddCircleLine, RiSearchLine } from "react-icons/ri";
 import ButtonMenu from "./ButtonMenu";
-import ConnectButton from "../web3/ConnectButton";
+const ConnectButton = dynamic(() => import("../web3/ConnectButton"), { ssr: false });
 /* import AuthButton from "./AuthButton"; */
 
 export default function NavBar() {

@@ -5,9 +5,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
 import Providers from "@/config/Providers";
 import { headers } from 'next/headers'
-import Wagmi_Provider from "@/config/Wagmi_Provider";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-
+import { Analytics } from "@vercel/analytics/next"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -44,13 +43,12 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers>
-            <Wagmi_Provider cookies={cookies}>
-              {children}
-            </Wagmi_Provider>
+          <Providers cookies={cookies}>
+            {children}
           </Providers>
         </NextIntlClientProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
