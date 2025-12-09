@@ -4,8 +4,9 @@ import { useLocale } from 'next-intl';
 import { RiTranslate } from 'react-icons/ri';
 
 const locales = [
+    { code: 'en', label: 'English' },
     { code: 'zh-Hans', label: '简体中文' },
-    { code: 'en', label: 'English' }
+    { code: 'zh-Hant', label: '繁體中文' }
 ];
 
 export default function LanguageSwitcher() {

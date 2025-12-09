@@ -1,0 +1,128 @@
+{
+  "about": {
+    "title": "Coolha",
+    "subtitle1": "數位增長新動力，使更多用戶連接到 Web3 世界",
+    "subtitle2": "為創作者、品牌、社群、組織賦能",
+    "description": "基於區塊鏈開發的去中心化社交應用",
+    "开始使用": "開始使用"
+  },
+  "about_us": {
+    "title": "酷哈有限公司",
+    "subtitle": "讓數據資訊可擁有、可信任、有價值",
+    "description1": "希望透過科技改變生產關係，為世界文明進步作出貢獻，讓世界變得更好",
+    "description2": "相信 Web3 與區塊鏈的發展不僅僅是技術與互聯網的進步，更是一種能延伸至各領域的積極理念",
+    "description3": "公共區塊鏈是世界大同、世界人民大團結、民主治理、解決信任問題的重要技術",
+    "mission": "使命",
+    "mission_desc": "推動互聯網進步與世界文明發展，打造令人振奮的產品與服務，讓世界更美好",
+    "vision": "願景",
+    "vision_desc": "讓數據資訊可擁有、可信任、有價值",
+    "values": "價值觀",
+    "values_desc": "始終以使用者為核心，避免過度商業化與金融化，確保所有權益公平",
+    "innovation": "技術創新",
+    "innovation_desc": "致力持續探索與應用前沿技術，提供更優質的 Web3 產品與服務解決方案",
+    "development": "開發",
+    "development_desc": "DAPP、前端網站、EVM 智能合約 Solidity、UI/UX 設計、產品架構、區塊鏈應用技術",
+    "market": "市場",
+    "market_desc": "市場研究報告、資料分析、技術研究文章等",
+    "marketing": "行銷",
+    "marketing_desc": "廣告流量、NFT 行銷方案等技術，為創作者與企業提供創收方案",
+    "planning": "策劃",
+    "planning_desc": "Web3 商業模式研究，提供市場研究、行銷策劃、內容創意、品牌策劃、企業形象設計等",
+    "digital_marketing": "數位行銷方案",
+    "digital_marketing_desc": "基於區塊鏈技術發行數位資產，增強品牌忠誠度並創造獨特價值，建立用戶與品牌更緊密的連結",
+    "web3_application": "Web3 應用落地",
+    "web3_application_desc": "Dapp 開發、鏈上智能合約開發、Web3 專案網站。依據業務場景需求，客製化開發",
+    "exposure_growth": "曝光與成長",
+    "exposure_growth_desc": "平台垂直廣告、精準行銷。為品牌進行研究與內容策劃，提升消費者與粉絲黏著度",
+    "brand_building": "品牌建立與推廣",
+    "brand_building_desc": "策劃品牌活動、品牌推廣策略、品牌形象設計",
+    "join_us": "加入我們",
+    "contact_us": "聯絡我們"
+  },
+  "header": {
+    "launch": "啟動",
+    "media": "媒體",
+    "info": "資訊",
+    "about_us": "關於我們",
+    "contact": "聯絡",
+    "feedback": "回饋",
+    "resources": "資源",
+    "docs": "文件",
+    "privacy": "隱私",
+    "terms": "條款"
+  },
+  "footer": {
+    "media": "媒體",
+    "info": "資訊",
+    "about_us": "關於我們",
+    "contact": "聯絡",
+    "feedback": "回饋",
+    "resources": "資源",
+    "docs": "文件",
+    "privacy": "隱私",
+    "terms": "條款"
+  },
+  "web3": {
+    "connect_wallet": "連接錢包",
+    "account": "帳戶"
+  },
+  "navigation": {
+    "home": "首頁",
+    "discover": "發現",
+    "messages": "訊息",
+    "profile": "個人"
+  },
+  "menu": {
+    "more": "更多",
+    "app_settings": "應用設定",
+    "extensions": "擴充功能",
+    "about": "關於",
+    "about_us": "關於我們",
+    "contact": "聯絡",
+    "feedback": "回饋",
+    "docs": "文件",
+    "privacy": "隱私",
+    "terms": "條款"
+  },
+  "sidebar": {
+    "search": "搜尋",
+    "home": "首頁",
+    "discover": "發現",
+    "messages": "訊息",
+    "profile": "用戶",
+    "wallet": "資產"
+  },
+  "home": {
+    "recommended": "推薦",
+    "following": "關注",
+    "all": "全部",
+    "version_notice": "Coolha 目前處於 v0.1-alpha 版本，我們正努力開發中，敬請期待。"
+  },
+  "find": {
+    "articles": "文章",
+    "images": "圖片",
+    "music": "音樂",
+    "videos": "影片",
+    "explore": "探索"
+  },
+  "message": {
+    "chat": "聊天",
+    "community": "社群",
+    "notifications": "通知"
+  },
+  "profile": {
+    "wallet": "資產",
+    "orders": "訂單",
+    "membership": "會員",
+    "bookmarks": "書籤",
+    "business": "商業版",
+    "store": "商店",
+    "promotion": "推廣",
+    "ai_agent": "AI Agent",
+    "creator_center": "創作中心",
+    "analytics": "資料分析",
+    "achievements": "成就等級",
+    "test_rewards": "測試獎勵",
+    "invite_users": "邀請用戶"
+  }
+}
