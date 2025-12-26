@@ -13,10 +13,7 @@
 @plugin "daisyui/theme" {
   name: "light";
   /* 主题名称 */
-  default: true;
-  /* 设为默认主题 */
-  prefersdark: false;
-  /* 非暗色模式主题 */
+
   color-scheme: light;
   /* 浏览器 UI 配色方案 */
 
@@ -99,10 +96,7 @@
 @plugin "daisyui/theme" {
   name: "dark";
   /* 主题名称 */
-  default: false;
-  /* 非默认主题 */
-  prefersdark: false;
-  /* 暗色模式首选主题 */
+
   color-scheme: dark;
   /* 浏览器 UI 配色方案 */
 
