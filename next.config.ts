@@ -5,21 +5,9 @@ import path from "path";
 const nextConfig: NextConfig = {
   webpack: (config) => {
     config.externals.push("pino-pretty", "lokijs", "encoding");
-    
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@solana/kit": false,
-      "@solana-program/system": false,
-      "@solana-program/token": false,
-      "axios": false,
-      "pino": false,
-      "zod": false,
-      "coinbase/cdp-sdk": false,
-    };  
-    
+  
     return config;
   },
-  serverExternalPackages: ["pino", "pino-pretty"],
 };
 
 const withNextIntl = createNextIntlPlugin();
