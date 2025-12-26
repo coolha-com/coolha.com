@@ -1,9 +1,15 @@
 import { getRequestConfig } from "next-intl/server";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 
 export default getRequestConfig(async () => {
   const cookieStore = cookies();
-  const locale = (await cookieStore).get("NEXT_LOCALE")?.value || "zh-Hans";
+  const headerStore = headers();
+  const cookieLocale = (await cookieStore).get("NEXT_LOCALE")?.value;
+  const acceptLang = (await headerStore).get("accept-language") ?? "";
+  const acceptLocale = acceptLang.split(",")[0]?.trim();
+  const normalizedAccept =
+    acceptLocale?.toLowerCase().startsWith("en") ? "en" : "zh-Hans";
+  const locale = cookieLocale || normalizedAccept || "zh-Hans";
 
   return {
     locale,

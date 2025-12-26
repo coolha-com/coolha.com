@@ -9,7 +9,7 @@ export default function Footer() {
 
 
             <div className="flex justify-center bg-base-100 ">
-                <footer className="footer sm:footer-horizontal max-w-screen-xl p-6 lg:p-8  text-base-content">
+                <footer className="footer sm:footer-horizontal max-w-7xl p-6 lg:p-8  text-base-content">
                     {/*                     <aside>
                         <Link href={`/`} className="">
                             <img src="/logo/透明LOGO白色.png" alt="/logo/透明LOGO白色.png" className="max-w-32 " />

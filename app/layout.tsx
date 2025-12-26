@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -7,6 +8,7 @@ import Providers from "@/config/Providers";
 import { headers } from 'next/headers'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/next"
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,6 +26,7 @@ export const metadata: Metadata = {
     default: 'Coolha',
   },
   description: "coolha.com, Coolha is a decentralized social application built on Lens Protocol / Lens Chain",
+  metadataBase: new URL('https://coolha.com'),
   icons: {
     icon: '/logo/logo.png',
     shortcut: '/shortcut-icon.png',
