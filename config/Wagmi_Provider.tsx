@@ -28,7 +28,7 @@ const modal = createAppKit({
     projectId,
     networks: [mainnet, polygon, base, arbitrum, optimism, worldchain, unichain, zksync, lens, linea],
     defaultNetwork: mainnet,
-     allowUnsupportedChain: false,
+    allowUnsupportedChain: false,
     chainImages: {
         232: '/web3/lens.png',
         8453: '/web3/base.png',
@@ -50,6 +50,7 @@ const modal = createAppKit({
         legalCheckbox: true,
     },
     enableWalletGuide: false,
+    enableCoinbase: false, // true by default
     allWallets: 'SHOW',
     featuredWalletIds: [
         '971e689d0a5be527bac79629b4ee9b925e82208e5168b733496a09c0faed0709',

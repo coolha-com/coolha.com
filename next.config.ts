@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
       "@solana-program/system": false,
       "@solana-program/token": false,
       "axios": false,
-      "pino": path.resolve(__dirname, "config/shims/pino.js"),
+      "pino": false,
     };
     
     return config;
