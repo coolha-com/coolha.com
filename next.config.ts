@@ -13,7 +13,9 @@ const nextConfig: NextConfig = {
       "@solana-program/token": false,
       "axios": false,
       "pino": false,
-    };
+      "zod": false,
+      "coinbase/cdp-sdk": false,
+    };  
     
     return config;
   },
