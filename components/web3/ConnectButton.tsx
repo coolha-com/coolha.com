@@ -18,7 +18,7 @@ export default function Connect() {
   if (!isConnected) {
     return (
       <button
-        onClick={() => open()}
+        onClick={() => open({view: "Connect",namespace: "eip155"})}
         className="btn btn-primary "
       >
         {t('connect_wallet')}

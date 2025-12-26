@@ -28,6 +28,7 @@ const modal = createAppKit({
     projectId,
     networks: [mainnet, polygon, base, arbitrum, optimism, worldchain, unichain, zksync, lens, linea],
     defaultNetwork: mainnet,
+     allowUnsupportedChain: false,
     chainImages: {
         232: '/web3/lens.png',
         8453: '/web3/base.png',

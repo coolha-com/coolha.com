@@ -14,7 +14,7 @@ export default function Header() {
     const t = useTranslations('header');
     return (
         <div className="min-w-80 w-screen bg-base-100 justify-around  z-50  flex  fixed top-0 left-0 right-0 transition-transform duration-300 px-2">
-            <div className="navbar  max-w-screen-xl mx-auto  ">
+            <div className="navbar  max-w-7xl mx-auto  ">
 
 
                 <div className="navbar-start">{/* 左 */}
@@ -46,7 +46,7 @@ export default function Header() {
                                 <RiMenuFill className=" w-7 h-7 swap-off" />
                             </label>
 
-                            <ul tabIndex={1} className="dropdown-content menu bg-base-100 rounded-box border gap-2 z-[1] min-w-72 max-w-96 p-2 shadow">
+                            <ul tabIndex={1} className="dropdown-content menu bg-base-100 rounded-box border gap-2 z-1 min-w-72 max-w-96 p-2 shadow">
                                 {/* <li><LinkNavbar href='/' Name='首页' /></li> */}
                                 <LinkMenu />
                             </ul>
