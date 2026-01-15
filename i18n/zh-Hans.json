@@ -6,7 +6,7 @@
     "description": "基于区块链开发的去中心化社交应用",
     "开始使用": "开始使用"
   },
-  "about_us": {
+  "about_company": {
     "title": "酷哈有限公司",
     "subtitle": "让数据信息可拥有、可信任、有价值",
     "description1": "希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好",
@@ -43,7 +43,7 @@
     "launch": "启动",
     "media": "媒体",
     "info": "信息",
-    "about_us": "关于我们",
+    "about_company": "关于公司",
     "contact": "联系",
     "feedback": "反馈",
     "resources": "资源",
@@ -54,7 +54,7 @@
   "footer": {
     "media": "媒体",
     "info": "信息",
-    "about_us": "关于我们",
+    "about_company": "关于公司",
     "contact": "联系",
     "feedback": "反馈",
     "resources": "资源",
@@ -77,7 +77,7 @@
     "app_settings": "应用设置",
     "extensions": "扩展功能",
     "about": "关于",
-    "about_us": "关于我们",
+    "about_company": "关于公司",
     "contact": "联系",
     "feedback": "反馈",
     "docs": "文档",

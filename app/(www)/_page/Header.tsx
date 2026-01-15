@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { RiCloseLargeFill, RiMenuFill, RiMoonLine, RiSunLine, RiTranslate } from "react-icons/ri";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 import MediaLink from "./MediaLink";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import ThemeSwap from "@/components/ui/ThemeSwap";
@@ -23,14 +22,17 @@ export default function Header() {
                             <Image src="/logo/logo.png" alt="logo.png" width={42} height={42} className=" rounded-full " />
                         </motion.div>
                     </Link>
+
+                    <ul className="menu menu-horizontal px-1 gap-4 hidden md:flex">
+                        {/* <li><LinkNavbar href='/' Name='首页' /></li> */}
+                        <LinkMenu />
+                    </ul>
+                    
                 </div>
 
                 {/* 手机隐藏navbar-center */}
                 <div className="navbar-center hidden md:flex">{/* 中 */}
-                    <ul className="menu menu-horizontal px-1 gap-4">
-                        {/* <li><LinkNavbar href='/' Name='首页' /></li> */}
-                        <LinkMenu />
-                    </ul>
+           
                 </div>
 
                 {/* 按钮 */}
@@ -73,31 +75,6 @@ function LinkNavbar({ href, Name }: any) {
 
 function LinkMenu() {
     const t = useTranslations('header');
-    const [isMdScreen, setIsMdScreen] = useState(false);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia("(min-width: 768px)");
-        const handleResize = () => setIsMdScreen(mediaQuery.matches);
-
-        // 初始化时检查屏幕大小
-        handleResize();
-
-        // 添加监听器
-        mediaQuery.addEventListener("change", handleResize);
-        return () => mediaQuery.removeEventListener("change", handleResize);
-    }, []);
-
-    const handleMouseEnter = (event: React.MouseEvent<HTMLDetailsElement>) => {
-        if (isMdScreen) {
-            event.currentTarget.setAttribute("open", "true");
-        }
-    };
-
-    const handleMouseLeave = (event: React.MouseEvent<HTMLDetailsElement>) => {
-        if (isMdScreen) {
-            event.currentTarget.removeAttribute("open");
-        }
-    };
 
     return (
         <>
@@ -107,39 +84,31 @@ function LinkMenu() {
                 </Link>
             </li>
 
-            <li>
-                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-                    <summary className="cursor-pointer">{t("media")}</summary>
-                    <ul className="w-52 bg-base-100 md:absolute md:top-6 md:left-0  md:rounded-2xl md:shadow-lg md:z-10">
-                        <div className="grid grid-flow-row grid-cols-3 gap-4 p-2">
-                            <MediaLink />
-                        </div>
 
-                    </ul>
-                </details>
+            <li className="text-lg">
+                <Link href={`/about_company`} prefetch={false}>
+                    {t("about_company")}
+                </Link>
             </li>
 
-            <li>
-                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-                    <summary className="cursor-pointer">{t("info")}</summary>
-                    <ul className="w-56 bg-base-100 md:absolute md:top-6 md:left-0  md:rounded-2xl md:shadow-lg md:z-10">
-                        <li> <Link href={`/about_us`} prefetch={false}>{t("about_us")}</Link></li>
-                        <li> <Link href={`https://link3.to/coolha`} target='_blank'>{t("contact")}</Link></li>
-                        <li>  <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank'>{t("feedback")}</Link></li>
-                    </ul>
-                </details>
+            {/*             <li className=" text-lg">
+                <Link href={`#footer-media`} >
+                    {t("media")}
+                </Link>
+            </li> */}
+
+            <li className="text-lg">
+                <Link href={`https://link3.to/coolha`} target='_blank'>
+                    {t("contact")}↗
+                </Link>
             </li>
 
-            <li>
-                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <summary className="cursor-pointer">{t("resources")}</summary>
-                    <ul className="w-56 bg-base-100 md:absolute md:top-6 md:left-0  md:rounded-2xl md:shadow-lg md:z-10">
-                        <li> <Link href={`https://docs.coolha.com`} target='_blank'>{t("docs")}</Link></li>
-                        <li><Link href="https://docs.coolha.com/apps/privacy" target='_blank'>{t("privacy")}</Link></li>
-                        <li><Link href="https://docs.coolha.com/apps/terms" target='_blank'>{t("terms")}</Link></li>
-                    </ul>
-                </details>
+            <li className="text-lg">
+                <Link href={`https://docs.coolha.com`} target='_blank'>
+                    {t("docs")}↗
+                </Link>
             </li>
+
 
 
 

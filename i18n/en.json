@@ -6,7 +6,7 @@
     "description": "A decentralized social application developed on the blockchain",
     "开始使用": "Get Started"
   },
-  "about_us": {
+  "about_company": {
     "title": "Coolha Limited",
     "subtitle": "Making data information ownable, trustworthy, and valuable",
     "description1": "We hope to change production relations through technology, contribute to world civilization progress, and make the world a better place",
@@ -43,7 +43,7 @@
     "launch": "Launch",
     "media": "Media",
     "info": "Info",
-    "about_us": "About Us",
+    "about_company": "About Company",
     "contact": "Contact",
     "feedback": "Feedback",
     "resources": "Resources",
@@ -54,7 +54,7 @@
   "footer": {
     "media": "Media",
     "info": "Info",
-    "about_us": "About Us",
+    "about_company": "About Company",
     "contact": "Contact",
     "feedback": "Feedback",
     "resources": "Resources",
@@ -77,7 +77,7 @@
     "app_settings": "App Settings",
     "extensions": "Extensions",
     "about": "About",
-    "about_us": "About Us",
+    "about_company": "About Company",
     "contact": "Contact",
     "feedback": "Feedback",
     "docs": "Docs",

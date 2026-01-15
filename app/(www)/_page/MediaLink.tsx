@@ -18,9 +18,9 @@ export default function MediaLink() {
   return (
     <>
 
-      <MLink href="https://link3.to/coolha" >
+{/*       <MLink href="https://link3.to/coolha" >
         <FaCircleChevronLeft className="w-7 h-7" />
-      </MLink>
+      </MLink> */}
 
       <MLink href="mailto:cs@coolha.com" >
         <RiMailFill className="w-7 h-7 " />
@@ -50,13 +50,13 @@ export default function MediaLink() {
         <RiTiktokFill className="w-7 h-7" />
       </MLink> */}
 
-      <MLink href="https://paragraph.com/@coolha" >
+{/*       <MLink href="https://paragraph.com/@coolha" >
         <svg xmlns="http://www.w3.org/2000/svg" width="81" height="82" viewBox="0 0 81 82" className="w-6 h-6 text-base-content" fill="none">
           <path d="M6 0V76.1345H81" stroke="currentColor" strokeWidth="10.6585" strokeMiterlimit="10" />
           <path d="M34.4067 5.30176L6 76.1337L76.0722 46.9673" stroke="currentColor" strokeWidth="10.6585" strokeLinejoin="round" />
           <path d="M6 76.129L59.0302 21.5845" stroke="currentColor" strokeWidth="10.6585" strokeMiterlimit="10" />
         </svg>
-      </MLink>
+      </MLink> */}
 
       <MLink href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk2NDgzNzIwOQ==&action=getalbum&album_id=4166591184711860231&subscene=159&subscene=&scenenote=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzk2NDgzNzIwOQ%3D%3D%26tempkey%3DMTMzOV9raDE2UTZ5UGpqdys3OEI4aU5Ebm9DTnVQM3ZNMnVydVRwdXBPbHY3REVjcjNyMlJia2RRVTNhcEUwdHVwZ3puZ2NQNzRySDBkenFoVl81TGFWYl9fanVMNVlBTjZmaGUzX2tsazhOYWdfZkJtRFREbXpxME81T1NyYjZEb2xzcFhlc3N1cnpsYTA4em02enh3RlRVVlJsM055RG1kR3hnbmZha3ZRfn4%253D%26chksm%3Dc46c2b3ef31ba2282c19336acb35921d3781f09e90e7ee3bb7cce2545ef874bda425b1912256%26token%3D656402245%26lang%3Dzh_CN%23rd&nolastread=1#wechat_redirect" >
         <RiWechatFill className="w-7 h-7" />
@@ -72,9 +72,9 @@ export default function MediaLink() {
         <FaTelegram className="w-7 h-7" />
       </MLink>
 
-      <MLink href="https://github.com/coolha-com" >
+{/*       <MLink href="https://github.com/coolha-com" >
         <FaGithub className="w-7 h-7" />
-      </MLink>
+      </MLink> */}
 
 
 

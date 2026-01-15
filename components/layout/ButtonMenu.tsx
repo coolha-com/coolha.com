@@ -58,8 +58,8 @@ export default function ButtonMenu() {
 
                         {/* 链接组 1 */}
                         <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                            <Link href={`/about_us`} prefetch={false} className="text-base-content/70 hover:text-base-content hover:underline transition-colors" target='_blank'>
-                                {t('about_us')}
+                            <Link href={`/about_company`} prefetch={false} className="text-base-content/70 hover:text-base-content hover:underline transition-colors" target='_blank'>
+                                {t('about_company')}
                             </Link>
                             <Link href={`https://link3.to/coolha`} className="text-base-content/70 hover:text-base-content hover:underline transition-colors" target='_blank'>
                                 {t('contact')}

@@ -8,7 +8,7 @@ import { FaBtc, FaEthereum, FaCommentsDollar, FaDonate } from "react-icons/fa";
 import { RiCodeBoxLine, RiBarChart2Line, RiLineChartLine, RiListCheck3, RiAdvertisementLine, RiApps2Line, RiFundsLine, RiNftLine } from "react-icons/ri";
 
 export default function page() {
-    const t = useTranslations("about_us");
+    const t = useTranslations("about_company");
     const Idea = [
         {
             name: t("mission"),
@@ -173,7 +173,7 @@ export default function page() {
 
 
 
-
+                    {/* 团队介绍 */}
 
 
 

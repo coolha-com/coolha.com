@@ -6,7 +6,7 @@
     "description": "基於區塊鏈開發的去中心化社交應用",
     "开始使用": "開始使用"
   },
-  "about_us": {
+  "about_company": {
     "title": "酷哈有限公司",
     "subtitle": "讓數據資訊可擁有、可信任、有價值",
     "description1": "希望透過科技改變生產關係，為世界文明進步作出貢獻，讓世界變得更好",
@@ -43,7 +43,7 @@
     "launch": "啟動",
     "media": "媒體",
     "info": "資訊",
-    "about_us": "關於我們",
+    "about_company": "關於公司",
     "contact": "聯絡",
     "feedback": "回饋",
     "resources": "資源",
@@ -54,7 +54,7 @@
   "footer": {
     "media": "媒體",
     "info": "資訊",
-    "about_us": "關於我們",
+    "about_company": "關於公司",
     "contact": "聯絡",
     "feedback": "回饋",
     "resources": "資源",
@@ -77,7 +77,7 @@
     "app_settings": "應用設定",
     "extensions": "擴充功能",
     "about": "關於",
-    "about_us": "關於我們",
+    "about_company": "關於我們",
     "contact": "聯絡",
     "feedback": "回饋",
     "docs": "文件",
