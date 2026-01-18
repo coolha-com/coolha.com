@@ -16,20 +16,20 @@ const ConnectButton = dynamic(() => import("../web3/ConnectButton"), { ssr: fals
 export default function Sidebar() {
     return (
         <div className="hidden md:flex flex-col min-h-full max-w-16 xl:max-w-64 fixed top-0 left-0 z-50 border-r bg-sidebar h-svh w-full p-3 gap-4">
-             <Logo />
-             {/* <Search /> */}
-             <div className="flex-1 overflow-y-auto">
+            <Logo />
+            {/* <Search /> */}
+            <div className="flex-1 overflow-y-auto">
                 <NavbarLink />
-             </div>
+            </div>
 
-             <div className="mt-auto flex flex-col gap-4">
+            <div className="mt-auto flex flex-col gap-4">
                 <div className="px-2">
                     <ButtonMenu />
                 </div>
                 <div className="px-2 pb-2">
                     <ConnectButton />
                 </div>
-             </div>
+            </div>
         </div>
     )
 }
@@ -93,22 +93,22 @@ function NavbarLink() {
             iconInactive: RiUserLine,
             startsWith: '/profile'
         },
-/*         {
-            title: t('wallet'),
-            href: '/wallet',
-            iconActive: IoWalletOutline,
-            iconInactive: IoWalletOutline,
-            startsWith: '/wallet'
-        }, */
+        /*         {
+                    title: t('wallet'),
+                    href: '/wallet',
+                    iconActive: IoWalletOutline,
+                    iconInactive: IoWalletOutline,
+                    startsWith: '/wallet'
+                }, */
         {
-            title: t('app_settings'),
+            title: t('settings'),
             href: '/settings',
             iconActive: RiSettingsLine,
             iconInactive: RiSettingsLine,
             startsWith: '/settings'
         },
         {
-            title: t('extensions'),
+            title: t('expand'),
             href: '/extend',
             iconActive: RiPuzzleLine,
             iconInactive: RiPuzzleLine,

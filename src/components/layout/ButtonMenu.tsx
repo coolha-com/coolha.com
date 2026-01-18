@@ -32,13 +32,13 @@ export default function ButtonMenu() {
                         {/*                         <DropdownMenuItem asChild>
                             <Link href={`/settings`} prefetch={false} className="w-full flex items-center gap-2 cursor-pointer" >
                                 <RxGear className="w-6 h-6" />
-                                <span>{t('app_settings')}</span>
+                                <span>{t('settings')}</span>
                             </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem asChild>
                             <Link href={`/extend`} prefetch={false} className="w-full flex items-center gap-2 cursor-pointer" >
                                 <RxCube className="w-6 h-6" />
-                                <span>{t('extensions')}</span>
+                                <span>{t('expand')}</span>
                             </Link>
                         </DropdownMenuItem> */}
                     </div>
@@ -50,7 +50,7 @@ export default function ButtonMenu() {
                     <div className="px-2 py-2 space-y-3">
                         {/* 版本信息 */}
                         <div className="flex items-center justify-between">
-                            <Link href={`/about`} className="text-sm text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
+                            <Link href={`/`} className="text-sm text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
                                 {t('about')}
                             </Link>
                             <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full font-medium">

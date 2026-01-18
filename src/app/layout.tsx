@@ -9,6 +9,25 @@ import { headers } from 'next/headers'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/next"
 
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('www')
+  const Title = t('title')
+
+  return {
+    title: {
+      template: `%s | ${Title}`,
+      default:  Title,
+    },
+    description: "coolha.com, Coolha is a decentralized social application built on Lens Protocol / Lens Chain",
+    metadataBase: new URL('https://coolha.com'),
+    icons: {
+      icon: '/logo/logo.png',
+      shortcut: '/shortcut-icon.png',
+      apple: '/apple-icon.png',
+    },
+    manifest: '/manifest.json',
+  }
+}
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,20 +39,7 @@ const geistMono = Geist_Mono({
 });
 
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Coolha',
-    default: 'Coolha',
-  },
-  description: "coolha.com, Coolha is a decentralized social application built on Lens Protocol / Lens Chain",
-  metadataBase: new URL('https://coolha.com'),
-  icons: {
-    icon: '/logo/logo.png',
-    shortcut: '/shortcut-icon.png',
-    apple: '/apple-icon.png',
-  },
-  manifest: '/manifest.json',
-};
+
 
 export default async function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   const headersObj = await headers();

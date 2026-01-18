@@ -11,7 +11,7 @@ import { useTranslations } from "next-intl";
 
 
 export default function Page() {
-  const t = useTranslations("about");
+  const t = useTranslations("www");
   return (
     <div className=" bg-base-100">
       <Header />

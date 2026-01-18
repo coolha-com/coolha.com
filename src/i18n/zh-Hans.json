@@ -1,6 +1,6 @@
 {
-  "about": {
-    "title": "Coolha",
+  "www": {
+    "title": "酷哈",
     "subtitle1": "数字增长新动力，使更多用户连接到Web3世界",
     "subtitle2": "为创作者、品牌、社区、组织赋能",
     "description": "基于区块链开发的去中心化社交应用",
@@ -74,8 +74,8 @@
   },
   "menu": {
     "more": "更多",
-    "app_settings": "应用设置",
-    "extensions": "扩展功能",
+    "settings": "设置",
+    "expand": "扩展",
     "about": "关于",
     "company": "关于公司",
     "contact": "联系",
@@ -91,8 +91,8 @@
     "messages": "消息",
     "profile": "用户",
     "wallet": "资产",
-    "app_settings": "应用设置",
-    "extensions": "扩展功能"
+    "settings": "设置",
+    "expand": "扩展"
   },
   "home": {
     "recommended": "推荐",

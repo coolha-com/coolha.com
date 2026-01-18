@@ -18,7 +18,7 @@ export default function Header() {
 
 
                 <div className="flex items-center gap-4">{/* Left */}
-                    <Link href={'/about'} className="border-border">
+                    <Link href={'/'} className="border-border">
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Image src="/logo/logo.png" alt="logo.png" width={40} height={40} className="rounded-full" />
                         </motion.div>

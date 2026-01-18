@@ -1,6 +1,6 @@
 {
-  "about": {
-    "title": "Coolha",
+  "www": {
+    "title": "酷哈",
     "subtitle1": "數位增長新動力，使更多用戶連接到 Web3 世界",
     "subtitle2": "為創作者、品牌、社群、組織賦能",
     "description": "基於區塊鏈開發的去中心化社交應用",
@@ -74,8 +74,8 @@
   },
   "menu": {
     "more": "更多",
-    "app_settings": "應用設定",
-    "extensions": "擴充功能",
+    "settings": "設定",
+    "expand": "擴展",
     "about": "關於",
     "company": "關於我們",
     "contact": "聯絡",
@@ -91,8 +91,8 @@
     "messages": "訊息",
     "profile": "用戶",
     "wallet": "資產",
-    "app_settings": "應用設定",
-    "extensions": "擴充功能"
+    "settings": "設定",
+    "expand": "擴展"
   },
   "home": {
     "recommended": "推薦",

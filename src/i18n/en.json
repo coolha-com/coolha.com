@@ -1,5 +1,5 @@
 {
-  "about": {
+  "www": {
     "title": "Coolha",
     "subtitle1": "Digital growth momentum, connecting more users to the Web3 world",
     "subtitle2": "Empowering creators, brands, communities, and organizations",
@@ -74,8 +74,8 @@
   },
   "menu": {
     "more": "More",
-    "app_settings": "App Settings",
-    "extensions": "Extensions",
+    "settings": "Settings",
+    "expand": "Expand",
     "about": "About",
     "company": "Company",
     "contact": "Contact",
@@ -91,8 +91,8 @@
     "messages": "Messages",
     "profile": "Profile",
     "wallet": "Wallet",
-    "app_settings": "App Settings",
-    "extensions": "Extensions"
+    "settings": "Settings",
+    "expand": "Expand"
   },
   "home": {
     "recommended": "Recommended",
