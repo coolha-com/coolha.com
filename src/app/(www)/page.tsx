@@ -27,11 +27,11 @@ export default function Page() {
           <div className="max-w-4xl ">
             <h1 className="text-5xl md:text-7xl font-bold mb-8">
               <span className="text-[#C0E218] drop-shadow-[2px_2px_2px_black]">
-                {t("title")}
+                Coolha
               </span>
             </h1>
-            
-            <div className="space-y-6 mb-12">
+
+            <div className="space-y-4 mb-12">
               <p className="text-base-content/90 text-lg md:text-xl font-light tracking-wide leading-8">
                 {t("subtitle1")}
               </p>
@@ -39,7 +39,7 @@ export default function Page() {
                 {t("subtitle2")}
               </p>
             </div>
-            
+
             <div className="mb-10">
               <p className="text-base-content/70 text-base md:text-lg font-light leading-7 max-w-xl mx-auto tracking-wide">
                 {t("description")}
@@ -47,17 +47,17 @@ export default function Page() {
             </div>
 
             <div className="flex justify-center">
-              <motion.div 
-                whileHover={{ scale: 1.02, y: -2 }} 
+              <motion.div
+                whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <Link 
-                  href="/home" 
+                <Link
+                  href="/home"
                   className="group inline-flex items-center gap-3 bg-transparent border border-base-content/20 hover:border-[#C0E218] text-base-content hover:text-[#C0E218] px-10 py-4 rounded-full text-lg font-light tracking-wider transition-all duration-500 hover:shadow-[0_0_30px_rgba(192,226,24,0.3)] backdrop-blur-sm"
                 >
                   <span>{t("开始使用")}</span>
-                  <motion.span 
+                  <motion.span
                     className="text-xl"
                     animate={{ x: [0, 4, 0] }}
                     transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}

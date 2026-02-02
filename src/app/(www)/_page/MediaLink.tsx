@@ -73,15 +73,15 @@ export default function MediaLink() {
         <FaTelegram className="w-7 h-7" />
       </MLink>
 
-{/*       <MLink href="https://github.com/coolha-com" >
+      <MLink href="https://github.com/coolha-com" >
         <FaGithub className="w-7 h-7" />
-      </MLink> */}
+      </MLink>
 
 
 
-      {/*       <MLink href="https://www.linkedin.com/company/coolha/" >
+            <MLink href="https://www.linkedin.com/company/coolha/" >
         <RiLinkedinBoxFill className="w-7 h-7" />
-      </MLink> */}
+      </MLink>
 
 
 

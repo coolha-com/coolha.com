@@ -107,14 +107,20 @@ export default function page() {
                     <div className="mx-auto  max-w-2xl md:max-w-4xl mt-8">
                         <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-5 md:max-w-none md:grid-cols-2 lg:gap-y-8">
                             {Idea.map((idea) => (
-                                <Card key={idea.name} className="relative pl-20 shadow-md p-6  rounded-2xl border bg-card hover:border-primary transition-colors">
-                                    <div className=" text-2xl font-semibold leading-7 text-primary ">
-                                        <div className="absolute left-5 top-7 flex h-10 w-10 items-start  rounded-2xl ">
-                                            <idea.icon className="h-6 w-6 " aria-hidden="true" />
+                                <Card key={idea.name} className="shadow-md p-6 rounded-2xl border bg-card hover:border-primary transition-colors">
+                                    <div className="flex gap-4">
+                                        <div className="flex-shrink-0 mt-1">
+                                            <idea.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                                         </div>
-                                        <span >  {idea.name}</span>
+                                        <div>
+                                            <div className="text-2xl font-semibold leading-7 text-primary">
+                                                {idea.name}
+                                            </div>
+                                            <div className="mt-2 text-xl text-foreground leading-7">
+                                                {idea.description}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span className="mt-2 text-xl text-foreground leading-7">{idea.description}</span>
                                 </Card>
                             ))}
                         </div>
@@ -128,22 +134,23 @@ export default function page() {
                         </Button>
                     </div>
 
-
-
-
-
-
                     {/* 业务 */}
                     <div className="mx-auto max-w-2xl md:max-w-4xl mt-40 grid grid-cols-1 md:grid-cols-2 gap-8 ">
                         {Bus.map((item) => (
-                            <Card key={item.name} className="rounded-2xl relative shadow-md bg-card border h-auto p-6 pl-20 hover:border-primary transition-colors">
-                                <dt className=" text-2xl font-semibold leading-7 text-primary  ">
-                                    <div className="absolute left-5 top-7 flex h-10 w-10 items-start  rounded-2xl ">
-                                        <item.icon className="h-6 w-6" aria-hidden="true" />
+                            <Card key={item.name} className="rounded-2xl shadow-md bg-card border h-auto p-6 hover:border-primary transition-colors">
+                                <div className="flex gap-4">
+                                    <div className="flex-shrink-0 mt-1">
+                                        <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                                     </div>
-                                    <span>  {item.name}</span>
-                                </dt>
-                                <dd className="mt-2 text-xl text-foreground leading-7 ">{item.description}</dd>
+                                    <div>
+                                        <div className="text-2xl font-semibold leading-7 text-primary">
+                                            {item.name}
+                                        </div>
+                                        <div className="mt-2 text-xl text-foreground leading-7">
+                                            {item.description}
+                                        </div>
+                                    </div>
+                                </div>
                             </Card>
                         ))}
                     </div>
@@ -153,14 +160,20 @@ export default function page() {
                     <div className="mx-auto max-w-2xl  md:max-w-4xl mt-8">
                         <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-5 md:max-w-none md:grid-cols-2 lg:gap-y-8">
                             {Case.map((cases) => (
-                                <Card key={cases.name} className="relative pl-20 shadow-md p-6  rounded-2xl border bg-card hover:border-primary transition-colors">
-                                    <div className=" text-2xl font-semibold leading-7 text-primary  ">
-                                        <div className="absolute left-5 top-7 flex h-10 w-10 items-start text-primary rounded-2xl ">
-                                            <cases.icon className="h-6 w-6 " aria-hidden="true" />
+                                <Card key={cases.name} className="shadow-md p-6 rounded-2xl border bg-card hover:border-primary transition-colors">
+                                    <div className="flex gap-4">
+                                        <div className="flex-shrink-0 mt-1">
+                                            <cases.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                                         </div>
-                                        <span>  {cases.name}</span>
+                                        <div>
+                                            <div className="text-2xl font-semibold leading-7 text-primary">
+                                                {cases.name}
+                                            </div>
+                                            <div className="mt-2 text-xl text-foreground leading-7">
+                                                {cases.description}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span className="mt-2 text-xl  text-foreground leading-7 ">{cases.description}</span>
                                 </Card>
                             ))}
                         </div>
