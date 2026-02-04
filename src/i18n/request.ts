@@ -8,8 +8,8 @@ export default getRequestConfig(async () => {
   const acceptLang = (await headerStore).get("accept-language") ?? "";
   const acceptLocale = acceptLang.split(",")[0]?.trim();
   const normalizedAccept =
-    acceptLocale?.toLowerCase().startsWith("en") ? "en" : "zh-Hans";
-  const locale = cookieLocale || normalizedAccept || "zh-Hans";
+    acceptLocale?.toLowerCase().startsWith("en") ? "en" : "en";
+  const locale = cookieLocale || normalizedAccept || "en";
 
   return {
     locale,

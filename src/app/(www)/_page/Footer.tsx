@@ -52,7 +52,7 @@ export default function Footer() {
 
                 <div className="mt-12 border-t border-border pt-8 text-center">
                     <p className="text-xs leading-5 text-muted-foreground">
-                        © 2025 Coolha Limited All Rights Reserved.
+                        © 2026 Coolha Limited All Rights Reserved.
                     </p>
                 </div>
             </div>
