@@ -95,6 +95,8 @@ export default function page() {
                         </h2>
                         <p className="mt-6 text-xl leading-8 text-muted-foreground">
                             <br />
+                            {t("description0")}
+                            <br />
                             {t("description1")}
                             <br />
                             {t("description2")}

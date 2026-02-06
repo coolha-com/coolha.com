@@ -6,7 +6,7 @@ import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { useTheme } from 'next-themes'
 import { createAppKit } from '@reown/appkit/react'
 import { projectId, wagmiAdapter } from './wagmi'
-import { arbitrum, base, lens, linea, mainnet, optimism, polygon, unichain, worldchain, zksync } from '@reown/appkit/networks'
+import { mainnet, polygon, base, arbitrum, optimism, lens,  } from '@reown/appkit/networks'
 
 // Set up queryClient
 export const queryClient = new QueryClient()
@@ -26,18 +26,12 @@ export const metadata = {
 const modal = createAppKit({
     adapters: [wagmiAdapter],
     projectId,
-    networks: [mainnet, polygon, base, arbitrum, optimism, worldchain, unichain, zksync, lens, linea],
+    networks: [mainnet, polygon, base, arbitrum, optimism, lens, ],
     defaultNetwork: mainnet,
     allowUnsupportedChain: false,
     chainImages: {
         232: '/web3/lens.png',
         8453: '/web3/base.png',
-        324: '/web3/zksync.png',
-        480: '/web3/world.jpg',
-        81457: '/web3/blast.png',
-        59_144: '/web3/linea.png',
-        534_352: '/web3/scroll.png',
-        196: '/web3/xLayer.png',
     },
     metadata: metadata,
     themeMode: 'dark',
