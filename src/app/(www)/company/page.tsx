@@ -111,7 +111,7 @@ export default function page() {
                             {Idea.map((idea) => (
                                 <Card key={idea.name} className="shadow-md p-6 rounded-2xl border bg-card hover:border-primary transition-colors">
                                     <div className="flex gap-4">
-                                        <div className="flex-shrink-0 mt-1">
+                                        <div className="shrink-0 mt-1">
                                             <idea.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                                         </div>
                                         <div>
@@ -141,7 +141,7 @@ export default function page() {
                         {Bus.map((item) => (
                             <Card key={item.name} className="rounded-2xl shadow-md bg-card border h-auto p-6 hover:border-primary transition-colors">
                                 <div className="flex gap-4">
-                                    <div className="flex-shrink-0 mt-1">
+                                    <div className="shrink-0 mt-1">
                                         <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                                     </div>
                                     <div>
@@ -164,7 +164,7 @@ export default function page() {
                             {Case.map((cases) => (
                                 <Card key={cases.name} className="shadow-md p-6 rounded-2xl border bg-card hover:border-primary transition-colors">
                                     <div className="flex gap-4">
-                                        <div className="flex-shrink-0 mt-1">
+                                        <div className="shrink-0 mt-1">
                                             <cases.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                                         </div>
                                         <div>

@@ -40,11 +40,11 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="mb-10">
+{/*             <div className="mb-10">
               <p className="text-base-content/70 text-base md:text-lg font-light leading-7 max-w-xl mx-auto tracking-wide">
                 {t("description")}
               </p>
-            </div>
+            </div> */}
 
             <div className="flex justify-center">
               <motion.div

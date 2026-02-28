@@ -9,7 +9,9 @@ import ButtonMenu from "./ButtonMenu";
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { RiSearchFill, RiSearchLine, RiHomeFill, RiHomeLine, RiCompassFill, RiCompassLine, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiPuzzleLine, RiSettingsLine } from "react-icons/ri";
+import { RiSearchFill, RiSearchLine, RiHomeFill, RiHomeLine, RiCompassFill, RiCompassLine, RiChat1Fill, RiChat1Line, RiUserFill, RiUserLine, RiPuzzleLine, RiSettingsLine, RiWallet3Fill, RiWallet3Line, RiSettingsFill, RiRobot2Fill, RiRobot2Line } from "react-icons/ri";
+import { IoStatsChartOutline, IoWalletOutline, } from "react-icons/io5";
+import { FaRobot } from "react-icons/fa6";
 
 const ConnectButton = dynamic(() => import("../web3/ConnectButton"), { ssr: false });
 
@@ -59,13 +61,6 @@ function NavbarLink() {
     const t = useTranslations('sidebar')
     const links = [
         {
-            title: t('search'),
-            href: '/search',
-            iconActive: RiSearchLine,
-            iconInactive: RiSearchLine,
-            startsWith: '/search'
-        },
-        {
             title: t('home'),
             href: '/home',
             iconActive: RiHomeLine,
@@ -80,39 +75,32 @@ function NavbarLink() {
             startsWith: '/find'
         },
         {
-            title: t('messages'),
-            href: '/message/chat',
-            iconActive: RiChat1Line,
-            iconInactive: RiChat1Line,
-            startsWith: '/message'
+            title: t('ai'),
+            href: '/ai',
+            iconActive: RiRobot2Line,
+            iconInactive: RiRobot2Fill,
+            startsWith: '/ai'
+        },
+        {
+            title: t('wallet'),
+            href: '/wallet',
+            iconActive: RiWallet3Line,
+            iconInactive: RiWallet3Fill,
+            startsWith: '/wallet'
         },
         {
             title: t('profile'),
             href: '/profile',
             iconActive: RiUserLine,
-            iconInactive: RiUserLine,
+            iconInactive: RiUserFill,
             startsWith: '/profile'
         },
-        /*         {
-                    title: t('wallet'),
-                    href: '/wallet',
-                    iconActive: IoWalletOutline,
-                    iconInactive: IoWalletOutline,
-                    startsWith: '/wallet'
-                }, */
         {
             title: t('settings'),
             href: '/settings',
             iconActive: RiSettingsLine,
-            iconInactive: RiSettingsLine,
+            iconInactive: RiSettingsFill,
             startsWith: '/settings'
-        },
-        {
-            title: t('expand'),
-            href: '/extend',
-            iconActive: RiPuzzleLine,
-            iconInactive: RiPuzzleLine,
-            startsWith: '/extend'
         }
     ];
     return (

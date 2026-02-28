@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTranslations } from 'next-intl'
 import { usePathname, } from 'next/navigation'
 
-import { RiChat1Fill, RiChat1Line, RiCompassFill, RiCompassLine, RiHomeFill, RiHomeLine, RiUserFill, RiUserLine } from "react-icons/ri";
+import { RiChat1Fill, RiChat1Line, RiCompassFill, RiCompassLine, RiHomeFill, RiHomeLine, RiRobot2Fill, RiRobot2Line, RiUserFill, RiUserLine, RiWallet3Fill, RiWallet3Line } from "react-icons/ri";
 
 
 export default function NavFooter() {
@@ -30,13 +30,20 @@ export default function NavFooter() {
                     text={t('discover')}
                 />
 
+                <NavLink
+                    href='/ai'
+                    activeHrefs={['/ai']}
+                    icon={<RiRobot2Line className="size-7" />}
+                    activeIcon={<RiRobot2Fill className="size-7" />}
+                    text={t('ai')}
+                />
 
                 <NavLink
-                    href='/message/chat'
-                    activeHrefs={['/message',]}
-                    icon={<RiChat1Line className="size-7" />}
-                    activeIcon={<RiChat1Fill className="size-7" />}
-                    text={t('messages')}
+                    href='/wallet'
+                    activeHrefs={['/wallet',]}
+                    icon={<RiWallet3Line className="size-7" />}
+                    activeIcon={<RiWallet3Fill className="size-7" />}
+                    text={t('wallet')}
                 />
 
                 <NavLink

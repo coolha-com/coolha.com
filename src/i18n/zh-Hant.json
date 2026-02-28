@@ -1,9 +1,9 @@
 {
   "www": {
     "title": "酷哈",
-    "subtitle1": "數位增長新動力，使更多用戶連接到 Web3 世界",
+    "subtitle1": "數位增長新動力，使更多資產和用戶連接到 Web3 世界",
     "subtitle2": "為創作者、品牌、社群、組織賦能",
-    "description": "基於區塊鏈開發的去中心化社交應用",
+    "description": "基於區塊鏈開發的去中心化應用",
     "开始使用": "開始使用"
   },
   "company": {
@@ -87,46 +87,19 @@
     "terms": "條款"
   },
   "sidebar": {
-    "search": "搜尋",
     "home": "首頁",
     "discover": "發現",
-    "messages": "訊息",
-    "profile": "用戶",
+    "ai": "AI",
+    "analytics": "分析",
     "wallet": "資產",
-    "settings": "設定",
-    "expand": "擴展"
+    "profile": "用戶",
+    "settings": "設定"
   },
   "home": {
-    "recommended": "推薦",
-    "following": "關注",
-    "all": "全部",
     "version_notice": "Coolha 目前處於 v0.1-alpha 版本，我們正努力開發中，敬請期待。"
   },
-  "find": {
-    "articles": "文章",
-    "images": "圖片",
-    "music": "音樂",
-    "videos": "影片",
-    "explore": "探索"
-  },
-  "message": {
-    "chat": "聊天",
-    "community": "社群",
-    "notifications": "通知"
-  },
+
   "profile": {
-    "wallet": "資產",
-    "orders": "訂單",
-    "membership": "會員",
-    "bookmarks": "書籤",
-    "business": "商業版",
-    "store": "商店",
-    "promotion": "推廣",
-    "ai_agent": "AI Agent",
-    "creator_center": "創作中心",
-    "analytics": "資料分析",
-    "achievements": "成就等級",
-    "test_rewards": "測試獎勵",
-    "invite_users": "邀請用戶"
+
   }
 }

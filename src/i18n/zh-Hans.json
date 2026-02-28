@@ -1,15 +1,15 @@
 {
   "www": {
     "title": "酷哈",
-    "subtitle1": "数字增长新动力，使更多用户连接到Web3世界",
+    "subtitle1": "数字增长新动力，使更多资产和用户连接到Web3世界",
     "subtitle2": "为创作者、品牌、社区、组织赋能",
-    "description": "基于区块链开发的去中心化社交应用",
+    "description": "基于区块链开发的去中心化应用",
     "开始使用": "开始使用"
   },
   "company": {
     "title": "酷哈有限公司",
     "subtitle": "让数据信息可拥有、可信任、有价值",
-    "description0":"专注于Web3技术开发和应用的软件科技公司，于2025年8月26日在香港注册成立",
+    "description0": "专注于Web3技术开发和应用的软件科技公司，于2025年8月26日在香港注册成立",
     "description1": "希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好",
     "description2": "相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念",
     "description3": "公共区块链是世界大同、世界人民大团结、民主治理、解决信任的一项重要技术",
@@ -87,14 +87,13 @@
     "terms": "条款"
   },
   "sidebar": {
-    "search": "搜索",
     "home": "首页",
     "discover": "发现",
-    "messages": "消息",
-    "profile": "用户",
+    "ai": "AI",
+    "analytics": "分析",
     "wallet": "资产",
-    "settings": "设置",
-    "expand": "扩展"
+    "profile": "用户",
+    "settings": "设置"
   },
   "home": {
     "recommended": "推荐",
@@ -103,30 +102,10 @@
     "version_notice": "Coolha目前处于v0.1-alpha版本，我们正在努力开发中，敬请期待。"
   },
   "find": {
-    "articles": "文章",
-    "images": "图片",
-    "music": "音乐",
-    "videos": "视频",
-    "explore": "探索"
+
   },
-  "message": {
-    "chat": "聊天",
-    "community": "社区",
-    "notifications": "通知"
-  },
+
   "profile": {
-    "wallet": "资产",
-    "orders": "订单",
-    "membership": "会员",
-    "bookmarks": "书签",
-    "business": "商业版",
-    "store": "商店",
-    "promotion": "推广",
-    "ai_agent": "AI Agent",
-    "creator_center": "创作中心",
-    "analytics": "数据分析",
-    "achievements": "成就等级",
-    "test_rewards": "测试奖励",
-    "invite_users": "邀请用户"
+
   }
 }

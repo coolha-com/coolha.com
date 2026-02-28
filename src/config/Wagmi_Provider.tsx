@@ -6,7 +6,7 @@ import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { useTheme } from 'next-themes'
 import { createAppKit } from '@reown/appkit/react'
 import { projectId, wagmiAdapter } from './wagmi'
-import { mainnet, polygon, base, arbitrum, optimism, lens,  } from '@reown/appkit/networks'
+import { mainnet, polygon, base, arbitrum, optimism, } from '@reown/appkit/networks'
 
 // Set up queryClient
 export const queryClient = new QueryClient()
@@ -26,11 +26,10 @@ export const metadata = {
 const modal = createAppKit({
     adapters: [wagmiAdapter],
     projectId,
-    networks: [mainnet, polygon, base, arbitrum, optimism, lens, ],
+    networks: [mainnet, polygon, base, arbitrum, optimism],
     defaultNetwork: mainnet,
     allowUnsupportedChain: false,
     chainImages: {
-        232: '/web3/lens.png',
         8453: '/web3/base.png',
     },
     metadata: metadata,
@@ -56,8 +55,15 @@ const modal = createAppKit({
 })
 
 export default function Wagmi_Provider({ children, cookies }: { children: ReactNode; cookies: string | null }) {
+    const { theme, resolvedTheme } = useTheme()
 
-
+    // Sync theme with AppKit
+    useEffect(() => {
+        if (modal && (theme || resolvedTheme)) {
+            const currentTheme = theme === 'system' ? resolvedTheme : theme
+            modal.setThemeMode(currentTheme as 'light' | 'dark')
+        }
+    }, [theme, resolvedTheme])
 
     return (
         <>
