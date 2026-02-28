@@ -19,7 +19,6 @@ export default function NavFooter() {
                     activeHrefs={['/home']}
                     icon={<RiHomeLine className="size-7" />}
                     activeIcon={<RiHomeFill className="size-7" />}
-                    text={t('home')}
                 />
 
                 <NavLink
@@ -27,7 +26,6 @@ export default function NavFooter() {
                     activeHrefs={['/find']}
                     icon={<RiCompassLine className="size-7" />}
                     activeIcon={<RiCompassFill className="size-7" />}
-                    text={t('discover')}
                 />
 
                 <NavLink
@@ -35,7 +33,6 @@ export default function NavFooter() {
                     activeHrefs={['/ai']}
                     icon={<RiRobot2Line className="size-7" />}
                     activeIcon={<RiRobot2Fill className="size-7" />}
-                    text={t('ai')}
                 />
 
                 <NavLink
@@ -43,7 +40,6 @@ export default function NavFooter() {
                     activeHrefs={['/wallet',]}
                     icon={<RiWallet3Line className="size-7" />}
                     activeIcon={<RiWallet3Fill className="size-7" />}
-                    text={t('wallet')}
                 />
 
                 <NavLink
@@ -51,7 +47,6 @@ export default function NavFooter() {
                     activeHrefs={[`/profile`]}
                     icon={<RiUserLine className="size-7" />}
                     activeIcon={<RiUserFill className="size-7" />}
-                    text={t('profile')}
                 />
 
                 {/*        {address ? () : (
@@ -71,7 +66,7 @@ export default function NavFooter() {
 }
 
 
-function NavLink({ href, activeIcon, icon, activeHrefs, text }) {
+function NavLink({ href, activeIcon, icon, activeHrefs, }) {
     const pathname = usePathname();
     // 检查路径是否以activeHrefs中的任何一个前缀开头
     const isActive = activeHrefs.some((activeHref) => pathname.startsWith(activeHref));

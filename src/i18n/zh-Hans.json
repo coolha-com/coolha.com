@@ -96,9 +96,6 @@
     "settings": "设置"
   },
   "home": {
-    "recommended": "推荐",
-    "following": "关注",
-    "all": "全部",
     "version_notice": "Coolha目前处于v0.1-alpha版本，我们正在努力开发中，敬请期待。"
   },
   "find": {
