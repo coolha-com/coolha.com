@@ -27,9 +27,9 @@ export default function Footer() {
                             <Link href={`https://link3.to/coolha`} target='_blank' className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
                                 {t("contact")}
                             </Link>
-                            <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank' className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
+{/*                             <Link href={`https://coolha-com.larksuite.com/base/Uq2HbmW8hasT3ksO7cquMgFWs2w?table=tblTSPWUJqLQjdTI&view=vewOlmHa88`} target='_blank' className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
                                 {t("feedback")}
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
 

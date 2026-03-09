@@ -1,15 +1,25 @@
 {
   "www": {
     "title": "酷哈",
-    "subtitle1": "數位增長新動力，使更多資產和用戶連接到 Web3 世界",
-    "subtitle2": "為創作者、品牌、社群、組織賦能",
+    "subtitle1": "數位增長新動力，為創作者、品牌、社群、組織賦能",
     "description": "基於區塊鏈開發的去中心化應用",
-    "开始使用": "開始使用"
+    "开始使用": "開始使用",
+    "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
+    "ai_rise_desc": "隨著人工智慧能力的快速提升，越來越多的工作正在由 AI 系統完成，AI 正逐漸成為數位世界中的核心執行者。",
+    "new_work_model_title": "Coolha 正在研究和構建一套新的工作模式：",
+    "one_person_one_company": "一個人 + 一套 Web3 AI 系統 = 一家公司",
+    "model_desc": "在這種模式下，一個創作者、開發者或創業者，可以透過 AI 智慧體和自動化系統，完成過去需要團隊協作才能完成的工作。",
+    "empower_individual": "讓個人擁有過去只有團隊才能擁有的能力",
+    "in_the_past": "在過去",
+    "past_startup_desc": "運作公司通常意味著不斷擴大團隊規模。",
+    "in_ai_era": "而在 AI 時代",
+    "ai_startup_desc": "運作公司可能意味著構建更智慧的系統。",
+    "conclusion_desc": "透過 AI 智慧體、自動化流程以及 Web3 基礎設施，一個人也可以構建、營運並擴展一家數位公司。"
   },
   "company": {
     "title": "酷哈有限公司",
     "subtitle": "讓數據資訊可擁有、可信任、有價值",
-    "description0":"專注於Web3技術開發和應用的軟體科技公司，於2025年8月26日在香港註冊成立",
+    "description0": "專注於Web3技術開發和應用的科技公司，於2025年8月26日在香港註冊成立",
     "description1": "希望透過科技改變生產關係，為世界文明進步作出貢獻，讓世界變得更好",
     "description2": "相信 Web3 與區塊鏈的發展不僅僅是技術與互聯網的進步，更是一種能延伸至各領域的積極理念",
     "description3": "公共區塊鏈是世界大同、世界人民大團結、民主治理、解決信任問題的重要技術",
@@ -99,7 +109,5 @@
     "version_notice": "Coolha 目前處於 v0.1-alpha 版本，我們正努力開發中，敬請期待。"
   },
 
-  "profile": {
-
-  }
+  "profile": {}
 }

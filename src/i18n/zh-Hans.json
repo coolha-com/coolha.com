@@ -1,15 +1,25 @@
 {
   "www": {
     "title": "酷哈",
-    "subtitle1": "数字增长新动力，使更多资产和用户连接到Web3世界",
-    "subtitle2": "为创作者、品牌、社区、组织赋能",
+    "subtitle1": "数字增长新动力，为创作者、品牌、社区、组织赋能",
     "description": "基于区块链开发的去中心化应用",
-    "开始使用": "开始使用"
+    "开始使用": "开始使用",
+    "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
+    "ai_rise_desc": "随着人工智能能力的快速提升，越来越多的工作正在由 AI 系统完成，AI 正逐渐成为数字世界中的核心执行者。",
+    "new_work_model_title": "Coolha 正在研究和构建一套新的工作模式：",
+    "one_person_one_company": "一个人 + 一套 Web3 AI 系统 = 一家公司",
+    "model_desc": "在这种模式下，一个创作者、开发者或创业者，可以通过 AI 智能体和自动化系统，完成过去需要团队协作才能完成的工作。",
+    "empower_individual": "让个人拥有过去只有团队才能拥有的能力",
+    "in_the_past": "在过去",
+    "past_startup_desc": "运作公司通常意味着不断扩大团队规模。",
+    "in_ai_era": "而在 AI 时代",
+    "ai_startup_desc": "运作公司可能意味着构建更智能的系统。",
+    "conclusion_desc": "通过 AI 智能体、自动化流程以及 Web3 基础设施，一个人也可以构建、运营并扩展一家数字公司。"
   },
   "company": {
     "title": "酷哈有限公司",
     "subtitle": "让数据信息可拥有、可信任、有价值",
-    "description0": "专注于Web3技术开发和应用的软件科技公司，于2025年8月26日在香港注册成立",
+    "description0": "专注于Web3技术开发和应用的科技公司，于2025年8月26日在香港注册成立",
     "description1": "希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好",
     "description2": "相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念",
     "description3": "公共区块链是世界大同、世界人民大团结、民主治理、解决信任的一项重要技术",
@@ -98,11 +108,7 @@
   "home": {
     "version_notice": "Coolha目前处于v0.1-alpha版本，我们正在努力开发中，敬请期待。"
   },
-  "find": {
+  "find": {},
 
-  },
-
-  "profile": {
-
-  }
+  "profile": {}
 }
