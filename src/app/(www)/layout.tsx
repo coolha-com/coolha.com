@@ -1,3 +1,5 @@
+import Footer from "./_page/Footer"
+import Header from "./_page/Header"
 
 export const metadata = {
     title: {
@@ -10,7 +12,9 @@ export const metadata = {
 export default function layout({ children }) {
     return (
         <>
+            <Header />
             {children}
+            <Footer />
         </>
     )
 }

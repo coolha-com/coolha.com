@@ -3,7 +3,9 @@
     "title": "酷哈",
     "subtitle1": "数字增长新动力，为创作者、品牌、社区、组织赋能",
     "description": "基于区块链开发的去中心化应用",
-    "开始使用": "开始使用",
+    "开始使用": "开始使用"
+  },
+  "web3-aios": {
     "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
     "ai_rise_desc": "随着人工智能能力的快速提升，越来越多的工作正在由 AI 系统完成，AI 正逐渐成为数字世界中的核心执行者。",
     "new_work_model_title": "Coolha 正在研究和构建一套新的工作模式：",
@@ -56,6 +58,7 @@
     "media": "媒体",
     "info": "信息",
     "company": "关于公司",
+    "ai": "Web3 AIOS",
     "contact": "联系",
     "feedback": "反馈",
     "resources": "资源",
@@ -67,6 +70,7 @@
     "media": "媒体",
     "info": "信息",
     "company": "关于公司",
+    "ai": "Web3 AIOS",
     "contact": "联系",
     "feedback": "反馈",
     "resources": "资源",
@@ -79,8 +83,8 @@
     "account": "账户"
   },
   "navigation": {
-    "home": "首页",
-    "discover": "发现",
+    "dashboard": "仪表板",
+    "find": "发现",
     "messages": "消息",
     "profile": "个人"
   },
@@ -88,7 +92,7 @@
     "more": "更多",
     "settings": "设置",
     "expand": "扩展",
-    "about": "关于",
+    "home": "首页",
     "company": "关于公司",
     "contact": "联系",
     "feedback": "反馈",
@@ -97,15 +101,15 @@
     "terms": "条款"
   },
   "sidebar": {
-    "home": "首页",
-    "discover": "发现",
+    "dashboard": "仪表板",
+    "find": "发现", 
     "ai": "AI",
     "analytics": "分析",
-    "wallet": "资产",
+    "wallet": "钱包",
     "profile": "用户",
     "settings": "设置"
   },
-  "home": {
+  "dashboard": {
     "version_notice": "Coolha目前处于v0.1-alpha版本，我们正在努力开发中，敬请期待。"
   },
   "find": {},

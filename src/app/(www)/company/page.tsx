@@ -1,9 +1,7 @@
 'use client'
-import Footer from "@/app/(www)/_page/Footer";
-import Header from "@/app/(www)/_page/Header";
+
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import React from "react";
 import { RxRocket, RxEyeOpen, RxHeart, RxLightningBolt, RxCode, RxBarChart, RxActivityLog, RxListBullet, RxDesktop, RxLaptop, RxSpeakerLoud, RxArrowTopRight } from "react-icons/rx";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -78,7 +76,6 @@ export default function page() {
     ]
     return (
         <>
-            <Header />
             <div className="flex flex-col justify-center items-center  py-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -202,7 +199,6 @@ export default function page() {
             </div>
 
 
-            <Footer />
 
         </>
     )

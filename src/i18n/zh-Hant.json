@@ -3,7 +3,9 @@
     "title": "酷哈",
     "subtitle1": "數位增長新動力，為創作者、品牌、社群、組織賦能",
     "description": "基於區塊鏈開發的去中心化應用",
-    "开始使用": "開始使用",
+    "开始使用": "開始使用"
+  },
+  "web3-aios": {
     "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
     "ai_rise_desc": "隨著人工智慧能力的快速提升，越來越多的工作正在由 AI 系統完成，AI 正逐漸成為數位世界中的核心執行者。",
     "new_work_model_title": "Coolha 正在研究和構建一套新的工作模式：",
@@ -56,6 +58,7 @@
     "media": "媒體",
     "info": "資訊",
     "company": "公司",
+    "ai": "Web3 AIOS",
     "contact": "聯絡",
     "feedback": "回饋",
     "resources": "資源",
@@ -67,6 +70,7 @@
     "media": "媒體",
     "info": "資訊",
     "company": "公司",
+    "ai": "Web3 AIOS",
     "contact": "聯絡",
     "feedback": "回饋",
     "resources": "資源",
@@ -79,8 +83,8 @@
     "account": "帳戶"
   },
   "navigation": {
-    "home": "首頁",
-    "discover": "發現",
+    "dashboard": "儀表板",
+    "find": "發現",
     "messages": "訊息",
     "profile": "個人"
   },
@@ -97,15 +101,15 @@
     "terms": "條款"
   },
   "sidebar": {
-    "home": "首頁",
-    "discover": "發現",
+    "dashboard": "儀表板",
+    "find": "發現", 
     "ai": "AI",
     "analytics": "分析",
-    "wallet": "資產",
+    "wallet": "錢包",
     "profile": "用戶",
     "settings": "設定"
   },
-  "home": {
+  "dashboard": {
     "version_notice": "Coolha 目前處於 v0.1-alpha 版本，我們正努力開發中，敬請期待。"
   },
 

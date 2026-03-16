@@ -50,9 +50,7 @@ export default function ButtonMenu() {
                     <div className="px-2 py-2 space-y-3">
                         {/* 版本信息 */}
                         <div className="flex items-center justify-between">
-                            <Link href={`/`} className="text-sm text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
-                                {t('about')}
-                            </Link>
+
                             <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full font-medium">
                                 v0.1-alpha
                             </span>
@@ -60,19 +58,21 @@ export default function ButtonMenu() {
 
                         {/* 链接组 1 */}
                         <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                            <Link href={`/`} className="text-sm text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
+                                {t('home')}
+                            </Link>
                             <Link href={`/company`} prefetch={false} className="text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
                                 {t('company')}
                             </Link>
-                            <Link href={`https://link3.to/coolha`} className="text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
-                                {t('contact')}
-                            </Link>
-                            <Link href={`https://coolha-com.sg.larksuite.com/share/base/form/shrusf2YvDVxMoNgsYrV1uZ8J3e`} className="text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
-                                {t('feedback')}
-                            </Link>
+
+
                         </div>
 
                         {/* 链接组 2 */}
                         <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                            <Link href={`https://link3.to/coolha`} className="text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
+                                {t('contact')}
+                            </Link>
                             <Link href={`https://docs.coolha.com`} className="text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
                                 {t('docs')}
                             </Link>

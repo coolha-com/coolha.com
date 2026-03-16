@@ -61,14 +61,14 @@ function NavbarLink() {
     const t = useTranslations('sidebar')
     const links = [
         {
-            title: t('home'),
-            href: '/home',
+            title: t('dashboard'),
+            href: '/dashboard',
             iconActive: RiHomeLine,
             iconInactive: RiHomeLine,
-            startsWith: '/home'
+            startsWith: '/dashboard'
         },
         {
-            title: t('discover'),
+            title: t('find'),
             href: '/find',
             iconActive: RiCompassLine,
             iconInactive: RiCompassLine,

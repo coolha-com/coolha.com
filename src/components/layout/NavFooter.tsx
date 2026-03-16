@@ -15,8 +15,8 @@ export default function NavFooter() {
             <div className="md:hidden flex fixed bottom-0 w-full h-14 bg-base-100 backdrop-filter backdrop-saturate-180 backdrop-blur-16  z-50 p-1">
 
                 <NavLink
-                    href='/home'
-                    activeHrefs={['/home']}
+                    href='/dashboard'
+                    activeHrefs={['/dashboard']}
                     icon={<RiHomeLine className="size-7" />}
                     activeIcon={<RiHomeFill className="size-7" />}
                 />

@@ -85,12 +85,11 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
         return (
             <>
                 <Button asChild className="w-full rounded-xl text-lg font-bold h-12 mb-4" size="lg">
-                    <Link href={'/home'}>
-                        {t("launch")}
-                    </Link>
+                    <Link href={'/dashboard'}> {t("launch")}</Link>
                 </Button>
 
                 <MobileNavLink href="/" label={t("home")} />
+                <MobileNavLink href="/web3-aios" label={t("ai")} />
                 <MobileNavLink href="/company" label={t("company")} />
                 <MobileNavLink href="https://link3.to/coolha" label={t("contact")} isExternal />
                 <MobileNavLink href="https://docs.coolha.com" label={t("docs")} isExternal />
@@ -103,6 +102,12 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
             <li className="text-sm font-medium list-none">
                 <Link href={`/`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
                     {t("home")}
+                </Link>
+            </li>
+
+            <li className="text-sm font-medium list-none">
+                <Link href={`/web3-aios`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
+                    {t("ai")}
                 </Link>
             </li>
 
