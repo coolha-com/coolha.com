@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
       template: `%s | ${Title}`,
-      default:  Title,
+      default: Title,
     },
     description: "coolha.com, Coolha is a decentralized social application built on Lens Protocol / Lens Chain",
     metadataBase: new URL('https://coolha.com'),
@@ -46,6 +46,7 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
   const cookies = headersObj.get('cookie')
   const locale = await getLocale();
   const messages = (await import(`../i18n/${locale}.json`)).default;
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
@@ -58,6 +59,40 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
         </NextIntlClientProvider>
         <SpeedInsights />
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Coolha Limited",
+              alternateName: "酷哈公司",
+              url: "https://coolha.com",
+              description:
+                "Web3 blockchain marketing, DApp development, and smart contract solutions",
+              sameAs: ["https://x.com/coolha_com", "https://github.com/coolha-com","https://www.linkedin.com/company/coolha/","https://farcaster.xyz/coolha"],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What services does Coolha provide?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Coolha provides Web3 marketing strategy, DApp development, smart contract development, NFT brand marketing, and decentralized application development.",
+                  },
+                },
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );

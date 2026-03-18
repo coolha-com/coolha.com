@@ -40,7 +40,7 @@ function Logo() {
     return (
         <div className="h-12 flex items-center px-3 mb-2">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href={`/home`} className="flex flex-row items-center gap-3">
+                <Link href={`/dashboard`} className="flex flex-row items-center gap-3">
                     <Avatar className="w-9 h-9 border">
                         <AvatarImage src="/favicon.ico" alt="Coolha" />
                         <AvatarFallback>CH</AvatarFallback>

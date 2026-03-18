@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 
 export default function layout({ children }) {
   const pathname = usePathname();
-  const activeHrefs = ['/home', '/message', '/profile']
+  const activeHrefs = ['/dashboard', '/find','/ai','/wallet', '/profile']
 
   const isActive = activeHrefs.some((activeHref) => pathname.startsWith(activeHref));
   return (

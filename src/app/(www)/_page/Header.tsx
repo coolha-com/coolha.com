@@ -35,7 +35,7 @@ export default function Header() {
                     <ThemeSwap />
                     <LanguageSwitcher />
                     <Button asChild className="hidden md:flex rounded-full text-sm font-semibold px-6" size="default">
-                        <Link href={'/home'}>
+                        <Link href={'/dashboard'}>
                             {t("launch")}
                         </Link>
                     </Button>
