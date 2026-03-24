@@ -15,10 +15,10 @@ export default function ButtonMenu() {
             {/* 菜单按钮 */}
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="rounded-full hover:bg-muted p-2 md:p-0 xl:w-40 xl:justify-start xl:pl-2 mx-1 md:mx-0 gap-2 h-auto">
+                    <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-9 px-4 py-2 has-[>svg]:px-3 rounded-full p-2 md:p-0 xl:w-40 xl:justify-start xl:pl-2 mx-1 md:mx-0 h-auto">
                         <RxGrid className="w-6 h-6 md:w-7 md:h-7" />
                         <span className="hidden xl:flex text-lg">{t('more')}</span>
-                    </Button>
+                    </button>
                 </DropdownMenuTrigger>
 
                 <DropdownMenuContent className="p-3 bg-background shadow-lg border min-w-64" style={{ borderRadius: '1.5rem' }} align="end" sideOffset={8}>
@@ -86,7 +86,7 @@ export default function ButtonMenu() {
 
                         {/* 版权信息 */}
                         <div className="text-xs text-muted-foreground/50 pt-2 border-t mt-2">
-                            <span>© {new Date().getFullYear()} coolha.com</span>
+                            <span>© 2026 coolha.com</span>
                         </div>
                     </div>
 

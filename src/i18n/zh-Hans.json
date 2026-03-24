@@ -5,7 +5,7 @@
     "description": "基于区块链开发的去中心化应用",
     "开始使用": "开始使用"
   },
-  "web3-aios": {
+  "aios": {
     "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
     "ai_rise_desc": "随着人工智能能力的快速提升，越来越多的工作正在由 AI 系统完成，AI 正逐渐成为数字世界中的核心执行者。",
     "new_work_model_title": "Coolha 正在研究和构建一套新的工作模式：",
@@ -57,8 +57,9 @@
     "launch": "启动",
     "media": "媒体",
     "info": "信息",
-    "company": "关于公司",
-    "ai": "Web3 AIOS",
+    "company": "公司",
+    "aios": "AIOS",
+    "rwa": "RWA",
     "contact": "联系",
     "feedback": "反馈",
     "resources": "资源",
@@ -69,8 +70,9 @@
   "footer": {
     "media": "媒体",
     "info": "信息",
-    "company": "关于公司",
-    "ai": "Web3 AIOS",
+    "company": "公司",
+    "aios": "AIOS",
+    "rwa": "RWA",
     "contact": "联系",
     "feedback": "反馈",
     "resources": "资源",
@@ -93,7 +95,7 @@
     "settings": "设置",
     "expand": "扩展",
     "home": "首页",
-    "company": "关于公司",
+    "company": "公司",
     "contact": "联系",
     "feedback": "反馈",
     "docs": "文档",
@@ -102,7 +104,7 @@
   },
   "sidebar": {
     "dashboard": "仪表板",
-    "find": "发现", 
+    "find": "发现",
     "ai": "AI",
     "analytics": "分析",
     "wallet": "钱包",
@@ -114,5 +116,27 @@
   },
   "find": {},
 
-  "profile": {}
+  "rwa": {
+    "hero_tag": "区块链上的真实世界资产",
+    "hero_title": "连接现实与",
+    "hero_title_highlight": "数字世界",
+    "hero_desc": "RWA（真实世界资产）代币化，让传统资产在区块链上获得流动性、透明度和全球可及性。",
+    "what_is_rwa_title": "什么是 RWA？",
+    "what_is_rwa_desc1": "RWA (Real World Assets) 是指存在于物理世界中的有形或无形资产，例如房地产、艺术品、国债、商品甚至碳信用额度。",
+    "what_is_rwa_desc2": "通过区块链技术，我们将这些资产的所有权或收益权转化为数字代币（Token化）。这不仅打破了传统金融市场的地域和资金门槛限制，还极大地提升了资产的交易效率。",
+    "physical_assets": "物理资产",
+    "physical_assets_desc": "房地产、基础设施、大宗商品等实体资产",
+    "financial_assets": "金融工具",
+    "financial_assets_desc": "国债、股票、私募股权、发票融资",
+    "core_advantages_title": "RWA 的核心优势",
+    "core_advantages_subtitle": "重塑资产流通方式，释放万亿级市场潜力",
+    "adv_liquidity_title": "释放流动性",
+    "adv_liquidity_desc": "通过碎片化（Fractionalization），将高门槛资产拆分，让全球散户投资者也能参与投资，大幅提升非流动性资产的换手率。",
+    "adv_trust_title": "透明与信任",
+    "adv_trust_desc": "区块链账本不可篡改，智能合约自动执行收益分配。从资产确权到交易结算，全流程链上可查，降低信任成本。",
+    "adv_friction_title": "降低交易摩擦",
+    "adv_friction_desc": "去除传统金融中的多层中介（券商、结算中心等），实现点对点（P2P）的即时结算，大幅降低交易费用和时间成本。",
+    "future_title": "万亿规模的蓝海市场",
+    "future_desc": "RWA 被认为是推动下一轮 Web3 增长的核心引擎。Coolha 致力于构建安全、合规的 RWA 基础设施，连接传统金融机构与去中心化网络，让更多真实资产在链上焕发新生。"
+  }
 }

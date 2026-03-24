@@ -5,7 +5,7 @@
     "description": "A decentralized application developed on the blockchain",
     "开始使用": "Get Started"
   },
-    "web3-aios": {
+  "aios": {
     "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
     "ai_rise_desc": "With the rapid improvement of artificial intelligence capabilities, more and more tasks are being completed by AI systems, and AI is gradually becoming a core executor in the digital world.",
     "new_work_model_title": "Coolha is researching and building a new work model:",
@@ -58,7 +58,8 @@
     "media": "Media",
     "info": "Info",
     "company": "Company",
-    "ai": "Web3 AIOS",
+    "aios": "AIOS",
+    "rwa": "RWA",
     "contact": "Contact",
     "feedback": "Feedback",
     "resources": "Resources",
@@ -70,7 +71,8 @@
     "media": "Media",
     "info": "Info",
     "company": "Company",
-    "ai": "Web3 AIOS",
+    "aios": "AIOS",
+    "rwa": "RWA",
     "contact": "Contact",
     "feedback": "Feedback",
     "resources": "Resources",
@@ -112,5 +114,27 @@
   "dashboard": {
     "version_notice": "Coolha is currently in v0.1-alpha version. We are working hard on development, please stay tuned."
   },
-  "profile": {}
+  "rwa": {
+    "hero_tag": "Real World Assets on Blockchain",
+    "hero_title": "Connecting Reality with the ",
+    "hero_title_highlight": "Digital World",
+    "hero_desc": "RWA (Real World Assets) tokenization brings liquidity, transparency, and global accessibility to traditional assets on the blockchain.",
+    "what_is_rwa_title": "What is RWA?",
+    "what_is_rwa_desc1": "RWA (Real World Assets) refers to tangible or intangible assets that exist in the physical world, such as real estate, artwork, treasury bonds, commodities, or even carbon credits.",
+    "what_is_rwa_desc2": "Through blockchain technology, we convert the ownership or yield rights of these assets into digital tokens (Tokenization). This not only breaks the geographical and financial threshold limits of traditional financial markets but also greatly improves asset trading efficiency.",
+    "physical_assets": "Physical Assets",
+    "physical_assets_desc": "Real estate, infrastructure, commodities, and other physical assets",
+    "financial_assets": "Financial Instruments",
+    "financial_assets_desc": "Treasury bonds, stocks, private equity, invoice financing",
+    "core_advantages_title": "Core Advantages of RWA",
+    "core_advantages_subtitle": "Reshaping asset circulation, unlocking trillion-dollar market potential",
+    "adv_liquidity_title": "Unlock Liquidity",
+    "adv_liquidity_desc": "Through fractionalization, high-threshold assets are split so that global retail investors can participate, greatly increasing the turnover rate of illiquid assets.",
+    "adv_trust_title": "Transparency & Trust",
+    "adv_trust_desc": "Blockchain ledgers are immutable, and smart contracts automatically execute yield distribution. From asset confirmation to trade settlement, the entire process is traceable on-chain, reducing trust costs.",
+    "adv_friction_title": "Reduce Friction",
+    "adv_friction_desc": "Eliminate multi-layer intermediaries in traditional finance (brokers, clearinghouses, etc.) to achieve peer-to-peer (P2P) instant settlement, significantly reducing trading fees and time costs.",
+    "future_title": "A Trillion-Dollar Blue Ocean Market",
+    "future_desc": "RWA is considered the core engine driving the next wave of Web3 growth. Coolha is committed to building a secure, compliant RWA infrastructure, connecting traditional financial institutions with decentralized networks, and bringing new life to more real-world assets on-chain."
+  }
 }

@@ -5,7 +5,7 @@
     "description": "基於區塊鏈開發的去中心化應用",
     "开始使用": "開始使用"
   },
-  "web3-aios": {
+  "aios": {
     "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
     "ai_rise_desc": "隨著人工智慧能力的快速提升，越來越多的工作正在由 AI 系統完成，AI 正逐漸成為數位世界中的核心執行者。",
     "new_work_model_title": "Coolha 正在研究和構建一套新的工作模式：",
@@ -58,7 +58,8 @@
     "media": "媒體",
     "info": "資訊",
     "company": "公司",
-    "ai": "Web3 AIOS",
+    "aios": "AIOS",
+    "rwa": "RWA",
     "contact": "聯絡",
     "feedback": "回饋",
     "resources": "資源",
@@ -70,7 +71,8 @@
     "media": "媒體",
     "info": "資訊",
     "company": "公司",
-    "ai": "Web3 AIOS",
+    "aios": "AIOS",
+    "rwa": "RWA",
     "contact": "聯絡",
     "feedback": "回饋",
     "resources": "資源",
@@ -102,7 +104,7 @@
   },
   "sidebar": {
     "dashboard": "儀表板",
-    "find": "發現", 
+    "find": "發現",
     "ai": "AI",
     "analytics": "分析",
     "wallet": "錢包",
@@ -113,5 +115,27 @@
     "version_notice": "Coolha 目前處於 v0.1-alpha 版本，我們正努力開發中，敬請期待。"
   },
 
-  "profile": {}
+  "rwa": {
+    "hero_tag": "區塊鏈上的真實世界資產",
+    "hero_title": "連接現實與",
+    "hero_title_highlight": "數位世界",
+    "hero_desc": "RWA（真實世界資產）代幣化，讓傳統資產在區塊鏈上獲得流動性、透明度和全球可及性。",
+    "what_is_rwa_title": "什麼是 RWA？",
+    "what_is_rwa_desc1": "RWA (Real World Assets) 是指存在於物理世界中的有形或無形資產，例如房地產、藝術品、國債、商品甚至碳信用額度。",
+    "what_is_rwa_desc2": "透過區塊鏈技術，我們將這些資產的所有權或收益權轉化為數位代幣（Token化）。這不僅打破了傳統金融市場的地域和資金門檻限制，還極大地提升了資產的交易效率。",
+    "physical_assets": "物理資產",
+    "physical_assets_desc": "房地產、基礎設施、大宗商品等實體資產",
+    "financial_assets": "金融工具",
+    "financial_assets_desc": "國債、股票、私募股權、發票融資",
+    "core_advantages_title": "RWA 的核心優勢",
+    "core_advantages_subtitle": "重塑資產流通方式，釋放兆級市場潛力",
+    "adv_liquidity_title": "釋放流動性",
+    "adv_liquidity_desc": "透過碎片化（Fractionalization），將高門檻資產拆分，讓全球散戶投資者也能參與投資，大幅提升非流動性資產的換手率。",
+    "adv_trust_title": "透明與信任",
+    "adv_trust_desc": "區塊鏈帳本不可篡改，智能合約自動執行收益分配。從資產確權到交易結算，全流程鏈上可查，降低信任成本。",
+    "adv_friction_title": "降低交易摩擦",
+    "adv_friction_desc": "去除傳統金融中的多層中介（券商、結算中心等），實現點對點（P2P）的即時結算，大幅降低交易費用和時間成本。",
+    "future_title": "兆級規模的藍海市場",
+    "future_desc": "RWA 被認為是推動下一輪 Web3 增長的核心引擎。Coolha 致力於構建安全、合規的 RWA 基礎設施，連接傳統金融機構與去中心化網路，讓更多真實資產在鏈上煥發新生。"
+  }
 }

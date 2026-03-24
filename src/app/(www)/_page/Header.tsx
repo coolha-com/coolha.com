@@ -63,7 +63,7 @@ export default function Header() {
 
                                 <div className="p-6 border-t bg-muted/20">
                                     <p className="text-xs text-muted-foreground text-center">
-                                        © {new Date().getFullYear()} Coolha Limited
+                                        © 2026 Coolha Limited
                                     </p>
                                 </div>
                             </SheetContent>
@@ -89,7 +89,8 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
                 </Button>
 
                 <MobileNavLink href="/" label={t("home")} />
-                <MobileNavLink href="/web3-aios" label={t("ai")} />
+                <MobileNavLink href="/aios" label={t("aios")} />
+                <MobileNavLink href="/rwa" label={t("rwa")} />
                 <MobileNavLink href="/company" label={t("company")} />
                 <MobileNavLink href="https://link3.to/coolha" label={t("contact")} isExternal />
                 <MobileNavLink href="https://docs.coolha.com" label={t("docs")} isExternal />
@@ -106,8 +107,14 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
             </li>
 
             <li className="text-sm font-medium list-none">
-                <Link href={`/web3-aios`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t("ai")}
+                <Link href={`/aios`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
+                    {t("aios")}
+                </Link>
+            </li>
+
+            <li className="text-sm font-medium list-none">
+                <Link href={`/rwa`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
+                    {t("rwa")}
                 </Link>
             </li>
 

@@ -22,8 +22,11 @@ export default function Footer() {
                         <h3 className="text-sm font-semibold leading-6 text-foreground">{t("info")}</h3>
                         <div className="flex flex-col gap-3">
 
-                            <Link href={`/web3-aios`} prefetch={false} className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
-                                {t("ai")}
+                            <Link href={`/aios`} prefetch={false} className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
+                                {t("aios")}
+                            </Link>
+                            <Link href={`/rwa`} prefetch={false} className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
+                                {t("rwa")}
                             </Link>
                             <Link href={`/company`} prefetch={false} className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
                                 {t("company")}

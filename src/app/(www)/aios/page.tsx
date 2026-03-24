@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useTranslations } from "next-intl";
 
 export default function page() {
-    const t = useTranslations("web3-aios");
+    const t = useTranslations("aios");
     return (
         <>
 
