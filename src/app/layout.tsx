@@ -26,6 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: '/apple-icon.png',
     },
     manifest: '/manifest.json',
+    
   }
 }
 const geistSans = Geist({
@@ -49,6 +50,9 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <meta name="talentapp:project_verification" content="3b8c0a3f9992f43448334d9ad892606045b08bb7e5b6a1abb0b31d6acdae4bee2cef56cf646f1ec2c19298f251d6af3229056d828568fd812b331c12e1cfd301"></meta>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

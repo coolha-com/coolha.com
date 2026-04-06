@@ -19,8 +19,10 @@ export default function RWAPage() {
         <div className="bg-base-100 min-h-screen">
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-base-200/50 to-base-100 pointer-events-none" />
+            <section className="relative min-h-screen flex items-center overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/hongkong.jpg')] bg-cover bg-center bg-no-repeat pointer-events-none" />
+                <div className="absolute inset-0 bg-black/55 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/60 pointer-events-none" />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -28,14 +30,14 @@ export default function RWAPage() {
                         transition={{ duration: 0.6 }}
                         className="text-center max-w-4xl mx-auto space-y-8"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C0E218]/10 text-[#C0E218] border border-[#C0E218]/20 text-sm font-medium mb-4">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C0E218]/15 text-[#D6F44A] border border-[#C0E218]/35 text-sm font-medium mb-4 backdrop-blur-sm">
                             <RiGlobalLine className="w-4 h-4" />
                             <span>{t("hero_tag")}</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.35)]">
                             {t("hero_title")}<span className="text-[#C0E218]">{t("hero_title_highlight")}</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-base-content/70 font-light leading-relaxed">
+                        <p className="text-xl md:text-2xl text-white/85 font-light leading-relaxed drop-shadow-[0_2px_14px_rgba(0,0,0,0.45)]">
                             {t("hero_desc")}
                         </p>
                     </motion.div>

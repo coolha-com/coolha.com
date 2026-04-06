@@ -1,5 +1,5 @@
-import Footer from "./_page/Footer"
-import Header from "./_page/Header"
+import Footer from "./_layout/Footer"
+import Header from "./_layout/Header"
 
 export const metadata = {
     title: {
