@@ -1,12 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import { formatUnits } from 'viem'
-import { x402Client } from '@x402/core/client'
-import { x402HTTPClient } from '@x402/core/http'
-import { ExactEvmScheme } from '@x402/evm/exact/client'
-import { toClientEvmSigner } from '@x402/evm'
-import { useAccount, usePublicClient, useWalletClient } from 'wagmi'
+import { erc20Abi, formatUnits } from 'viem'
+import { useAccount, usePublicClient, useWriteContract } from 'wagmi'
 import Image from 'next/image'
 import Connect from '@/components/web3/ConnectButton'
 import { Button } from '@/components/ui/button'
@@ -26,20 +22,24 @@ type CatalogResponse = {
 }
 
 type PaymentRequiredResponse = {
-  code?: 'X402_PAYMENT_REQUIRED'
-  message?: string
-  payment?: {
+  code: 'X402_PAYMENT_REQUIRED'
+  message: string
+  payment: {
     network: string
     chainId: number
     recipient: `0x${string}`
     asset: 'usdc'
+    tokenAddress: `0x${string}`
+    tokenDecimals: number
     amountUsdc: string
     totalUsd: number
+    quoteId: string
+    expiresAt: number
   }
-  x402?: {
+  x402: {
     version: string
     proofHeader: string
-    settleHeader?: string
+    settleEndpoint: string
   }
 }
 
@@ -47,6 +47,9 @@ type OrderResponse = {
   message: string
   order: {
     orderId: string
+    quoteId: string
+    txHash: string
+    paidBy: string
     amountUsdc: string
     totalUsd: number
     network: string
@@ -63,27 +66,11 @@ export default function ShopClient() {
   const [error, setError] = useState('')
   const [flowLog, setFlowLog] = useState<string[]>([])
   const [order, setOrder] = useState<OrderResponse['order'] | null>(null)
-  const [settleInfo, setSettleInfo] = useState<{ transaction?: string; payer?: string } | null>(null)
   const [orderUsdcDecimals, setOrderUsdcDecimals] = useState(6)
 
   const { address, isConnected, chainId } = useAccount()
-  const { data: walletClient } = useWalletClient({ chainId: BASE_CHAIN_ID })
+  const { writeContractAsync } = useWriteContract()
   const publicClient = usePublicClient({ chainId: BASE_CHAIN_ID })
-  const xClient = useMemo(() => {
-    if (!walletClient?.account || !publicClient) return null
-    const signer = toClientEvmSigner(
-      {
-        address: walletClient.account.address,
-        signTypedData: async (message) => walletClient.signTypedData(message as never),
-      },
-      {
-        readContract: publicClient.readContract,
-      },
-    )
-
-    const core = new x402Client().register(`eip155:${BASE_CHAIN_ID}`, new ExactEvmScheme(signer))
-    return new x402HTTPClient(core)
-  }, [publicClient, walletClient])
 
   useEffect(() => {
     void fetch('/api/shop/catalog')
@@ -119,10 +106,19 @@ export default function ShopClient() {
     setCart((prev) => ({ ...prev, [id]: Math.max(0, next) }))
   }
 
+  const getErrorMessage = async (response: Response, fallbackMessage: string) => {
+    const contentType = response.headers.get('content-type') || ''
+    if (contentType.includes('application/json')) {
+      const data = (await response.json().catch(() => null)) as { message?: string; error?: string } | null
+      return data?.message || data?.error || fallbackMessage
+    }
+    const text = await response.text().catch(() => '')
+    return text.trim() || fallbackMessage
+  }
+
   const handleCheckout = async () => {
     setError('')
     setOrder(null)
-    setSettleInfo(null)
 
     if (!isConnected || !address) {
       setError('请先连接钱包')
@@ -136,15 +132,15 @@ export default function ShopClient() {
       setError('请先选择至少一个商品')
       return
     }
-    if (!xClient) {
-      setError('钱包签名器未就绪，请稍后重试')
+    if (!publicClient) {
+      setError('链上客户端未初始化')
       return
     }
 
     try {
       setLoading(true)
       setFlowLog([])
-      pushLog('步骤 1/4：请求 /api/shop/checkout，等待 x402 付款要求')
+      pushLog('步骤 1/4：请求 /api/shop/checkout，等待 402 支付挑战')
 
       const challengeRes = await fetch('/api/shop/checkout', {
         method: 'POST',
@@ -153,39 +149,45 @@ export default function ShopClient() {
       })
 
       if (challengeRes.status !== 402) {
-        const fallback = await challengeRes.json().catch(() => ({ message: '未知错误' }))
-        throw new Error(fallback.message || '服务端没有返回 402')
+        throw new Error(await getErrorMessage(challengeRes, '服务端没有返回 402'))
       }
 
-      const challengeBody = (await challengeRes.json().catch(() => ({}))) as PaymentRequiredResponse
-      const paymentRequired = xClient.getPaymentRequiredResponse((name) => challengeRes.headers.get(name), challengeBody)
-      const selected = paymentRequired.accepts?.[0]
-      pushLog(`步骤 2/4：收到付款要求，网络 ${selected?.network ?? 'unknown'}，创建签名载荷`)
-      const paymentPayload = await xClient.createPaymentPayload(paymentRequired)
-      pushLog('步骤 3/4：签名完成，携带 PAYMENT-SIGNATURE 重试结算请求')
+      const challenge = (await challengeRes.json()) as PaymentRequiredResponse
+      pushLog(`步骤 2/4：收到报价单 ${challenge.payment.quoteId}，发起 USDC transfer 交易`)
 
-      const settleRes = await fetch('/api/shop/checkout', {
+      const txHash = await writeContractAsync({
+        abi: erc20Abi,
+        address: challenge.payment.tokenAddress,
+        functionName: 'transfer',
+        args: [challenge.payment.recipient, BigInt(challenge.payment.amountUsdc)],
+        chainId: challenge.payment.chainId,
+      })
+
+      pushLog(`步骤 3/4：交易已广播 ${txHash}，等待链上确认`)
+      await publicClient.waitForTransactionReceipt({ hash: txHash })
+      pushLog('链上确认成功，提交 x-payment 证明到结算接口')
+
+      const settleRes = await fetch(challenge.x402.settleEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          ...xClient.encodePaymentSignatureHeader(paymentPayload),
+          'x-payment': JSON.stringify({
+            quoteId: challenge.payment.quoteId,
+            txHash,
+            payer: address,
+            chainId: challenge.payment.chainId,
+          }),
         },
         body: JSON.stringify({ items: cartItems }),
       })
 
       if (!settleRes.ok) {
-        const failure = await settleRes.json().catch(() => ({ message: '结算失败' }))
-        throw new Error(failure.message || '结算失败')
+        throw new Error(await getErrorMessage(settleRes, '结算失败'))
       }
 
       const settleData = (await settleRes.json()) as OrderResponse
-      const settleHeader = xClient.getPaymentSettleResponse((name) => settleRes.headers.get(name))
       setOrder(settleData.order)
-      setSettleInfo({
-        transaction: settleHeader.transaction,
-        payer: settleHeader.payer,
-      })
-      setOrderUsdcDecimals(6)
+      setOrderUsdcDecimals(challenge.payment.tokenDecimals)
       pushLog('步骤 4/4：订单确认完成')
     } catch (e) {
       const msg = e instanceof Error ? e.message : '支付失败'
@@ -201,7 +203,7 @@ export default function ShopClient() {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="space-y-2">
             <h1 className="text-3xl md:text-4xl font-bold">Coolha 品牌周边商店</h1>
-            <p className="text-base-content/70">EVM 支付采用 x402 资源服务器模式：402 挑战 → PAYMENT-SIGNATURE 重试 → PAYMENT-RESPONSE 回执。</p>
+            <p className="text-base-content/70">EVM 支付采用 x402 风格：402 报价挑战 → Base USDC 转账 → x-payment 结算确认。</p>
           </div>
           <Connect />
         </div>
@@ -238,14 +240,15 @@ export default function ShopClient() {
           <h3 className="text-xl font-semibold">结算面板</h3>
           <p className="text-base-content/70">当前购物车 {cartItems.length} 项，预估总价 ${totalUsd.toFixed(2)} USD</p>
           <Button onClick={handleCheckout} disabled={loading || cartItems.length === 0}>
-            {loading ? '支付处理中...' : '使用 Base USDC 发起 x402 支付（资源服务器模式）'}
+            {loading ? '支付处理中...' : '使用 Base USDC 发起 x402 支付'}
           </Button>
           {error ? <p className="text-red-500 text-sm">{error}</p> : null}
           {order ? (
             <div className="text-sm rounded-xl bg-emerald-500/10 border border-emerald-500/30 p-4 space-y-1">
               <p>订单号：{order.orderId}</p>
-              <p>支付地址：{settleInfo?.payer ?? '以 PAYMENT-RESPONSE 为准'}</p>
-              <p>交易哈希：{settleInfo?.transaction ?? '以 PAYMENT-RESPONSE 为准'}</p>
+              <p>报价单：{order.quoteId}</p>
+              <p>支付地址：{order.paidBy}</p>
+              <p>交易哈希：{order.txHash}</p>
               <p>
                 实付金额：{Number(formatUnits(BigInt(order.amountUsdc), orderUsdcDecimals)).toFixed(2)} USDC（$
                 {order.totalUsd.toFixed(2)} USD）
