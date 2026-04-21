@@ -17,7 +17,7 @@ const ConnectButton = dynamic(() => import("@/components/web3/ConnectButton"), {
 
 export default function Sidebar() {
     return (
-        <div className="hidden md:flex flex-col min-h-full max-w-16 xl:max-w-64 fixed top-0 left-0 z-50 border-r bg-sidebar h-svh w-full p-3 gap-4">
+        <div className="hidden md:flex md:w-16 xl:w-64 flex-col fixed top-0 left-0 z-50 border-r bg-sidebar h-svh p-3 gap-4">
             <Logo />
             {/* <Search /> */}
             <div className="flex-1 overflow-y-auto">

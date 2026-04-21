@@ -8,13 +8,13 @@ import { usePathname } from 'next/navigation';
 
 export default function layout({ children }) {
   const pathname = usePathname();
-  const activeHrefs = ['/dashboard', '/find','/ai','/wallet', '/profile']
+  const activeHrefs = ['/dashboard', '/find', '/ai', '/wallet', '/profile']
 
   const isActive = activeHrefs.some((activeHref) => pathname.startsWith(activeHref));
   return (
     <div className='bg-base-200  min-h-dvh flex'>
 
-      <div className="md:w-20 xl:w-52">
+      <div className="hidden md:block md:w-16 xl:w-64">
         <Sidebar />
       </div>
 
@@ -24,7 +24,7 @@ export default function layout({ children }) {
         <NavFooter />
       </div>
 
-      <div className={` ${isActive && `lg:w-20 xl:w-52`}`} />
+      <div className={`hidden lg:block ${isActive ? 'lg:w-16 xl:w-64' : ''}`} />
 
     </div>
   )
