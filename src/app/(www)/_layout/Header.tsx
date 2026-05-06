@@ -124,11 +124,11 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
                 </Link>
             </li>
 
-            <li className="text-sm font-medium list-none">
+{/*             <li className="text-sm font-medium list-none">
                 <Link href={`https://link3.to/coolha`} target='_blank' className="text-muted-foreground hover:text-foreground transition-colors">
                     {t("contact")} ↗
                 </Link>
-            </li>
+            </li> */}
 
             <li className="text-sm font-medium list-none">
                 <Link href={`https://docs.coolha.com`} target='_blank' className="text-muted-foreground hover:text-foreground transition-colors">

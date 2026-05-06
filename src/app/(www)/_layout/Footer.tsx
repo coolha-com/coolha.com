@@ -38,9 +38,9 @@ export default function Footer() {
                     <div className="flex flex-col gap-4">
                         <h3 className="text-sm font-semibold leading-6 text-foreground">{t("resources")}</h3>
                         <div className="flex flex-col gap-3">
-                            <Link href={`https://link3.to/coolha`} target='_blank' className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
+  {/*                           <Link href={`https://link3.to/coolha`} target='_blank' className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
                                 {t("contact")}
-                            </Link>
+                            </Link> */}
                             <Link href={`https://docs.coolha.com`} target='_blank' className="text-sm leading-6 text-muted-foreground hover:text-foreground transition-colors">
                                 {t("docs")}
                             </Link>
