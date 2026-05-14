@@ -1,12 +1,14 @@
 'use client'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import React, { type ReactNode, useEffect, useState } from 'react'
+import React, { type ReactNode, useEffect } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { useTheme } from 'next-themes'
 import { createAppKit } from '@reown/appkit/react'
+import { AaveProvider } from '@aave/react'
 import { projectId, wagmiAdapter } from './wagmi'
 import { mainnet, polygon, base, arbitrum, optimism, } from '@reown/appkit/networks'
+import { aaveClient } from '@/lib/aave/client'
 
 // Set up queryClient
 export const queryClient = new QueryClient()
@@ -69,7 +71,9 @@ export default function Wagmi_Provider({ children, cookies }: { children: ReactN
         <>
             <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={cookieToInitialState(wagmiAdapter.wagmiConfig as Config, cookies)}>
                 <QueryClientProvider client={queryClient}>
-                    {children}
+                    <AaveProvider client={aaveClient}>
+                        {children}
+                    </AaveProvider>
                 </QueryClientProvider>
             </WagmiProvider>
         </>

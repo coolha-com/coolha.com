@@ -86,9 +86,9 @@ export default function ButtonMenu() {
 
                         {/* 链接组 2 */}
                         <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                            <Link href={`https://link3.to/coolha`} className="text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
+{/*                             <Link href={`https://link3.to/coolha`} className="text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
                                 {t('contact')}
-                            </Link>
+                            </Link> */}
                             <Link href={`https://docs.coolha.com`} className="text-muted-foreground hover:text-foreground hover:underline transition-colors" target='_blank'>
                                 {t('docs')}
                             </Link>
