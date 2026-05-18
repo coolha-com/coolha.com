@@ -5,10 +5,8 @@ import React, { type ReactNode, useEffect } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 import { useTheme } from 'next-themes'
 import { createAppKit } from '@reown/appkit/react'
-import { AaveProvider } from '@aave/react'
 import { projectId, wagmiAdapter } from './wagmi'
 import { mainnet, polygon, base, arbitrum, optimism, } from '@reown/appkit/networks'
-import { aaveClient } from '@/lib/aave/client'
 
 // Set up queryClient
 export const queryClient = new QueryClient()
@@ -48,9 +46,7 @@ const modal = createAppKit({
     enableCoinbase: false, // true by default
     allWallets: 'SHOW',
     featuredWalletIds: [
-        '971e689d0a5be527bac79629b4ee9b925e82208e5168b733496a09c0faed0709',
         'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96',
-        'fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa',
         '1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369',
         '225affb176778569276e484e1b92637ad061b01e13a048b35a9d280c3b58970f',
     ]
@@ -71,9 +67,7 @@ export default function Wagmi_Provider({ children, cookies }: { children: ReactN
         <>
             <WagmiProvider config={wagmiAdapter.wagmiConfig as Config} initialState={cookieToInitialState(wagmiAdapter.wagmiConfig as Config, cookies)}>
                 <QueryClientProvider client={queryClient}>
-                    <AaveProvider client={aaveClient}>
                         {children}
-                    </AaveProvider>
                 </QueryClientProvider>
             </WagmiProvider>
         </>

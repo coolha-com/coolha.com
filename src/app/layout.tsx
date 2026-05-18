@@ -4,13 +4,14 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
-import Providers from "@/config/Providers";
 import { headers } from 'next/headers'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/next"
 import { cn } from "@/lib/utils";
+import Theme from "@/config/Theme";
+import Wagmi_Provider from "@/config/Wagmi_Provider";
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -30,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: '/apple-icon.png',
     },
     manifest: '/manifest.json',
-    
+
   }
 }
 const geistSans = Geist({
@@ -61,9 +62,11 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Providers cookies={cookies}>
-            {children}
-          </Providers>
+          <Theme>
+            <Wagmi_Provider cookies={cookies}>
+              {children}
+            </Wagmi_Provider>
+          </Theme>
         </NextIntlClientProvider>
         <SpeedInsights />
         <Analytics />
@@ -78,7 +81,7 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
               url: "https://coolha.com",
               description:
                 "Web3 blockchain marketing, DApp development, and smart contract solutions",
-              sameAs: ["https://x.com/coolha_com", "https://github.com/coolha-com","https://www.linkedin.com/company/coolha/","https://farcaster.xyz/coolha"],
+              sameAs: ["https://x.com/coolha_com", "https://github.com/coolha-com", "https://www.linkedin.com/company/coolha/", "https://farcaster.xyz/coolha"],
             }),
           }}
         />
