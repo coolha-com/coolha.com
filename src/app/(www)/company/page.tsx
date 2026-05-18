@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { RxRocket, RxEyeOpen, RxHeart, RxLightningBolt, RxCode, RxBarChart, RxActivityLog, RxListBullet, RxDesktop, RxLaptop, RxSpeakerLoud, RxArrowTopRight } from "react-icons/rx";
+import { Activity, ArrowUpRight, BarChart3, Code2, Eye, Heart, Laptop, List, Megaphone, Monitor, Rocket, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -12,66 +12,66 @@ export default function page() {
         {
             name: t("mission"),
             description: t("mission_desc"),
-            icon: RxRocket,
+            icon: Rocket,
         },
         {
             name: t("vision"),
             description: t("vision_desc"),
-            icon: RxEyeOpen,
+            icon: Eye,
         },
         {
             name: t("values"),
             description: t("values_desc"),
-            icon: RxHeart,
+            icon: Heart,
         },
         {
             name: t("innovation"),
             description: t("innovation_desc"),
-            icon: RxLightningBolt,
+            icon: Zap,
         },
     ]
     const Bus = [
         {
             name: t("development"),
             description: t("development_desc"),
-            icon: RxCode,
+            icon: Code2,
         },
         {
             name: t("market"),
             description: t("market_desc"),
-            icon: RxBarChart,
+            icon: BarChart3,
         },
         {
             name: t("marketing"),
             description: t("marketing_desc"),
-            icon: RxActivityLog,
+            icon: Activity,
         },
         {
             name: t("planning"),
             description: t("planning_desc"),
-            icon: RxListBullet,
+            icon: List,
         },
     ]
     const Case = [
         {
             name: t("digital_marketing"),
             description: t("digital_marketing_desc"),
-            icon: RxDesktop,
+            icon: Monitor,
         },
         {
             name: t("web3_application"),
             description: t("web3_application_desc"),
-            icon: RxLaptop,
+            icon: Laptop,
         },
         {
             name: t("exposure_growth"),
             description: t("exposure_growth_desc"),
-            icon: RxSpeakerLoud,
+            icon: Megaphone,
         },
         {
             name: t("brand_building"),
             description: t("brand_building_desc"),
-            icon: RxArrowTopRight,
+            icon: ArrowUpRight,
         },
     ]
     return (

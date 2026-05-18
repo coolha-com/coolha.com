@@ -1,6 +1,6 @@
 'use client';
 
-import { RiTranslate } from 'react-icons/ri';
+import { RiTranslate } from '@remixicon/react';
 import { useLocale } from 'next-intl';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <DropdownMenu>
+        <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon" className="rounded-full">
                     <RiTranslate size={20} />
@@ -33,7 +33,10 @@ export default function LanguageSwitcher() {
                         onClick={() => handleSelect(l.code)}
                         className={l.code === locale ? 'text-primary' : ''}
                     >
-                        {l.label}
+                        <span>{l.label}</span>
+                        <span className={`ml-auto ${l.code === locale ? 'opacity-100' : 'opacity-0'}`}>
+                            ✓
+                        </span>
                     </DropdownMenuItem>
                 ))}
             </DropdownMenuContent>

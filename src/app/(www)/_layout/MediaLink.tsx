@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image";
 import Link from "next/link"
 import { useState } from "react";
-import { FaCircleChevronLeft, FaDiscord, FaGithub, FaInstagram, FaSquareXTwitter, FaTelegram, FaTiktok, } from 'react-icons/fa6';
-import { RiBlueskyFill, RiInstagramFill, RiLinkedinBoxFill, RiMailFill, RiTiktokFill, RiWechatFill, RiWeiboFill } from "react-icons/ri";
+import { RiArrowLeftCircleLine, RiGithubFill, RiLinkedinBoxFill, RiMailFill, RiTwitterXFill, RiWechatFill } from "@remixicon/react";
 export default function MediaLink() {
   const [showImage, setShowImage] = useState(false);
 
@@ -20,7 +19,7 @@ export default function MediaLink() {
     <>
 
             <MLink href="https://link3.to/coolha" >
-        <FaCircleChevronLeft className="w-7 h-7" />
+        <RiArrowLeftCircleLine className="w-7 h-7" />
       </MLink>
 
       <MLink href="mailto:cs@coolha.com" >
@@ -32,7 +31,7 @@ export default function MediaLink() {
       </MLink>
 
       <MLink href="https://x.com/coolha_com" >
-        <FaSquareXTwitter className="w-7 h-7" />
+        <RiTwitterXFill className="w-7 h-7" />
       </MLink>
 
       <MLink href="https://farcaster.xyz/coolha" >
@@ -84,7 +83,7 @@ export default function MediaLink() {
       </MLink>
 
       <MLink href="https://github.com/coolha-com" >
-        <FaGithub className="w-7 h-7" />
+        <RiGithubFill className="w-7 h-7" />
       </MLink>
 
 

@@ -1,10 +1,10 @@
 'use client'
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { RxHamburgerMenu, RxExternalLink } from "react-icons/rx";
+import { ExternalLink, Menu } from "lucide-react";
 import Image from "next/image";
-import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
-import ThemeSwap from "@/components/ui/ThemeSwap";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ThemeSwap from "@/components/ThemeSwap";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -33,19 +33,21 @@ export default function Header() {
                 <div className="flex items-center gap-3">{/* Right */}
                     <ThemeSwap />
                     <LanguageSwitcher />
-                    <Button asChild className="hidden md:flex rounded-full text-sm font-semibold px-6" size="default">
+                    <Button asChild className="hidden md:flex rounded-4xl text-sm font-semibold px-6" size="default">
                         <Link href={'https://app.coolha.com'} target="_blank">
                             {t("launch")}
                         </Link>
                     </Button>
 
-                    <div className="md:hidden">
+                    <div className="md:hidden flex">
                         <Sheet>
+
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon" className="rounded-full">
-                                    <RxHamburgerMenu className="w-6 h-6" />
+                                    <Menu className="w-6 h-6" />
                                 </Button>
                             </SheetTrigger>
+
                             <SheetContent side="right" className="flex flex-col w-[300px] sm:w-[400px] p-0">
                                 <SheetHeader className="p-6 text-left border-b">
                                     <div className="flex items-center gap-3">
@@ -66,6 +68,7 @@ export default function Header() {
                                     </p>
                                 </div>
                             </SheetContent>
+
                         </Sheet>
                     </div>
 
@@ -83,9 +86,9 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
     if (isMobile) {
         return (
             <>
-                <Button asChild className="w-full rounded-xl text-lg font-bold h-12 mb-4" size="lg">
+                {/*                 <Button asChild className="w-full rounded-4xl text-lg font-bold h-12 mb-4" size="lg">
                     <Link href={'https://app.coolha.com'} target="_blank">{t("launch")}</Link>
-                </Button>
+                </Button> */}
 
                 <MobileNavLink href="/" label={t("home")} />
                 <MobileNavLink href="/aios" label={t("aios")} />
@@ -143,10 +146,10 @@ function MobileNavLink({ href, label, isExternal = false }: { href: string, labe
         <Link
             href={href}
             target={isExternal ? "_blank" : undefined}
-            className="flex items-center justify-between p-4 rounded-xl hover:bg-muted transition-colors group"
+            className="flex items-center justify-between p-4 rounded-4xl hover:bg-muted transition-colors group"
         >
             <span className="text-base font-medium text-foreground">{label}</span>
-            {isExternal && <RxExternalLink className="w-4 h-4 text-muted-foreground" />}
+            {isExternal && <ExternalLink className="w-4 h-4 text-muted-foreground" />}
         </Link>
     );
 }

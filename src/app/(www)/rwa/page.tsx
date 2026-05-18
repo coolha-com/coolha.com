@@ -10,7 +10,7 @@ import {
     RiFundsLine,
     RiLineChartLine,
     RiExchangeFundsLine
-} from "react-icons/ri";
+} from "@remixicon/react";
 
 export default function RWAPage() {
     const t = useTranslations("rwa");
