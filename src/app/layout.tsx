@@ -4,12 +4,10 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
-import { headers } from 'next/headers'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/next"
 import { cn } from "@/lib/utils";
 import Theme from "@/config/Theme";
-import Wagmi_Provider from "@/config/Wagmi_Provider";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -48,8 +46,6 @@ const geistMono = Geist_Mono({
 
 
 export default async function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
-  const headersObj = await headers();
-  const cookies = headersObj.get('cookie')
   const locale = await getLocale();
   const messages = (await import(`../i18n/${locale}.json`)).default;
 
@@ -63,9 +59,7 @@ export default async function RootLayout({ children, }: Readonly<{ children: Rea
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Theme>
-            <Wagmi_Provider cookies={cookies}>
-              {children}
-            </Wagmi_Provider>
+            {children}
           </Theme>
         </NextIntlClientProvider>
         <SpeedInsights />

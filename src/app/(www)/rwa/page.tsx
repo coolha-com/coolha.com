@@ -22,7 +22,7 @@ export default function RWAPage() {
             <section className="relative min-h-screen flex items-center overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/hongkong.jpg')] bg-cover bg-center bg-no-repeat pointer-events-none" />
                 <div className="absolute inset-0 bg-black/55 pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/60 pointer-events-none" />
+                <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/45 to-black/60 pointer-events-none" />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

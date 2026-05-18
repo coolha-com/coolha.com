@@ -1,5 +1,4 @@
 'use client'
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { RxHamburgerMenu, RxExternalLink } from "react-icons/rx";
@@ -35,7 +34,7 @@ export default function Header() {
                     <ThemeSwap />
                     <LanguageSwitcher />
                     <Button asChild className="hidden md:flex rounded-full text-sm font-semibold px-6" size="default">
-                        <Link href={'/dashboard'}>
+                        <Link href={'https://testnet.coolha.com'} target="_blank">
                             {t("launch")}
                         </Link>
                     </Button>
@@ -85,7 +84,7 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
         return (
             <>
                 <Button asChild className="w-full rounded-xl text-lg font-bold h-12 mb-4" size="lg">
-                    <Link href={'/dashboard'}> {t("launch")}</Link>
+                    <Link href={'/company'}>{t("company")}</Link>
                 </Button>
 
                 <MobileNavLink href="/" label={t("home")} />
@@ -124,7 +123,7 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
                 </Link>
             </li>
 
-{/*             <li className="text-sm font-medium list-none">
+            {/*             <li className="text-sm font-medium list-none">
                 <Link href={`https://link3.to/coolha`} target='_blank' className="text-muted-foreground hover:text-foreground transition-colors">
                     {t("contact")} ↗
                 </Link>
@@ -152,4 +151,3 @@ function MobileNavLink({ href, label, isExternal = false }: { href: string, labe
         </Link>
     );
 }
-
