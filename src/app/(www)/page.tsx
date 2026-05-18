@@ -50,7 +50,7 @@ export default function Page() {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <Link
-                  href="https://testnet.coolha.com"
+                  href="https://app.coolha.com"
                   target="_blank"
                   className="group inline-flex items-center gap-3 bg-transparent border border-base-content/20 hover:border-[#C0E218] text-base-content hover:text-[#C0E218] px-10 py-4 rounded-full text-lg font-light tracking-wider transition-all duration-500 hover:shadow-[0_0_30px_rgba(192,226,24,0.3)] backdrop-blur-sm"
                 >

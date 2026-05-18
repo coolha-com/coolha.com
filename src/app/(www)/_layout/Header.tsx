@@ -34,7 +34,7 @@ export default function Header() {
                     <ThemeSwap />
                     <LanguageSwitcher />
                     <Button asChild className="hidden md:flex rounded-full text-sm font-semibold px-6" size="default">
-                        <Link href={'https://testnet.coolha.com'} target="_blank">
+                        <Link href={'https://app.coolha.com'} target="_blank">
                             {t("launch")}
                         </Link>
                     </Button>
@@ -84,14 +84,13 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
         return (
             <>
                 <Button asChild className="w-full rounded-xl text-lg font-bold h-12 mb-4" size="lg">
-                    <Link href={'/company'}>{t("company")}</Link>
+                    <Link href={'https://app.coolha.com'} target="_blank">{t("launch")}</Link>
                 </Button>
 
                 <MobileNavLink href="/" label={t("home")} />
                 <MobileNavLink href="/aios" label={t("aios")} />
                 <MobileNavLink href="/rwa" label={t("rwa")} />
                 <MobileNavLink href="/company" label={t("company")} />
-                <MobileNavLink href="https://link3.to/coolha" label={t("contact")} isExternal />
                 <MobileNavLink href="https://docs.coolha.com" label={t("docs")} isExternal />
             </>
         );
