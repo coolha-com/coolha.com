@@ -1,45 +1,169 @@
 "use client"
 
 import * as React from "react"
-import { Dialog as SheetPrimitive } from "radix-ui"
+import { createPortal } from "react-dom"
 
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { RiCloseLine } from "@remixicon/react"
+import { RiCloseLine } from "react-icons/ri"
 
-function Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {
-  return <SheetPrimitive.Root data-slot="sheet" {...props} />
+function joinClasses(...classes: Array<string | boolean | undefined>) {
+  return classes.filter(Boolean).join(" ")
+}
+
+type SheetContextValue = {
+  open: boolean
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const SheetContext = React.createContext<SheetContextValue | null>(null)
+
+function useSheetContext() {
+  const context = React.useContext(SheetContext)
+
+  if (!context) {
+    throw new Error("Sheet components must be used within <Sheet>")
+  }
+
+  return context
+}
+
+function Sheet({
+  children,
+  open: controlledOpen,
+  defaultOpen = false,
+  onOpenChange,
+}: {
+  children: React.ReactNode
+  open?: boolean
+  defaultOpen?: boolean
+  onOpenChange?: (open: boolean) => void
+}) {
+  const [uncontrolledOpen, setUncontrolledOpen] = React.useState(defaultOpen)
+  const open = controlledOpen ?? uncontrolledOpen
+
+  const setOpen = React.useCallback(
+    (nextValue: React.SetStateAction<boolean>) => {
+      const nextOpen =
+        typeof nextValue === "function" ? nextValue(open) : nextValue
+
+      if (controlledOpen === undefined) {
+        setUncontrolledOpen(nextOpen)
+      }
+
+      onOpenChange?.(nextOpen)
+    },
+    [controlledOpen, onOpenChange, open]
+  )
+
+  return (
+    <SheetContext.Provider value={{ open, setOpen }}>
+      {children}
+    </SheetContext.Provider>
+  )
 }
 
 function SheetTrigger({
+  asChild = false,
+  children,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Trigger>) {
-  return <SheetPrimitive.Trigger data-slot="sheet-trigger" {...props} />
+}: React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  asChild?: boolean
+  children: React.ReactNode
+}) {
+  const { setOpen } = useSheetContext()
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    props.onClick?.(event)
+
+    if (!event.defaultPrevented) {
+      setOpen(true)
+    }
+  }
+
+  if (asChild && React.isValidElement(children)) {
+    const child = children as React.ReactElement<{ onClick?: React.MouseEventHandler; className?: string }>
+
+    return React.cloneElement(child, {
+      ...props,
+      onClick: (event: React.MouseEvent<HTMLButtonElement>) => {
+        child.props.onClick?.(event)
+        handleClick(event)
+      },
+    })
+  }
+
+  return (
+    <button data-slot="sheet-trigger" type="button" {...props} onClick={handleClick}>
+      {children}
+    </button>
+  )
 }
 
 function SheetClose({
+  asChild = false,
+  children,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Close>) {
-  return <SheetPrimitive.Close data-slot="sheet-close" {...props} />
+}: React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  asChild?: boolean
+  children: React.ReactNode
+}) {
+  const { setOpen } = useSheetContext()
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    props.onClick?.(event)
+
+    if (!event.defaultPrevented) {
+      setOpen(false)
+    }
+  }
+
+  if (asChild && React.isValidElement(children)) {
+    const child = children as React.ReactElement<{ onClick?: React.MouseEventHandler; className?: string }>
+
+    return React.cloneElement(child, {
+      ...props,
+      onClick: (event: React.MouseEvent<HTMLButtonElement>) => {
+        child.props.onClick?.(event)
+        handleClick(event)
+      },
+    })
+  }
+
+  return (
+    <button data-slot="sheet-close" type="button" {...props} onClick={handleClick}>
+      {children}
+    </button>
+  )
 }
 
-function SheetPortal({
-  ...props
-}: React.ComponentProps<typeof SheetPrimitive.Portal>) {
-  return <SheetPrimitive.Portal data-slot="sheet-portal" {...props} />
+function SheetPortal({ children }: { children: React.ReactNode }) {
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  return createPortal(children, document.body)
 }
 
 function SheetOverlay({
   className,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Overlay>) {
+}: React.ComponentProps<"div">) {
+  const { open, setOpen } = useSheetContext()
+
+  if (!open) return null
+
   return (
-    <SheetPrimitive.Overlay
+    <div
       data-slot="sheet-overlay"
-      className={cn(
-        "fixed inset-0 z-50 bg-black/30 duration-100 supports-backdrop-filter:backdrop-blur-sm data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0",
+      className={joinClasses(
+        "fixed inset-0 z-50 bg-black/30 duration-100 supports-backdrop-filter:backdrop-blur-sm",
         className
       )}
+      onClick={() => setOpen(false)}
       {...props}
     />
   )
@@ -51,37 +175,62 @@ function SheetContent({
   side = "right",
   showCloseButton = true,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Content> & {
+}: React.ComponentProps<"div"> & {
   side?: "top" | "right" | "bottom" | "left"
   showCloseButton?: boolean
 }) {
+  const { open, setOpen } = useSheetContext()
+
+  React.useEffect(() => {
+    if (!open) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false)
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    document.body.style.overflow = "hidden"
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+      document.body.style.overflow = ""
+    }
+  }, [open, setOpen])
+
+  if (!open) return null
+
   return (
     <SheetPortal>
       <SheetOverlay />
-      <SheetPrimitive.Content
+      <div
         data-slot="sheet-content"
         data-side={side}
-        className={cn(
-          "fixed z-50 flex flex-col bg-popover bg-clip-padding text-sm text-popover-foreground shadow-xl transition duration-200 ease-in-out data-[side=bottom]:inset-x-0 data-[side=bottom]:bottom-0 data-[side=bottom]:h-auto data-[side=bottom]:border-t data-[side=left]:inset-y-0 data-[side=left]:left-0 data-[side=left]:h-full data-[side=left]:w-3/4 data-[side=left]:border-r data-[side=right]:inset-y-0 data-[side=right]:right-0 data-[side=right]:h-full data-[side=right]:w-3/4 data-[side=right]:border-l data-[side=top]:inset-x-0 data-[side=top]:top-0 data-[side=top]:h-auto data-[side=top]:border-b data-[side=left]:sm:max-w-sm data-[side=right]:sm:max-w-sm data-open:animate-in data-open:fade-in-0 data-[side=bottom]:data-open:slide-in-from-bottom-10 data-[side=left]:data-open:slide-in-from-left-10 data-[side=right]:data-open:slide-in-from-right-10 data-[side=top]:data-open:slide-in-from-top-10 data-closed:animate-out data-closed:fade-out-0 data-[side=bottom]:data-closed:slide-out-to-bottom-10 data-[side=left]:data-closed:slide-out-to-left-10 data-[side=right]:data-closed:slide-out-to-right-10 data-[side=top]:data-closed:slide-out-to-top-10",
+        className={joinClasses(
+          "fixed z-50 flex flex-col bg-popover bg-clip-padding text-sm text-popover-foreground shadow-xl transition duration-200 ease-in-out",
+          side === "bottom" && "inset-x-0 bottom-0 h-auto border-t",
+          side === "left" && "inset-y-0 left-0 h-full w-3/4 border-r sm:max-w-sm",
+          side === "right" && "inset-y-0 right-0 h-full w-3/4 border-l sm:max-w-sm",
+          side === "top" && "inset-x-0 top-0 h-auto border-b",
           className
         )}
         {...props}
       >
         {children}
         {showCloseButton && (
-          <SheetPrimitive.Close data-slot="sheet-close" asChild>
+          <SheetClose asChild>
             <Button
               variant="ghost"
               className="absolute top-4 right-4 bg-secondary"
               size="icon-sm"
             >
-              <RiCloseLine
-              />
+              <RiCloseLine />
               <span className="sr-only">Close</span>
             </Button>
-          </SheetPrimitive.Close>
+          </SheetClose>
         )}
-      </SheetPrimitive.Content>
+      </div>
     </SheetPortal>
   )
 }
@@ -90,7 +239,7 @@ function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="sheet-header"
-      className={cn("flex flex-col gap-1.5 p-6", className)}
+      className={joinClasses("flex flex-col gap-1.5 p-6", className)}
       {...props}
     />
   )
@@ -100,7 +249,7 @@ function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="sheet-footer"
-      className={cn("mt-auto flex flex-col gap-2 p-6", className)}
+      className={joinClasses("mt-auto flex flex-col gap-2 p-6", className)}
       {...props}
     />
   )
@@ -109,11 +258,11 @@ function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
 function SheetTitle({
   className,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Title>) {
+}: React.ComponentProps<"div">) {
   return (
-    <SheetPrimitive.Title
+    <div
       data-slot="sheet-title"
-      className={cn(
+      className={joinClasses(
         "font-heading text-base font-medium text-foreground",
         className
       )}
@@ -125,11 +274,11 @@ function SheetTitle({
 function SheetDescription({
   className,
   ...props
-}: React.ComponentProps<typeof SheetPrimitive.Description>) {
+}: React.ComponentProps<"div">) {
   return (
-    <SheetPrimitive.Description
+    <div
       data-slot="sheet-description"
-      className={cn("text-sm text-muted-foreground", className)}
+      className={joinClasses("text-sm text-muted-foreground", className)}
       {...props}
     />
   )
