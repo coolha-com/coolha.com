@@ -148,8 +148,8 @@ function MobileNavLink({ href, label, isExternal = false }: { href: string, labe
             target={isExternal ? "_blank" : undefined}
             className="flex items-center justify-between p-4 rounded-4xl hover:bg-muted transition-colors group"
         >
-            <span className="text-base font-medium text-foreground">{label}</span>
-            {isExternal && <ExternalLink className="w-4 h-4 text-muted-foreground" />}
+            <span className="text-base font-medium text-foreground">{label}{isExternal && <> ↗</>}</span>
+
         </Link>
     );
 }

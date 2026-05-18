@@ -33,7 +33,7 @@ export default function Page() {
                 {t("subtitle1")}
               </p>
               <p className="text-base-content/90 text-lg md:text-xl font-light tracking-wide leading-8">
-
+                {t("subtitle2")}
               </p>
             </div>
 
