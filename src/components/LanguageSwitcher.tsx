@@ -2,6 +2,7 @@
 
 import { RiTranslate } from '@remixicon/react';
 import { useLocale } from 'next-intl';
+import { useRouter, usePathname } from 'next/navigation';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 
@@ -13,10 +14,15 @@ const locales = [
 
 export default function LanguageSwitcher() {
     const locale = useLocale();
+    const pathname = usePathname();
+    const router = useRouter();
 
     const handleSelect = (nextLocale: string) => {
-        document.cookie = `NEXT_LOCALE=${nextLocale}; path=/;`;
-        window.location.reload();
+        if (nextLocale === locale) return;
+
+        // Replace current locale in pathname with new locale
+        const newPathname = pathname.replace(`/${locale}`, `/${nextLocale}`);
+        router.push(newPathname);
     };
 
     return (

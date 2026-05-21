@@ -7,6 +7,12 @@
     "launch": "启动"
   },
   "aios": {
+    "page_title": "AI 公司操作系统",
+    "page_description": "用 AI 智能体、Web3 基础设施和加密原生工作流自动化整个业务。AIOS 帮助个人创业者以 AI 员工构建可扩展公司。",
+    "definition_title": "什么是 AIOS？",
+    "definition_intro": "AIOS（AI Company Operating System）是一套由区块链驱动的自动化平台，让一个人也能借助 AI 智能体与 Web3 基础设施搭建并运营一家公司。",
+    "definition_desc1": "无需先组建传统团队，AIOS 提供五个 AI 员工角色：CEO、市场官（CMO）、销售官（CSO）、首席技术官（CTO）和首席财务官（CFO），分别自动处理战略、营销、销售、技术与财务工作。",
+    "definition_desc2": "这些 AI 智能体通过 OpenClaw runtime 协同运行，并结合 Base Chain 与 USDC 实现安全、透明、自动化的支付流程，使整套系统真正具备 Web3 原生能力。",
     "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
     "ai_rise_desc": "随着人工智能能力的快速提升，越来越多的工作正在由 AI 系统完成，AI 正逐渐成为数字世界中的核心执行者。",
     "new_work_model_title": "Coolha 正在研究和构建一套新的工作模式：",
@@ -17,7 +23,25 @@
     "past_startup_desc": "运作公司通常意味着不断扩大团队规模。",
     "in_ai_era": "而在 AI 时代",
     "ai_startup_desc": "运作公司可能意味着构建更智能的系统。",
-    "conclusion_desc": "通过 AI 智能体、自动化流程以及 Web3 基础设施，一个人也可以构建、运营并扩展一家数字公司。"
+    "conclusion_desc": "通过 AI 智能体、自动化流程以及 Web3 基础设施，一个人也可以构建、运营并扩展一家数字公司。",
+    "benefits_title": "AIOS 的核心优势",
+    "benefit_cost_title": "成本效率",
+    "benefit_cost_desc": "减少高成本团队招聘。AI 智能体可 24/7 工作，无需工资、福利和额外管理开销。",
+    "benefit_scale_title": "可扩展性",
+    "benefit_scale_desc": "无需受限于招聘节奏即可快速扩展业务规模，AI 能承接持续增长的工作量。",
+    "benefit_web3_title": "Web3 原生",
+    "benefit_web3_desc": "基于区块链构建，支持 USDC 支付、Base Chain 结算与透明可验证的交易流程。",
+    "benefit_always_on_title": "始终在线",
+    "benefit_always_on_desc": "全天候运行不停机。当你休息或专注战略时，AI 智能体仍会持续推进业务。",
+    "use_cases_title": "谁适合使用 AIOS？",
+    "use_case_founders_title": "个人创业者",
+    "use_case_founders_desc": "用 AI 团队自动处理运营、营销和销售，更快启动并验证业务。",
+    "use_case_developers_title": "Web3 开发者",
+    "use_case_developers_desc": "专注做产品本身，AIOS 帮你承担商业拓展与市场运营工作。",
+    "use_case_creators_title": "内容创作者",
+    "use_case_creators_desc": "把精力放在内容创作上，让 AIOS 自动完成增长、变现和品牌合作推进。",
+    "use_case_nomads_title": "数字游民",
+    "use_case_nomads_desc": "无论身在何处都能经营全球化业务，AIOS 会持续帮你运转公司。"
   },
   "company": {
     "title": "酷哈有限公司",
@@ -118,6 +142,8 @@
   "find": {},
 
   "rwa": {
+    "page_title": "真实世界资产代币化平台",
+    "page_description": "将房地产、大宗商品、债券等真实世界资产接入区块链，释放流动性，并用透明、可编程的基础设施管理资产发行与流转。",
     "hero_tag": "区块链上的真实世界资产",
     "hero_title": "连接现实与",
     "hero_title_highlight": "数字世界",

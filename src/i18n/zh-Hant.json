@@ -7,6 +7,12 @@
     "launch": "啟動"
   },
   "aios": {
+    "page_title": "AI 公司作業系統",
+    "page_description": "用 AI 智慧體、Web3 基礎設施與加密原生工作流自動化整個業務。AIOS 幫助個人創業者以 AI 員工打造可擴展公司。",
+    "definition_title": "什麼是 AIOS？",
+    "definition_intro": "AIOS（AI Company Operating System）是一套由區塊鏈驅動的自動化平台，讓一個人也能借助 AI 智慧體與 Web3 基礎設施建立並營運一家公司。",
+    "definition_desc1": "無需先組建傳統團隊，AIOS 提供五個 AI 員工角色：CEO、行銷長（CMO）、銷售長（CSO）、技術長（CTO）與財務長（CFO），自動處理策略、行銷、銷售、技術與財務工作。",
+    "definition_desc2": "這些 AI 智慧體透過 OpenClaw runtime 協同運行，並結合 Base Chain 與 USDC 實現安全、透明且自動化的支付流程，使整套系統真正具備 Web3 原生能力。",
     "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
     "ai_rise_desc": "隨著人工智慧能力的快速提升，越來越多的工作正在由 AI 系統完成，AI 正逐漸成為數位世界中的核心執行者。",
     "new_work_model_title": "Coolha 正在研究和構建一套新的工作模式：",
@@ -17,7 +23,25 @@
     "past_startup_desc": "運作公司通常意味著不斷擴大團隊規模。",
     "in_ai_era": "而在 AI 時代",
     "ai_startup_desc": "運作公司可能意味著構建更智慧的系統。",
-    "conclusion_desc": "透過 AI 智慧體、自動化流程以及 Web3 基礎設施，一個人也可以構建、營運並擴展一家數位公司。"
+    "conclusion_desc": "透過 AI 智慧體、自動化流程以及 Web3 基礎設施，一個人也可以構建、營運並擴展一家數位公司。",
+    "benefits_title": "AIOS 的核心優勢",
+    "benefit_cost_title": "成本效率",
+    "benefit_cost_desc": "減少高成本團隊招募。AI 智慧體可 24/7 工作，無需薪資、福利與額外管理成本。",
+    "benefit_scale_title": "可擴展性",
+    "benefit_scale_desc": "無需受限於招募節奏即可快速擴大營運規模，AI 能承接持續成長的工作量。",
+    "benefit_web3_title": "Web3 原生",
+    "benefit_web3_desc": "基於區塊鏈打造，支援 USDC 支付、Base Chain 結算與透明可驗證的交易流程。",
+    "benefit_always_on_title": "始終在線",
+    "benefit_always_on_desc": "全天候運作不中斷。當你休息或專注策略時，AI 智慧體仍會持續推進業務。",
+    "use_cases_title": "誰適合使用 AIOS？",
+    "use_case_founders_title": "個人創業者",
+    "use_case_founders_desc": "用 AI 團隊自動處理營運、行銷與銷售，更快啟動並驗證業務。",
+    "use_case_developers_title": "Web3 開發者",
+    "use_case_developers_desc": "專注打造產品本身，AIOS 會替你承擔商務拓展與市場營運工作。",
+    "use_case_creators_title": "內容創作者",
+    "use_case_creators_desc": "把精力放在內容創作上，讓 AIOS 自動完成成長、變現與品牌合作推進。",
+    "use_case_nomads_title": "數位遊牧者",
+    "use_case_nomads_desc": "無論身在何處都能經營全球化業務，AIOS 會持續替你運轉公司。"
   },
   "company": {
     "title": "酷哈有限公司",
@@ -117,6 +141,8 @@
   },
 
   "rwa": {
+    "page_title": "真實世界資產代幣化平台",
+    "page_description": "將房地產、大宗商品、債券等真實世界資產接入區塊鏈，釋放流動性，並以透明、可程式化的基礎設施管理資產發行與流轉。",
     "hero_tag": "區塊鏈上的真實世界資產",
     "hero_title": "連接現實與",
     "hero_title_highlight": "數位世界",

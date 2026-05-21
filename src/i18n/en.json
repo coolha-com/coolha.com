@@ -7,6 +7,12 @@
     "launch": "Launch"
   },
   "aios": {
+    "page_title": "AI Company Operating System",
+    "page_description": "Automate your business with AI agents, Web3 infrastructure, and crypto-native workflows. AIOS helps solo founders build scalable companies with AI employees.",
+    "definition_title": "What is AIOS?",
+    "definition_intro": "AIOS (AI Company Operating System) is a blockchain-powered automation platform that enables a single person to build and operate a fully functional company using AI agents and Web3 infrastructure.",
+    "definition_desc1": "Instead of hiring a team, AIOS provides five AI employees: a CEO, Marketing Officer (CMO), Sales Officer (CSO), Chief Technology Officer (CTO), and Chief Financial Officer (CFO), working autonomously across strategy, marketing, sales, technology, and finance.",
+    "definition_desc2": "These AI agents orchestrate through OpenClaw runtime and leverage Base Chain for secure, transparent, and automated payments with USDC, making the system truly Web3-native.",
     "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
     "ai_rise_desc": "With the rapid improvement of artificial intelligence capabilities, more and more tasks are being completed by AI systems, and AI is gradually becoming a core executor in the digital world.",
     "new_work_model_title": "Coolha is researching and building a new work model:",
@@ -17,7 +23,25 @@
     "past_startup_desc": "Running a company usually meant constantly expanding team size.",
     "in_ai_era": "In the AI Era",
     "ai_startup_desc": "Running a company may mean building smarter systems.",
-    "conclusion_desc": "Through AI agents, automated processes, and Web3 infrastructure, one person can build, operate, and scale a digital company."
+    "conclusion_desc": "Through AI agents, automated processes, and Web3 infrastructure, one person can build, operate, and scale a digital company.",
+    "benefits_title": "Key Benefits of AIOS",
+    "benefit_cost_title": "Cost Efficiency",
+    "benefit_cost_desc": "Eliminate expensive team hiring. AI agents work 24/7 without salary, benefits, or overhead costs.",
+    "benefit_scale_title": "Scalability",
+    "benefit_scale_desc": "Scale your operations instantly without hiring bottlenecks. AI can handle unlimited workload growth.",
+    "benefit_web3_title": "Web3 Native",
+    "benefit_web3_desc": "Built on blockchain with USDC payments, Base Chain settlement, and transparent transactions.",
+    "benefit_always_on_title": "Always Available",
+    "benefit_always_on_desc": "24/7 operation without downtime. AI agents continue working while you sleep or focus on strategy.",
+    "use_cases_title": "Who Uses AIOS?",
+    "use_case_founders_title": "Solo Founders",
+    "use_case_founders_desc": "Launch businesses faster with an AI team handling operations, marketing, and sales automatically.",
+    "use_case_developers_title": "Web3 Developers",
+    "use_case_developers_desc": "Build products without operational overhead. AIOS handles business development and marketing.",
+    "use_case_creators_title": "Content Creators",
+    "use_case_creators_desc": "Focus on content creation while AIOS automates audience growth, monetization, and brand partnerships.",
+    "use_case_nomads_title": "Digital Nomads",
+    "use_case_nomads_desc": "Run a global business from anywhere. AIOS operates your company while you travel."
   },
   "company": {
     "title": "Coolha Limited",
@@ -116,6 +140,8 @@
     "version_notice": "Coolha is currently in v0.1-alpha version. We are working hard on development, please stay tuned."
   },
   "rwa": {
+    "page_title": "Real World Assets Tokenization Platform",
+    "page_description": "Tokenize real-world assets on blockchain. Unlock liquidity for real estate, commodities, bonds, and other asset classes with transparent and programmable infrastructure.",
     "hero_tag": "Real World Assets on Blockchain",
     "hero_title": "Connecting Reality with the ",
     "hero_title_highlight": "Digital World",
