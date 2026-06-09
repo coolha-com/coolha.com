@@ -48,13 +48,13 @@ export default function RWAPage() {
             <section className="py-20 bg-base-200/50">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="mb-16 bg-linear-to-br from-[#C0E218]/5 to-base-200 p-8 rounded-2xl border border-[#C0E218]/20">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#C0E218]">What are Real World Assets (RWA)?</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#C0E218]">{t("definition_title")}</h2>
                         <div className="space-y-4 text-lg text-base-content/80 leading-relaxed">
                             <p className="font-semibold text-base-content">
-                                Real World Assets (RWA) are tangible and intangible assets from the physical world that are tokenized on blockchain networks.
+                                {t("definition_intro")}
                             </p>
                             <p>
-                                These include physical assets (real estate, infrastructure, commodities), financial assets (bonds, stocks, private equity, invoice financing), and emerging categories like carbon credits. By tokenizing RWA on blockchain, assets become fractional, tradable, and transparent while maintaining immutable records.
+                                {t("definition_desc")}
                             </p>
                         </div>
                     </div>
@@ -148,8 +148,8 @@ export default function RWAPage() {
             {/* AEO: Use Cases Section */}
             <section className="py-24 max-w-7xl mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                    <h2 className="text-3xl md:text-5xl font-bold">RWA Use Cases</h2>
-                    <p className="text-lg text-base-content/70">How RWA Tokenization Creates Value</p>
+                    <h2 className="text-3xl md:text-5xl font-bold">{t("use_cases_title")}</h2>
+                    <p className="text-lg text-base-content/70">{t("use_cases_subtitle")}</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
@@ -159,8 +159,8 @@ export default function RWAPage() {
                         viewport={{ once: true }}
                         className="p-8 rounded-2xl bg-base-100 border border-base-content/10"
                     >
-                        <h3 className="text-xl font-bold mb-4 text-[#C0E218]">Real Estate Investment</h3>
-                        <p className="text-base-content/70">Fractional real estate ownership enabling smaller investors to diversify into property. Unlock capital through tokenization without selling entire properties.</p>
+                        <h3 className="text-xl font-bold mb-4 text-[#C0E218]">{t("use_case_real_estate_title")}</h3>
+                        <p className="text-base-content/70">{t("use_case_real_estate_desc")}</p>
                     </motion.div>
 
                     <motion.div
@@ -170,8 +170,8 @@ export default function RWAPage() {
                         transition={{ delay: 0.1 }}
                         className="p-8 rounded-2xl bg-base-100 border border-base-content/10"
                     >
-                        <h3 className="text-xl font-bold mb-4 text-[#C0E218]">Bond Trading</h3>
-                        <p className="text-base-content/70">Immediate settlement and transparency in bond markets. Reduce intermediaries and settlement time from T+2 to minutes on blockchain.</p>
+                        <h3 className="text-xl font-bold mb-4 text-[#C0E218]">{t("use_case_bonds_title")}</h3>
+                        <p className="text-base-content/70">{t("use_case_bonds_desc")}</p>
                     </motion.div>
 
                     <motion.div
@@ -181,8 +181,8 @@ export default function RWAPage() {
                         transition={{ delay: 0.2 }}
                         className="p-8 rounded-2xl bg-base-100 border border-base-content/10"
                     >
-                        <h3 className="text-xl font-bold mb-4 text-[#C0E218]">Commodity Trading</h3>
-                        <p className="text-base-content/70">Tokenize precious metals, agricultural commodities, and energy futures. Improve price discovery and reduce storage costs.</p>
+                        <h3 className="text-xl font-bold mb-4 text-[#C0E218]">{t("use_case_commodities_title")}</h3>
+                        <p className="text-base-content/70">{t("use_case_commodities_desc")}</p>
                     </motion.div>
 
                     <motion.div
@@ -192,8 +192,8 @@ export default function RWAPage() {
                         transition={{ delay: 0.3 }}
                         className="p-8 rounded-2xl bg-base-100 border border-base-content/10"
                     >
-                        <h3 className="text-xl font-bold mb-4 text-[#C0E218]">Carbon Credits</h3>
-                        <p className="text-base-content/70">Transparent carbon offset trading. Verify, trade, and retire carbon credits with immutable blockchain records.</p>
+                        <h3 className="text-xl font-bold mb-4 text-[#C0E218]">{t("use_case_carbon_title")}</h3>
+                        <p className="text-base-content/70">{t("use_case_carbon_desc")}</p>
                     </motion.div>
                 </div>
             </section>
