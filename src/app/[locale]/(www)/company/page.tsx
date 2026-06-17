@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Activity, ArrowUpRight, BarChart3, Code2, Eye, Heart, Laptop, List, Megaphone, Monitor, Rocket, Zap } from "lucide-react";
+import { Bot, BriefcaseBusiness, Code2, Coins, Eye, Heart, Rocket, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -32,46 +32,28 @@ export default function page() {
     ]
     const Bus = [
         {
-            name: t("development"),
-            description: t("development_desc"),
+            name: t("web3_dev"),
+            description: t("web3_dev_desc"),
+            items: t.raw("web3_dev_items"),
             icon: Code2,
         },
         {
-            name: t("market"),
-            description: t("market_desc"),
-            icon: BarChart3,
+            name: t("rwa_solution"),
+            description: t("rwa_solution_desc"),
+            items: t.raw("rwa_solution_items"),
+            icon: Coins,
         },
         {
-            name: t("marketing"),
-            description: t("marketing_desc"),
-            icon: Activity,
+            name: t("ai_growth"),
+            description: t("ai_growth_desc"),
+            items: t.raw("ai_growth_items"),
+            icon: Bot,
         },
         {
-            name: t("planning"),
-            description: t("planning_desc"),
-            icon: List,
-        },
-    ]
-    const Case = [
-        {
-            name: t("digital_marketing"),
-            description: t("digital_marketing_desc"),
-            icon: Monitor,
-        },
-        {
-            name: t("web3_application"),
-            description: t("web3_application_desc"),
-            icon: Laptop,
-        },
-        {
-            name: t("exposure_growth"),
-            description: t("exposure_growth_desc"),
-            icon: Megaphone,
-        },
-        {
-            name: t("brand_building"),
-            description: t("brand_building_desc"),
-            icon: ArrowUpRight,
+            name: t("brand_strategy"),
+            description: t("brand_strategy_desc"),
+            items: t.raw("brand_strategy_items"),
+            icon: BriefcaseBusiness,
         },
     ]
     return (
@@ -141,42 +123,27 @@ export default function page() {
                                     <div className="shrink-0 mt-1">
                                         <item.icon className="h-6 w-6 text-primary" aria-hidden="true" />
                                     </div>
-                                    <div>
+                                    <div className="min-w-0">
                                         <div className="text-2xl font-semibold leading-7 text-primary">
                                             {item.name}
                                         </div>
-                                        <div className="mt-2 text-xl text-foreground leading-7">
+                                        <div className="mt-2 text-base text-muted-foreground leading-7">
                                             {item.description}
                                         </div>
+                                        <ul className="mt-4 grid grid-cols-1 gap-2 text-lg text-foreground leading-7">
+                                            {item.items.map((it) => (
+                                                <li key={it} className="flex gap-3">
+                                                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary/70" />
+                                                    <span className="min-w-0">{it}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </div>
                             </Card>
                         ))}
                     </div>
 
-
-                    {/* 案例 */}
-                    <div className="mx-auto max-w-2xl  md:max-w-4xl mt-8">
-                        <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-5 md:max-w-none md:grid-cols-2 lg:gap-y-8">
-                            {Case.map((cases) => (
-                                <Card key={cases.name} className="shadow-md p-6 rounded-2xl border bg-card hover:border-primary transition-colors">
-                                    <div className="flex gap-4">
-                                        <div className="shrink-0 mt-1">
-                                            <cases.icon className="h-6 w-6 text-primary" aria-hidden="true" />
-                                        </div>
-                                        <div>
-                                            <div className="text-2xl font-semibold leading-7 text-primary">
-                                                {cases.name}
-                                            </div>
-                                            <div className="mt-2 text-xl text-foreground leading-7">
-                                                {cases.description}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Card>
-                            ))}
-                        </div>
-                    </div>
 
                     <div className="mt-14 flex justify-center ">
                         <Button asChild size="lg" className="text-xl font-bold rounded-full">
