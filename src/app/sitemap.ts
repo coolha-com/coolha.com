@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://coolha.com";
   const locales = ['en', 'zh-Hans', 'zh-Hant'];
-  const routes = ['', '/company', '/aios', '/rwa'];
+  const routes = ['', '/company', '/ai', '/rwa'];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       } else if (route === '/company') {
         changeFrequency = 'weekly';
         priority = 0.8;
-      } else if (route === '/aios' || route === '/rwa') {
+      } else if (route === '/ai' || route === '/rwa') {
         changeFrequency = 'weekly';
         priority = 0.8;
       }

@@ -1,85 +1,11 @@
 {
-  "www": {
-    "title": "酷哈",
-    "subtitle1": "数字增长新动力，为创作者、品牌、社区、组织赋能",
-    "subtitle2": "让资产连接DeFi与RWA市场，AI跟踪管理你的资产和项目",
-    "description": "基于区块链开发的去中心化应用",
-    "launch": "启动"
-  },
-  "aios": {
-    "page_title": "AI 公司操作系统",
-    "page_description": "用 AI 智能体、Web3 基础设施和加密原生工作流自动化整个业务。AIOS 帮助个人创业者以 AI 员工构建可扩展公司。",
-    "definition_title": "什么是 AIOS？",
-    "definition_intro": "AIOS（AI Company Operating System）是一套由区块链驱动的自动化平台，让一个人也能借助 AI 智能体与 Web3 基础设施搭建并运营一家公司。",
-    "definition_desc1": "无需先组建传统团队，AIOS 提供五个 AI 员工角色：CEO、市场官（CMO）、销售官（CSO）、首席技术官（CTO）和首席财务官（CFO），分别自动处理战略、营销、销售、技术与财务工作。",
-    "definition_desc2": "这些 AI 智能体通过 OpenClaw runtime 协同运行，并结合 Base Chain 与 USDC 实现安全、透明、自动化的支付流程，使整套系统真正具备 Web3 原生能力。",
-    "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
-    "ai_rise_desc": "随着人工智能能力的快速提升，越来越多的工作正在由 AI 系统完成，AI 正逐渐成为数字世界中的核心执行者。",
-    "new_work_model_title": "Coolha 正在研究和构建一套新的工作模式：",
-    "one_person_one_company": "一个人 + 一套 Web3 AI 系统 = 一家公司",
-    "model_desc": "在这种模式下，一个创作者、开发者或创业者，可以通过 AI 智能体和自动化系统，完成过去需要团队协作才能完成的工作。",
-    "empower_individual": "让个人拥有过去只有团队才能拥有的能力",
-    "in_the_past": "在过去",
-    "past_startup_desc": "运作公司通常意味着不断扩大团队规模。",
-    "in_ai_era": "而在 AI 时代",
-    "ai_startup_desc": "运作公司可能意味着构建更智能的系统。",
-    "conclusion_desc": "通过 AI 智能体、自动化流程以及 Web3 基础设施，一个人也可以构建、运营并扩展一家数字公司。",
-    "benefits_title": "AIOS 的核心优势",
-    "benefit_cost_title": "成本效率",
-    "benefit_cost_desc": "减少高成本团队招聘。AI 智能体可 24/7 工作，无需工资、福利和额外管理开销。",
-    "benefit_scale_title": "可扩展性",
-    "benefit_scale_desc": "无需受限于招聘节奏即可快速扩展业务规模，AI 能承接持续增长的工作量。",
-    "benefit_web3_title": "Web3 原生",
-    "benefit_web3_desc": "基于区块链构建，支持 USDC 支付、Base Chain 结算与透明可验证的交易流程。",
-    "benefit_always_on_title": "始终在线",
-    "benefit_always_on_desc": "全天候运行不停机。当你休息或专注战略时，AI 智能体仍会持续推进业务。",
-    "use_cases_title": "谁适合使用 AIOS？",
-    "use_case_founders_title": "个人创业者",
-    "use_case_founders_desc": "用 AI 团队自动处理运营、营销和销售，更快启动并验证业务。",
-    "use_case_developers_title": "Web3 开发者",
-    "use_case_developers_desc": "专注做产品本身，AIOS 帮你承担商业拓展与市场运营工作。",
-    "use_case_creators_title": "内容创作者",
-    "use_case_creators_desc": "把精力放在内容创作上，让 AIOS 自动完成增长、变现和品牌合作推进。",
-    "use_case_nomads_title": "数字游民",
-    "use_case_nomads_desc": "无论身在何处都能经营全球化业务，AIOS 会持续帮你运转公司。"
-  },
-  "company": {
-    "title": "酷哈有限公司",
-    "subtitle": "让数据信息可拥有、可信任、有价值",
-    "description0": "专注于Web3技术开发和应用的科技公司，于2025年8月26日在香港注册成立",
-    "description1": "希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好",
-    "description2": "相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念",
-    "description3": "公共区块链是世界大同、世界人民大团结、民主治理、解决信任的一项重要技术",
-    "mission": "使命",
-    "mission_desc": "为推动互联网进步和世界文明进步，创造激动人心的产品服务，让世界变得更好",
-    "vision": "愿景",
-    "vision_desc": "让数据信息可拥有、可信任、有价值",
-    "values": "价值观",
-    "values_desc": "始终以用户为核心，不希望利益化和过度金融化，所有权益公平",
-    "innovation": "技术创新",
-    "innovation_desc": "致力于不断探索和应用前沿技术,提供更好的Web3产品和服务解决方案。",
-    "web3_dev": "Web3 技术开发",
-    "web3_dev_desc": "涵盖企业和项目方所需的区块链技术建设服务。",
-    "web3_dev_items": ["DApp 开发", "EVM 智能合约开发", "Web3 项目官网建设", "区块链系统架构设计", "钱包集成与链上交互", "AI Agent 与 Web3 应用开发"],
-    "rwa_solution": "数字资产与 RWA 解决方案",
-    "rwa_solution_desc": "帮助企业将资产、权益和业务场景进行数字化升级。",
-    "rwa_solution_items": ["RWA 资产上链方案", "稳定币与支付场景设计", "数字资产发行", "会员权益体系设计", "品牌数字化运营", "链上资产管理系统"],
-    "ai_growth": "AI 增长与数字营销",
-    "ai_growth_desc": "利用 AI 和数据能力帮助企业获取用户和增长。",
-    "ai_growth_items": ["AI 营销自动化", "内容生成与运营", "社交媒体增长", "广告投放策略", "用户增长方案", "数据分析与商业洞察"],
-    "brand_strategy": "品牌战略与商业咨询",
-    "brand_strategy_desc": "帮助企业完成从商业模式到品牌建设的整体规划。",
-    "brand_strategy_items": ["商业模式设计", "市场研究分析", "品牌战略规划", "产品策划与定位", "企业形象设计", "Web3 转型咨询"],
-    "join_us": "加入我们",
-    "contact_us": "联系我们"
-  },
   "header": {
     "home": "首页",
     "launch": "启动",
     "media": "媒体",
     "info": "信息",
     "company": "公司",
-    "aios": "AIOS",
+    "ai": "AI",
     "rwa": "RWA",
     "contact": "联系",
     "feedback": "反馈",
@@ -92,7 +18,7 @@
     "media": "媒体",
     "info": "信息",
     "company": "公司",
-    "aios": "AIOS",
+    "ai": "AI",
     "rwa": "RWA",
     "contact": "联系",
     "feedback": "反馈",
@@ -101,42 +27,17 @@
     "privacy": "隐私",
     "terms": "条款"
   },
-  "web3": {
-    "connect_wallet": "连接钱包",
-    "account": "账户"
+  "www": {
+    "title": "酷哈",
+    "subtitle1": "数字增长新动力，为创作者、品牌、社区、组织赋能",
+    "subtitle2": "让资产连接DeFi与RWA市场，AI跟踪管理你的资产和项目",
+    "description": "基于区块链开发的去中心化应用",
+    "launch": "启动"
   },
-  "navigation": {
-    "dashboard": "仪表板",
-    "find": "发现",
-    "messages": "消息",
-    "profile": "个人"
+  "ai": {
+    "title": "AI",
+    "description": "基于AI驱动的区块链应用"
   },
-  "menu": {
-    "more": "更多",
-    "settings": "设置",
-    "expand": "扩展",
-    "home": "首页",
-    "company": "公司",
-    "contact": "联系",
-    "feedback": "反馈",
-    "docs": "文档",
-    "privacy": "隐私",
-    "terms": "条款"
-  },
-  "sidebar": {
-    "dashboard": "仪表板",
-    "find": "发现",
-    "ai": "AI",
-    "analytics": "分析",
-    "wallet": "钱包",
-    "profile": "用户",
-    "settings": "设置"
-  },
-  "dashboard": {
-    "version_notice": "Coolha目前处于v0.1-alpha版本，我们正在努力开发中，敬请期待。"
-  },
-  "find": {},
-
   "rwa": {
     "page_title": "真实世界资产代币化平台",
     "page_description": "将房地产、大宗商品、债券等真实世界资产接入区块链，释放流动性，并用透明、可编程的基础设施管理资产发行与流转。",
@@ -174,5 +75,63 @@
     "use_case_carbon_desc": "让碳抵消资产的核验、交易与注销过程更加透明，并通过不可篡改的链上记录提升可信度。",
     "future_title": "万亿规模的蓝海市场",
     "future_desc": "RWA 被认为是推动下一轮 Web3 增长的核心引擎。Coolha 致力于构建安全、合规的 RWA 基础设施，连接传统金融机构与去中心化网络，让更多真实资产在链上焕发新生。"
+  },
+  "company": {
+    "title": "酷哈有限公司",
+    "subtitle": "让数据信息可拥有、可信任、有价值",
+    "description0": "专注于Web3技术开发和应用的科技公司，于2025年8月26日在香港注册成立",
+    "description1": "希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好",
+    "description2": "相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念",
+    "description3": "公共区块链是世界大同、世界人民大团结、民主治理、解决信任的一项重要技术",
+    "mission": "使命",
+    "mission_desc": "为推动互联网进步和世界文明进步，创造激动人心的产品服务，让世界变得更好",
+    "vision": "愿景",
+    "vision_desc": "让数据信息可拥有、可信任、有价值",
+    "values": "价值观",
+    "values_desc": "始终以用户为核心，不希望利益化和过度金融化，所有权益公平",
+    "innovation": "技术创新",
+    "innovation_desc": "致力于不断探索和应用前沿技术,提供更好的Web3产品和服务解决方案。",
+    "web3_dev": "Web3 技术开发",
+    "web3_dev_desc": "涵盖企业和项目方所需的区块链技术建设服务。",
+    "web3_dev_items": [
+      "DApp 开发",
+      "EVM 智能合约开发",
+      "Web3 项目官网建设",
+      "区块链系统架构设计",
+      "钱包集成与链上交互",
+      "AI Agent 与 Web3 应用开发"
+    ],
+    "rwa_solution": "数字资产与 RWA 解决方案",
+    "rwa_solution_desc": "帮助企业将资产、权益和业务场景进行数字化升级。",
+    "rwa_solution_items": [
+      "RWA 资产上链方案",
+      "稳定币与支付场景设计",
+      "数字资产发行",
+      "会员权益体系设计",
+      "品牌数字化运营",
+      "链上资产管理系统"
+    ],
+    "ai_growth": "AI 增长与数字营销",
+    "ai_growth_desc": "利用 AI 和数据能力帮助企业获取用户和增长。",
+    "ai_growth_items": [
+      "AI 营销自动化",
+      "内容生成与运营",
+      "社交媒体增长",
+      "广告投放策略",
+      "用户增长方案",
+      "数据分析与商业洞察"
+    ],
+    "brand_strategy": "品牌战略与商业咨询",
+    "brand_strategy_desc": "帮助企业完成从商业模式到品牌建设的整体规划。",
+    "brand_strategy_items": [
+      "商业模式设计",
+      "市场研究分析",
+      "品牌战略规划",
+      "产品策划与定位",
+      "企业形象设计",
+      "Web3 转型咨询"
+    ],
+    "join_us": "加入我们",
+    "contact_us": "联系我们"
   }
 }

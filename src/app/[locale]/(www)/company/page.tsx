@@ -2,7 +2,16 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Bot, BriefcaseBusiness, Code2, Coins, Eye, Heart, Rocket, Zap } from "lucide-react";
+import {
+    RiBriefcase4Line,
+    RiCodeSSlashLine,
+    RiCoinsLine,
+    RiEyeLine,
+    RiFlashlightLine,
+    RiHeartLine,
+    RiRobot2Line,
+    RiRocketLine,
+} from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -12,22 +21,22 @@ export default function page() {
         {
             name: t("mission"),
             description: t("mission_desc"),
-            icon: Rocket,
+            icon: RiRocketLine,
         },
         {
             name: t("vision"),
             description: t("vision_desc"),
-            icon: Eye,
+            icon: RiEyeLine,
         },
         {
             name: t("values"),
             description: t("values_desc"),
-            icon: Heart,
+            icon: RiHeartLine,
         },
         {
             name: t("innovation"),
             description: t("innovation_desc"),
-            icon: Zap,
+            icon: RiFlashlightLine,
         },
     ]
     const Bus = [
@@ -35,25 +44,25 @@ export default function page() {
             name: t("web3_dev"),
             description: t("web3_dev_desc"),
             items: t.raw("web3_dev_items"),
-            icon: Code2,
+            icon: RiCodeSSlashLine,
         },
         {
             name: t("rwa_solution"),
             description: t("rwa_solution_desc"),
             items: t.raw("rwa_solution_items"),
-            icon: Coins,
+            icon: RiCoinsLine,
         },
         {
             name: t("ai_growth"),
             description: t("ai_growth_desc"),
             items: t.raw("ai_growth_items"),
-            icon: Bot,
+            icon: RiRobot2Line,
         },
         {
             name: t("brand_strategy"),
             description: t("brand_strategy_desc"),
             items: t.raw("brand_strategy_items"),
-            icon: BriefcaseBusiness,
+            icon: RiBriefcase4Line,
         },
     ]
     return (

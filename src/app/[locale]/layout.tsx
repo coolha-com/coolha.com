@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s | ${Title}`,
       default: Title,
     },
-    description: "Coolha: Web3 marketing, DApp development, AI company operating system, and real-world asset tokenization. Empower creators, brands, and organizations with blockchain infrastructure.",
+    description: "Coolha: Web3 marketing, DApp development, AI-powered blockchain applications, and real-world asset tokenization. Empower creators, brands, and organizations with blockchain infrastructure.",
     metadataBase: new URL('https://coolha.com'),
     alternates: {
       canonical: `https://coolha.com/${locale}`,
@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       title: Title,
-      description: "Web3 marketing, DApp development, AI company OS, and RWA tokenization platform",
+      description: "Web3 marketing, DApp development, AI-powered blockchain applications, and RWA tokenization platform",
       url: 'https://coolha.com',
       siteName: 'Coolha',
       images: [
@@ -50,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title: Title,
-      description: "Web3 marketing, DApp development, AI company OS, and RWA tokenization",
+      description: "Web3 marketing, DApp development, AI-powered blockchain applications, and RWA tokenization",
       images: ['/logo/logo.png'],
       creator: '@coolha_com',
       site: '@coolha_com',
@@ -101,7 +101,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
               name: "Coolha Limited",
               alternateName: "酷哈公司",
               url: "https://coolha.com",
-              description: "Web3 blockchain marketing, DApp development, AI company operating system, and real-world asset tokenization solutions",
+              description: "Web3 blockchain marketing, DApp development, AI-powered blockchain applications, and real-world asset tokenization solutions",
               sameAs: ["https://x.com/coolha_com", "https://github.com/coolha-com", "https://www.linkedin.com/company/coolha/", "https://farcaster.xyz/coolha"],
               foundingDate: "2025-08-26",
               contactPoint: {
@@ -128,15 +128,15 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "What is Coolha?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha is a Web3 infrastructure company providing blockchain marketing, DApp development, AI company operating system (AIOS), and real-world asset (RWA) tokenization solutions.",
+                    "text": "Coolha is a Web3 infrastructure company providing blockchain marketing, DApp development, AI-powered blockchain applications, and real-world asset (RWA) tokenization solutions.",
                   },
                 },
                 {
                   "@type": "Question",
-                  "name": "What is AIOS (AI Company Operating System)?",
+                  "name": "What is Coolha AI?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "AIOS is an AI-powered automation platform that enables one person to run a fully operational company using AI agents (CEO, CMO, CSO, CTO, CFO) combined with Web3 infrastructure and crypto payments.",
+                    "text": "Coolha AI focuses on using agents to execute on-chain transactions and handle on-chain operations on behalf of users.",
                   },
                 },
                 {
@@ -152,15 +152,15 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "What services does Coolha provide?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha provides Web3 marketing strategy, DApp development, smart contract development, NFT brand marketing, AI company operating system (AIOS), RWA tokenization infrastructure, and decentralized application development.",
+                    "text": "Coolha provides Web3 marketing strategy, DApp development, smart contract development, NFT brand marketing, AI-powered blockchain applications, RWA tokenization infrastructure, and decentralized application development.",
                   },
                 },
                 {
                   "@type": "Question",
-                  "name": "Is AIOS suitable for solo founders?",
+                  "name": "Is Coolha AI suitable for solo founders?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, AIOS is specifically designed for solo founders, independent developers, creators, and digital nomads who want to build and operate companies without needing to hire a large team.",
+                    "text": "Yes, Coolha AI is suitable for solo founders, independent developers, creators, and digital operators who want agents to help execute on-chain workflows.",
                   },
                 },
                 {
@@ -213,8 +213,8 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                 {
                   "@type": "ListItem",
                   position: 3,
-                  name: "AIOS",
-                  item: "https://coolha.com/aios"
+                  name: "AI",
+                  item: "https://coolha.com/ai"
                 },
                 {
                   "@type": "ListItem",

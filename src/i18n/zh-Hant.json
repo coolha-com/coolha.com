@@ -1,86 +1,11 @@
 {
-  "www": {
-    "title": "酷哈",
-    "subtitle1": "數位成長動力，為創作者、品牌、社群、組織賦能",
-    "subtitle2": "讓資產連接DeFi與RWA市場，AI追蹤管理你的資產和項目",
-    "description": "基於區塊鏈開發的去中心化應用",
-    "launch": "啟動"
-  },
-  "aios": {
-    "page_title": "AI 公司作業系統",
-    "page_description": "用 AI 智慧體、Web3 基礎設施與加密原生工作流自動化整個業務。AIOS 幫助個人創業者以 AI 員工打造可擴展公司。",
-    "definition_title": "什麼是 AIOS？",
-    "definition_intro": "AIOS（AI Company Operating System）是一套由區塊鏈驅動的自動化平台，讓一個人也能借助 AI 智慧體與 Web3 基礎設施建立並營運一家公司。",
-    "definition_desc1": "無需先組建傳統團隊，AIOS 提供五個 AI 員工角色：CEO、行銷長（CMO）、銷售長（CSO）、技術長（CTO）與財務長（CFO），自動處理策略、行銷、銷售、技術與財務工作。",
-    "definition_desc2": "這些 AI 智慧體透過 OpenClaw runtime 協同運行，並結合 Base Chain 與 USDC 實現安全、透明且自動化的支付流程，使整套系統真正具備 Web3 原生能力。",
-    "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
-    "ai_rise_desc": "隨著人工智慧能力的快速提升，越來越多的工作正在由 AI 系統完成，AI 正逐漸成為數位世界中的核心執行者。",
-    "new_work_model_title": "Coolha 正在研究和構建一套新的工作模式：",
-    "one_person_one_company": "一個人 + 一套 Web3 AI 系統 = 一家公司",
-    "model_desc": "在這種模式下，一個創作者、開發者或創業者，可以透過 AI 智慧體和自動化系統，完成過去需要團隊協作才能完成的工作。",
-    "empower_individual": "讓個人擁有過去只有團隊才能擁有的能力",
-    "in_the_past": "在過去",
-    "past_startup_desc": "運作公司通常意味著不斷擴大團隊規模。",
-    "in_ai_era": "而在 AI 時代",
-    "ai_startup_desc": "運作公司可能意味著構建更智慧的系統。",
-    "conclusion_desc": "透過 AI 智慧體、自動化流程以及 Web3 基礎設施，一個人也可以構建、營運並擴展一家數位公司。",
-    "benefits_title": "AIOS 的核心優勢",
-    "benefit_cost_title": "成本效率",
-    "benefit_cost_desc": "減少高成本團隊招募。AI 智慧體可 24/7 工作，無需薪資、福利與額外管理成本。",
-    "benefit_scale_title": "可擴展性",
-    "benefit_scale_desc": "無需受限於招募節奏即可快速擴大營運規模，AI 能承接持續成長的工作量。",
-    "benefit_web3_title": "Web3 原生",
-    "benefit_web3_desc": "基於區塊鏈打造，支援 USDC 支付、Base Chain 結算與透明可驗證的交易流程。",
-    "benefit_always_on_title": "始終在線",
-    "benefit_always_on_desc": "全天候運作不中斷。當你休息或專注策略時，AI 智慧體仍會持續推進業務。",
-    "use_cases_title": "誰適合使用 AIOS？",
-    "use_case_founders_title": "個人創業者",
-    "use_case_founders_desc": "用 AI 團隊自動處理營運、行銷與銷售，更快啟動並驗證業務。",
-    "use_case_developers_title": "Web3 開發者",
-    "use_case_developers_desc": "專注打造產品本身，AIOS 會替你承擔商務拓展與市場營運工作。",
-    "use_case_creators_title": "內容創作者",
-    "use_case_creators_desc": "把精力放在內容創作上，讓 AIOS 自動完成成長、變現與品牌合作推進。",
-    "use_case_nomads_title": "數位遊牧者",
-    "use_case_nomads_desc": "無論身在何處都能經營全球化業務，AIOS 會持續替你運轉公司。"
-  },
-  "company": {
-    "title": "酷哈有限公司",
-    "subtitle": "讓數據資訊可擁有、可信任、有價值",
-    "description0": "專注於Web3技術開發和應用的科技公司，於2025年8月26日在香港註冊成立",
-    "description1": "希望透過科技改變生產關係，為世界文明進步作出貢獻，讓世界變得更好",
-    "description2": "相信 Web3 與區塊鏈的發展不僅僅是技術與互聯網的進步，更是一種能延伸至各領域的積極理念",
-    "description3": "公共區塊鏈是世界大同、世界人民大團結、民主治理、解決信任問題的重要技術",
-    "mission": "使命",
-    "mission_desc": "推動互聯網進步與世界文明發展，打造令人振奮的產品與服務，讓世界更美好",
-    "vision": "願景",
-    "vision_desc": "讓數據資訊可擁有、可信任、有價值",
-    "values": "價值觀",
-    "values_desc": "始終以使用者為核心，避免過度商業化與金融化，確保所有權益公平",
-    "innovation": "技術創新",
-    "innovation_desc": "致力持續探索與應用前沿技術，提供更優質的 Web3 產品與服務解決方案",
-
-    "web3_dev": "Web3 技術開發",
-    "web3_dev_desc": "涵蓋企業和專案方所需的區塊鏈技術建設服務。",
-    "web3_dev_items": ["DApp 開發", "EVM 智能合約開發", "Web3 專案官網建設", "區塊鏈系統架構設計", "錢包整合與鏈上互動", "AI Agent 與 Web3 應用開發"],
-    "rwa_solution": "數位資產與 RWA 解決方案",
-    "rwa_solution_desc": "幫助企業將資產、權益和業務場景進行數位化升級。",
-    "rwa_solution_items": ["RWA 資產上鏈方案", "穩定幣與支付場景設計", "數位資產發行", "會員權益體系設計", "品牌數位化營運", "鏈上資產管理系統"],
-    "ai_growth": "AI 成長與數位行銷",
-    "ai_growth_desc": "利用 AI 和資料能力幫助企業獲取用戶和成長。",
-    "ai_growth_items": ["AI 行銷自動化", "內容生成與營運", "社群媒體成長", "廣告投放策略", "用戶成長方案", "資料分析與商業洞察"],
-    "brand_strategy": "品牌戰略與商業諮詢",
-    "brand_strategy_desc": "幫助企業完成從商業模式到品牌建設的整體規劃。",
-    "brand_strategy_items": ["商業模式設計", "市場研究分析", "品牌戰略規劃", "產品策劃與定位", "企業形象設計", "Web3 轉型諮詢"],
-    "join_us": "加入我們",
-    "contact_us": "聯絡我們"
-  },
   "header": {
     "home": "首頁",
     "launch": "啟動",
     "media": "媒體",
     "info": "資訊",
     "company": "公司",
-    "aios": "AIOS",
+    "ai": "AI",
     "rwa": "RWA",
     "contact": "聯絡",
     "feedback": "回饋",
@@ -93,7 +18,7 @@
     "media": "媒體",
     "info": "資訊",
     "company": "公司",
-    "aios": "AIOS",
+    "ai": "AI",
     "rwa": "RWA",
     "contact": "聯絡",
     "feedback": "回饋",
@@ -102,41 +27,17 @@
     "privacy": "隱私",
     "terms": "條款"
   },
-  "web3": {
-    "connect_wallet": "連接錢包",
-    "account": "帳戶"
+  "www": {
+    "title": "酷哈",
+    "subtitle1": "數位成長動力，為創作者、品牌、社群、組織賦能",
+    "subtitle2": "讓資產連接DeFi與RWA市場，AI追蹤管理你的資產和項目",
+    "description": "基於區塊鏈開發的去中心化應用",
+    "launch": "啟動"
   },
-  "navigation": {
-    "dashboard": "儀表板",
-    "find": "發現",
-    "messages": "訊息",
-    "profile": "個人"
+  "ai": {
+    "title": "AI",
+    "description": "Agent 執行鏈上交易，讓 Agent 代替執行鏈上操作"
   },
-  "menu": {
-    "more": "更多",
-    "settings": "設定",
-    "expand": "擴展",
-    "home": "首頁",
-    "company": "公司",
-    "contact": "聯絡",
-    "feedback": "回饋",
-    "docs": "文件",
-    "privacy": "隱私",
-    "terms": "條款"
-  },
-  "sidebar": {
-    "dashboard": "儀表板",
-    "find": "發現",
-    "ai": "AI",
-    "analytics": "分析",
-    "wallet": "錢包",
-    "profile": "用戶",
-    "settings": "設定"
-  },
-  "dashboard": {
-    "version_notice": "Coolha 目前處於 v0.1-alpha 版本，我們正努力開發中，敬請期待。"
-  },
-
   "rwa": {
     "page_title": "真實世界資產代幣化平台",
     "page_description": "將房地產、大宗商品、債券等真實世界資產接入區塊鏈，釋放流動性，並以透明、可程式化的基礎設施管理資產發行與流轉。",
@@ -174,5 +75,63 @@
     "use_case_carbon_desc": "讓碳抵換資產的核驗、交易與註銷流程更加透明，並透過不可竄改的鏈上紀錄提升可信度。",
     "future_title": "兆級規模的藍海市場",
     "future_desc": "RWA 被認為是推動下一輪 Web3 增長的核心引擎。Coolha 致力於構建安全、合規的 RWA 基礎設施，連接傳統金融機構與去中心化網路，讓更多真實資產在鏈上煥發新生。"
+  },
+  "company": {
+    "title": "酷哈有限公司",
+    "subtitle": "讓數據資訊可擁有、可信任、有價值",
+    "description0": "專注於Web3技術開發和應用的科技公司，於2025年8月26日在香港註冊成立",
+    "description1": "希望透過科技改變生產關係，為世界文明進步作出貢獻，讓世界變得更好",
+    "description2": "相信 Web3 與區塊鏈的發展不僅僅是技術與互聯網的進步，更是一種能延伸至各領域的積極理念",
+    "description3": "公共區塊鏈是世界大同、世界人民大團結、民主治理、解決信任問題的重要技術",
+    "mission": "使命",
+    "mission_desc": "推動互聯網進步與世界文明發展，打造令人振奮的產品與服務，讓世界更美好",
+    "vision": "願景",
+    "vision_desc": "讓數據資訊可擁有、可信任、有價值",
+    "values": "價值觀",
+    "values_desc": "始終以使用者為核心，避免過度商業化與金融化，確保所有權益公平",
+    "innovation": "技術創新",
+    "innovation_desc": "致力持續探索與應用前沿技術，提供更優質的 Web3 產品與服務解決方案",
+    "web3_dev": "Web3 技術開發",
+    "web3_dev_desc": "涵蓋企業和專案方所需的區塊鏈技術建設服務。",
+    "web3_dev_items": [
+      "DApp 開發",
+      "EVM 智能合約開發",
+      "Web3 專案官網建設",
+      "區塊鏈系統架構設計",
+      "錢包整合與鏈上互動",
+      "AI Agent 與 Web3 應用開發"
+    ],
+    "rwa_solution": "數位資產與 RWA 解決方案",
+    "rwa_solution_desc": "幫助企業將資產、權益和業務場景進行數位化升級。",
+    "rwa_solution_items": [
+      "RWA 資產上鏈方案",
+      "穩定幣與支付場景設計",
+      "數位資產發行",
+      "會員權益體系設計",
+      "品牌數位化營運",
+      "鏈上資產管理系統"
+    ],
+    "ai_growth": "AI 成長與數位行銷",
+    "ai_growth_desc": "利用 AI 和資料能力幫助企業獲取用戶和成長。",
+    "ai_growth_items": [
+      "AI 行銷自動化",
+      "內容生成與營運",
+      "社群媒體成長",
+      "廣告投放策略",
+      "用戶成長方案",
+      "資料分析與商業洞察"
+    ],
+    "brand_strategy": "品牌戰略與商業諮詢",
+    "brand_strategy_desc": "幫助企業完成從商業模式到品牌建設的整體規劃。",
+    "brand_strategy_items": [
+      "商業模式設計",
+      "市場研究分析",
+      "品牌戰略規劃",
+      "產品策劃與定位",
+      "企業形象設計",
+      "Web3 轉型諮詢"
+    ],
+    "join_us": "加入我們",
+    "contact_us": "聯絡我們"
   }
 }

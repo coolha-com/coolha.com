@@ -1,85 +1,11 @@
 {
-  "www": {
-    "title": "Coolha",
-    "subtitle1": "Digital growth momentum, empowering creators, brands, communities, and organizations",
-    "subtitle2": "Connect assets to DeFi and RWA markets, AI tracks and manages your assets and projects",
-    "description": "A decentralized application developed on the blockchain",
-    "launch": "Launch"
-  },
-  "aios": {
-    "page_title": "AI Company Operating System",
-    "page_description": "Automate your business with AI agents, Web3 infrastructure, and crypto-native workflows. AIOS helps solo founders build scalable companies with AI employees.",
-    "definition_title": "What is AIOS?",
-    "definition_intro": "AIOS (AI Company Operating System) is a blockchain-powered automation platform that enables a single person to build and operate a fully functional company using AI agents and Web3 infrastructure.",
-    "definition_desc1": "Instead of hiring a team, AIOS provides five AI employees: a CEO, Marketing Officer (CMO), Sales Officer (CSO), Chief Technology Officer (CTO), and Chief Financial Officer (CFO), working autonomously across strategy, marketing, sales, technology, and finance.",
-    "definition_desc2": "These AI agents orchestrate through OpenClaw runtime and leverage Base Chain for secure, transparent, and automated payments with USDC, making the system truly Web3-native.",
-    "web3_ai_company_os": "Coolha <green>Web3 AI Company OS</green>",
-    "ai_rise_desc": "With the rapid improvement of artificial intelligence capabilities, more and more tasks are being completed by AI systems, and AI is gradually becoming a core executor in the digital world.",
-    "new_work_model_title": "Coolha is researching and building a new work model:",
-    "one_person_one_company": "One Person + One Web3 AI System = One Company",
-    "model_desc": "In this model, a creator, developer, or entrepreneur can complete work that previously required team collaboration through AI agents and automated systems.",
-    "empower_individual": "Empowering individuals with capabilities previously only available to teams",
-    "in_the_past": "In the Past",
-    "past_startup_desc": "Running a company usually meant constantly expanding team size.",
-    "in_ai_era": "In the AI Era",
-    "ai_startup_desc": "Running a company may mean building smarter systems.",
-    "conclusion_desc": "Through AI agents, automated processes, and Web3 infrastructure, one person can build, operate, and scale a digital company.",
-    "benefits_title": "Key Benefits of AIOS",
-    "benefit_cost_title": "Cost Efficiency",
-    "benefit_cost_desc": "Eliminate expensive team hiring. AI agents work 24/7 without salary, benefits, or overhead costs.",
-    "benefit_scale_title": "Scalability",
-    "benefit_scale_desc": "Scale your operations instantly without hiring bottlenecks. AI can handle unlimited workload growth.",
-    "benefit_web3_title": "Web3 Native",
-    "benefit_web3_desc": "Built on blockchain with USDC payments, Base Chain settlement, and transparent transactions.",
-    "benefit_always_on_title": "Always Available",
-    "benefit_always_on_desc": "24/7 operation without downtime. AI agents continue working while you sleep or focus on strategy.",
-    "use_cases_title": "Who Uses AIOS?",
-    "use_case_founders_title": "Solo Founders",
-    "use_case_founders_desc": "Launch businesses faster with an AI team handling operations, marketing, and sales automatically.",
-    "use_case_developers_title": "Web3 Developers",
-    "use_case_developers_desc": "Build products without operational overhead. AIOS handles business development and marketing.",
-    "use_case_creators_title": "Content Creators",
-    "use_case_creators_desc": "Focus on content creation while AIOS automates audience growth, monetization, and brand partnerships.",
-    "use_case_nomads_title": "Digital Nomads",
-    "use_case_nomads_desc": "Run a global business from anywhere. AIOS operates your company while you travel."
-  },
-  "company": {
-    "title": "Coolha Limited",
-    "subtitle": "Making data information ownable, trustworthy, and valuable",
-    "description0": "A software technology company focused on Web3 technology development and applications, established in Hong Kong on August 26, 2025.",
-    "description1": "We hope to change production relations through technology, contribute to world civilization progress, and make the world a better place",
-    "description2": "We believe that the development of Web3 and blockchain is not just technological and internet progress, but also a positive concept that can extend to various fields",
-    "description3": "Public blockchain is an important technology for world unity, global solidarity, democratic governance, and solving trust issues",
-    "mission": "Mission",
-    "mission_desc": "To promote internet progress and world civilization advancement, create exciting products and services, and make the world better",
-    "vision": "Vision",
-    "vision_desc": "Making data information ownable, trustworthy, and valuable",
-    "values": "Values",
-    "values_desc": "Always user-centered, avoiding excessive commercialization and financialization, ensuring fair rights for all",
-    "innovation": "Technical Innovation",
-    "innovation_desc": "Committed to continuously exploring and applying cutting-edge technologies to provide better Web3 products and service solutions.",
-    "web3_dev": "Web3 Technology Development",
-    "web3_dev_desc": "Blockchain technology services for enterprises and project teams.",
-    "web3_dev_items": ["DApp development", "EVM smart contract development", "Web3 project website building", "Blockchain system architecture design", "Wallet integration and on-chain interaction", "AI Agent and Web3 application development"],
-    "rwa_solution": "Digital Assets & RWA Solutions",
-    "rwa_solution_desc": "Help enterprises digitize assets, rights, and business scenarios.",
-    "rwa_solution_items": ["RWA asset tokenization", "Stablecoin and payment design", "Digital asset issuance", "Membership systems", "Brand digital operations", "On-chain asset management"],
-    "ai_growth": "AI Growth & Digital Marketing",
-    "ai_growth_desc": "Leverage AI and data to drive user acquisition and growth.",
-    "ai_growth_items": ["AI marketing automation", "Content generation and operations", "Social media growth", "Advertising strategy", "User growth programs", "Data analytics and business insights"],
-    "brand_strategy": "Brand Strategy & Business Consulting",
-    "brand_strategy_desc": "End-to-end planning from business models to brand building.",
-    "brand_strategy_items": ["Business model design", "Market research analysis", "Brand strategy planning", "Product planning and positioning", "Corporate identity design", "Web3 transformation consulting"],
-    "join_us": "Join Us",
-    "contact_us": "Contact Us"
-  },
   "header": {
     "home": "Home",
     "launch": "Launch",
     "media": "Media",
     "info": "Info",
     "company": "Company",
-    "aios": "AIOS",
+    "ai": "AI",
     "rwa": "RWA",
     "contact": "Contact",
     "feedback": "Feedback",
@@ -92,7 +18,7 @@
     "media": "Media",
     "info": "Info",
     "company": "Company",
-    "aios": "AIOS",
+    "ai": "AI",
     "rwa": "RWA",
     "contact": "Contact",
     "feedback": "Feedback",
@@ -101,39 +27,16 @@
     "privacy": "Privacy",
     "terms": "Terms"
   },
-  "web3": {
-    "connect_wallet": "Connect Wallet",
-    "account": "Account"
+  "www": {
+    "title": "Coolha",
+    "subtitle1": "Digital growth momentum, empowering creators, brands, communities, and organizations",
+    "subtitle2": "Connect assets to DeFi and RWA markets, AI tracks and manages your assets and projects",
+    "description": "A decentralized application developed on the blockchain",
+    "launch": "Launch"
   },
-  "navigation": {
-    "dashboard": "Dashboard",
-    "find": "Find",
-    "messages": "Messages",
-    "profile": "Profile"
-  },
-  "menu": {
-    "more": "More",
-    "settings": "Settings",
-    "expand": "Expand",
-    "home": "Home",
-    "company": "Company",
-    "contact": "Contact",
-    "feedback": "Feedback",
-    "docs": "Docs",
-    "privacy": "Privacy",
-    "terms": "Terms"
-  },
-  "sidebar": {
-    "dashboard": "Dashboard",
-    "find": "Find",
-    "ai": "AI",
-    "analytics": "Analytics",
-    "wallet": "Wallet",
-    "profile": "Profile",
-    "settings": "Settings"
-  },
-  "dashboard": {
-    "version_notice": "Coolha is currently in v0.1-alpha version. We are working hard on development, please stay tuned."
+  "ai": {
+    "title": "AI",
+    "description": "Agents execute on-chain transactions and handle on-chain operations on your behalf."
   },
   "rwa": {
     "page_title": "Real World Assets Tokenization Platform",
@@ -172,5 +75,63 @@
     "use_case_carbon_desc": "Support transparent carbon offset trading so credits can be verified, traded, and retired with immutable blockchain records.",
     "future_title": "A Trillion-Dollar Blue Ocean Market",
     "future_desc": "RWA is considered the core engine driving the next wave of Web3 growth. Coolha is committed to building a secure, compliant RWA infrastructure, connecting traditional financial institutions with decentralized networks, and bringing new life to more real-world assets on-chain."
+  },
+  "company": {
+    "title": "Coolha Limited",
+    "subtitle": "Making data information ownable, trustworthy, and valuable",
+    "description0": "A software technology company focused on Web3 technology development and applications, established in Hong Kong on August 26, 2025.",
+    "description1": "We hope to change production relations through technology, contribute to world civilization progress, and make the world a better place",
+    "description2": "We believe that the development of Web3 and blockchain is not just technological and internet progress, but also a positive concept that can extend to various fields",
+    "description3": "Public blockchain is an important technology for world unity, global solidarity, democratic governance, and solving trust issues",
+    "mission": "Mission",
+    "mission_desc": "To promote internet progress and world civilization advancement, create exciting products and services, and make the world better",
+    "vision": "Vision",
+    "vision_desc": "Making data information ownable, trustworthy, and valuable",
+    "values": "Values",
+    "values_desc": "Always user-centered, avoiding excessive commercialization and financialization, ensuring fair rights for all",
+    "innovation": "Technical Innovation",
+    "innovation_desc": "Committed to continuously exploring and applying cutting-edge technologies to provide better Web3 products and service solutions.",
+    "web3_dev": "Web3 Technology Development",
+    "web3_dev_desc": "Blockchain technology services for enterprises and project teams.",
+    "web3_dev_items": [
+      "DApp development",
+      "EVM smart contract development",
+      "Web3 project website building",
+      "Blockchain system architecture design",
+      "Wallet integration and on-chain interaction",
+      "AI Agent and Web3 application development"
+    ],
+    "rwa_solution": "Digital Assets & RWA Solutions",
+    "rwa_solution_desc": "Help enterprises digitize assets, rights, and business scenarios.",
+    "rwa_solution_items": [
+      "RWA asset tokenization",
+      "Stablecoin and payment design",
+      "Digital asset issuance",
+      "Membership systems",
+      "Brand digital operations",
+      "On-chain asset management"
+    ],
+    "ai_growth": "AI Growth & Digital Marketing",
+    "ai_growth_desc": "Leverage AI and data to drive user acquisition and growth.",
+    "ai_growth_items": [
+      "AI marketing automation",
+      "Content generation and operations",
+      "Social media growth",
+      "Advertising strategy",
+      "User growth programs",
+      "Data analytics and business insights"
+    ],
+    "brand_strategy": "Brand Strategy & Business Consulting",
+    "brand_strategy_desc": "End-to-end planning from business models to brand building.",
+    "brand_strategy_items": [
+      "Business model design",
+      "Market research analysis",
+      "Brand strategy planning",
+      "Product planning and positioning",
+      "Corporate identity design",
+      "Web3 transformation consulting"
+    ],
+    "join_us": "Join Us",
+    "contact_us": "Contact Us"
   }
 }

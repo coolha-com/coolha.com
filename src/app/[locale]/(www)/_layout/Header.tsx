@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ExternalLink, Menu } from "lucide-react";
+import { RiMenuLine } from "react-icons/ri";
 import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ThemeSwap from "@/components/ThemeSwap";
@@ -44,7 +44,7 @@ export default function Header() {
 
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon" className="rounded-full">
-                                    <Menu className="w-6 h-6" />
+                                    <RiMenuLine className="size-6" />
                                 </Button>
                             </SheetTrigger>
 
@@ -91,7 +91,7 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
                 </Button> */}
 
                 <MobileNavLink href="/" label={t("home")} />
-                <MobileNavLink href="/aios" label={t("aios")} />
+                <MobileNavLink href="/ai" label={t("ai")} />
                 <MobileNavLink href="/rwa" label={t("rwa")} />
                 <MobileNavLink href="/company" label={t("company")} />
                 <MobileNavLink href="https://docs.coolha.com" label={t("docs")} isExternal />
@@ -108,8 +108,8 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
             </li>
 
             <li className="text-sm font-medium list-none">
-                <Link href={`/aios`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t("aios")}
+                <Link href={`/ai`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
+                    {t("ai")}
                 </Link>
             </li>
 

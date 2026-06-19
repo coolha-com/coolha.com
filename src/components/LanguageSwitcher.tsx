@@ -1,6 +1,6 @@
 'use client';
 
-import { RiTranslate } from '@remixicon/react';
+import { RiTranslate2 } from 'react-icons/ri';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -29,7 +29,7 @@ export default function LanguageSwitcher() {
         <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon" className="rounded-full">
-                    <RiTranslate size={20} />
+                    <RiTranslate2 className="size-5" />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

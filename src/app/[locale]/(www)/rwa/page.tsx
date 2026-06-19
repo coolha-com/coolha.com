@@ -4,13 +4,13 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
-    RiBuilding4Line,
+    RiArrowLeftRightLine,
+    RiBankLine,
+    RiBuildingLine,
     RiGlobalLine,
-    RiShieldKeyholeLine,
-    RiFundsLine,
     RiLineChartLine,
-    RiExchangeFundsLine
-} from "@remixicon/react";
+    RiShieldCheckLine,
+} from "react-icons/ri";
 
 export default function RWAPage() {
     const t = useTranslations("rwa");
@@ -31,7 +31,7 @@ export default function RWAPage() {
                         className="text-center max-w-4xl mx-auto space-y-8"
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C0E218]/15 text-[#D6F44A] border border-[#C0E218]/35 text-sm font-medium mb-4 backdrop-blur-sm">
-                            <RiGlobalLine className="w-4 h-4" />
+                            <RiGlobalLine className="size-4" />
                             <span>{t("hero_tag")}</span>
                         </div>
                         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.35)]">
@@ -83,14 +83,14 @@ export default function RWAPage() {
                         >
                             <div className="p-6 bg-base-100 rounded-2xl border border-base-content/5 space-y-4">
                                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                                    <RiBuilding4Line className="w-6 h-6" />
+                                    <RiBuildingLine className="size-6" />
                                 </div>
                                 <h3 className="font-semibold text-lg">{t("physical_assets")}</h3>
                                 <p className="text-sm text-base-content/60">{t("physical_assets_desc")}</p>
                             </div>
                             <div className="p-6 bg-base-100 rounded-2xl border border-base-content/5 space-y-4 mt-8">
                                 <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
-                                    <RiFundsLine className="w-6 h-6" />
+                                    <RiBankLine className="size-6" />
                                 </div>
                                 <h3 className="font-semibold text-lg">{t("financial_assets")}</h3>
                                 <p className="text-sm text-base-content/60">{t("financial_assets_desc")}</p>
@@ -110,12 +110,12 @@ export default function RWAPage() {
                 <div className="grid md:grid-cols-3 gap-8">
                     {[
                         {
-                            icon: RiExchangeFundsLine,
+                            icon: RiArrowLeftRightLine,
                             title: t("adv_liquidity_title"),
                             desc: t("adv_liquidity_desc")
                         },
                         {
-                            icon: RiShieldKeyholeLine,
+                            icon: RiShieldCheckLine,
                             title: t("adv_trust_title"),
                             desc: t("adv_trust_desc")
                         },
@@ -134,7 +134,7 @@ export default function RWAPage() {
                             className="p-8 rounded-3xl bg-base-100 border border-base-content/10 hover:border-[#C0E218]/50 transition-colors group"
                         >
                             <div className="w-14 h-14 rounded-2xl bg-base-200 flex items-center justify-center mb-6 group-hover:bg-[#C0E218]/10 group-hover:text-[#C0E218] transition-colors">
-                                <feature.icon className="w-7 h-7" />
+                                <feature.icon className="size-7" />
                             </div>
                             <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
                             <p className="text-base-content/70 leading-relaxed">

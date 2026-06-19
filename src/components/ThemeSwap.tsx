@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Monitor, Moon, Sun } from "lucide-react"
+import { RiComputerLine, RiMoonLine, RiSunLine } from "react-icons/ri"
 import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
@@ -14,13 +14,30 @@ import {
 
 export default function ThemeSwap() {
     const { setTheme, theme } = useTheme()
+    const currentTheme = theme ?? "system"
 
     return (
         <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon">
-                    <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-                    <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                <Button variant="outline" size="icon" className="rounded-full">
+                    <RiSunLine
+                        className={`size-5 transition-all ${currentTheme === "light"
+                            ? "scale-100 rotate-0 opacity-100"
+                            : "absolute scale-0 -rotate-90 opacity-0"
+                            }`}
+                    />
+                    <RiMoonLine
+                        className={`size-5 transition-all ${currentTheme === "dark"
+                            ? "absolute scale-100 rotate-0 opacity-100"
+                            : "absolute scale-0 rotate-90 opacity-0"
+                            }`}
+                    />
+                    <RiComputerLine
+                        className={`size-5 transition-all ${currentTheme === "system"
+                            ? "absolute scale-100 rotate-0 opacity-100"
+                            : "absolute scale-0 rotate-90 opacity-0"
+                            }`}
+                    />
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </DropdownMenuTrigger>
@@ -29,7 +46,7 @@ export default function ThemeSwap() {
                     onClick={() => setTheme("light")}
                     className={theme === "light" ? "text-primary" : undefined}
                 >
-                    <Sun />
+                    <RiSunLine />
                     <span>Light</span>
                     <span className={`ml-auto ${theme === "light" ? "opacity-100" : "opacity-0"}`}>
                         ✓
@@ -39,7 +56,7 @@ export default function ThemeSwap() {
                     onClick={() => setTheme("dark")}
                     className={theme === "dark" ? "text-primary" : undefined}
                 >
-                    <Moon />
+                    <RiMoonLine />
                     <span>Dark</span>
                     <span className={`ml-auto ${theme === "dark" ? "opacity-100" : "opacity-0"}`}>
                         ✓
@@ -49,7 +66,7 @@ export default function ThemeSwap() {
                     onClick={() => setTheme("system")}
                     className={theme === "system" ? "text-primary" : undefined}
                 >
-                    <Monitor />
+                    <RiComputerLine />
                     <span>System</span>
                     <span className={`ml-auto ${theme === "system" ? "opacity-100" : "opacity-0"}`}>
                         ✓
