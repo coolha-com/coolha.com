@@ -4,7 +4,6 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getTranslations } from 'next-intl/server';
-import Theme from "@/config/Theme";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
@@ -89,7 +88,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
   const messages = (await import(`../../i18n/${locale}.json`)).default;
 
   return (
-    <html lang={locale} suppressHydrationWarning className={`font-sans ${inter.variable}`}>
+    <html lang={locale} className={`font-sans ${inter.variable} dark`}>
       <head>
         <meta name="talentapp:project_verification" content="3b8c0a3f9992f43448334d9ad892606045b08bb7e5b6a1abb0b31d6acdae4bee2cef56cf646f1ec2c19298f251d6af3229056d828568fd812b331c12e1cfd301"></meta>
         <script
@@ -245,9 +244,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
           </>
         ) : null}
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Theme>
-            {children}
-          </Theme>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

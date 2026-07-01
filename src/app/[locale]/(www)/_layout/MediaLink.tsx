@@ -5,6 +5,20 @@ import Image from "next/image";
 import Link from "next/link"
 import { useState } from "react";
 import { RiArrowLeftCircleLine, RiGithubFill, RiLinkedinBoxFill, RiMailFill, RiTwitterXFill, RiWechatFill } from "react-icons/ri";
+
+
+function MLink({ href, children }: any) {
+  return (
+    <motion.div whileHover={{ scale: 1.2 }} >
+      <Button asChild variant="outline" size="icon" className="rounded-full">
+        <Link href={href} target='_blank'>
+          {children}
+        </Link >
+      </Button>
+    </motion.div>
+  )
+}
+
 export default function MediaLink() {
   const [showImage, setShowImage] = useState(false);
 
@@ -97,17 +111,7 @@ export default function MediaLink() {
   )
 }
 
-function MLink({ href, children }: any) {
-  return (
-    <motion.div whileHover={{ scale: 1.2 }} >
-      <Button asChild variant="outline" size="icon" className="rounded-full">
-        <Link href={href} target='_blank'>
-          {children}
-        </Link >
-      </Button>
-    </motion.div>
-  )
-}
+
 
 const ThemeImage = (props: any) => {
   const { srcLight, srcDark, ...rest } = props

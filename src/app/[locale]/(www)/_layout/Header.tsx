@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { RiMenuLine } from "react-icons/ri";
 import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import ThemeSwap from "@/components/ThemeSwap";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -31,7 +30,6 @@ export default function Header() {
 
                 {/* Right */}
                 <div className="flex items-center gap-3">{/* Right */}
-                    <ThemeSwap />
                     <LanguageSwitcher />
                     <Button asChild className="hidden md:flex rounded-4xl text-sm font-semibold px-6" size="default">
                         <Link href={'https://app.coolha.com'} target="_blank">
