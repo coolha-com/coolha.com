@@ -30,7 +30,7 @@ export default function Page() {
               </span>
             </h1>
 
-            <div className="space-y-4 mb-12">
+            <div className="space-y-4 mb-12 px-6">
               <p className="text-base-content/90 text-lg md:text-xl font-light tracking-wide leading-8">
                 {t("subtitle1")}
               </p>
