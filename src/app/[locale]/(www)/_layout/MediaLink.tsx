@@ -36,7 +36,7 @@ export default function MediaLink() {
         <RiArrowLeftCircleLine className="w-9 h-9 text-base-content" />
       </MLink>
 
-      <MLink href="mailto:cs@coolha.com" >
+      <MLink href="mailto:connect@coolha.com" >
         <RiMailFill className="w-9 h-9 text-base-content" />
       </MLink>
 
@@ -51,12 +51,12 @@ export default function MediaLink() {
       <MLink href="https://github.com/coolha-com" >
         <RiGithubFill className="w-9 h-9 text-base-content" />
       </MLink>
-      
+
       <MLink href="https://www.linkedin.com/company/coolha/" >
         <RiLinkedinBoxFill className="w-9 h-9 text-base-content" />
       </MLink>
-      
- {/*      <MLink href="https://farcaster.xyz/coolha" >
+
+      {/*      <MLink href="https://farcaster.xyz/coolha" >
         <svg xmlns="http://www.w3.org/2000/svg" width="752" height="689" viewBox="0 0 752 689" className="w-9 h-9 text-base-content" fill="currentColor">
           <path d="M128.889 0H613.333V688.889H542.222V373.333H541.525C533.665 286.121 460.369 217.777 371.111 217.777C281.853 217.777 208.557 286.121 200.697 373.333H200V688.889H128.889V0Z" />
           <path d="M0 97.777L28.889 195.555H53.333V591.111C41.06 591.111 31.111 601.06 31.111 613.333V640H26.667C14.394 640 4.44398 649.949 4.44398 662.222V688.889H253.333V662.222C253.333 649.949 243.384 640 231.111 640H226.667V613.333C226.667 601.06 216.717 591.111 204.444 591.111H177.778V97.777H0Z" />

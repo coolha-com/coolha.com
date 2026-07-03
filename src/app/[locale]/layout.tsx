@@ -107,7 +107,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                 "@type": "ContactPoint",
                 "telephone": "+852-XXXX-XXXX",
                 "contactType": "Sales",
-                "email": "cs@coolha.com",
+                "email": "connect@coolha.com",
                 "areaServed": "Worldwide",
                 "availableLanguage": ["en", "zh-Hans", "zh-Hant"],
               },

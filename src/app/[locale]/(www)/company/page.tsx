@@ -131,7 +131,7 @@ export default function page() {
 
           <div className="mt-14 flex justify-center">
             <Button asChild size="lg" className="text-xl font-bold rounded-full">
-              <Link href={'mailto:cs@coolha.com'} target='_blank'>
+              <Link href={'mailto:connect@coolha.com'} target='_blank'>
                 {t("contact_us")} ↗
               </Link>
             </Button>
