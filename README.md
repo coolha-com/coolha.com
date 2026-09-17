@@ -20,16 +20,17 @@ Coolha Limited（酷哈有限公司）是一家专注于 Web3 技术开发和应
 | **Web3 技术开发**      | DApp 开发、EVM 智能合约、钱包集成、链上交互                                                                  |
 | **品牌战略与商业咨询** | 商业模式设计、品牌规划、Web3 转型咨询                                                                        |
 
-## 联系方式
+## 网站导航
 
 - **网站**: [https://coolha.com](https://coolha.com)
 - **应用**: [https://app.coolha.com](https://app.coolha.com)
 - **文档**: [https://docs.coolha.com](https://docs.coolha.com)
-- **邮箱**: [connect@coolha.com](mailto:connect@coolha.com)
 
 ### 社交媒体
 
+- **邮箱**: [connect@coolha.com](mailto:connect@coolha.com)
 - **WeChat**: [Coolha](https://mp.weixin.qq.com/s/ou6OinQvb0odJswnO2A5Dg)
 - **X (Twitter)**: [@coolha_com](https://x.com/coolha_com)
+- **X Group**: [Coolha Community](https://x.com/i/chat/group_join/g2041104590905782725/itv293Wzr3)
 - **GitHub**: [coolha-com](https://github.com/coolha-com)
 - **LinkedIn**: [Coolha Limited](https://www.linkedin.com/company/coolha/)
