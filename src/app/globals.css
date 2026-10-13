@@ -131,3 +131,48 @@
     @apply font-sans;
   }
 }
+
+/* Legal document content typography */
+.legal-content {
+  scroll-margin-top: 96px;
+}
+
+.legal-content section {
+  scroll-margin-top: 96px;
+}
+
+.legal-content h2 {
+  scroll-margin-top: 96px;
+}
+
+.legal-content h3 {
+  scroll-margin-top: 96px;
+}
+
+.legal-content p {
+  @apply text-foreground/90;
+}
+
+.legal-content ul {
+  @apply list-disc pl-6 space-y-2;
+}
+
+.legal-content li {
+  @apply text-foreground/90;
+}
+
+.legal-content strong {
+  @apply font-semibold text-foreground;
+}
+
+.legal-content a {
+  @apply text-primary underline underline-offset-4 hover:opacity-80 transition-opacity break-all;
+}
+
+.legal-content h2 {
+  @apply text-2xl font-bold tracking-tight text-foreground mt-10 first:mt-0 pb-2 border-b border-border;
+}
+
+.legal-content h3 {
+  @apply text-xl font-semibold tracking-tight text-foreground mt-8;
+}

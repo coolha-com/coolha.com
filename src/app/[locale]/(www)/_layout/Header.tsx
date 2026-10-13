@@ -92,7 +92,6 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
                 <MobileNavLink href="/ai" label={t("ai")} />
                 <MobileNavLink href="/rwa" label={t("rwa")} />
                 <MobileNavLink href="/company" label={t("company")} />
-                <MobileNavLink href="https://docs.coolha.com" label={t("docs")} isExternal />
             </>
         );
     }
@@ -123,17 +122,11 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
                 </Link>
             </li>
 
-            {/*             <li className="text-sm font-medium list-none">
+{/*             <li className="text-sm font-medium list-none">
                 <Link href={`https://link3.to/coolha`} target='_blank' className="text-muted-foreground hover:text-foreground transition-colors">
                     {t("contact")} ↗
                 </Link>
             </li> */}
-
-            <li className="text-sm font-medium list-none">
-                <Link href={`https://docs.coolha.com`} target='_blank' className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t("docs")} ↗
-                </Link>
-            </li>
 
         </>
     );
