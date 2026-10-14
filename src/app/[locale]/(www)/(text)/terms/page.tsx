@@ -394,7 +394,7 @@ export default function TermsPage() {
             <br />
             Website: <a href="https://coolha.com">https://coolha.com</a>
             <br />
-            Email: <a href="mailto:connect@coolha.com">help@coolha.com</a>
+            Email: <a href="mailto:help@coolha.com">help@coolha.com</a>
           </p>
         </section>
       </LegalLayout>
