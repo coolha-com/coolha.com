@@ -18,7 +18,7 @@ export default function Header() {
                 <div className="flex items-center gap-4">{/* Left */}
                     <Link href={'/'} className="border-border">
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Image src="/logo/logo.png" alt="logo.png" width={40} height={40} className="rounded-full" />
+                            <Image src="/logo/logo.png" alt="Coolha" width={40} height={40} className="rounded-full" />
                         </motion.div>
                     </Link>
 
@@ -49,7 +49,7 @@ export default function Header() {
                             <SheetContent side="right" className="flex flex-col w-[300px] sm:w-[400px] p-0">
                                 <SheetHeader className="p-6 text-left border-b">
                                     <div className="flex items-center gap-3">
-                                        <Image src="/logo/logo.png" alt="logo" width={32} height={32} className="rounded-full" />
+                                        <Image src="/logo/logo.png" alt="Coolha" width={32} height={32} className="rounded-full" />
                                         <SheetTitle className="text-xl font-bold text-primary">Coolha</SheetTitle>
                                     </div>
                                 </SheetHeader>

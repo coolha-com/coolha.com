@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: "en",
     images: [
       {
-        url: "/logo/logo.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "Coolha - Privacy Policy",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/logo/logo.png"],
+    images: ["/og.png"],
   },
   robots: {
     index: true,

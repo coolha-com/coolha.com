@@ -51,9 +51,7 @@ export default function AIPage() {
 
             {/* Title */}
             <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl">
-              <span className="bg-clip-text bg-linear-to-r from-white to-white/60 text-transparent">
-                Web4
-              </span>
+    
               <span className="mx-3 text-[#C0E218]">&</span>
               <br className="md:hidden" />
               <span className="bg-clip-text bg-linear-to-r from-[#C0E218] to-[#C0E218]/70 text-transparent">

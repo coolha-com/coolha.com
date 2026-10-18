@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: {
-      template: `%s | ${Title}`,
+      template: ` ${Title} | %s`,
       default: Title,
     },
     description: "Coolha: Web3 marketing, DApp development, AI-powered blockchain applications, and real-world asset tokenization. Empower creators, brands, and organizations with blockchain infrastructure.",
@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'Coolha',
       images: [
         {
-          url: '/logo/logo.png',
+          url: '/og.png',
           width: 1200,
           height: 630,
           alt: 'Coolha - Web3 Infrastructure Platform',
@@ -50,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: Title,
       description: "Web3 marketing, DApp development, AI-powered blockchain applications, and RWA tokenization",
-      images: ['/logo/logo.png'],
+      images: ['/og.png'],
       creator: '@coolha_com',
       site: '@coolha_com',
     },
@@ -71,6 +71,10 @@ export function generateViewport() {
     viewportFit: 'cover',
     themeColor: '#C0E218',
   }
+}
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'zh-Hans' }, { locale: 'zh-Hant' }];
 }
 
 const geistSans = Geist({

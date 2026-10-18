@@ -50,8 +50,8 @@ export default function LegalLayout({
   }, [toc]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+    <div className="min-h-screen bg-background text-foreground pt-20">
+      <div className="mx-auto max-w-7xl px-6 pb-12 lg:px-8 lg:pb-16">
         {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"

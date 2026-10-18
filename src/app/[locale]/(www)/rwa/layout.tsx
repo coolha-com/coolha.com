@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: 'https://coolha.com/rwa',
       images: [
         {
-          url: '/logo/logo.png',
+          url: '/og.png',
           width: 1200,
           height: 630,
           alt: 'Coolha RWA - Real World Assets Tokenization',
@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: t('page_title') || 'Real World Assets Tokenization Platform | Coolha',
       description: t('page_description') || 'Blockchain-based RWA tokenization platform',
-      images: ['/logo/logo.png'],
+      images: ['/og.png'],
     },
   };
 }

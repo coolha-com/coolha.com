@@ -2,6 +2,7 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Product from "./_layout/Product";
@@ -21,7 +22,16 @@ export default function Page() {
 
         <div className=" flex flex-col justify-center items-center text-center  text-neutral-content  mt-20">
 
-          <img src="/logo/logo.png" alt="/logo/logo.png" className=' image-full w-2/5 md:w-48  m-4' />
+          <Image
+            src="/logo/logo.png"
+            alt="Coolha"
+            width={192}
+            height={192}
+            priority
+            fetchPriority="high"
+            sizes="(max-width: 768px) 40vw, 192px"
+            className="w-2/5 md:w-48 m-4 h-auto"
+          />
 
           <div className="max-w-4xl ">
             <h1 className="text-5xl md:text-7xl font-bold mb-8">

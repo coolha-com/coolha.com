@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
@@ -62,7 +63,16 @@ export default function RWAPage() {
     <div className="bg-base-100 min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/hongkong.jpg')] bg-cover bg-center bg-no-repeat pointer-events-none" />
+        <Image
+          src="/hongkong.jpg"
+          alt=""
+          fill
+          priority
+          fetchPriority="high"
+          quality={75}
+          sizes="100vw"
+          className="object-cover object-center pointer-events-none"
+        />
         <div className="absolute inset-0 bg-black/15 dark:bg-black/55 pointer-events-none" />
         <div className="absolute inset-0 bg-linear-to-b from-black/50 dark:from-black/60 via-black/50 to-black/50 dark:to-black/60 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
