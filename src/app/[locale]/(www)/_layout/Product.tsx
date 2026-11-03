@@ -195,6 +195,7 @@ function Showcase() {
                   width={shot.width}
                   height={shot.height}
                   sizes="(min-width: 1024px) 1100px, 100vw"
+                  loading={index === 0 ? 'eager' : 'lazy'}
                   className="w-full rounded-xl"
                 />
               </motion.div>

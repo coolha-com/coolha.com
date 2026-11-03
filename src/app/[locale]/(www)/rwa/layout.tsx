@@ -1,18 +1,26 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { buildAlternates, toOgLocale } from '@/lib/seo';
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('rwa');
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'rwa' });
+  const alternates = buildAlternates('rwa', locale);
+  const title = t('page_title');
+  const description = t('page_description');
 
   return {
-    title: t('page_title') || 'Real World Assets Tokenization Platform | Coolha',
-    description: t('page_description') || 'Tokenize real-world assets on blockchain. Unlock liquidity for real estate, commodities, bonds, and more. Coolha RWA platform enables fractional ownership and transparent asset management.',
+    title,
+    description,
+    alternates,
     keywords: ['RWA', 'real world assets', 'tokenization', 'blockchain assets', 'asset liquidity', 'fractional ownership', 'crypto infrastructure'],
     openGraph: {
-      title: t('page_title') || 'Real World Assets Tokenization Platform | Coolha',
-      description: t('page_description') || 'Tokenize real-world assets and unlock liquidity on blockchain',
+      title,
+      description,
       type: 'website',
-      url: 'https://coolha.com/rwa',
+      url: alternates.canonical,
+      siteName: 'Coolha',
+      locale: toOgLocale(locale),
       images: [
         {
           url: '/og.png',
@@ -24,8 +32,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('page_title') || 'Real World Assets Tokenization Platform | Coolha',
-      description: t('page_description') || 'Blockchain-based RWA tokenization platform',
+      title,
+      description,
       images: ['/og.png'],
     },
   };

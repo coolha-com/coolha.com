@@ -31,9 +31,10 @@
     "title": "Coolha",
     "subtitle1": "Digital growth momentum, empowering creators, brands, communities, and organizations",
     "subtitle2": "AI connects with RWA, and Agents help manage your assets and projects",
-    "launch": "Launch"
+    "launch": "Launch",
+    "meta_title": "On-chain AI Agent Infrastructure",
+    "meta_description": "Coolha builds on-chain infrastructure for the Web4 agent economy: AI chat, agent execution, ERC-8004 agent identity and marketplace, x402 programmable payments, and real-world asset (RWA) tokenization."
   },
-
   "product": {
     "tag": "Web3 Agent Tools",
     "subtitle": "Anyone can easily own, rent, or sell on-chain AI agents, ushering in the era of the AI agent economy.",
@@ -82,12 +83,25 @@
     "position_title": "Our Position",
     "position_desc": "We foresee the long-term transformation of the agent economy and are proactively building technology and products for the Web4 era.",
     "stances": [
-      { "title": "Building Standardized Human-Machine & Machine-Machine Interaction and Payment Infrastructure", "desc": "Providing complete solutions for enterprises to connect with AI agent customers" },
-      { "title": "Restructuring Product Logic and Business Interfaces", "desc": "Adapting for future automated agent procurement, transactions, and fulfillment (cross-border, compute, SaaS services as priorities)" },
-      { "title": "Committing to Carbon-Silicon Symbiosis", "desc": "Silicon-based intelligence handles规模化, continuous execution and efficiency; humans retain top-level decision-making, value judgment, and innovation" },
-      { "title": "Tracking Global AI Compliance and Policy", "desc": "Building a secure, controllable, and sustainable agent business ecosystem" }
+      {
+        "title": "Building Standardized Human-Machine & Machine-Machine Interaction and Payment Infrastructure",
+        "desc": "Providing complete solutions for enterprises to connect with AI agent customers"
+      },
+      {
+        "title": "Restructuring Product Logic and Business Interfaces",
+        "desc": "Adapting for future automated agent procurement, transactions, and fulfillment (cross-border, compute, SaaS services as priorities)"
+      },
+      {
+        "title": "Committing to Carbon-Silicon Symbiosis",
+        "desc": "Silicon-based intelligence handles规模化, continuous execution and efficiency; humans retain top-level decision-making, value judgment, and innovation"
+      },
+      {
+        "title": "Tracking Global AI Compliance and Policy",
+        "desc": "Building a secure, controllable, and sustainable agent business ecosystem"
+      }
     ],
-    "closing": "The future competition is no longer just about who has better AI. It's about who can build a business system that serves both human customers and AI agent customers — sooner."
+    "closing": "The future competition is no longer just about who has better AI. It's about who can build a business system that serves both human customers and AI agent customers — sooner.",
+    "meta_description": "The Web4 agent economy: AI agents with independent on-chain identity, crypto wallets, and reputation systems, forming two-way markets between humans and machines. Coolha builds the standard interaction and payment infrastructure for agents."
   },
   "rwa": {
     "page_title": "Real World Assets Tokenization Platform",
@@ -99,11 +113,12 @@
     "definition_title": "What are Real World Assets (RWA)?",
     "definition_intro": "Real World Assets (RWA) are tangible and intangible assets from the physical world that are tokenized on blockchain networks.",
     "definition_desc": "These include physical assets such as real estate, infrastructure, and commodities, as well as financial assets including bonds, stocks, private equity, invoice financing, and newer categories such as carbon credits. By tokenizing RWA on blockchain, assets become fractional, tradable, and transparent while preserving immutable records.",
+    "tokenization_title": "How Tokenization Works",
     "what_is_rwa_title": "What is RWA?",
     "what_is_rwa_desc1": "RWA (Real World Assets) refers to tangible or intangible assets that exist in the physical world, such as real estate, artwork, treasury bonds, commodities, or even carbon credits.",
     "what_is_rwa_desc2": "Through blockchain technology, we convert the ownership or yield rights of these assets into digital tokens (Tokenization). This not only breaks the geographical and financial threshold limits of traditional financial markets but also greatly improves asset trading efficiency.",
     "physical_assets": "Physical Assets",
-    "physical_assets_desc": "Real estate, infrastructure, commodities, and other physical assets",
+    "physical_assets_desc": "Real estate, infrastructure, commodities, artwork, carbon credits, and other physical assets",
     "financial_assets": "Financial Instruments",
     "financial_assets_desc": "Treasury bonds, stocks, private equity, invoice financing",
     "core_advantages_title": "Core Advantages of RWA",
@@ -183,6 +198,7 @@
       "Web3 transformation consulting"
     ],
     "join_us": "Join Us",
-    "contact_us": "Contact Us"
+    "contact_us": "Contact Us",
+    "meta_description": "Coolha Limited is a technology company focused on Web3 development and applications, incorporated in Hong Kong on August 26, 2025. Its work spans Web3 infrastructure, AI agent economy infrastructure, RWA tokenization, and brand strategy and business consulting."
   }
 }

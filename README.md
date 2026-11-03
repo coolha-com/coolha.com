@@ -24,7 +24,6 @@ Coolha Limited（酷哈有限公司）是一家专注于 Web3 技术开发和应
 
 - **网站**: [https://coolha.com](https://coolha.com)
 - **应用**: [https://app.coolha.com](https://app.coolha.com)
-- **文档**: [https://docs.coolha.com](https://docs.coolha.com)
 
 ### 社交媒体
 

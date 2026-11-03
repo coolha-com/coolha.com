@@ -117,11 +117,8 @@ export default function RWAPage() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold">{t("what_is_rwa_title")}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("tokenization_title")}</h2>
               <div className="space-y-4 text-lg text-base-content/80 leading-relaxed">
-                <p>
-                  {t("what_is_rwa_desc1")}
-                </p>
                 <p>
                   {t("what_is_rwa_desc2")}
                 </p>

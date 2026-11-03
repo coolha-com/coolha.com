@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LegalLayout, { type TocItem } from "@/components/legal/LegalLayout";
+import { buildAlternates, toOgLocale } from "@/lib/seo";
 
 const title = "Privacy Policy";
 const description =
@@ -7,46 +8,47 @@ const description =
 
 const url = "https://coolha.com/privacy";
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: {
-    canonical: url,
-    languages: {
-      en: "https://coolha.com/en/privacy",
-      "zh-Hans": "https://coolha.com/zh-Hans/privacy",
-      "zh-Hant": "https://coolha.com/zh-Hant/privacy",
-      "x-default": "https://coolha.com/en/privacy",
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const alternates = buildAlternates("privacy", locale);
+
+  return {
+    title,
+    description,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      url: alternates.canonical,
+      type: "article",
+      siteName: "Coolha",
+      locale: toOgLocale(locale),
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: "Coolha - Privacy Policy",
+          type: "image/png",
+        },
+      ],
     },
-  },
-  openGraph: {
-    title,
-    description,
-    url,
-    type: "article",
-    siteName: "Coolha",
-    locale: "en",
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Coolha - Privacy Policy",
-        type: "image/png",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: ["/og.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og.png"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 const toc: TocItem[] = [
   { id: "introduction", title: "1. Introduction" },

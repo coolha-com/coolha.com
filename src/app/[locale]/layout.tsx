@@ -3,36 +3,35 @@ import Script from "next/script";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { SITE_URL, buildAlternates, toOgLocale } from '@/lib/seo';
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('www')
-  const Title = t('title')
-  const locale = await getLocale()
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'www' });
+  const Title = t('title');
+  const description = t('meta_description');
+  const alternates = buildAlternates('', locale);
 
   return {
     title: {
-      template: ` ${Title} | %s`,
+      template: `%s | ${Title}`,
       default: Title,
     },
-    description: "Coolha: Web3 marketing, DApp development, AI-powered blockchain applications, and real-world asset tokenization. Empower creators, brands, and organizations with blockchain infrastructure.",
-    metadataBase: new URL('https://coolha.com'),
-    alternates: {
-      canonical: `https://coolha.com/${locale}`,
-      languages: {
-        'en': 'https://coolha.com/en',
-        'zh-Hans': 'https://coolha.com/zh-Hans',
-        'zh-Hant': 'https://coolha.com/zh-Hant',
-        'x-default': 'https://coolha.com/en',
-      },
-    },
+    description,
+    metadataBase: new URL(SITE_URL),
+    alternates,
     openGraph: {
       title: Title,
-      description: "Web3 marketing, DApp development, AI-powered blockchain applications, and RWA tokenization platform",
-      url: 'https://coolha.com',
+      description,
+      url: alternates.canonical,
       siteName: 'Coolha',
       images: [
         {
@@ -43,19 +42,22 @@ export async function generateMetadata(): Promise<Metadata> {
           type: 'image/png',
         },
       ],
-      locale,
+      locale: toOgLocale(locale),
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
       title: Title,
-      description: "Web3 marketing, DApp development, AI-powered blockchain applications, and RWA tokenization",
+      description,
       images: ['/og.png'],
       creator: '@coolha_com',
       site: '@coolha_com',
     },
     icons: {
-      icon: 'favicon.ico',
+      icon: [
+        { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+        { url: '/logo/icon192.png', sizes: '192x192', type: 'image/png' },
+      ],
       shortcut: '/shortcut-icon.png',
       apple: '/apple-icon.png',
     },
@@ -104,18 +106,17 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
               name: "Coolha Limited",
               alternateName: "酷哈公司",
               url: "https://coolha.com",
-              description: "Web3 blockchain marketing, DApp development, AI-powered blockchain applications, and real-world asset tokenization solutions",
+              description: "Coolha builds Web3 agent infrastructure: on-chain AI agents, ERC-8004 agent identity, x402 programmable payments, and real-world asset (RWA) tokenization.",
               sameAs: ["https://x.com/coolha_com", "https://github.com/coolha-com", "https://www.linkedin.com/company/coolha/", "https://farcaster.xyz/coolha"],
               foundingDate: "2025-08-26",
               contactPoint: {
                 "@type": "ContactPoint",
-                "telephone": "+852-XXXX-XXXX",
                 "contactType": "Sales",
                 "email": "connect@coolha.com",
                 "areaServed": "Worldwide",
                 "availableLanguage": ["en", "zh-Hans", "zh-Hant"],
               },
-              knowsAbout: ["Web3", "Blockchain", "DApp Development", "Smart Contracts", "Cryptocurrency", "AI Automation", "Real World Assets", "Tokenization"],
+              knowsAbout: ["Web3", "Blockchain", "AI Agents", "ERC-8004", "x402", "Smart Contracts", "Real World Assets", "Tokenization"],
             }),
           }}
         />
@@ -131,7 +132,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "What is Coolha?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha is a Web3 infrastructure company providing blockchain marketing, DApp development, AI-powered blockchain applications, and real-world asset (RWA) tokenization solutions.",
+                    "text": "Coolha is a Web3 infrastructure company building on-chain AI agent infrastructure, including agent identity (ERC-8004), programmable agent payments (x402), and real-world asset (RWA) tokenization.",
                   },
                 },
                 {
@@ -139,7 +140,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "What is Coolha AI?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha AI focuses on using agents to execute on-chain transactions and handle on-chain operations on behalf of users.",
+                    "text": "Coolha AI is a suite of on-chain agent tools: AI chat for on-chain analysis and contract auditing, an agent assistant that executes transactions and manages wallets, an agent factory for minting agents with verifiable on-chain reputation, an agent marketplace, and token-based AI compute APIs.",
                   },
                 },
                 {
@@ -155,15 +156,15 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "What services does Coolha provide?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha provides Web3 marketing strategy, DApp development, smart contract development, NFT brand marketing, AI-powered blockchain applications, RWA tokenization infrastructure, and decentralized application development.",
+                    "text": "Coolha provides Web3 infrastructure development (DApps, EVM smart contracts, wallet integration), on-chain AI agent tools and marketplaces, token-based AI compute APIs, RWA tokenization solutions, and brand strategy and business consulting for Web3.",
                   },
                 },
                 {
                   "@type": "Question",
-                  "name": "Is Coolha AI suitable for solo founders?",
+                  "name": "Who can use Coolha AI?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes, Coolha AI is suitable for solo founders, independent developers, creators, and digital operators who want agents to help execute on-chain workflows.",
+                    "text": "Coolha AI is built for creators, brands, communities, organizations, and independent operators who want agents to manage on-chain workflows — including AI chat for analysis and auditing, an agent assistant for wallet and transaction execution, an agent factory for issuing agents with on-chain identity, and an agent marketplace.",
                   },
                 },
                 {
@@ -171,7 +172,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "How does Web3 automation work in Coolha?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha uses AI agents orchestrated through the OpenClaw runtime, with blockchain infrastructure (Base chain, USDC, x402 Protocol) to automate business processes and enable crypto-native payments and settlements.",
+                    "text": "Coolha runs AI agents on EVM-compatible blockchain infrastructure, combining on-chain agent identity (ERC-8004), stablecoin settlement (USDC/USDT), and the x402 protocol so agents can call paid APIs and settle transactions programmatically.",
                   },
                 },
                 {
@@ -179,7 +180,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "What blockchain network does Coolha use?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha primarily uses Base Chain, an L2 blockchain by Coinbase, for its infrastructure. Base provides low gas fees, native USDC support, and strong builder ecosystem.",
+                    "text": "Coolha builds on EVM-compatible chains, so agents can interact with the same contracts, wallets, and token standards used across the Ethereum ecosystem.",
                   },
                 },
                 {
@@ -199,33 +200,15 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://coolha.com"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Company",
-                  item: "https://coolha.com/company"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "AI",
-                  item: "https://coolha.com/ai"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "RWA",
-                  item: "https://coolha.com/rwa"
-                }
-              ]
+              "@type": "WebSite",
+              name: "Coolha",
+              url: SITE_URL,
+              inLanguage: ["en", "zh-Hans", "zh-Hant"],
+              publisher: {
+                "@type": "Organization",
+                name: "Coolha Limited",
+                url: SITE_URL,
+              },
             }),
           }}
         />
