@@ -144,61 +144,13 @@
   },
   "company": {
     "title": "Coolha Limited",
-    "subtitle": "Making data information ownable, trustworthy, and valuable",
-    "description0": "A software technology company focused on Web3 technology development and applications, established in Hong Kong on August 26, 2025.",
-    "description1": "We hope to change production relations through technology, contribute to world civilization progress, and make the world a better place",
-    "description2": "We believe that the development of Web3 and blockchain is not just technological and internet progress, but also a positive concept that can extend to various fields",
-    "description3": "Public blockchain is an important technology for world unity, global solidarity, democratic governance, and solving trust issues",
-    "mission": "Mission",
-    "mission_desc": "To promote internet progress and world civilization advancement, create exciting products and services, and make the world better",
-    "vision": "Vision",
-    "vision_desc": "Making data information ownable, trustworthy, and valuable",
-    "values": "Values",
-    "values_desc": "Always user-centered, avoiding excessive commercialization and financialization, ensuring fair rights for all",
-    "innovation": "Technical Innovation",
-    "innovation_desc": "Committed to continuously exploring and applying cutting-edge technologies to provide better Web3 products and service solutions.",
+    "intro": "Registered in Hong Kong, China in 2025, focused on Web3 blockchain technology application development and cutting-edge technology applications, hoping to change production relations and increase productivity through technology, contribute to the progress of world civilization, and make data and information ownable, trustworthy, and valuable.",
     "web3_dev": "Web3 Technology Development",
-    "web3_dev_desc": "Blockchain technology services for enterprises and project teams.",
-    "web3_dev_items": [
-      "DApp development",
-      "EVM smart contract development",
-      "Web3 project website building",
-      "Blockchain system architecture design",
-      "Wallet integration and on-chain interaction",
-      "AI Agent and Web3 application development"
-    ],
-    "rwa_solution": "Digital Assets & RWA Solutions",
-    "rwa_solution_desc": "Help enterprises digitize assets, rights, and business scenarios.",
-    "rwa_solution_items": [
-      "RWA asset tokenization",
-      "Stablecoin and payment design",
-      "Digital asset issuance",
-      "Membership systems",
-      "Brand digital operations",
-      "On-chain asset management"
-    ],
-    "ai_growth": "AI Growth & Digital Marketing",
-    "ai_growth_desc": "Leverage AI and data to drive user acquisition and growth.",
-    "ai_growth_items": [
-      "AI marketing automation",
-      "Content generation and operations",
-      "Social media growth",
-      "Advertising strategy",
-      "User growth programs",
-      "Data analytics and business insights"
-    ],
-    "brand_strategy": "Brand Strategy & Business Consulting",
-    "brand_strategy_desc": "End-to-end planning from business models to brand building.",
-    "brand_strategy_items": [
-      "Business model design",
-      "Market research analysis",
-      "Brand strategy planning",
-      "Product planning and positioning",
-      "Corporate identity design",
-      "Web3 transformation consulting"
-    ],
+    "rwa_solution": "Digital Assets and RWA Tokenization Solutions",
+    "ai_growth": "AI Growth and Digital Marketing",
+    "brand_strategy": "Brand Strategy and Business Consulting",
     "join_us": "Join Us",
     "contact_us": "Contact Us",
-    "meta_description": "Coolha Limited is a technology company focused on Web3 development and applications, incorporated in Hong Kong on August 26, 2025. Its work spans Web3 infrastructure, AI agent economy infrastructure, RWA tokenization, and brand strategy and business consulting."
+    "meta_description": "Registered in Hong Kong, China in 2025, focused on Web3 blockchain technology application development and cutting-edge technology applications, hoping to change production relations and increase productivity through technology, contribute to the progress of world civilization, and make data and information ownable, trustworthy, and valuable."
   }
 }
