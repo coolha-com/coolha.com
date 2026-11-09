@@ -89,7 +89,7 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
                 </Button> */}
 
                 <MobileNavLink href="/" label={t("home")} />
-                <MobileNavLink href="/ai" label={t("ai")} />
+                <MobileNavLink href="/agent" label={t("agent")} />
                 <MobileNavLink href="/rwa" label={t("rwa")} />
                 <MobileNavLink href="/company" label={t("company")} />
             </>
@@ -105,8 +105,8 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
             </li>
 
             <li className="text-sm font-medium list-none">
-                <Link href={`/ai`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t("ai")}
+                <Link href={`/agent`} prefetch={false} className="text-muted-foreground hover:text-foreground transition-colors">
+                    {t("agent")}
                 </Link>
             </li>
 
@@ -121,12 +121,6 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
                     {t("company")}
                 </Link>
             </li>
-
-{/*             <li className="text-sm font-medium list-none">
-                <Link href={`https://link3.to/coolha`} target='_blank' className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t("contact")} ↗
-                </Link>
-            </li> */}
 
         </>
     );

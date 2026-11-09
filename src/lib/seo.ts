@@ -8,7 +8,7 @@ export const DEFAULT_LOCALE: Locale = "en";
 
 /**
  * Builds the canonical URL + hreflang map for a given route path.
- * `path` is the locale-agnostic route, e.g. "" for home, "ai", "rwa".
+ * `path` is the locale-agnostic route, e.g. "" for home, "agent", "rwa".
  */
 export function buildAlternates(path: string, locale: string) {
   const suffix = path ? `/${path.replace(/^\/+|\/+$/g, "")}` : "";

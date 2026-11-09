@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image";
 import Link from "next/link"
 import { useState } from "react";
-import { RiArrowLeftCircleLine, RiGithubFill, RiLinkedinBoxFill, RiMailFill, RiTwitterXFill, RiWechatFill } from "react-icons/ri";
+import { RiGithubFill, RiLinkedinBoxFill, RiMailFill, RiTwitterXFill, RiWechatFill } from "react-icons/ri";
 
 
 function MLink({ href, children }: any) {
@@ -31,10 +31,6 @@ export default function MediaLink() {
   };
   return (
     <>
-
-      <MLink href="https://link3.to/coolha" >
-        <RiArrowLeftCircleLine className="w-9 h-9 text-base-content" />
-      </MLink>
 
       <MLink href="mailto:connect@coolha.com" >
         <RiMailFill className="w-9 h-9 text-base-content" />

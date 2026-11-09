@@ -15,7 +15,7 @@ export default function page() {
 
   return (
     <main className="mx-auto w-full max-w-3xl px-6 py-12 sm:py-16">
-      <h1 className="text-2xl font-medium tracking-tight text-foreground sm:text-3xl">
+      <h1 className="text-2xl font-medium tracking-tight text-primary sm:text-3xl">
         {t("title")}
       </h1>
       <p className="mt-6 text-base leading-7 text-muted-foreground">

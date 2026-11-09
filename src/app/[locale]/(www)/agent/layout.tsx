@@ -5,7 +5,7 @@ import { buildAlternates, toOgLocale } from "@/lib/seo"
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "ai" })
-  const alternates = buildAlternates("ai", locale)
+  const alternates = buildAlternates("agent", locale)
   const description = t("meta_description")
 
   return {
