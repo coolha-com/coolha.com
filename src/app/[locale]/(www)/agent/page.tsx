@@ -25,8 +25,8 @@ const sectionKeys = [
   { id: "hardware", paragraphs: ["p1"] },
 ] as const
 
-export default function AIPage() {
-  const t = useTranslations("ai")
+export default function AgentPage() {
+  const t = useTranslations("agent")
   const stances = t.raw("stances") as { title: string; desc: string }[]
 
   return (

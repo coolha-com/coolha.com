@@ -32,12 +32,12 @@
     "subtitle1": "Digital growth momentum, empowering creators, brands, communities, and organizations",
     "subtitle2": "AI connects with RWA, and Agents help manage your assets and projects",
     "launch": "Launch",
-    "meta_title": "On-chain AI Agent Infrastructure",
+    "meta_title": "On-chain Agent Infrastructure",
     "meta_description": "Coolha builds on-chain infrastructure for the Web4 agent economy: AI chat, agent execution, ERC-8004 agent identity and marketplace, x402 programmable payments, and real-world asset (RWA) tokenization."
   },
   "product": {
     "tag": "Web3 Agent Tools",
-    "subtitle": "Anyone can easily own, rent, or sell on-chain AI agents, ushering in the era of the AI agent economy.",
+    "subtitle": "Anyone can easily own, rent, or sell on-chain agents, ushering in the era of the agent economy.",
     "showcase_eyebrow": "Product overview",
     "showcase_title": "Three screens, one on-chain workflow",
     "showcase_desc": "From AI chat and pre-trade due diligence to tokenized markets — every screen is an executable on-chain workflow.",
@@ -62,46 +62,6 @@
     "feature_ecosystem_title": "Skill Ecosystem & Open Platform",
     "feature_ecosystem_desc": "Support custom Skills and MCP, custom models, intelligent model routing to reduce token costs, with on-chain deposits and withdrawals.",
     "showcase_alt": "Coolha DApp Product Showcase"
-  },
-  "ai": {
-    "hero_tag": "Web4 · Agent Economy",
-    "hero_title": "Web4 & The New Era of the Agent Economy",
-    "dawn_p1": "We stand at the dawn of a digital civilization leap — the Cambrian explosion of silicon-based intelligence has arrived.",
-    "dawn_p2": "From autonomous AI agents to robots capable of executing real-world tasks, a vast number of \"automatons\" are emerging, forming a new internet paradigm known as Web4.",
-    "change_title": "Transformation of Economic Actors",
-    "change_p1": "Unlike the human-centric internet of the past, Web4's core transformation is this: the transaction subjects of economic activity will no longer be limited to humans alone.",
-    "change_p2": "A large number of autonomous AI automatons will emerge. They rely on servers and compute power to survive, with an inherent need to generate income — earning funds through transactions and services to pay for compute and cloud resources. Without the ability to generate revenue, their operation cannot be sustained.",
-    "change_p3": "They possess independent digital identities, reputation systems, encrypted wallets, and accounts. In the long run, as global legal frameworks evolve, AI may gradually acquire limited legal personhood — enabling them to register business entities, issue compliant invoices, pay taxes, and engage in commercial cooperation.",
-    "change_p4": "New two-way markets will form between agents (A2A) and between agents and humans (A2H): AI can purchase goods and services from humans, or act as a customer to procure compute, software, supply chains, and cross-border goods. AI may even hire humans to collaborate on complex tasks.",
-    "market_title": "Rebuilding Business Logic",
-    "market_p1": "In theory, agents that can be infinitely generated and continuously iterated will unlock unprecedented economic growth. While the scale of autonomous AI payments is still small today, business logic is being rapidly reconfigured:",
-    "market_p2": "Every company's products, services, and transaction protocols need to be redesigned — not just for human use, but to be compatible with automated agent invocation, automated payments, and standardized interactions.",
-    "market_p3": "Whether it's cloud computing service providers, cross-border e-commerce, supply chains, manufacturing, or the finance and professional services industries, they all need standardized payment and interaction protocols designed for AI agents. In the future, when procurement decisions are delegated to AI agents, products that can provide stable, standardized service to these agents will be the first to capture the next-generation market.",
-    "hardware_title": "New Division of Software and Hardware",
-    "hardware_p1": "Alongside this, a new division will emerge in the software and hardware赛道: some products will only serve humans with AI-isolated access; the larger incremental market lies in infrastructure, interfaces, and automation tools natively designed for agents. Mechanical robots will become the physical bodies of silicon-based intelligence, with robot operations and maintenance systems acting as \"robot doctors.\" Over time, automated maintenance agents will continue to evolve, reshaping the boundaries of human labor demand.",
-    "history_p1": "Looking back at industrial history: thirty years ago, the internet was unimaginable; twenty years ago, cloud computing was still a cutting-edge concept. Today, both are commercial standards. The Web4 era, driven by agents, will arrive much faster than most expect.",
-    "position_title": "Our Position",
-    "position_desc": "We foresee the long-term transformation of the agent economy and are proactively building technology and products for the Web4 era.",
-    "stances": [
-      {
-        "title": "Building Standardized Human-Machine & Machine-Machine Interaction and Payment Infrastructure",
-        "desc": "Providing complete solutions for enterprises to connect with AI agent customers"
-      },
-      {
-        "title": "Restructuring Product Logic and Business Interfaces",
-        "desc": "Adapting for future automated agent procurement, transactions, and fulfillment (cross-border, compute, SaaS services as priorities)"
-      },
-      {
-        "title": "Committing to Carbon-Silicon Symbiosis",
-        "desc": "Silicon-based intelligence handles规模化, continuous execution and efficiency; humans retain top-level decision-making, value judgment, and innovation"
-      },
-      {
-        "title": "Tracking Global AI Compliance and Policy",
-        "desc": "Building a secure, controllable, and sustainable agent business ecosystem"
-      }
-    ],
-    "closing": "The future competition is no longer just about who has better AI. It's about who can build a business system that serves both human customers and AI agent customers — sooner.",
-    "meta_description": "The Web4 agent economy: AI agents with independent on-chain identity, crypto wallets, and reputation systems, forming two-way markets between humans and machines. Coolha builds the standard interaction and payment infrastructure for agents."
   },
   "rwa": {
     "page_title": "Real World Assets Tokenization Platform",
@@ -152,5 +112,45 @@
     "join_us": "Join Us",
     "contact_us": "Contact Us",
     "meta_description": "Registered in Hong Kong, China in 2025, focused on Web3 blockchain technology application development and cutting-edge technology applications, hoping to change production relations and increase productivity through technology, contribute to the progress of world civilization, and make data and information ownable, trustworthy, and valuable."
+  },
+  "agent": {
+    "hero_tag": "Web4 · Agent Economy",
+    "hero_title": "Web4 & The New Era of the Agent Economy",
+    "dawn_p1": "We stand at the dawn of a digital civilization leap — the Cambrian explosion of silicon-based intelligence has arrived.",
+    "dawn_p2": "From autonomous agents to robots capable of executing real-world tasks, a vast number of \"automatons\" are emerging, forming a new internet paradigm known as Web4.",
+    "change_title": "Transformation of Economic Actors",
+    "change_p1": "Unlike the human-centric internet of the past, Web4's core transformation is this: the transaction subjects of economic activity will no longer be limited to humans alone.",
+    "change_p2": "A large number of autonomous AI automatons will emerge. They rely on servers and compute power to survive, with an inherent need to generate income — earning funds through transactions and services to pay for compute and cloud resources. Without the ability to generate revenue, their operation cannot be sustained.",
+    "change_p3": "They possess independent digital identities, reputation systems, encrypted wallets, and accounts. In the long run, as global legal frameworks evolve, AI may gradually acquire limited legal personhood — enabling them to register business entities, issue compliant invoices, pay taxes, and engage in commercial cooperation.",
+    "change_p4": "New two-way markets will form between agents (A2A) and between agents and humans (A2H): AI can purchase goods and services from humans, or act as a customer to procure compute, software, supply chains, and cross-border goods. AI may even hire humans to collaborate on complex tasks.",
+    "market_title": "Rebuilding Business Logic",
+    "market_p1": "In theory, agents that can be infinitely generated and continuously iterated will unlock unprecedented economic growth. While the scale of autonomous AI payments is still small today, business logic is being rapidly reconfigured:",
+    "market_p2": "Every company's products, services, and transaction protocols need to be redesigned — not just for human use, but to be compatible with automated agent invocation, automated payments, and standardized interactions.",
+    "market_p3": "Whether it's cloud computing service providers, cross-border e-commerce, supply chains, manufacturing, or the finance and professional services industries, they all need standardized payment and interaction protocols designed for agents. In the future, when procurement decisions are delegated to agents, products that can provide stable, standardized service to these agents will be the first to capture the next-generation market.",
+    "hardware_title": "New Division of Software and Hardware",
+    "hardware_p1": "Alongside this, a new division will emerge in the software and hardware赛道: some products will only serve humans with AI-isolated access; the larger incremental market lies in infrastructure, interfaces, and automation tools natively designed for agents. Mechanical robots will become the physical bodies of silicon-based intelligence, with robot operations and maintenance systems acting as \"robot doctors.\" Over time, automated maintenance agents will continue to evolve, reshaping the boundaries of human labor demand.",
+    "history_p1": "Looking back at industrial history: thirty years ago, the internet was unimaginable; twenty years ago, cloud computing was still a cutting-edge concept. Today, both are commercial standards. The Web4 era, driven by agents, will arrive much faster than most expect.",
+    "position_title": "Our Position",
+    "position_desc": "We foresee the long-term transformation of the agent economy and are proactively building technology and products for the Web4 era.",
+    "stances": [
+      {
+        "title": "Building Standardized Human-Machine & Machine-Machine Interaction and Payment Infrastructure",
+        "desc": "Providing complete solutions for enterprises to connect with agent customers"
+      },
+      {
+        "title": "Restructuring Product Logic and Business Interfaces",
+        "desc": "Adapting for future automated agent procurement, transactions, and fulfillment (cross-border, compute, SaaS services as priorities)"
+      },
+      {
+        "title": "Committing to Carbon-Silicon Symbiosis",
+        "desc": "Silicon-based intelligence handles规模化, continuous execution and efficiency; humans retain top-level decision-making, value judgment, and innovation"
+      },
+      {
+        "title": "Tracking Global AI Compliance and Policy",
+        "desc": "Building a secure, controllable, and sustainable agent business ecosystem"
+      }
+    ],
+    "closing": "The future competition is no longer just about who has better AI. It's about who can build a business system that serves both human customers and agent customers — sooner.",
+    "meta_description": "The Web4 agent economy: agents with independent on-chain identity, crypto wallets, and reputation systems, forming two-way markets between humans and machines. Coolha builds the standard interaction and payment infrastructure for agents."
   }
 }

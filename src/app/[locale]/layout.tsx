@@ -106,7 +106,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
               name: "Coolha Limited",
               alternateName: "酷哈公司",
               url: "https://coolha.com",
-              description: "Coolha builds Web3 agent infrastructure: on-chain AI agents, ERC-8004 agent identity, x402 programmable payments, and real-world asset (RWA) tokenization.",
+              description: "2025注册于中国香港，专注Web3区块链技术应用开发和前沿技术应用，希望通过技术改变生产关系和提高生产力，为世界文明进步做贡献，让数据信息可拥有、可信任、有价值。",
               sameAs: ["https://x.com/coolha_com", "https://github.com/coolha-com", "https://www.linkedin.com/company/coolha/", "https://farcaster.xyz/coolha"],
               foundingDate: "2025-08-26",
               contactPoint: {
@@ -117,6 +117,12 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                 "availableLanguage": ["en", "zh-Hans", "zh-Hant"],
               },
               knowsAbout: ["Web3", "Blockchain", "AI Agents", "ERC-8004", "x402", "Smart Contracts", "Real World Assets", "Tokenization"],
+              makesOffer: [
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web3 技术开发" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "数字资产与 RWA 代币化解决方案" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI 增长与数字营销" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "品牌战略与商业咨询" } },
+              ],
             }),
           }}
         />
@@ -132,15 +138,15 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "What is Coolha?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha is a Web3 infrastructure company building on-chain AI agent infrastructure, including agent identity (ERC-8004), programmable agent payments (x402), and real-world asset (RWA) tokenization.",
+                    "text": "2025注册于中国香港，专注Web3区块链技术应用开发和前沿技术应用，希望通过技术改变生产关系和提高生产力，为世界文明进步做贡献，让数据信息可拥有、可信任、有价值。",
                   },
                 },
                 {
                   "@type": "Question",
-                  "name": "What is Coolha AI?",
+                  "name": "What is Coolha Agent?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha AI is a suite of on-chain agent tools: AI chat for on-chain analysis and contract auditing, an agent assistant that executes transactions and manages wallets, an agent factory for minting agents with verifiable on-chain reputation, an agent marketplace, and token-based AI compute APIs.",
+                    "text": "Coolha Agent is a suite of on-chain agent tools: AI chat for on-chain analysis and contract auditing, an agent assistant that executes transactions and manages wallets, an agent factory for minting agents with verifiable on-chain reputation, an agent marketplace, and token-based AI compute APIs.",
                   },
                 },
                 {
@@ -156,15 +162,15 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "What services does Coolha provide?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha provides Web3 infrastructure development (DApps, EVM smart contracts, wallet integration), on-chain AI agent tools and marketplaces, token-based AI compute APIs, RWA tokenization solutions, and brand strategy and business consulting for Web3.",
+                    "text": "Web3 技术开发；数字资产与 RWA 代币化解决方案；AI 增长与数字营销；品牌战略与商业咨询。",
                   },
                 },
                 {
                   "@type": "Question",
-                  "name": "Who can use Coolha AI?",
+                  "name": "Who can use Coolha Agent?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha AI is built for creators, brands, communities, organizations, and independent operators who want agents to manage on-chain workflows — including AI chat for analysis and auditing, an agent assistant for wallet and transaction execution, an agent factory for issuing agents with on-chain identity, and an agent marketplace.",
+                    "text": "Coolha Agent is built for creators, brands, communities, organizations, and independent operators who want agents to manage on-chain workflows — including AI chat for analysis and auditing, an agent assistant for wallet and transaction execution, an agent factory for issuing agents with on-chain identity, and an agent marketplace.",
                   },
                 },
                 {
@@ -172,7 +178,7 @@ export default async function RootLayout({ children, params }: Readonly<{ childr
                   "name": "How does Web3 automation work in Coolha?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Coolha runs AI agents on EVM-compatible blockchain infrastructure, combining on-chain agent identity (ERC-8004), stablecoin settlement (USDC/USDT), and the x402 protocol so agents can call paid APIs and settle transactions programmatically.",
+                    "text": "Coolha runs agents on EVM-compatible blockchain infrastructure, combining on-chain agent identity (ERC-8004), stablecoin settlement (USDC/USDT), and the x402 protocol so agents can call paid APIs and settle transactions programmatically.",
                   },
                 },
                 {
