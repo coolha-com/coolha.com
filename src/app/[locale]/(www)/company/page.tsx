@@ -32,13 +32,13 @@ export default function page() {
 
       <div className="mt-10 grid w-full max-w-md grid-cols-2 gap-3">
         <Button asChild variant="outline" size="lg" className="w-full min-w-0 px-2 text-sm font-medium sm:px-4">
-          <Link href={'mailto:ceo@coolha.com'} target='_blank'>
-            {t("join_us")}
+          <Link href={'mailto:connect@coolha.com'} target='_blank'>
+            {t("contact_us")}
           </Link>
         </Button>
         <Button asChild variant="outline" size="lg" className="w-full min-w-0 px-2 text-sm font-medium sm:px-4">
-          <Link href={'mailto:connect@coolha.com'} target='_blank'>
-            {t("contact_us")}
+          <Link href={'mailto:ceo@coolha.com'} target='_blank'>
+            {t("join_us")}
           </Link>
         </Button>
       </div>
