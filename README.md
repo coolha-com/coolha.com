@@ -4,21 +4,16 @@
 
 ## 公司简介
 
-Coolha Limited（酷哈有限公司）是一家专注于 Web3 技术开发和应用的科技公司，位于香港注册成立。
+酷哈有限公司
 
-我们致力于通过区块链与 AI 技术改变生产关系，为世界文明进步贡献力量。核心方向涵盖 Web3 技术开发、AI 智能体经济基础设施、真实世界资产（RWA）代币化，以及面向 Web4 时代的人机+机机交互与支付协议。
+2025注册于中国香港，专注Web3区块链技术应用开发和前沿技术应用，希望通过技术改变生产关系和提高生产力，为世界文明进步做贡献，让数据信息可拥有、可信任、有价值。
 
 ## 产品与业务
 
-> Web3 基础设施与 AI 智能体平台
-
-| 领域                   | 说明                                                                                                         |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Web3 Agent Tools**   | 链上 AI ，涵盖 AI Chat、Agent Execution、Agent Factory、Agent Marketplace 与开放生态技能扩展 |
-| **AI 智能体交付服务**  | 面向 B 端的项目制交付：AI Agent 与链上模块的定制开发、技术实施与运维，按项目报价，不转售算力 |
-| **RWA 代币化**         | 将房地产、债券、大宗商品等真实世界资产接入区块链，释放流动性                                                 |
-| **Web3 技术开发**      | DApp 开发、EVM 智能合约、钱包集成、链上交互                                                                  |
-| **品牌战略与商业咨询** | 商业模式设计、品牌规划、Web3 转型咨询                                                                        |
+- Web3 技术开发
+- 数字资产与 RWA 代币化解决方案
+- AI 增长与数字营销
+- 品牌战略与商业咨询
 
 ## 网站导航
 
@@ -30,6 +25,5 @@ Coolha Limited（酷哈有限公司）是一家专注于 Web3 技术开发和应
 - **邮箱**: [connect@coolha.com](mailto:connect@coolha.com)
 - **WeChat**: [Coolha](https://mp.weixin.qq.com/s/ou6OinQvb0odJswnO2A5Dg)
 - **X (Twitter)**: [@coolha_com](https://x.com/coolha_com)
-- **X Group**: [Coolha Community](https://x.com/i/chat/group_join/g2041104590905782725/itv293Wzr3)
 - **GitHub**: [coolha-com](https://github.com/coolha-com)
 - **LinkedIn**: [Coolha Limited](https://www.linkedin.com/company/coolha/)
