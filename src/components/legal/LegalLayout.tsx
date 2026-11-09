@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RiArrowRightSLine, RiHome7Line } from "react-icons/ri";
@@ -13,19 +14,36 @@ export interface LegalLayoutProps {
   title: string;
   effectiveDate?: string;
   lastUpdated?: string;
+  effectiveLabel?: string;
+  lastUpdatedLabel?: string;
   breadcrumbLabel: string;
+  homeLabel?: string;
+  tocLabel?: string;
+  breadcrumbAria?: string;
+  tocAria?: string;
+  lang?: string;
   toc: TocItem[];
-  children: React.ReactNode;
+  html?: string;
+  children?: React.ReactNode;
 }
 
 export default function LegalLayout({
   title,
   effectiveDate,
   lastUpdated,
+  effectiveLabel = "Effective Date:",
+  lastUpdatedLabel = "Last Updated:",
   breadcrumbLabel,
+  homeLabel = "Home",
+  tocLabel = "On this page",
+  breadcrumbAria = "Breadcrumb",
+  tocAria = "Table of contents",
+  lang,
   toc,
+  html,
   children,
 }: LegalLayoutProps) {
+  const locale = useLocale();
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
@@ -54,15 +72,15 @@ export default function LegalLayout({
       <div className="mx-auto max-w-7xl px-6 pb-12 lg:px-8 lg:pb-16">
         {/* Breadcrumb */}
         <nav
-          aria-label="Breadcrumb"
+          aria-label={breadcrumbAria}
           className="mb-8 flex items-center gap-1.5 text-sm text-muted-foreground"
         >
           <Link
-            href="/"
+            href={`/${locale}`}
             className="inline-flex items-center gap-1 hover:text-foreground transition-colors"
           >
             <RiHome7Line className="h-4 w-4" />
-            Home
+            {homeLabel}
           </Link>
           <RiArrowRightSLine className="h-4 w-4" />
           <span className="text-foreground font-medium">{breadcrumbLabel}</span>
@@ -73,9 +91,9 @@ export default function LegalLayout({
           <aside className="hidden lg:block">
             <div className="sticky top-24">
               <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                On this page
+                {tocLabel}
               </p>
-              <nav aria-label="Table of contents" className="border-l border-border pl-4">
+              <nav aria-label={tocAria} className="border-l border-border pl-4">
                 <ul className="space-y-1.5">
                   {toc.map((item) => (
                     <li key={item.id}>
@@ -97,7 +115,7 @@ export default function LegalLayout({
           </aside>
 
           {/* Content */}
-          <article className="min-w-0 max-w-none">
+          <article lang={lang} className="min-w-0 max-w-none">
             <header className="mb-10 border-b border-border pb-8">
               <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
                 {title}
@@ -106,13 +124,13 @@ export default function LegalLayout({
                 <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
                   {effectiveDate && (
                     <p>
-                      <span className="font-medium text-foreground">Effective Date:</span>{" "}
+                      <span className="font-medium text-foreground">{effectiveLabel}</span>{" "}
                       {effectiveDate}
                     </p>
                   )}
                   {lastUpdated && (
                     <p>
-                      <span className="font-medium text-foreground">Last Updated:</span>{" "}
+                      <span className="font-medium text-foreground">{lastUpdatedLabel}</span>{" "}
                       {lastUpdated}
                     </p>
                   )}
@@ -123,10 +141,10 @@ export default function LegalLayout({
             {/* Mobile TOC */}
             <details className="lg:hidden mb-8 rounded-2xl border border-border bg-muted/30">
               <summary className="cursor-pointer px-5 py-4 text-sm font-medium text-foreground list-none flex items-center justify-between">
-                <span>On this page</span>
+                <span>{tocLabel}</span>
                 <RiArrowRightSLine className="h-4 w-4 transition-transform open:rotate-90" />
               </summary>
-              <nav className="px-5 pb-5 pt-1">
+              <nav aria-label={tocAria} className="px-5 pb-5 pt-1">
                 <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                   {toc.map((item) => (
                     <li key={item.id}>
@@ -142,9 +160,16 @@ export default function LegalLayout({
               </nav>
             </details>
 
-            <div className="legal-content space-y-8 text-base leading-7 text-foreground/90">
-              {children}
-            </div>
+            {html !== undefined ? (
+              <div
+                className="legal-content space-y-8 text-base leading-7 text-foreground/90"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
+            ) : (
+              <div className="legal-content space-y-8 text-base leading-7 text-foreground/90">
+                {children}
+              </div>
+            )}
           </article>
         </div>
       </div>

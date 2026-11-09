@@ -3,6 +3,12 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 
 const nextConfig: NextConfig = {
+  // Locale files are chosen at request/build time. Keep every legal Markdown
+  // file in the server trace if a page is not fully static.
+  outputFileTracingIncludes: {
+    "/[locale]/privacy": ["./content/legal/**/*.md"],
+    "/[locale]/terms": ["./content/legal/**/*.md"],
+  },
   async redirects() {
     return [
       {
