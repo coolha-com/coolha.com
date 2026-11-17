@@ -31,11 +31,14 @@ export default function Header() {
                 {/* Right */}
                 <div className="flex items-center gap-3">{/* Right */}
                     <LanguageSwitcher />
-                    <Button asChild className="hidden md:flex rounded-4xl text-sm font-semibold px-6" size="default">
-                        <Link href={'https://app.coolha.com'} target="_blank">
-                            {t("launch")}
-                        </Link>
-                    </Button>
+                    <button
+                        type="button"
+                        disabled
+                        aria-disabled="true"
+                        className="hidden h-9 cursor-default items-center justify-center rounded-4xl bg-primary px-6 text-sm font-semibold text-primary-foreground disabled:cursor-default disabled:opacity-100 md:inline-flex"
+                    >
+                        {t("launch")}
+                    </button>
 
                     <div className="md:hidden flex">
                         <Sheet>
@@ -84,10 +87,6 @@ function LinkMenu({ isMobile = false }: { isMobile?: boolean }) {
     if (isMobile) {
         return (
             <>
-                {/*                 <Button asChild className="w-full rounded-4xl text-lg font-bold h-12 mb-4" size="lg">
-                    <Link href={'https://app.coolha.com'} target="_blank">{t("launch")}</Link>
-                </Button> */}
-
                 <MobileNavLink href="/" label={t("home")} />
                 <MobileNavLink href="/agent" label={t("agent")} />
                 <MobileNavLink href="/rwa" label={t("rwa")} />
