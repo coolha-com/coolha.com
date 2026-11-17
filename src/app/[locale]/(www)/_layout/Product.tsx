@@ -20,7 +20,6 @@ import {
   CardTitle,
   CardDescription,
 } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 
 /** Matches the motion used across coolha.com */
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
@@ -43,7 +42,7 @@ const featureKeys = [
   'ecosystem',
 ] as const
 
-/** The three real product screens shown in the product introduction below. */
+/** The four product screens shown in the product introduction below. */
 const showcaseShots = [
   {
     src: '/showcase/01-ai-chat.png',
@@ -53,18 +52,25 @@ const showcaseShots = [
     descKey: 'showcase_1_desc',
   },
   {
+    src: '/showcase/02-aaas.png',
+    width: 1418,
+    height: 736,
+    titleKey: 'showcase_2_title',
+    descKey: 'showcase_2_desc',
+  },
+  {
     src: '/showcase/02-due-diligence.png',
     width: 1414,
     height: 734,
-    titleKey: 'showcase_2_title',
-    descKey: 'showcase_2_desc',
+    titleKey: 'showcase_3_title',
+    descKey: 'showcase_3_desc',
   },
   {
     src: '/showcase/03-rwa-market.png',
     width: 1394,
     height: 738,
-    titleKey: 'showcase_3_title',
-    descKey: 'showcase_3_desc',
+    titleKey: 'showcase_4_title',
+    descKey: 'showcase_4_desc',
   },
 ] as const
 
@@ -211,22 +217,15 @@ function Showcase() {
           transition={{ duration: 0.6, ease: EASE }}
           className="mx-auto mt-20 max-w-2xl text-center md:mt-28"
         >
-          <h3 className="text-2xl font-bold tracking-tight text-base-content md:text-3xl">
-            {t('showcase_closing_title')}
-          </h3>
-          <p className="mt-4 text-base font-light leading-relaxed text-base-content/60 md:text-lg">
-            {t('showcase_closing_desc')}
-          </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-7">
-            <Button
-              asChild
-              size="lg"
-              className="h-12 rounded-4xl px-8 text-base font-semibold"
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-7">
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="inline-flex h-12 cursor-default items-center justify-center rounded-4xl bg-primary px-8 text-base font-semibold text-primary-foreground disabled:cursor-default disabled:opacity-100"
             >
-              <a href="https://app.coolha.com" target="_blank" rel="noreferrer">
-                {tw('launch')}
-              </a>
-            </Button>
+              {tw('launch')}
+            </button>
             <a
               href="mailto:connect@coolha.com"
               className="text-sm text-base-content/50 transition-colors duration-300 hover:text-base-content"

@@ -2,9 +2,7 @@
 'use client';
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import Product from "./Product";
 import Absolute from "./Absolute";
 
@@ -47,26 +45,14 @@ export default function HomeContent() {
             </div>
 
             <div className="flex justify-center">
-              <motion.div
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                className="inline-flex cursor-default items-center border border-base-content/20 bg-transparent px-10 py-4 rounded-full text-lg font-light tracking-wider text-base-content backdrop-blur-sm disabled:cursor-default disabled:opacity-100"
               >
-                <Link
-                  href="https://app.coolha.com"
-                  target="_blank"
-                  className="group inline-flex items-center gap-3 bg-transparent border border-base-content/20 hover:border-[#C0E218] text-base-content hover:text-[#C0E218] px-10 py-4 rounded-full text-lg font-light tracking-wider transition-all duration-500 hover:shadow-[0_0_30px_rgba(192,226,24,0.3)] backdrop-blur-sm"
-                >
-                  <span>{t("launch")}</span>
-                  <motion.span
-                    className="text-xl"
-                    animate={{ x: [0, 4, 0] }}
-                    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                  >
-                    →
-                  </motion.span>
-                </Link>
-              </motion.div>
+                <span>{t("launch")}</span>
+              </button>
             </div>
           </div>
 
