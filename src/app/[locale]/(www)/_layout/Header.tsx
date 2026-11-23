@@ -44,11 +44,11 @@ export default function Header() {
     useEffect(() => { setMenuOpen(false); }, [pathname]);
 
     return (
-        <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out ${scrolled ? "px-3 pt-3 md:px-6 md:pt-4" : "px-0 pt-0"}`}>
-            <div className={`glass-panel-strong mx-auto flex w-full items-center justify-between border transition-all duration-300 ease-out ${
+        <header className={`fixed inset-x-0 top-0 z-50 transition-[padding] duration-[420ms] ease-[cubic-bezier(0.32,0.72,0,1)] ${scrolled ? "px-3 pt-3 md:px-6 md:pt-4" : "px-0 pt-0"}`}>
+            <div className={`glass-panel-strong mx-auto flex w-full items-center justify-between border transition-[max-width,height,padding,border-radius,border-color] duration-[420ms] ease-[cubic-bezier(0.32,0.72,0,1)] ${
                 scrolled
                     ? "h-14 max-w-5xl rounded-[1.75rem] border-white/12 px-2.5 md:px-3"
-                    : "h-16 max-w-none rounded-none border-transparent px-4 md:h-18 md:px-6"
+                    : "h-16 max-w-full rounded-none border-transparent px-4 md:h-18 md:px-6"
             }`}>
 
                 <div className="flex items-center gap-4">
