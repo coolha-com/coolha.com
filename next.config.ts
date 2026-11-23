@@ -3,6 +3,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 
 const nextConfig: NextConfig = {
+  // 允许通过 127.0.0.1 访问 dev 资源（预览面板用该 host，否则 HMR/JS 被拦截导致不 hydrate）
+  allowedDevOrigins: ['127.0.0.1'],
   // Locale files are chosen at request/build time. Keep every legal Markdown
   // file in the server trace if a page is not fully static.
   outputFileTracingIncludes: {

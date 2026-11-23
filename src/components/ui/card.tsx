@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils"
 
 const cardVariants = {
   default:
-    "border border-base-content/10 bg-base-200/50 hover:border-[#C0E218]/30 hover:bg-[#C0E218]/5",
+    "glass-panel hover:-translate-y-1 hover:bg-white/[0.09]",
   accent:
-    "border border-[#C0E218]/20 bg-[#C0E218]/5 hover:border-[#C0E218]/40 hover:bg-[#C0E218]/10",
+    "glass-panel bg-[#C8F237]/[0.05] hover:-translate-y-1 hover:bg-[#C8F237]/[0.1]",
   ghost:
-    "border border-transparent bg-transparent hover:border-base-content/10 hover:bg-base-200/50",
+    "border border-transparent bg-transparent hover:-translate-y-1 hover:bg-white/[0.06]",
 } as const
 
 type CardVariant = keyof typeof cardVariants
@@ -22,7 +22,7 @@ function Card({
     <div
       data-slot="card"
       className={cn(
-        "group relative rounded-2xl p-6 transition-all duration-300",
+        "group relative overflow-hidden rounded-3xl p-6 transition-all duration-300 md:p-7",
         cardVariants[variant],
         className
       )}
@@ -40,12 +40,12 @@ function CardIcon({
     <div
       data-slot="card-icon"
       className={cn(
-        "mb-4 flex size-12 items-center justify-center rounded-xl transition-colors",
+        "mb-5 flex size-12 items-center justify-center rounded-2xl border transition-colors",
         variant === "accent"
-          ? "bg-[#C0E218]/15 text-[#C0E218] group-hover:bg-[#C0E218]/25"
+          ? "bg-[#C8F237]/15 text-[#C8F237] group-hover:bg-[#C8F237]/25"
           : variant === "ghost"
-            ? "bg-base-200/50 text-base-content/60 group-hover:bg-base-200"
-            : "bg-[#C0E218]/10 text-[#C0E218] group-hover:bg-[#C0E218]/20",
+            ? "bg-white/[0.05] text-white/60 group-hover:bg-white/[0.1]"
+            : "bg-[#C8F237]/10 text-[#C8F237] group-hover:bg-[#C8F237]/20",
         className
       )}
       {...props}
@@ -67,7 +67,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-title"
-      className={cn("text-lg font-semibold text-base-content", className)}
+      className={cn("text-lg font-semibold tracking-tight text-white/90", className)}
       {...props}
     />
   )
@@ -77,7 +77,7 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-description"
-      className={cn("text-sm leading-relaxed text-base-content/70", className)}
+      className={cn("text-sm leading-relaxed text-white/65", className)}
       {...props}
     />
   )

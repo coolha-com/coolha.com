@@ -68,41 +68,45 @@ export default function LegalLayout({
   }, [toc]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground pt-20">
-      <div className="mx-auto max-w-7xl px-6 pb-12 lg:px-8 lg:pb-16">
+    <main className="site-shell min-h-screen">
+      {/* 背景光晕：阅读场景保持克制，不与正文抢注意力 */}
+      <div className="pointer-events-none absolute -right-40 top-10 size-[26rem] rounded-full bg-[#C8F237]/8 blur-[120px]" aria-hidden="true" />
+      <div className="pointer-events-none absolute -left-40 top-1/3 size-[24rem] rounded-full bg-[#C8F237]/6 blur-[120px]" aria-hidden="true" />
+
+      <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 md:px-12 md:pb-28">
         {/* Breadcrumb */}
         <nav
           aria-label={breadcrumbAria}
-          className="mb-8 flex items-center gap-1.5 text-sm text-muted-foreground"
+          className="mb-10 flex items-center gap-1.5 text-sm text-white/50"
         >
           <Link
             href={`/${locale}`}
-            className="inline-flex items-center gap-1 hover:text-foreground transition-colors"
+            className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
           >
-            <RiHome7Line className="h-4 w-4" />
+            <RiHome7Line className="size-4" />
             {homeLabel}
           </Link>
-          <RiArrowRightSLine className="h-4 w-4" />
-          <span className="text-foreground font-medium">{breadcrumbLabel}</span>
+          <RiArrowRightSLine className="size-4 text-white/30" />
+          <span className="font-medium text-white/85">{breadcrumbLabel}</span>
         </nav>
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[220px_1fr]">
           {/* Sidebar TOC */}
           <aside className="hidden lg:block">
-            <div className="sticky top-24">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            <div className="glass-panel sticky top-28 rounded-3xl p-5">
+              <p className="quiet-label mb-4 text-[11px] font-semibold">
                 {tocLabel}
               </p>
-              <nav aria-label={tocAria} className="border-l border-border pl-4">
+              <nav aria-label={tocAria} className="border-l border-white/10 pl-4">
                 <ul className="space-y-1.5">
                   {toc.map((item) => (
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className={`text-sm leading-relaxed transition-colors ${
+                        className={`block text-sm leading-relaxed transition-colors ${
                           activeId === item.id
-                            ? "text-primary font-medium"
-                            : "text-muted-foreground hover:text-foreground"
+                            ? "font-medium text-[#C8F237]"
+                            : "text-white/50 hover:text-white"
                         }`}
                       >
                         {item.title}
@@ -116,63 +120,69 @@ export default function LegalLayout({
 
           {/* Content */}
           <article lang={lang} className="min-w-0 max-w-none">
-            <header className="mb-10 border-b border-border pb-8">
-              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                {title}
-              </h1>
-              {(effectiveDate || lastUpdated) && (
-                <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                  {effectiveDate && (
-                    <p>
-                      <span className="font-medium text-foreground">{effectiveLabel}</span>{" "}
-                      {effectiveDate}
-                    </p>
-                  )}
-                  {lastUpdated && (
-                    <p>
-                      <span className="font-medium text-foreground">{lastUpdatedLabel}</span>{" "}
-                      {lastUpdated}
-                    </p>
-                  )}
+            <div className="glass-panel-strong rounded-[2rem] p-7 sm:p-10 md:p-12">
+              <header className="mb-10 border-b border-white/10 pb-8">
+                <div className="mb-7 flex items-center gap-3">
+                  <span className="h-px w-10 bg-[#C8F237]/70" />
+                  <span className="quiet-label text-[11px] font-semibold">Coolha</span>
+                </div>
+                <h1 className="text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">
+                  {title}
+                </h1>
+                {(effectiveDate || lastUpdated) && (
+                  <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/50">
+                    {effectiveDate && (
+                      <p>
+                        <span className="font-medium text-white/85">{effectiveLabel}</span>{" "}
+                        {effectiveDate}
+                      </p>
+                    )}
+                    {lastUpdated && (
+                      <p>
+                        <span className="font-medium text-white/85">{lastUpdatedLabel}</span>{" "}
+                        {lastUpdated}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </header>
+
+              {/* Mobile TOC */}
+              <details className="glass-panel mb-9 rounded-2xl lg:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-sm font-medium text-white/85">
+                  <span>{tocLabel}</span>
+                  <RiArrowRightSLine className="size-4 transition-transform open:rotate-90" />
+                </summary>
+                <nav aria-label={tocAria} className="px-5 pb-5 pt-1">
+                  <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                    {toc.map((item) => (
+                      <li key={item.id}>
+                        <a
+                          href={`#${item.id}`}
+                          className="block text-sm text-white/55 transition-colors hover:text-white"
+                        >
+                          {item.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </details>
+
+              {html !== undefined ? (
+                <div
+                  className="legal-content space-y-8 text-base leading-7 text-white/75"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              ) : (
+                <div className="legal-content space-y-8 text-base leading-7 text-white/75">
+                  {children}
                 </div>
               )}
-            </header>
-
-            {/* Mobile TOC */}
-            <details className="lg:hidden mb-8 rounded-2xl border border-border bg-muted/30">
-              <summary className="cursor-pointer px-5 py-4 text-sm font-medium text-foreground list-none flex items-center justify-between">
-                <span>{tocLabel}</span>
-                <RiArrowRightSLine className="h-4 w-4 transition-transform open:rotate-90" />
-              </summary>
-              <nav aria-label={tocAria} className="px-5 pb-5 pt-1">
-                <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                  {toc.map((item) => (
-                    <li key={item.id}>
-                      <a
-                        href={`#${item.id}`}
-                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </details>
-
-            {html !== undefined ? (
-              <div
-                className="legal-content space-y-8 text-base leading-7 text-foreground/90"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
-            ) : (
-              <div className="legal-content space-y-8 text-base leading-7 text-foreground/90">
-                {children}
-              </div>
-            )}
+            </div>
           </article>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

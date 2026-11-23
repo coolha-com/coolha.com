@@ -50,72 +50,72 @@
 /* --preset b3SRdliTo */
 
 :root {
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #c0e218;
-  --primary-foreground: #273000;
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --card: #1c1c1e;
+  --card-foreground: #f5f7f0;
+  --popover: #1c1c1e;
+  --popover-foreground: #f5f7f0;
+  --primary: #c8f237;
+  --primary-foreground: #13200a;
+  --secondary: #242426;
+  --secondary-foreground: #edf2ea;
+  --muted: #242426;
+  --muted-foreground: #a6b0af;
+  --accent: #2c2c2e;
+  --accent-foreground: #f5f7f0;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: rgb(255 255 255 / 12%);
+  --input: rgb(255 255 255 / 12%);
+  --ring: #c8f237;
   --chart-1: oklch(0.897 0.196 126.665);
   --chart-2: oklch(0.768 0.233 130.85);
   --chart-3: oklch(0.648 0.2 131.684);
   --chart-4: oklch(0.532 0.157 131.589);
   --chart-5: oklch(0.453 0.124 130.933);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #c0e218;
-  --sidebar-primary-foreground: #273000;
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --radius: 1rem;
+  --sidebar: #1c1c1e;
+  --sidebar-foreground: #f5f7f0;
+  --sidebar-primary: #c8f237;
+  --sidebar-primary-foreground: #13200a;
+  --sidebar-accent: #2c2c2e;
+  --sidebar-accent-foreground: #f5f7f0;
+  --sidebar-border: rgb(255 255 255 / 12%);
+  --sidebar-ring: #c8f237;
+  --background: #0a0a0b;
+  --foreground: #f5f7f0;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: #c0e218;
-  --primary-foreground: #273000;
-  --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --background: #0a0a0b;
+  --foreground: #f5f7f0;
+  --card: #1c1c1e;
+  --card-foreground: #f5f7f0;
+  --popover: #1c1c1e;
+  --popover-foreground: #f5f7f0;
+  --primary: #c8f237;
+  --primary-foreground: #13200a;
+  --secondary: #242426;
+  --secondary-foreground: #edf2ea;
+  --muted: #242426;
+  --muted-foreground: #a6b0af;
+  --accent: #2c2c2e;
+  --accent-foreground: #f5f7f0;
+  --destructive: #ff827d;
+  --border: rgb(255 255 255 / 12%);
+  --input: rgb(255 255 255 / 15%);
+  --ring: #c8f237;
   --chart-1: oklch(0.897 0.196 126.665);
   --chart-2: oklch(0.768 0.233 130.85);
   --chart-3: oklch(0.648 0.2 131.684);
   --chart-4: oklch(0.532 0.157 131.589);
   --chart-5: oklch(0.453 0.124 130.933);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: #c0e218;
-  --sidebar-primary-foreground: #273000;
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar: #1c1c1e;
+  --sidebar-foreground: #f5f7f0;
+  --sidebar-primary: #c8f237;
+  --sidebar-primary-foreground: #13200a;
+  --sidebar-accent: #2c2c2e;
+  --sidebar-accent-foreground: #f5f7f0;
+  --sidebar-border: rgb(255 255 255 / 12%);
+  --sidebar-ring: #c8f237;
 }
 
 @layer base {
@@ -125,10 +125,273 @@
 
   body {
     @apply bg-background text-foreground;
+    min-height: 100vh;
+    background-color: var(--background);
+    background-image:
+      radial-gradient(circle at 12% 5%, rgb(200 242 55 / 7%), transparent 25rem),
+      radial-gradient(circle at 88% 18%, rgb(200 242 55 / 12%), transparent 29rem),
+      radial-gradient(circle at 50% 88%, rgb(168 214 40 / 6%), transparent 34rem);
+    background-attachment: fixed;
   }
 
   html {
     @apply font-sans;
+  }
+}
+
+@layer components {
+  .site-shell {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    background: linear-gradient(135deg, rgb(16 16 18 / 88%), rgb(10 10 12 / 74%));
+  }
+
+  .site-shell::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    opacity: 0.38;
+    background-image: linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px), linear-gradient(90deg, rgb(255 255 255 / 3%) 1px, transparent 1px);
+    background-size: 54px 54px;
+    mask-image: linear-gradient(to bottom, black, transparent 72%);
+  }
+
+  .glass-panel {
+    border: 0;
+    background: linear-gradient(145deg, rgb(255 255 255 / 8%), rgb(255 255 255 / 3%));
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 9%),
+      0 1px 2px rgb(0 0 0 / 14%),
+      0 18px 48px rgb(0 0 0 / 24%);
+    -webkit-backdrop-filter: blur(22px) saturate(180%);
+    backdrop-filter: blur(22px) saturate(180%);
+  }
+
+  .glass-panel-strong {
+    border: 0;
+    background: linear-gradient(145deg, rgb(38 38 42 / 82%), rgb(16 16 19 / 72%));
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 12%),
+      0 2px 6px rgb(0 0 0 / 18%),
+      0 26px 72px rgb(0 0 0 / 36%);
+    -webkit-backdrop-filter: blur(30px) saturate(185%);
+    backdrop-filter: blur(30px) saturate(185%);
+  }
+
+  /* 悬浮展示型玻璃：几乎不改变背景的颜色和亮度，只做一层柔和雾化，
+     让背后的天空、云层、建筑轮廓都清晰可辨 */
+  .glass-panel-float {
+    border: 0;
+    background: linear-gradient(148deg, rgb(12 14 12 / 7%), rgb(4 6 4 / 3%));
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 6%),
+      0 1px 2px rgb(0 0 0 / 4%),
+      0 16px 40px rgb(0 0 0 / 10%);
+    -webkit-backdrop-filter: blur(26px) saturate(112%);
+    backdrop-filter: blur(26px) saturate(112%);
+  }
+
+  .glass-button {
+    border: 1px solid rgb(200 242 55 / 38%);
+    background: linear-gradient(135deg, rgb(200 242 55 / 100%), rgb(174 223 31 / 100%));
+    color: #13200a;
+    box-shadow: 0 14px 32px rgb(174 223 31 / 19%), inset 0 1px 0 rgb(255 255 255 / 38%);
+    transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+  }
+
+  .glass-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.04);
+    box-shadow: 0 20px 40px rgb(174 223 31 / 25%), inset 0 1px 0 rgb(255 255 255 / 40%);
+  }
+
+  .quiet-label {
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgb(200 242 55 / 85%);
+  }
+}
+
+@media (max-width: 767px) {
+  .glass-panel,
+  .glass-panel-strong,
+  .glass-panel-float {
+    -webkit-backdrop-filter: blur(14px) saturate(125%);
+    backdrop-filter: blur(14px) saturate(125%);
+  }
+}
+
+/* RWA hero 镜头系统，分端处理：
+   桌面（≥1024）：img 先以 scale(1) 完整交出 16:9 全景，2.4s 后缓慢推近到 1.2 并偏左，
+                摇镜层在推近结束后接手，42s 往返小幅横摇（幅度由 scale 溢出量决定）。
+   移动（<1024）：屏幕太窄，一屏只能看到图片一小块，所以让层按 16:9 原始比例展开，
+                横向行程覆盖整幅图，56s 从左扫到右再返回。 */
+
+@media (min-width: 1024px) {
+  .hero-pan-layer {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+    animation: hero-pan-desk 42s cubic-bezier(0.45, 0, 0.55, 1) 6.4s infinite alternate;
+  }
+
+  .hero-zoom-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform;
+    animation: hero-zoom 4s cubic-bezier(0.33, 1, 0.68, 1) 2.4s both;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-pan-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: max(100vw, 177.78svh);
+    will-change: transform;
+    animation: hero-pan-mobile 56s cubic-bezier(0.45, 0, 0.55, 1) 3.2s infinite alternate;
+  }
+
+  .hero-zoom-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@keyframes hero-pan-desk {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: translateX(0) scale(1);
+  }
+  to {
+    transform: translateX(10%) scale(1.2);
+  }
+}
+
+@keyframes hero-pan-mobile {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% + 100vw));
+  }
+}
+
+/* ===== Agent 页 AI 视觉层 ===== */
+
+/* 神经节点呼吸 */
+.neural-node {
+  animation: neural-pulse 5.5s ease-in-out infinite;
+}
+
+@keyframes neural-pulse {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* 沿连线流动的数据脉冲 */
+.neural-link {
+  animation: neural-dash 7s linear infinite;
+}
+
+@keyframes neural-dash {
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+/* 环绕核心的轨道环 */
+.orbit-ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  border: 1px solid rgb(200 242 55 / 15%);
+  border-top-color: rgb(200 242 55 / 62%);
+  transform: translate(-50%, -50%);
+}
+
+.orbit-ring::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c8f237;
+  box-shadow: 0 0 18px 5px rgb(200 242 55 / 40%);
+  transform: translateX(-50%);
+}
+
+.orbit-ring-1 {
+  width: 34rem;
+  height: 34rem;
+  animation: orbit-spin 46s linear infinite;
+}
+
+.orbit-ring-2 {
+  width: 50rem;
+  height: 50rem;
+  border-top-color: rgb(255 255 255 / 34%);
+  animation: orbit-spin 78s linear infinite reverse;
+}
+
+.orbit-ring-2::after {
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
+  box-shadow: 0 0 16px 4px rgb(255 255 255 / 30%);
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .orbit-ring-1 {
+    width: 19rem;
+    height: 19rem;
+  }
+
+  .orbit-ring-2 {
+    width: 28rem;
+    height: 28rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 
@@ -150,7 +413,7 @@
 }
 
 .legal-content p {
-  @apply text-foreground/90;
+  @apply text-white/72;
 }
 
 .legal-content ul {
@@ -158,11 +421,11 @@
 }
 
 .legal-content li {
-  @apply text-foreground/90;
+  @apply text-white/72;
 }
 
 .legal-content strong {
-  @apply font-semibold text-foreground;
+  @apply font-semibold text-white;
 }
 
 .legal-content a {
@@ -170,9 +433,9 @@
 }
 
 .legal-content h2 {
-  @apply text-2xl font-bold tracking-tight text-foreground mt-10 first:mt-0 pb-2 border-b border-border;
+  @apply text-2xl font-semibold tracking-[-0.03em] text-white mt-10 first:mt-0 pb-2 border-b border-white/12;
 }
 
 .legal-content h3 {
-  @apply text-xl font-semibold tracking-tight text-foreground mt-8;
+  @apply text-xl font-semibold tracking-tight text-white/90 mt-8;
 }

@@ -34,9 +34,5 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function layout({ children }: { children: React.ReactNode }) {
-    return (
-        <div className=" bg-base-100 pt-20">
-            {children}
-        </div>
-    )
+    return <>{children}</>
 }

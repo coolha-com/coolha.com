@@ -9,7 +9,10 @@ Coolha Limited（酷哈有限公司），香港注册（2025-08-26），Web3 + A
 - Next.js 16.2.6 + Turbopack，React 19，Tailwind v4
 - next-intl v4，三语言：`en`（默认）/ `zh-Hans` / `zh-Hant`，路径形如 `/zh-Hans/ai`
 - `src/proxy.ts` 是 i18n 中间件（next-intl createMiddleware），`localePrefix: 'always'`
-- 品牌主色 `#C0E218`（黄绿），站点强制暗色主题（`<html className="dark">`）
+- 品牌主色 `#C8F237`（黄绿，2026-11-24 毛玻璃改造后统一；旧值 `#C0E218` 已全站清除），
+  站点强制暗色主题（`<html className="dark">`）
+- **已无 daisyUI 依赖**：禁止使用 `bg-base-*` / `text-base-content` / `border-base-*` 等类，
+  它们不会生效。改用 white/opacity 或项目 token
 
 ## 关键约定
 - **i18n 键必须三语同步**：改任何 `src/i18n/*.json` 后用脚本校验 key 数量一致
@@ -20,10 +23,21 @@ Coolha Limited（酷哈有限公司），香港注册（2025-08-26），Web3 + A
 - 页面级 metadata 放各页面的 `layout.tsx`（ai/rwa/company），
   `(www)/layout.tsx` 只负责 Header/Footer 布局，不要放 metadata
 - 首页是 client 组件时，metadata 需通过 server component 包装（见 `_layout/Home.tsx` 模式）
+- **毛玻璃设计系统**在 `src/app/globals.css` 的 `@layer components`：
+  `.site-shell`（网格纹理容器）、`.glass-panel`（轻玻璃）、`.glass-panel-strong`（重玻璃/hero）、
+  `.glass-button`（主 CTA）、`.quiet-label`（小标签）。新页面/卡片优先复用这些类，不要重复造玻璃样式。
+- `Button` 基础样式带 `shrink-0`：并排按钮不要用 `flex + w-full`（会撑破容器），
+  用 `grid grid-cols-2` 才能正确均分宽度
 
 ## 验证方式
-- 改完跑 `npx next build`（应生成 23 个静态页）+ `npx tsc --noEmit`
+- 改完跑 `npx next build`（当前生成 26 个静态页）+ `npx tsc --noEmit`
 - 视觉改动用 Playwright 截图逐页核对；Chromium 已在
   `~/AppData/Local/ms-playwright/chromium-1234/chrome-win64/chrome.exe`，
-  需在脚本里指定 `executablePath`（当前 playwright 版本与已装浏览器版本不匹配，不会自动下载）
-- 生产验证：`npx next start -p <port>`，注意端口可能被残留进程占用
+  需在脚本里指定 `executablePath`（当前 playwright 版本与已装浏览器版本不匹配，不会自动下载）；
+  playwright 包不在项目内，可用 npx 缓存里的包：
+  `~/AppData/Local/npm-cache/_npx/e41f203b7505f1fb/node_modules/playwright`
+- **截图含 framer-motion `whileInView` 的页面时，必须先逐段滚动到底再回顶**，
+  否则视口外元素停在 `opacity:0`，全页截图会出现大片空白假象
+- 生产验证：`npx next start -p <port>`，注意端口可能被残留 node 进程占用；
+  停后台任务后仍可能残留，需用 PowerShell 按监听端口 `Stop-Process`
+- 本地 `next start` 下 Vercel Analytics / Speed Insights 的 `/_vercel/*` 请求 404 属预期，非页面错误
