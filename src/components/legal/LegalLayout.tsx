@@ -1,7 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useEffect, useState } from "react";
 import { RiArrowRightSLine, RiHome7Line } from "react-icons/ri";
 
@@ -43,7 +42,6 @@ export default function LegalLayout({
   html,
   children,
 }: LegalLayoutProps) {
-  const locale = useLocale();
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
@@ -80,7 +78,7 @@ export default function LegalLayout({
           className="mb-10 flex items-center gap-1.5 text-sm text-white/50"
         >
           <Link
-            href={`/${locale}`}
+            href="/"
             className="inline-flex items-center gap-1.5 transition-colors hover:text-white"
           >
             <RiHome7Line className="size-4" />

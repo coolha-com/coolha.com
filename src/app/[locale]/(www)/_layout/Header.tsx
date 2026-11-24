@@ -1,8 +1,7 @@
 'use client'
-import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
