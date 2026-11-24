@@ -12,7 +12,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'www' });
 
   return {
-    title: t('meta_title'),
+    // 首页标签页只显示品牌名：en = Coolha，中文 = Coolha 酷哈（absolute 跳过 layout 的 %s 模板）
+    title: { absolute: t('brand') },
     description: t('meta_description'),
     alternates: buildAlternates('', locale),
   };

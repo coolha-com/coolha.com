@@ -84,8 +84,13 @@ export default function HomeContent() {
               variants={fadeUp}
               className="text-6xl font-semibold tracking-[-0.065em] text-[#C8F237] sm:text-7xl md:text-8xl"
             >
-              {t("brand")}
+              Coolha
             </motion.h1>
+
+            <div className="mt-9 space-y-3 text-pretty px-2 text-lg font-light leading-8 text-white/75 sm:text-xl lg:px-0">
+              <motion.p variants={fadeUp}>{t("subtitle1")}</motion.p>
+              <motion.p variants={fadeUp} className="text-white/57">{t("subtitle2")}</motion.p>
+            </div>
 
             <motion.div variants={fadeUp} className="mt-10 flex justify-center md:justify-start">
               <button
