@@ -1,5 +1,6 @@
 'use client'
 
+import dynamic from "next/dynamic"
 import { motion, type Variants } from "framer-motion"
 import { useTranslations } from "next-intl"
 import {
@@ -36,45 +37,7 @@ const riseIn = {
   transition: { duration: 0.7, ease: EASE },
 }
 
-/* ---------- 神经网络：确定性伪随机，保证 SSR / CSR 渲染一致 ---------- */
-function seeded(i: number) {
-  const x = Math.sin(i * 127.1 + 311.7) * 43758.5453
-  return x - Math.floor(x)
-}
-
-const NODE_COUNT = 42
-
-const NEURAL_NODES = Array.from({ length: NODE_COUNT }, (_, i) => {
-  const angle = (i / NODE_COUNT) * Math.PI * 2 + seeded(i) * 0.4
-  const rx = 300 + seeded(i + 40) * 220
-  const ry = 200 + seeded(i + 80) * 150
-  return {
-    x: 600 + Math.cos(angle) * rx,
-    y: 400 + Math.sin(angle) * ry,
-    r: 1 + seeded(i + 12) * 1.8,
-    delay: seeded(i + 3) * 5.5,
-  }
-})
-
-const NEURAL_LINKS = (() => {
-  const links: { key: string; x1: number; y1: number; x2: number; y2: number; delay: number }[] = []
-  const seen = new Set<string>()
-  NEURAL_NODES.forEach((a, i) => {
-    NEURAL_NODES.map((b, j) => ({ j, d: Math.hypot(b.x - a.x, b.y - a.y) }))
-      .filter((o) => o.j !== i)
-      .sort((m, n) => m.d - n.d)
-      .slice(0, 2)
-      .forEach(({ j, d }) => {
-        if (d > 360) return
-        const key = i < j ? `${i}-${j}` : `${j}-${i}`
-        if (seen.has(key)) return
-        seen.add(key)
-        const b = NEURAL_NODES[j]
-        links.push({ key, x1: a.x, y1: a.y, x2: b.x, y2: b.y, delay: (a.delay + b.delay) / 2 })
-      })
-  })
-  return links
-})()
+const AgentNeuralSphere = dynamic(() => import("@/components/three/AgentNeuralSphere"), { ssr: false })
 
 const stanceIcons = [RiMindMap, RiStackLine, RiLightbulbFlashLine, RiGlobalLine]
 
@@ -115,51 +78,8 @@ export default function AgentPage() {
           className="pointer-events-none absolute left-1/2 top-1/2 size-[44rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C8F237]/12 blur-[140px]"
         />
 
-        {/* 神经网络：静态骨架 + 流动数据脉冲 + 呼吸节点 */}
-        <svg
-          className="pointer-events-none absolute inset-0 h-full w-full"
-          viewBox="0 0 1200 800"
-          preserveAspectRatio="xMidYMid slice"
-          aria-hidden="true"
-        >
-          <defs>
-            <linearGradient id="neural-stroke" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#C8F237" stopOpacity="0.32" />
-              <stop offset="100%" stopColor="#C8F237" stopOpacity="0.04" />
-            </linearGradient>
-          </defs>
-          <g stroke="#C8F237" strokeOpacity="0.11" strokeWidth="1">
-            {NEURAL_LINKS.map((l) => (
-              <line key={`base-${l.key}`} x1={l.x1} y1={l.y1} x2={l.x2} y2={l.y2} />
-            ))}
-          </g>
-          <g stroke="url(#neural-stroke)" strokeWidth="1.4" fill="none">
-            {NEURAL_LINKS.map((l) => (
-              <line
-                key={`flow-${l.key}`}
-                x1={l.x1}
-                y1={l.y1}
-                x2={l.x2}
-                y2={l.y2}
-                strokeDasharray="2 46"
-                className="neural-link"
-                style={{ animationDelay: `${l.delay}s` }}
-              />
-            ))}
-          </g>
-          <g fill="#C8F237">
-            {NEURAL_NODES.map((n, i) => (
-              <circle
-                key={i}
-                cx={n.x}
-                cy={n.y}
-                r={n.r}
-                className="neural-node"
-                style={{ animationDelay: `${n.delay}s` }}
-              />
-            ))}
-          </g>
-        </svg>
+        {/* 3D 神经网络球：斐波那契球面节点 + 拓扑连线，取代原 2D SVG 网络 */}
+        <AgentNeuralSphere className="pointer-events-none absolute left-1/2 top-1/2 h-[44rem] w-[44rem] -translate-x-1/2 -translate-y-1/2" />
 
         {/* 环绕核心的轨道环 */}
         <div className="pointer-events-none absolute left-1/2 top-1/2" aria-hidden="true">
